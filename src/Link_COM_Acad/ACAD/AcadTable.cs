@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Runtime.CompilerServices;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -901,17 +903,18 @@
 		///<summary>
 		///
 		///</summary>
-		public void SetFormat(int rowTypes) 
+		public void SetFormat(int rowTypes, string pFormat) 
 		{
-			this._i.SetFormat(rowTypes);
+			this._i.SetFormat(rowTypes, pFormat);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void FormatValue(int row,int col) 
+		public string FormatValue(int row,int col, AXDBLib.AcFormatOption option, string current_value) 
 		{
-			this._i.FormatValue(row,col);
+			this._i.FormatValue(row,col, option, ref current_value);
+			return current_value;
 		}
 
 		///<summary>
@@ -925,9 +928,9 @@
 		///<summary>
 		///
 		///</summary>
-		public void SetCellDataType(int row,int col) 
+		public void SetCellDataType(int row,int col, AXDBLib.AcValueDataType dataType, AXDBLib.AcValueUnitType unitType) 
 		{
-			this._i.SetCellDataType(row,col);
+			this._i.SetCellDataType(row,col, dataType, unitType);
 		}
 
 		///<summary>
@@ -941,9 +944,9 @@
 		///<summary>
 		///
 		///</summary>
-		public void SetCellFormat(int row,int col) 
+		public void SetCellFormat(int row,int col, string pFormat) 
 		{
-			this._i.SetCellFormat(row,col);
+			this._i.SetCellFormat(row,col, pFormat);
 		}
 
 		///<summary>
@@ -957,9 +960,9 @@
 		///<summary>
 		///
 		///</summary>
-		public void SetCellValue(int row,int col) 
+		public void SetCellValue(int row,int col, object cValue) 
 		{
-			this._i.SetCellValue(row,col);
+			this._i.SetCellValue(row,col, cValue);
 		}
 
 		///<summary>

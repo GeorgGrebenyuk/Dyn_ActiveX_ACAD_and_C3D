@@ -312,9 +312,9 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_MTextBoundaryWidth() 
+		public void Set_MTextBoundaryWidth(double MTextBoundaryWidth) 
 		{
-			this._i.MTextBoundaryWidth = ;
+			this._i.MTextBoundaryWidth = MTextBoundaryWidth;
 		}
 
 		///<summary>

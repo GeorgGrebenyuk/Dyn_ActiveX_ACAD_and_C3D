@@ -120,7 +120,7 @@
 		///<summary>
 		///
 		///</summary>
-		public int NumCustomInfo => this._i.NumCustomInfo;
+		public int NumCustomInfo => this._i.NumCustomInfo();
 
 		///<summary>
 		///

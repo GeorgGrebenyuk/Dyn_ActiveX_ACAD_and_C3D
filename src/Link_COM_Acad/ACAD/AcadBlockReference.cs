@@ -107,17 +107,17 @@
 		///<summary>
 		///
 		///</summary>
-		public object Explode => this._i.Explode;
+		public object Explode => this._i.Explode();
 
 		///<summary>
 		///
 		///</summary>
-		public object GetAttributes => this._i.GetAttributes;
+		public object GetAttributes => this._i.GetAttributes();
 
 		///<summary>
 		///
 		///</summary>
-		public object GetConstantAttributes => this._i.GetConstantAttributes;
+		public object GetConstantAttributes => this._i.GetConstantAttributes();
 
 		///<summary>
 		///
@@ -137,7 +137,7 @@
 		///<summary>
 		///
 		///</summary>
-		public object GetDynamicBlockProperties => this._i.GetDynamicBlockProperties;
+		public object GetDynamicBlockProperties => this._i.GetDynamicBlockProperties();
 
 		///<summary>
 		///

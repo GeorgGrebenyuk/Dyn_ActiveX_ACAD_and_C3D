@@ -386,19 +386,6 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic LabelBlockId => this._i.LabelBlockId;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_LabelBlockId(dynamic ObjectID) 
-		{
-			this._i.LabelBlockId = ObjectID;
-		}
-
-		///<summary>
-		///
-		///</summary>
 		public bool HasSheetView => this._i.HasSheetView;
 
 		///<summary>

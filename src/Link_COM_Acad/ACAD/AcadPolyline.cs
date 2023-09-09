@@ -63,7 +63,7 @@
 		///<summary>
 		///
 		///</summary>
-		public object Explode => this._i.Explode;
+		public object Explode => this._i.Explode();
 
 		///<summary>
 		///
@@ -92,9 +92,9 @@
 		///<summary>
 		///
 		///</summary>
-		public void SetWidth(int Index,double StartWidth) 
+		public void SetWidth(int Index,double StartWidth, double EndWidth) 
 		{
-			this._i.SetWidth(Index,StartWidth);
+			this._i.SetWidth(Index,StartWidth, EndWidth);
 		}
 
 		///<summary>
@@ -180,7 +180,7 @@
 		///</summary>
 		public object Coordinate(int Index) 
 		{
-			return this._i.Coordinate(Index);
+			return this._i.Coordinate[Index];
 		}
 
 		///<summary>
@@ -188,7 +188,7 @@
 		///</summary>
 		public void Set_Coordinate(int Index,object pVal) 
 		{
-			this._i.Coordinate = Index,pVal;
+            this._i.Coordinate[Index] = pVal;
 		}
 
 		///<summary>

@@ -70,7 +70,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GetExtensionDictionary => this._i.GetExtensionDictionary;
+		public dynamic GetExtensionDictionary => this._i.GetExtensionDictionary();
 
 		///<summary>
 		///

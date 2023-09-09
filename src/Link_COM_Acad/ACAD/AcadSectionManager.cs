@@ -29,7 +29,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GetLiveSection => this._i.GetLiveSection;
+		public dynamic GetLiveSection => this._i.GetLiveSection();
 
 		///<summary>
 		///

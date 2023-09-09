@@ -16,7 +16,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic RevolutionAngle => this._i.RevolutionAngle;
+		public double RevolutionAngle => this._i.RevolutionAngle;
 
 		///<summary>
 		///

@@ -61,14 +61,14 @@
 		///<summary>
 		///
 		///</summary>
-		public void Boolean(AXDBLib.AcBoolean Operation,dynamic Object) 
+		public void Boolean(AXDBLib.AcBooleanType Operation,dynamic Object) 
 		{
-			this._i.Boolean(Operation,Object);
+			this._i.Boolean(Operation, Object);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public object Explode => this._i.Explode;
+		public object Explode => this._i.Explode();
 	}
 }

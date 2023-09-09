@@ -424,7 +424,7 @@
 		///<summary>
 		///
 		///</summary>
-		public int AddLeader => this._i.AddLeader;
+		public int AddLeader => this._i.AddLeader();
 
 		///<summary>
 		///

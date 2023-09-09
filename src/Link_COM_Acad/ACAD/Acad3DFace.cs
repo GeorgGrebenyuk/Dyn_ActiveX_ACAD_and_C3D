@@ -99,7 +99,7 @@
 		///</summary>
 		public object Coordinate(int Index) 
 		{
-			return this._i.Coordinate(Index);
+			return this._i.Coordinate[Index];
 		}
 
 		///<summary>
@@ -107,7 +107,7 @@
 		///</summary>
 		public void Set_Coordinate(int Index,object pVal) 
 		{
-			this._i.Coordinate = Index,pVal;
+            this._i.Coordinate[Index] = pVal;
 		}
 	}
 }

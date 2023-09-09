@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using AXDBLib;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -29,12 +31,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic NumberOfLoops => this._i.NumberOfLoops;
+		public int NumberOfLoops => this._i.NumberOfLoops;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic PatternType => this._i.PatternType;
+		public AcPatternType PatternType => this._i.PatternType;
 
 		///<summary>
 		///
@@ -44,12 +46,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic PatternAngle => this._i.PatternAngle;
+		public double PatternAngle => this._i.PatternAngle;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_PatternAngle(dynamic PatternAngle) 
+		public void Set_PatternAngle(double PatternAngle) 
 		{
 			this._i.PatternAngle = PatternAngle;
 		}
@@ -57,12 +59,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic PatternScale => this._i.PatternScale;
+		public double PatternScale => this._i.PatternScale;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_PatternScale(dynamic PatternScale) 
+		public void Set_PatternScale(double PatternScale) 
 		{
 			this._i.PatternScale = PatternScale;
 		}
@@ -83,7 +85,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ISOPenWidth => this._i.ISOPenWidth;
+		public object ISOPenWidth => this._i.ISOPenWidth;
 
 		///<summary>
 		///
@@ -135,7 +137,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic HatchStyle => this._i.HatchStyle;
+		public object HatchStyle => this._i.HatchStyle;
 
 		///<summary>
 		///
@@ -196,7 +198,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GradientColor1 => this._i.GradientColor1;
+		public object GradientColor1 => this._i.GradientColor1;
 
 		///<summary>
 		///
@@ -209,7 +211,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GradientColor2 => this._i.GradientColor2;
+		public object GradientColor2 => this._i.GradientColor2;
 
 		///<summary>
 		///
@@ -261,7 +263,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic HatchObjectType => this._i.HatchObjectType;
+		public object HatchObjectType => this._i.HatchObjectType;
 
 		///<summary>
 		///

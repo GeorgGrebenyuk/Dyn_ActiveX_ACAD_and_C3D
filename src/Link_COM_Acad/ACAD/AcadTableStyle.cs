@@ -578,9 +578,9 @@
 		///<summary>
 		///
 		///</summary>
-		public void SetTemplateId(dynamic val) 
+		public void SetTemplateId(long val, AXDBLib.AcMergeCellStyleOption AcMergeCellStyleOption) 
 		{
-			this._i.SetTemplateId(val);
+			this._i.SetTemplateId(val, AcMergeCellStyleOption);
 		}
 	}
 }

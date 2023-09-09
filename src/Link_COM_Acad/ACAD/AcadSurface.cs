@@ -21,12 +21,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic UIsolineDensity => this._i.UIsolineDensity;
+		public int UIsolineDensity => this._i.UIsolineDensity;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_UIsolineDensity(dynamic density) 
+		public void Set_UIsolineDensity(int density) 
 		{
 			this._i.UIsolineDensity = density;
 		}
@@ -34,12 +34,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic VIsolineDensity => this._i.VIsolineDensity;
+		public int VIsolineDensity => this._i.VIsolineDensity;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_VIsolineDensity(dynamic density) 
+		public void Set_VIsolineDensity(int density) 
 		{
 			this._i.VIsolineDensity = density;
 		}

@@ -78,7 +78,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_ColorMethod(AXDBLib.AcColor Flags) 
+		public void Set_ColorMethod(AXDBLib.AcColorMethod Flags) 
 		{
 			this._i.ColorMethod = Flags;
 		}

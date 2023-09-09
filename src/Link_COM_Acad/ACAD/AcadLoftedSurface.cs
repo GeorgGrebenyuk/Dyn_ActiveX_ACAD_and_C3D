@@ -16,17 +16,17 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic NumCrossSections => this._i.NumCrossSections;
+		public int NumCrossSections => this._i.NumCrossSections;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic NumGuidePaths => this._i.NumGuidePaths;
+		public int NumGuidePaths => this._i.NumGuidePaths;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic SurfaceNormals => this._i.SurfaceNormals;
+		public object SurfaceNormals => this._i.SurfaceNormals;
 
 		///<summary>
 		///
@@ -39,12 +39,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic StartDraftAngle => this._i.StartDraftAngle;
+		public double StartDraftAngle => this._i.StartDraftAngle;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_StartDraftAngle(dynamic StartDraftAngle) 
+		public void Set_StartDraftAngle(double StartDraftAngle) 
 		{
 			this._i.StartDraftAngle = StartDraftAngle;
 		}
@@ -65,12 +65,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic EndDraftAngle => this._i.EndDraftAngle;
+		public double EndDraftAngle => this._i.EndDraftAngle;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_EndDraftAngle(dynamic EndDraftAngle) 
+		public void Set_EndDraftAngle(double EndDraftAngle) 
 		{
 			this._i.EndDraftAngle = EndDraftAngle;
 		}

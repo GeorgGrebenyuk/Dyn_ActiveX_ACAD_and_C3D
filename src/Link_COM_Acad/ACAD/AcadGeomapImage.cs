@@ -16,12 +16,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GeoImageBrightness => this._i.GeoImageBrightness;
+		public int GeoImageBrightness => this._i.GeoImageBrightness;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_GeoImageBrightness(dynamic Brightness) 
+		public void Set_GeoImageBrightness(int Brightness) 
 		{
 			this._i.GeoImageBrightness = Brightness;
 		}
@@ -29,12 +29,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GeoImageContrast => this._i.GeoImageContrast;
+		public int GeoImageContrast => this._i.GeoImageContrast;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_GeoImageContrast(dynamic Contrast) 
+		public void Set_GeoImageContrast(int Contrast) 
 		{
 			this._i.GeoImageContrast = Contrast;
 		}
@@ -42,12 +42,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GeoImageFade => this._i.GeoImageFade;
+		public int GeoImageFade => this._i.GeoImageFade;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_GeoImageFade(dynamic Fade) 
+		public void Set_GeoImageFade(int Fade) 
 		{
 			this._i.GeoImageFade = Fade;
 		}

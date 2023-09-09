@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_State2(AXDBLib.AcSectionState pVal) 
+		public void Set_State2(AXDBLib.AcSectionState2 pVal) 
 		{
 			this._i.State2 = pVal;
 		}

@@ -51,7 +51,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Boolean(AXDBLib.AcBoolean Operation,dynamic SolidObject) 
+		public void Boolean(AXDBLib.AcBooleanType Operation,dynamic SolidObject) 
 		{
 			this._i.Boolean(Operation,SolidObject);
 		}

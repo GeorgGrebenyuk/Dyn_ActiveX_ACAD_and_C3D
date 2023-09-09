@@ -185,6 +185,6 @@
 		///<summary>
 		///
 		///</summary>
-		public string FieldCode => this._i.FieldCode;
+		public string FieldCode => this._i.FieldCode();
 	}
 }

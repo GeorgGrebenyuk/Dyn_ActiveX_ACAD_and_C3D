@@ -324,17 +324,17 @@
 		///<summary>
 		///
 		///</summary>
-		public object GetCanonicalMediaNames => this._i.GetCanonicalMediaNames;
+		public object GetCanonicalMediaNames => this._i.GetCanonicalMediaNames();
 
 		///<summary>
 		///
 		///</summary>
-		public object GetPlotDeviceNames => this._i.GetPlotDeviceNames;
+		public object GetPlotDeviceNames => this._i.GetPlotDeviceNames();
 
 		///<summary>
 		///
 		///</summary>
-		public object GetPlotStyleTableNames => this._i.GetPlotStyleTableNames;
+		public object GetPlotStyleTableNames => this._i.GetPlotStyleTableNames();
 
 		///<summary>
 		///

@@ -105,7 +105,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Copy => this._i.Copy;
+		public dynamic Copy => this._i.Copy();
 
 		///<summary>
 		///

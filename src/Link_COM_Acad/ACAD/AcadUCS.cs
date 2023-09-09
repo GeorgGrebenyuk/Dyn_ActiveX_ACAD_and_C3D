@@ -68,6 +68,6 @@
 		///<summary>
 		///
 		///</summary>
-		public object GetUCSMatrix => this._i.GetUCSMatrix;
+		public object GetUCSMatrix => this._i.GetUCSMatrix();
 	}
 }

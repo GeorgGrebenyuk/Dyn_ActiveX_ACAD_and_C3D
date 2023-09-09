@@ -26,7 +26,7 @@
 		///</summary>
 		public void Set_Mask(string bsName,AXDBLib.AcLayerStateMask eMask) 
 		{
-			this._i.Mask = bsName,eMask;
+			this._i.Mask[bsName] = eMask;
 		}
 
 		///<summary>
@@ -34,7 +34,7 @@
 		///</summary>
 		public dynamic Mask(string bsName) 
 		{
-			return this._i.Mask(bsName);
+			return this._i.Mask[bsName];
 		}
 
 		///<summary>

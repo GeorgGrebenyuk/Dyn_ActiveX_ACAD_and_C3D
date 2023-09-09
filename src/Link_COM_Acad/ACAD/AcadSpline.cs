@@ -16,7 +16,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic NumberOfControlPoints => this._i.NumberOfControlPoints;
+		public int NumberOfControlPoints => this._i.NumberOfControlPoints;
 
 		///<summary>
 		///
@@ -34,7 +34,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic NumberOfFitPoints => this._i.NumberOfFitPoints;
+		public int NumberOfFitPoints => this._i.NumberOfFitPoints;
 
 		///<summary>
 		///
@@ -52,7 +52,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Degree => this._i.Degree;
+		public int Degree => this._i.Degree;
 
 		///<summary>
 		///

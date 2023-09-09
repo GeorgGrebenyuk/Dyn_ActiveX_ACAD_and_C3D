@@ -16,12 +16,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Brightness => this._i.Brightness;
+		public int Brightness => this._i.Brightness;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Brightness(dynamic Brightness) 
+		public void Set_Brightness(int Brightness) 
 		{
 			this._i.Brightness = Brightness;
 		}
@@ -29,12 +29,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Contrast => this._i.Contrast;
+		public int Contrast => this._i.Contrast;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Contrast(dynamic Contrast) 
+		public void Set_Contrast(int Contrast) 
 		{
 			this._i.Contrast = Contrast;
 		}
@@ -42,12 +42,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Fade => this._i.Fade;
+		public int Fade => this._i.Fade;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Fade(dynamic Fade) 
+		public void Set_Fade(int Fade) 
 		{
 			this._i.Fade = Fade;
 		}
@@ -68,12 +68,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Rotation => this._i.Rotation;
+		public double Rotation => this._i.Rotation;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Rotation(dynamic rotAngle) 
+		public void Set_Rotation(double rotAngle) 
 		{
 			this._i.Rotation = rotAngle;
 		}
@@ -203,12 +203,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ScaleFactor => this._i.ScaleFactor;
+		public double ScaleFactor => this._i.ScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_ScaleFactor(dynamic ScaleFactor) 
+		public void Set_ScaleFactor(double ScaleFactor) 
 		{
 			this._i.ScaleFactor = ScaleFactor;
 		}
