@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAdditionalSampleControls 
 	{
-		public AeccXLandLib.IAeccSettingsAdditionalSampleControls _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAdditionalSampleControls _i;
 		internal AeccSettingsAdditionalSampleControls(object AeccSettingsAdditionalSampleControls_object) 
 		{
-			this._i = AeccSettingsAdditionalSampleControls_object as AeccXLandLib.IAeccSettingsAdditionalSampleControls;
+			this._i = AeccSettingsAdditionalSampleControls_object as Autodesk.AECC.Interop.Land.IAeccSettingsAdditionalSampleControls;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

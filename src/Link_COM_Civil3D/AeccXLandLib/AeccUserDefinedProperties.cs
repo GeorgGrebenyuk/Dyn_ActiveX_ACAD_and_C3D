@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccUserDefinedProperties 
 	{
-		public AeccXLandLib.IAeccUserDefinedProperties _i;
+		public Autodesk.AECC.Interop.Land.IAeccUserDefinedProperties _i;
 		internal AeccUserDefinedProperties(object AeccUserDefinedProperties_object) 
 		{
-			this._i = AeccUserDefinedProperties_object as AeccXLandLib.IAeccUserDefinedProperties;
+			this._i = AeccUserDefinedProperties_object as Autodesk.AECC.Interop.Land.IAeccUserDefinedProperties;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -29,7 +29,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Add(string Name,string Description,AeccXLandLib.AeccUDPPropertyFieldType PropertyFieldType,bool bLowerBoundInclusive,bool bUseDefaultLowerBoundValue,object LowerBoundValue,bool bUpperBoundInclusive,bool bUseDefaultUpperBoundValue,object UpperBoundValue,bool bUseDefaultValue,object DefaultValue,object EnumStringArray) 
+		public dynamic Add(string Name,string Description,Autodesk.AECC.Interop.Land.AeccUDPPropertyFieldType PropertyFieldType,bool bLowerBoundInclusive,bool bUseDefaultLowerBoundValue,object LowerBoundValue,bool bUpperBoundInclusive,bool bUseDefaultUpperBoundValue,object UpperBoundValue,bool bUseDefaultValue,object DefaultValue,object EnumStringArray) 
 		{
 			return this._i.Add(Name,Description,PropertyFieldType,bLowerBoundInclusive,bUseDefaultLowerBoundValue,LowerBoundValue,bUpperBoundInclusive,bUseDefaultUpperBoundValue,UpperBoundValue,bUseDefaultValue,DefaultValue,EnumStringArray);
 		}

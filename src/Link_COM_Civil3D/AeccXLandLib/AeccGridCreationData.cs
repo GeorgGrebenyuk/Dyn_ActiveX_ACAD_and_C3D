@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGridCreationData 
 	{
-		public AeccXLandLib.IAeccGridCreationData _i;
+		public Autodesk.AECC.Interop.Land.IAeccGridCreationData _i;
 		internal AeccGridCreationData(object AeccGridCreationData_object) 
 		{
-			this._i = AeccGridCreationData_object as AeccXLandLib.IAeccGridCreationData;
+			this._i = AeccGridCreationData_object as Autodesk.AECC.Interop.Land.IAeccGridCreationData;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

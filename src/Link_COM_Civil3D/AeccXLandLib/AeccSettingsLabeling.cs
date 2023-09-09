@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsLabeling 
 	{
-		public AeccXLandLib.IAeccSettingsLabeling _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsLabeling _i;
 		internal AeccSettingsLabeling(object AeccSettingsLabeling_object) 
 		{
-			this._i = AeccSettingsLabeling_object as AeccXLandLib.IAeccSettingsLabeling;
+			this._i = AeccSettingsLabeling_object as Autodesk.AECC.Interop.Land.IAeccSettingsLabeling;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

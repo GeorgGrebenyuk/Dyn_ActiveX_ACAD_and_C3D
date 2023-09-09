@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsPointCreation 
 	{
-		public AeccXLandLib.IAeccSettingsPointCreation _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsPointCreation _i;
 		internal AeccSettingsPointCreation(object AeccSettingsPointCreation_object) 
 		{
-			this._i = AeccSettingsPointCreation_object as AeccXLandLib.IAeccSettingsPointCreation;
+			this._i = AeccSettingsPointCreation_object as Autodesk.AECC.Interop.Land.IAeccSettingsPointCreation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

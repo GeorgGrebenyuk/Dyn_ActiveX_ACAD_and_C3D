@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsUnitZone 
 	{
-		public AeccXLandLib.IAeccSettingsUnitZone _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsUnitZone _i;
 		internal AeccSettingsUnitZone(object AeccSettingsUnitZone_object) 
 		{
-			this._i = AeccSettingsUnitZone_object as AeccXLandLib.IAeccSettingsUnitZone;
+			this._i = AeccSettingsUnitZone_object as Autodesk.AECC.Interop.Land.IAeccSettingsUnitZone;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DrawingUnits(AeccXLandLib.AeccDrawingUnitType pVal) 
+		public void Set_DrawingUnits(Autodesk.AECC.Interop.Land.AeccDrawingUnitType pVal) 
 		{
 			this._i.DrawingUnits = pVal;
 		}
@@ -34,7 +34,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_FootToMeterConversionFlag(AeccXLandLib.AeccFootToMeterConversionFlag pVal) 
+		public void Set_FootToMeterConversionFlag(Autodesk.AECC.Interop.Land.AeccFootToMeterConversionFlag pVal) 
 		{
 			this._i.FootToMeterConversionFlag = pVal;
 		}
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_AngularUnits(AeccXLandLib.AeccAngleUnitType pVal) 
+		public void Set_AngularUnits(Autodesk.AECC.Interop.Land.AeccAngleUnitType pVal) 
 		{
 			this._i.AngularUnits = pVal;
 		}

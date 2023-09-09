@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParcelLoop 
 	{
-		public AeccXLandLib.IAeccParcelLoop _i;
+		public Autodesk.AECC.Interop.Land.IAeccParcelLoop _i;
 		internal AeccParcelLoop(object AeccParcelLoop_object) 
 		{
-			this._i = AeccParcelLoop_object as AeccXLandLib.IAeccParcelLoop;
+			this._i = AeccParcelLoop_object as Autodesk.AECC.Interop.Land.IAeccParcelLoop;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

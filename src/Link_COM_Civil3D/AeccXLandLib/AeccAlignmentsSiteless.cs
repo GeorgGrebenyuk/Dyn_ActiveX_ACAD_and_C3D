@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentsSiteless 
 	{
-		public AeccXLandLib.IAeccAlignmentsSiteless _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentsSiteless _i;
 		internal AeccAlignmentsSiteless(object AeccAlignmentsSiteless_object) 
 		{
-			this._i = AeccAlignmentsSiteless_object as AeccXLandLib.IAeccAlignmentsSiteless;
+			this._i = AeccAlignmentsSiteless_object as Autodesk.AECC.Interop.Land.IAeccAlignmentsSiteless;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateNetworkPartsListFull 
 	{
-		public AeccXPipeLib.IAeccSettingsCreateNetworkPartsListFull _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsCreateNetworkPartsListFull _i;
 		internal AeccSettingsCreateNetworkPartsListFull(object AeccSettingsCreateNetworkPartsListFull_object) 
 		{
-			this._i = AeccSettingsCreateNetworkPartsListFull_object as AeccXPipeLib.IAeccSettingsCreateNetworkPartsListFull;
+			this._i = AeccSettingsCreateNetworkPartsListFull_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsCreateNetworkPartsListFull;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

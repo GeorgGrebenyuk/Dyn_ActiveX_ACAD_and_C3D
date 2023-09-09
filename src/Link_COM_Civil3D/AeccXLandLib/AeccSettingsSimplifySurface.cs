@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsSimplifySurface 
 	{
-		public AeccXLandLib.IAeccSettingsSimplifySurface _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsSimplifySurface _i;
 		internal AeccSettingsSimplifySurface(object AeccSettingsSimplifySurface_object) 
 		{
-			this._i = AeccSettingsSimplifySurface_object as AeccXLandLib.IAeccSettingsSimplifySurface;
+			this._i = AeccSettingsSimplifySurface_object as Autodesk.AECC.Interop.Land.IAeccSettingsSimplifySurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

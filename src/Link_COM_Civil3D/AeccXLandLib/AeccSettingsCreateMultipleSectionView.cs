@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateMultipleSectionView 
 	{
-		public AeccXLandLib.IAeccSettingsCreateMultipleSectionView _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateMultipleSectionView _i;
 		internal AeccSettingsCreateMultipleSectionView(object AeccSettingsCreateMultipleSectionView_object) 
 		{
-			this._i = AeccSettingsCreateMultipleSectionView_object as AeccXLandLib.IAeccSettingsCreateMultipleSectionView;
+			this._i = AeccSettingsCreateMultipleSectionView_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateMultipleSectionView;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPartList 
 	{
-		public AeccXPipeLib.IAeccPartList _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPartList _i;
 		internal AeccPartList(object AeccPartList_object) 
 		{
-			this._i = AeccPartList_object as AeccXPipeLib.IAeccPartList;
+			this._i = AeccPartList_object as Autodesk.AECC.Interop.Pipe.IAeccPartList;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

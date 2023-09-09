@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccInterference 
 	{
-		public AeccXPipeLib.IAeccInterference _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccInterference _i;
 		internal AeccInterference(object AeccInterference_object) 
 		{
-			this._i = AeccInterference_object as AeccXPipeLib.IAeccInterference;
+			this._i = AeccInterference_object as Autodesk.AECC.Interop.Pipe.IAeccInterference;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

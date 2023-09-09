@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateParcelFromObjects 
 	{
-		public AeccXLandLib.IAeccSettingsCreateParcelFromObjects _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateParcelFromObjects _i;
 		internal AeccSettingsCreateParcelFromObjects(object AeccSettingsCreateParcelFromObjects_object) 
 		{
-			this._i = AeccSettingsCreateParcelFromObjects_object as AeccXLandLib.IAeccSettingsCreateParcelFromObjects;
+			this._i = AeccSettingsCreateParcelFromObjects_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateParcelFromObjects;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

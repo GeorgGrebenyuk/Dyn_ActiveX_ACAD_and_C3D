@@ -6,10 +6,10 @@
 	///</summary>
 	public class XMLDOMNodeList 
 	{
-		public AeccXLandLib.IXMLDOMNodeList _i;
+		public Autodesk.AECC.Interop.Land.IXMLDOMNodeList _i;
 		internal XMLDOMNodeList(object XMLDOMNodeList_object) 
 		{
-			this._i = XMLDOMNodeList_object as AeccXLandLib.IXMLDOMNodeList;
+			this._i = XMLDOMNodeList_object as Autodesk.AECC.Interop.Land.IXMLDOMNodeList;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

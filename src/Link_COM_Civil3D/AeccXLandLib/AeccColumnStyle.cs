@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccColumnStyle 
 	{
-		public AeccXLandLib.IAeccColumnStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccColumnStyle _i;
 		internal AeccColumnStyle(object AeccColumnStyle_object) 
 		{
-			this._i = AeccColumnStyle_object as AeccXLandLib.IAeccColumnStyle;
+			this._i = AeccColumnStyle_object as Autodesk.AECC.Interop.Land.IAeccColumnStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_HeaderJustification(AeccXLandLib.AeccTableTitleJustificationType pVal) 
+		public void Set_HeaderJustification(Autodesk.AECC.Interop.Land.AeccTableTitleJustificationType pVal) 
 		{
 			this._i.HeaderJustification = pVal;
 		}
@@ -105,7 +105,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DataJustification(AeccXLandLib.AeccTableTitleJustificationType pVal) 
+		public void Set_DataJustification(Autodesk.AECC.Interop.Land.AeccTableTitleJustificationType pVal) 
 		{
 			this._i.DataJustification = pVal;
 		}

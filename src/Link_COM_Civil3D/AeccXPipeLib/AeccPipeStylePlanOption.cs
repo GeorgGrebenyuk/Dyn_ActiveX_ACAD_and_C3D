@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipeStylePlanOption 
 	{
-		public AeccXPipeLib.IAeccPipeStylePlanOption _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPipeStylePlanOption _i;
 		internal AeccPipeStylePlanOption(object AeccPipeStylePlanOption_object) 
 		{
-			this._i = AeccPipeStylePlanOption_object as AeccXPipeLib.IAeccPipeStylePlanOption;
+			this._i = AeccPipeStylePlanOption_object as Autodesk.AECC.Interop.Pipe.IAeccPipeStylePlanOption;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

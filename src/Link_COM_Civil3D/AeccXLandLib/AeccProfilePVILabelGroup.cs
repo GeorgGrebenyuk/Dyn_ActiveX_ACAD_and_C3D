@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfilePVILabelGroup 
 	{
-		public AeccXLandLib.IAeccProfilePVILabelGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfilePVILabelGroup _i;
 		internal AeccProfilePVILabelGroup(object AeccProfilePVILabelGroup_object) 
 		{
-			this._i = AeccProfilePVILabelGroup_object as AeccXLandLib.IAeccProfilePVILabelGroup;
+			this._i = AeccProfilePVILabelGroup_object as Autodesk.AECC.Interop.Land.IAeccProfilePVILabelGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

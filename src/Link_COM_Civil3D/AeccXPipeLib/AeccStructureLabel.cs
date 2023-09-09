@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStructureLabel 
 	{
-		public AeccXPipeLib.IAeccStructureLabel _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccStructureLabel _i;
 		internal AeccStructureLabel(object AeccStructureLabel_object) 
 		{
-			this._i = AeccStructureLabel_object as AeccXPipeLib.IAeccStructureLabel;
+			this._i = AeccStructureLabel_object as Autodesk.AECC.Interop.Pipe.IAeccStructureLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

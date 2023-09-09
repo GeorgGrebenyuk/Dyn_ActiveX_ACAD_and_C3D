@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyFigurePrefix 
 	{
-		public AeccXSurveyLib.IAeccSurveyFigurePrefix _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyFigurePrefix _i;
 		internal AeccSurveyFigurePrefix(object AeccSurveyFigurePrefix_object) 
 		{
-			this._i = AeccSurveyFigurePrefix_object as AeccXSurveyLib.IAeccSurveyFigurePrefix;
+			this._i = AeccSurveyFigurePrefix_object as Autodesk.AECC.Interop.Survey.IAeccSurveyFigurePrefix;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

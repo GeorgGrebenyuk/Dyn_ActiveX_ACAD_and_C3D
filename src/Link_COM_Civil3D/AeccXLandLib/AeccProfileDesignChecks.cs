@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileDesignChecks 
 	{
-		public AeccXLandLib.IAeccProfileDesignChecks _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileDesignChecks _i;
 		internal AeccProfileDesignChecks(object AeccProfileDesignChecks_object) 
 		{
-			this._i = AeccProfileDesignChecks_object as AeccXLandLib.IAeccProfileDesignChecks;
+			this._i = AeccProfileDesignChecks_object as Autodesk.AECC.Interop.Land.IAeccProfileDesignChecks;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

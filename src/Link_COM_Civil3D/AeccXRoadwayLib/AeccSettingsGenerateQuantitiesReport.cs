@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsGenerateQuantitiesReport 
 	{
-		public AeccXRoadwayLib.IAeccSettingsGenerateQuantitiesReport _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsGenerateQuantitiesReport _i;
 		internal AeccSettingsGenerateQuantitiesReport(object AeccSettingsGenerateQuantitiesReport_object) 
 		{
-			this._i = AeccSettingsGenerateQuantitiesReport_object as AeccXRoadwayLib.IAeccSettingsGenerateQuantitiesReport;
+			this._i = AeccSettingsGenerateQuantitiesReport_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsGenerateQuantitiesReport;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccCorridorSurfaceBoundary 
 	{
-		public AeccXRoadwayLib.IAeccCorridorSurfaceBoundary _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccCorridorSurfaceBoundary _i;
 		internal AeccCorridorSurfaceBoundary(object AeccCorridorSurfaceBoundary_object) 
 		{
-			this._i = AeccCorridorSurfaceBoundary_object as AeccXRoadwayLib.IAeccCorridorSurfaceBoundary;
+			this._i = AeccCorridorSurfaceBoundary_object as Autodesk.AECC.Interop.Roadway.IAeccCorridorSurfaceBoundary;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

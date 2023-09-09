@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccElevationRegion 
 	{
-		public AeccXLandLib.IAeccElevationRegion _i;
+		public Autodesk.AECC.Interop.Land.IAeccElevationRegion _i;
 		internal AeccElevationRegion(object AeccElevationRegion_object) 
 		{
-			this._i = AeccElevationRegion_object as AeccXLandLib.IAeccElevationRegion;
+			this._i = AeccElevationRegion_object as Autodesk.AECC.Interop.Land.IAeccElevationRegion;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

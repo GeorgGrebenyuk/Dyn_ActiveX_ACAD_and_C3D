@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAssemblyStyle 
 	{
-		public AeccXRoadwayLib.IAeccAssemblyStyle _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccAssemblyStyle _i;
 		internal AeccAssemblyStyle(object AeccAssemblyStyle_object) 
 		{
-			this._i = AeccAssemblyStyle_object as AeccXRoadwayLib.IAeccAssemblyStyle;
+			this._i = AeccAssemblyStyle_object as Autodesk.AECC.Interop.Roadway.IAeccAssemblyStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

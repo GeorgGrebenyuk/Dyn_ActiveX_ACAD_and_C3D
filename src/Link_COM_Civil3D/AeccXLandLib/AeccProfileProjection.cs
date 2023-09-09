@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileProjection 
 	{
-		public AeccXLandLib.IAeccProfileProjection _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileProjection _i;
 		internal AeccProfileProjection(object AeccProfileProjection_object) 
 		{
-			this._i = AeccProfileProjection_object as AeccXLandLib.IAeccProfileProjection;
+			this._i = AeccProfileProjection_object as Autodesk.AECC.Interop.Land.IAeccProfileProjection;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

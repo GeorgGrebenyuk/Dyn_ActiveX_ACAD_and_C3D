@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumDirection 
 	{
-		public AeccXLandLib.IAeccPropertyEnumDirection _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumDirection _i;
 		internal AeccPropertyEnumDirection(object AeccPropertyEnumDirection_object) 
 		{
-			this._i = AeccPropertyEnumDirection_object as AeccXLandLib.IAeccPropertyEnumDirection;
+			this._i = AeccPropertyEnumDirection_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumDirection;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccDirectionType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccDirectionType pVal) 
 		{
 			this._i.Value = pVal;
 		}

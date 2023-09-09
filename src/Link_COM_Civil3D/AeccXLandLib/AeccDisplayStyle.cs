@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccDisplayStyle 
 	{
-		public AeccXLandLib.IAeccDisplayStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccDisplayStyle _i;
 		internal AeccDisplayStyle(object AeccDisplayStyle_object) 
 		{
-			this._i = AeccDisplayStyle_object as AeccXLandLib.IAeccDisplayStyle;
+			this._i = AeccDisplayStyle_object as Autodesk.AECC.Interop.Land.IAeccDisplayStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

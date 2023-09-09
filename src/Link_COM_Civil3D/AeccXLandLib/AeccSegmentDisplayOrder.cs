@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSegmentDisplayOrder 
 	{
-		public AeccXLandLib.IAeccSegmentDisplayOrder _i;
+		public Autodesk.AECC.Interop.Land.IAeccSegmentDisplayOrder _i;
 		internal AeccSegmentDisplayOrder(object AeccSegmentDisplayOrder_object) 
 		{
-			this._i = AeccSegmentDisplayOrder_object as AeccXLandLib.IAeccSegmentDisplayOrder;
+			this._i = AeccSegmentDisplayOrder_object as Autodesk.AECC.Interop.Land.IAeccSegmentDisplayOrder;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

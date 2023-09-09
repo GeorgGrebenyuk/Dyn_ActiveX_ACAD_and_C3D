@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccRoadwayDatabase 
 	{
-		public AeccXRoadwayLib.IAeccRoadwayDatabase _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccRoadwayDatabase _i;
 		internal AeccRoadwayDatabase(object AeccRoadwayDatabase_object) 
 		{
-			this._i = AeccRoadwayDatabase_object as AeccXRoadwayLib.IAeccRoadwayDatabase;
+			this._i = AeccRoadwayDatabase_object as Autodesk.AECC.Interop.Roadway.IAeccRoadwayDatabase;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

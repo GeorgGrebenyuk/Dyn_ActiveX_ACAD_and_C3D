@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileLineLabelGroup 
 	{
-		public AeccXLandLib.IAeccProfileLineLabelGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileLineLabelGroup _i;
 		internal AeccProfileLineLabelGroup(object AeccProfileLineLabelGroup_object) 
 		{
-			this._i = AeccProfileLineLabelGroup_object as AeccXLandLib.IAeccProfileLineLabelGroup;
+			this._i = AeccProfileLineLabelGroup_object as Autodesk.AECC.Interop.Land.IAeccProfileLineLabelGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

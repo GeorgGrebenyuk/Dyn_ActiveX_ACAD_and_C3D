@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelLineStyleSet 
 	{
-		public AeccXLandLib.IAeccLabelLineStyleSet _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelLineStyleSet _i;
 		internal AeccLabelLineStyleSet(object AeccLabelLineStyleSet_object) 
 		{
-			this._i = AeccLabelLineStyleSet_object as AeccXLandLib.IAeccLabelLineStyleSet;
+			this._i = AeccLabelLineStyleSet_object as Autodesk.AECC.Interop.Land.IAeccLabelLineStyleSet;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

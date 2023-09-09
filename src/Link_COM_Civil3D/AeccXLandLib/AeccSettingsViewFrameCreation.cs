@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsViewFrameCreation 
 	{
-		public AeccXLandLib.IAeccSettingsViewFrameCreation _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsViewFrameCreation _i;
 		internal AeccSettingsViewFrameCreation(object AeccSettingsViewFrameCreation_object) 
 		{
-			this._i = AeccSettingsViewFrameCreation_object as AeccXLandLib.IAeccSettingsViewFrameCreation;
+			this._i = AeccSettingsViewFrameCreation_object as Autodesk.AECC.Interop.Land.IAeccSettingsViewFrameCreation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

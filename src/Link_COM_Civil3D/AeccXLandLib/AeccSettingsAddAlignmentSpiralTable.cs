@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddAlignmentSpiralTable 
 	{
-		public AeccXLandLib.IAeccSettingsAddAlignmentSpiralTable _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAddAlignmentSpiralTable _i;
 		internal AeccSettingsAddAlignmentSpiralTable(object AeccSettingsAddAlignmentSpiralTable_object) 
 		{
-			this._i = AeccSettingsAddAlignmentSpiralTable_object as AeccXLandLib.IAeccSettingsAddAlignmentSpiralTable;
+			this._i = AeccSettingsAddAlignmentSpiralTable_object as Autodesk.AECC.Interop.Land.IAeccSettingsAddAlignmentSpiralTable;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

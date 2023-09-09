@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCorridorStyles 
 	{
-		public AeccXRoadwayLib.IAeccSettingsCorridorStyles _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsCorridorStyles _i;
 		internal AeccSettingsCorridorStyles(object AeccSettingsCorridorStyles_object) 
 		{
-			this._i = AeccSettingsCorridorStyles_object as AeccXRoadwayLib.IAeccSettingsCorridorStyles;
+			this._i = AeccSettingsCorridorStyles_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsCorridorStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

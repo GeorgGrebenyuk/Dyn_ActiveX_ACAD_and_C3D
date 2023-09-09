@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipeStyleProfileOption 
 	{
-		public AeccXPipeLib.IAeccPipeStyleProfileOption _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPipeStyleProfileOption _i;
 		internal AeccPipeStyleProfileOption(object AeccPipeStyleProfileOption_object) 
 		{
-			this._i = AeccPipeStyleProfileOption_object as AeccXPipeLib.IAeccPipeStyleProfileOption;
+			this._i = AeccPipeStyleProfileOption_object as Autodesk.AECC.Interop.Pipe.IAeccPipeStyleProfileOption;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_CrossingHatch(AeccXPipeLib.AeccPipeHatchOptions pnHatchOptions) 
+		public void Set_CrossingHatch(Autodesk.AECC.Interop.Pipe.AeccPipeHatchOptions pnHatchOptions) 
 		{
 			this._i.CrossingHatch = pnHatchOptions;
 		}

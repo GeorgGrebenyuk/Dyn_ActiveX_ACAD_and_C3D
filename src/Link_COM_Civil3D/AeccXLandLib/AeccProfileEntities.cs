@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileEntities 
 	{
-		public AeccXLandLib.IAeccProfileEntities _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileEntities _i;
 		internal AeccProfileEntities(object AeccProfileEntities_object) 
 		{
-			this._i = AeccProfileEntities_object as AeccXLandLib.IAeccProfileEntities;
+			this._i = AeccProfileEntities_object as Autodesk.AECC.Interop.Land.IAeccProfileEntities;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -103,7 +103,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFixedSymmetricParabolaByTwoPointsAndK(object varPoint1,object varPoint2,AeccXLandLib.AeccProfileVerticalCurveType eVerticalCurveType,double dK) 
+		public dynamic AddFixedSymmetricParabolaByTwoPointsAndK(object varPoint1,object varPoint2,Autodesk.AECC.Interop.Land.AeccProfileVerticalCurveType eVerticalCurveType,double dK) 
 		{
 			return this._i.AddFixedSymmetricParabolaByTwoPointsAndK(varPoint1,varPoint2,eVerticalCurveType,dK);
 		}
@@ -111,7 +111,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFixedSymmetricParabolaByTwoPointsAndRadius(object varPoint1,object varPoint2,AeccXLandLib.AeccProfileVerticalCurveType eVerticalCurveType,double dRadius) 
+		public dynamic AddFixedSymmetricParabolaByTwoPointsAndRadius(object varPoint1,object varPoint2,Autodesk.AECC.Interop.Land.AeccProfileVerticalCurveType eVerticalCurveType,double dRadius) 
 		{
 			return this._i.AddFixedSymmetricParabolaByTwoPointsAndRadius(varPoint1,varPoint2,eVerticalCurveType,dRadius);
 		}
@@ -167,7 +167,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFreeSymmetricParabolaByLength(dynamic nBeforeId,dynamic nAfterId,AeccXLandLib.AeccProfileVerticalCurveType eVerticalCurveType,double dLength,bool bPreferFlat) 
+		public dynamic AddFreeSymmetricParabolaByLength(dynamic nBeforeId,dynamic nAfterId,Autodesk.AECC.Interop.Land.AeccProfileVerticalCurveType eVerticalCurveType,double dLength,bool bPreferFlat) 
 		{
 			return this._i.AddFreeSymmetricParabolaByLength(nBeforeId,nAfterId,eVerticalCurveType,dLength,bPreferFlat);
 		}
@@ -175,7 +175,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFreeSymmetricParabolaByK(dynamic nBeforeId,dynamic nAfterId,AeccXLandLib.AeccProfileVerticalCurveType eVerticalCurveType,double dK) 
+		public dynamic AddFreeSymmetricParabolaByK(dynamic nBeforeId,dynamic nAfterId,Autodesk.AECC.Interop.Land.AeccProfileVerticalCurveType eVerticalCurveType,double dK) 
 		{
 			return this._i.AddFreeSymmetricParabolaByK(nBeforeId,nAfterId,eVerticalCurveType,dK);
 		}
@@ -183,7 +183,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFreeSymmetricParabolaByRadius(dynamic nBeforeId,dynamic nAfterId,AeccXLandLib.AeccProfileVerticalCurveType eVerticalCurveType,double dRadius) 
+		public dynamic AddFreeSymmetricParabolaByRadius(dynamic nBeforeId,dynamic nAfterId,Autodesk.AECC.Interop.Land.AeccProfileVerticalCurveType eVerticalCurveType,double dRadius) 
 		{
 			return this._i.AddFreeSymmetricParabolaByRadius(nBeforeId,nAfterId,eVerticalCurveType,dRadius);
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelStyleBlockComponent 
 	{
-		public AeccXLandLib.IAeccLabelStyleBlockComponent _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelStyleBlockComponent _i;
 		internal AeccLabelStyleBlockComponent(object AeccLabelStyleBlockComponent_object) 
 		{
-			this._i = AeccLabelStyleBlockComponent_object as AeccXLandLib.IAeccLabelStyleBlockComponent;
+			this._i = AeccLabelStyleBlockComponent_object as Autodesk.AECC.Interop.Land.IAeccLabelStyleBlockComponent;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

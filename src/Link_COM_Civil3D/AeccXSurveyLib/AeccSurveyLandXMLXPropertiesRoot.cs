@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyLandXMLXPropertiesRoot 
 	{
-		public AeccXSurveyLib.IAeccSurveyLandXMLXPropertiesRoot _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyLandXMLXPropertiesRoot _i;
 		internal AeccSurveyLandXMLXPropertiesRoot(object AeccSurveyLandXMLXPropertiesRoot_object) 
 		{
-			this._i = AeccSurveyLandXMLXPropertiesRoot_object as AeccXSurveyLib.IAeccSurveyLandXMLXPropertiesRoot;
+			this._i = AeccSurveyLandXMLXPropertiesRoot_object as Autodesk.AECC.Interop.Survey.IAeccSurveyLandXMLXPropertiesRoot;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateSurfaceWaterdrop 
 	{
-		public AeccXLandLib.IAeccSettingsCreateSurfaceWaterdrop _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateSurfaceWaterdrop _i;
 		internal AeccSettingsCreateSurfaceWaterdrop(object AeccSettingsCreateSurfaceWaterdrop_object) 
 		{
-			this._i = AeccSettingsCreateSurfaceWaterdrop_object as AeccXLandLib.IAeccSettingsCreateSurfaceWaterdrop;
+			this._i = AeccSettingsCreateSurfaceWaterdrop_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateSurfaceWaterdrop;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

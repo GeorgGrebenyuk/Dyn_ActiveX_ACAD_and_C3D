@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceWatershedStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceWatershedStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceWatershedStyle _i;
 		internal AeccSurfaceWatershedStyle(object AeccSurfaceWatershedStyle_object) 
 		{
-			this._i = AeccSurfaceWatershedStyle_object as AeccXLandLib.IAeccSurfaceWatershedStyle;
+			this._i = AeccSurfaceWatershedStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceWatershedStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_PointScalingMethodType(AeccXLandLib.AeccScalingMethodType pVal) 
+		public void Set_PointScalingMethodType(Autodesk.AECC.Interop.Land.AeccScalingMethodType pVal) 
 		{
 			this._i.PointScalingMethodType = pVal;
 		}

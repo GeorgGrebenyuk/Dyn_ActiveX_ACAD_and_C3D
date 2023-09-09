@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfacePointStyle 
 	{
-		public AeccXLandLib.IAeccSurfacePointStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfacePointStyle _i;
 		internal AeccSurfacePointStyle(object AeccSurfacePointStyle_object) 
 		{
-			this._i = AeccSurfacePointStyle_object as AeccXLandLib.IAeccSurfacePointStyle;
+			this._i = AeccSurfacePointStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfacePointStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_ScalingMethodType(AeccXLandLib.AeccScalingMethodType pVal) 
+		public void Set_ScalingMethodType(Autodesk.AECC.Interop.Land.AeccScalingMethodType pVal) 
 		{
 			this._i.ScalingMethodType = pVal;
 		}

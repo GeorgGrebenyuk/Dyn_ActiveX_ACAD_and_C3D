@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumLinkCreation 
 	{
-		public AeccXRoadwayLib.IAeccPropertyEnumLinkCreation _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccPropertyEnumLinkCreation _i;
 		internal AeccPropertyEnumLinkCreation(object AeccPropertyEnumLinkCreation_object) 
 		{
-			this._i = AeccPropertyEnumLinkCreation_object as AeccXRoadwayLib.IAeccPropertyEnumLinkCreation;
+			this._i = AeccPropertyEnumLinkCreation_object as Autodesk.AECC.Interop.Roadway.IAeccPropertyEnumLinkCreation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXRoadwayLib.AeccLinkCreationType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Roadway.AeccLinkCreationType pVal) 
 		{
 			this._i.Value = pVal;
 		}

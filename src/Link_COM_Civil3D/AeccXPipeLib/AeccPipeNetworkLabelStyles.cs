@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipeNetworkLabelStyles 
 	{
-		public AeccXPipeLib.IAeccPipeNetworkLabelStyles _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPipeNetworkLabelStyles _i;
 		internal AeccPipeNetworkLabelStyles(object AeccPipeNetworkLabelStyles_object) 
 		{
-			this._i = AeccPipeNetworkLabelStyles_object as AeccXPipeLib.IAeccPipeNetworkLabelStyles;
+			this._i = AeccPipeNetworkLabelStyles_object as Autodesk.AECC.Interop.Pipe.IAeccPipeNetworkLabelStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

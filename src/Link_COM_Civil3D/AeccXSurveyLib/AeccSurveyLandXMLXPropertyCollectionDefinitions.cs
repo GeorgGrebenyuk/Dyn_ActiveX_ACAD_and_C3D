@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyLandXMLXPropertyCollectionDefinitions 
 	{
-		public AeccXSurveyLib.IAeccSurveyLandXMLXPropertyCollectionDefinitions _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyLandXMLXPropertyCollectionDefinitions _i;
 		internal AeccSurveyLandXMLXPropertyCollectionDefinitions(object AeccSurveyLandXMLXPropertyCollectionDefinitions_object) 
 		{
-			this._i = AeccSurveyLandXMLXPropertyCollectionDefinitions_object as AeccXSurveyLib.IAeccSurveyLandXMLXPropertyCollectionDefinitions;
+			this._i = AeccSurveyLandXMLXPropertyCollectionDefinitions_object as Autodesk.AECC.Interop.Survey.IAeccSurveyLandXMLXPropertyCollectionDefinitions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStationOffsetLabel 
 	{
-		public AeccXLandLib.IAeccStationOffsetLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccStationOffsetLabel _i;
 		internal AeccStationOffsetLabel(object AeccStationOffsetLabel_object) 
 		{
-			this._i = AeccStationOffsetLabel_object as AeccXLandLib.IAeccStationOffsetLabel;
+			this._i = AeccStationOffsetLabel_object as Autodesk.AECC.Interop.Land.IAeccStationOffsetLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -52,7 +52,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_LeaderAttachmentOption(AeccXLandLib.AeccLabelLeaderAttachmentType pVal) 
+		public void Set_LeaderAttachmentOption(Autodesk.AECC.Interop.Land.AeccLabelLeaderAttachmentType pVal) 
 		{
 			this._i.LeaderAttachmentOption = pVal;
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyProjectSettings 
 	{
-		public AeccXSurveyLib.IAeccSurveyProjectSettings _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyProjectSettings _i;
 		internal AeccSurveyProjectSettings(object AeccSurveyProjectSettings_object) 
 		{
-			this._i = AeccSurveyProjectSettings_object as AeccXSurveyLib.IAeccSurveyProjectSettings;
+			this._i = AeccSurveyProjectSettings_object as Autodesk.AECC.Interop.Survey.IAeccSurveyProjectSettings;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -34,7 +34,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DistanceUnit(AeccXSurveyLib.AeccSurveyDistanceUnit pVal) 
+		public void Set_DistanceUnit(Autodesk.AECC.Interop.Survey.AeccSurveyDistanceUnit pVal) 
 		{
 			this._i.DistanceUnit = pVal;
 		}
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_AngleUnit(AeccXSurveyLib.AeccSurveyAngleUnit pVal) 
+		public void Set_AngleUnit(Autodesk.AECC.Interop.Survey.AeccSurveyAngleUnit pVal) 
 		{
 			this._i.AngleUnit = pVal;
 		}
@@ -60,7 +60,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DirectionUnit(AeccXSurveyLib.AeccSurveyDirectionUnit pVal) 
+		public void Set_DirectionUnit(Autodesk.AECC.Interop.Survey.AeccSurveyDirectionUnit pVal) 
 		{
 			this._i.DirectionUnit = pVal;
 		}
@@ -73,7 +73,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_TemperatureUnit(AeccXSurveyLib.AeccSurveyTemperatureUnit pVal) 
+		public void Set_TemperatureUnit(Autodesk.AECC.Interop.Survey.AeccSurveyTemperatureUnit pVal) 
 		{
 			this._i.TemperatureUnit = pVal;
 		}
@@ -86,7 +86,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_PressureUnit(AeccXSurveyLib.AeccSurveyPressureUnit pVal) 
+		public void Set_PressureUnit(Autodesk.AECC.Interop.Survey.AeccSurveyPressureUnit pVal) 
 		{
 			this._i.PressureUnit = pVal;
 		}
@@ -164,7 +164,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_AngleType(AeccXSurveyLib.AeccSurveyAngleType pVal) 
+		public void Set_AngleType(Autodesk.AECC.Interop.Survey.AeccSurveyAngleType pVal) 
 		{
 			this._i.AngleType = pVal;
 		}
@@ -177,7 +177,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DistanceType(AeccXSurveyLib.AeccSurveyDistanceType pVal) 
+		public void Set_DistanceType(Autodesk.AECC.Interop.Survey.AeccSurveyDistanceType pVal) 
 		{
 			this._i.DistanceType = pVal;
 		}
@@ -190,7 +190,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_VerticalType(AeccXSurveyLib.AeccSurveyVerticalType pVal) 
+		public void Set_VerticalType(Autodesk.AECC.Interop.Survey.AeccSurveyVerticalType pVal) 
 		{
 			this._i.VerticalType = pVal;
 		}
@@ -203,7 +203,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_TargetType(AeccXSurveyLib.AeccSurveyTargetType pVal) 
+		public void Set_TargetType(Autodesk.AECC.Interop.Survey.AeccSurveyTargetType pVal) 
 		{
 			this._i.TargetType = pVal;
 		}
@@ -333,7 +333,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_HorizontalAdjustMethod(AeccXSurveyLib.AeccSurveyHorizontalAdjustMethod pVal) 
+		public void Set_HorizontalAdjustMethod(Autodesk.AECC.Interop.Survey.AeccSurveyHorizontalAdjustMethod pVal) 
 		{
 			this._i.HorizontalAdjustMethod = pVal;
 		}
@@ -346,7 +346,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_VerticalAdjustMethod(AeccXSurveyLib.AeccSurveyVerticalAdjustMethod pVal) 
+		public void Set_VerticalAdjustMethod(Autodesk.AECC.Interop.Survey.AeccSurveyVerticalAdjustMethod pVal) 
 		{
 			this._i.VerticalAdjustMethod = pVal;
 		}
@@ -398,7 +398,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_NetworkAdjustmentType(AeccXSurveyLib.AeccSurveyNetworkAdjustmentType pVal) 
+		public void Set_NetworkAdjustmentType(Autodesk.AECC.Interop.Survey.AeccSurveyNetworkAdjustmentType pVal) 
 		{
 			this._i.NetworkAdjustmentType = pVal;
 		}
@@ -437,7 +437,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_ConfidenceInterval(AeccXSurveyLib.AeccSurveyConfidenceInterval pVal) 
+		public void Set_ConfidenceInterval(Autodesk.AECC.Interop.Survey.AeccSurveyConfidenceInterval pVal) 
 		{
 			this._i.ConfidenceInterval = pVal;
 		}
@@ -593,7 +593,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_OverwriteStatus(AeccXSurveyLib.AeccSurveyOverwriteStatus pVal) 
+		public void Set_OverwriteStatus(Autodesk.AECC.Interop.Survey.AeccSurveyOverwriteStatus pVal) 
 		{
 			this._i.OverwriteStatus = pVal;
 		}

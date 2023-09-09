@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccBandStyleSetItem 
 	{
-		public AeccXLandLib.IAeccBandStyleSetItem _i;
+		public Autodesk.AECC.Interop.Land.IAeccBandStyleSetItem _i;
 		internal AeccBandStyleSetItem(object AeccBandStyleSetItem_object) 
 		{
-			this._i = AeccBandStyleSetItem_object as AeccXLandLib.IAeccBandStyleSetItem;
+			this._i = AeccBandStyleSetItem_object as Autodesk.AECC.Interop.Land.IAeccBandStyleSetItem;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

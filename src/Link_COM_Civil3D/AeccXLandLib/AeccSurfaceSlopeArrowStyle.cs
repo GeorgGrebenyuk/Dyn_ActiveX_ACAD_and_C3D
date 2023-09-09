@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceSlopeArrowStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceSlopeArrowStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceSlopeArrowStyle _i;
 		internal AeccSurfaceSlopeArrowStyle(object AeccSurfaceSlopeArrowStyle_object) 
 		{
-			this._i = AeccSurfaceSlopeArrowStyle_object as AeccXLandLib.IAeccSurfaceSlopeArrowStyle;
+			this._i = AeccSurfaceSlopeArrowStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceSlopeArrowStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_GroupValuesBy(AeccXLandLib.AeccGroupValuesByType pVal) 
+		public void Set_GroupValuesBy(Autodesk.AECC.Interop.Land.AeccGroupValuesByType pVal) 
 		{
 			this._i.GroupValuesBy = pVal;
 		}
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_RangePrecision(AeccXLandLib.AeccPrecisionRangeType pVal) 
+		public void Set_RangePrecision(Autodesk.AECC.Interop.Land.AeccPrecisionRangeType pVal) 
 		{
 			this._i.RangePrecision = pVal;
 		}
@@ -60,7 +60,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_ArrowType(AeccXLandLib.AeccArrowType pVal) 
+		public void Set_ArrowType(Autodesk.AECC.Interop.Land.AeccArrowType pVal) 
 		{
 			this._i.ArrowType = pVal;
 		}

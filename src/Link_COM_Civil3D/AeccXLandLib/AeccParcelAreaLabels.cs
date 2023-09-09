@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParcelAreaLabels 
 	{
-		public AeccXLandLib.IAeccParcelAreaLabels _i;
+		public Autodesk.AECC.Interop.Land.IAeccParcelAreaLabels _i;
 		internal AeccParcelAreaLabels(object AeccParcelAreaLabels_object) 
 		{
-			this._i = AeccParcelAreaLabels_object as AeccXLandLib.IAeccParcelAreaLabels;
+			this._i = AeccParcelAreaLabels_object as Autodesk.AECC.Interop.Land.IAeccParcelAreaLabels;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

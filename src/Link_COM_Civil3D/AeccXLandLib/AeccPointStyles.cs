@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPointStyles 
 	{
-		public AeccXLandLib.IAeccPointStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccPointStyles _i;
 		internal AeccPointStyles(object AeccPointStyles_object) 
 		{
-			this._i = AeccPointStyles_object as AeccXLandLib.IAeccPointStyles;
+			this._i = AeccPointStyles_object as Autodesk.AECC.Interop.Land.IAeccPointStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

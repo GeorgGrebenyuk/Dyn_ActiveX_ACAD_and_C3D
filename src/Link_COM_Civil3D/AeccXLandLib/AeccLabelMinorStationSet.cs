@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelMinorStationSet 
 	{
-		public AeccXLandLib.IAeccLabelMinorStationSet _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelMinorStationSet _i;
 		internal AeccLabelMinorStationSet(object AeccLabelMinorStationSet_object) 
 		{
-			this._i = AeccLabelMinorStationSet_object as AeccXLandLib.IAeccLabelMinorStationSet;
+			this._i = AeccLabelMinorStationSet_object as Autodesk.AECC.Interop.Land.IAeccLabelMinorStationSet;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

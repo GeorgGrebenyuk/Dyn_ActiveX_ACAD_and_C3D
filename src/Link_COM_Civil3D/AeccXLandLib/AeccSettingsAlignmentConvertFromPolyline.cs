@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAlignmentConvertFromPolyline 
 	{
-		public AeccXLandLib.IAeccSettingsAlignmentConvertFromPolyline _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAlignmentConvertFromPolyline _i;
 		internal AeccSettingsAlignmentConvertFromPolyline(object AeccSettingsAlignmentConvertFromPolyline_object) 
 		{
-			this._i = AeccSettingsAlignmentConvertFromPolyline_object as AeccXLandLib.IAeccSettingsAlignmentConvertFromPolyline;
+			this._i = AeccSettingsAlignmentConvertFromPolyline_object as Autodesk.AECC.Interop.Land.IAeccSettingsAlignmentConvertFromPolyline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsPointIdentity 
 	{
-		public AeccXLandLib.IAeccSettingsPointIdentity _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsPointIdentity _i;
 		internal AeccSettingsPointIdentity(object AeccSettingsPointIdentity_object) 
 		{
-			this._i = AeccSettingsPointIdentity_object as AeccXLandLib.IAeccSettingsPointIdentity;
+			this._i = AeccSettingsPointIdentity_object as Autodesk.AECC.Interop.Land.IAeccSettingsPointIdentity;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

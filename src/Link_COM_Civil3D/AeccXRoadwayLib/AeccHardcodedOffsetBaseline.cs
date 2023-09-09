@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccHardcodedOffsetBaseline 
 	{
-		public AeccXRoadwayLib.IAeccHardcodedOffsetBaseline _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccHardcodedOffsetBaseline _i;
 		internal AeccHardcodedOffsetBaseline(object AeccHardcodedOffsetBaseline_object) 
 		{
-			this._i = AeccHardcodedOffsetBaseline_object as AeccXRoadwayLib.IAeccHardcodedOffsetBaseline;
+			this._i = AeccHardcodedOffsetBaseline_object as Autodesk.AECC.Interop.Roadway.IAeccHardcodedOffsetBaseline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

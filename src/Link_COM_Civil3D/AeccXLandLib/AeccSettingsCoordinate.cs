@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCoordinate 
 	{
-		public AeccXLandLib.IAeccSettingsCoordinate _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCoordinate _i;
 		internal AeccSettingsCoordinate(object AeccSettingsCoordinate_object) 
 		{
-			this._i = AeccSettingsCoordinate_object as AeccXLandLib.IAeccSettingsCoordinate;
+			this._i = AeccSettingsCoordinate_object as Autodesk.AECC.Interop.Land.IAeccSettingsCoordinate;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

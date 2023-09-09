@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccTinSurface 
 	{
-		public AeccXLandLib.IAeccTinSurface _i;
+		public Autodesk.AECC.Interop.Land.IAeccTinSurface _i;
 		internal AeccTinSurface(object AeccTinSurface_object) 
 		{
-			this._i = AeccTinSurface_object as AeccXLandLib.IAeccTinSurface;
+			this._i = AeccTinSurface_object as Autodesk.AECC.Interop.Land.IAeccTinSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileDesignCheck 
 	{
-		public AeccXLandLib.IAeccProfileDesignCheck _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileDesignCheck _i;
 		internal AeccProfileDesignCheck(object AeccProfileDesignCheck_object) 
 		{
-			this._i = AeccProfileDesignCheck_object as AeccXLandLib.IAeccProfileDesignCheck;
+			this._i = AeccProfileDesignCheck_object as Autodesk.AECC.Interop.Land.IAeccProfileDesignCheck;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -60,7 +60,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Type(AeccXLandLib.AeccProfileDesignCheckType pValue) 
+		public void Set_Type(Autodesk.AECC.Interop.Land.AeccProfileDesignCheckType pValue) 
 		{
 			this._i.Type = pValue;
 		}
@@ -73,7 +73,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_CurveType(AeccXLandLib.AeccProfileDesignCheckCurveType pValue) 
+		public void Set_CurveType(Autodesk.AECC.Interop.Land.AeccProfileDesignCheckCurveType pValue) 
 		{
 			this._i.CurveType = pValue;
 		}

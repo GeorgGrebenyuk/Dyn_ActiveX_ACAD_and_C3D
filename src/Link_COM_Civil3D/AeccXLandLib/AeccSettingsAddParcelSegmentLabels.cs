@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddParcelSegmentLabels 
 	{
-		public AeccXLandLib.IAeccSettingsAddParcelSegmentLabels _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAddParcelSegmentLabels _i;
 		internal AeccSettingsAddParcelSegmentLabels(object AeccSettingsAddParcelSegmentLabels_object) 
 		{
-			this._i = AeccSettingsAddParcelSegmentLabels_object as AeccXLandLib.IAeccSettingsAddParcelSegmentLabels;
+			this._i = AeccSettingsAddParcelSegmentLabels_object as Autodesk.AECC.Interop.Land.IAeccSettingsAddParcelSegmentLabels;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

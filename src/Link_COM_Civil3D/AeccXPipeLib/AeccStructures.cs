@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStructures 
 	{
-		public AeccXPipeLib.IAeccStructures _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccStructures _i;
 		internal AeccStructures(object AeccStructures_object) 
 		{
-			this._i = AeccStructures_object as AeccXPipeLib.IAeccStructures;
+			this._i = AeccStructures_object as Autodesk.AECC.Interop.Pipe.IAeccStructures;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

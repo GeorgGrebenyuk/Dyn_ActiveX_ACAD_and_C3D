@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGradingStyles 
 	{
-		public AeccXLandLib.IAeccGradingStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccGradingStyles _i;
 		internal AeccGradingStyles(object AeccGradingStyles_object) 
 		{
-			this._i = AeccGradingStyles_object as AeccXLandLib.IAeccGradingStyles;
+			this._i = AeccGradingStyles_object as Autodesk.AECC.Interop.Land.IAeccGradingStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

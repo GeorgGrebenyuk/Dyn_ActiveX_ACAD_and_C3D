@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsSurfaceGridBuildOptions 
 	{
-		public AeccXLandLib.IAeccSettingsSurfaceGridBuildOptions _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsSurfaceGridBuildOptions _i;
 		internal AeccSettingsSurfaceGridBuildOptions(object AeccSettingsSurfaceGridBuildOptions_object) 
 		{
-			this._i = AeccSettingsSurfaceGridBuildOptions_object as AeccXLandLib.IAeccSettingsSurfaceGridBuildOptions;
+			this._i = AeccSettingsSurfaceGridBuildOptions_object as Autodesk.AECC.Interop.Land.IAeccSettingsSurfaceGridBuildOptions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

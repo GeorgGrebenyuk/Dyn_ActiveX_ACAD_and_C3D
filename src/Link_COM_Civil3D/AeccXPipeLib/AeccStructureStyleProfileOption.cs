@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStructureStyleProfileOption 
 	{
-		public AeccXPipeLib.IAeccStructureStyleProfileOption _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccStructureStyleProfileOption _i;
 		internal AeccStructureStyleProfileOption(object AeccStructureStyleProfileOption_object) 
 		{
-			this._i = AeccStructureStyleProfileOption_object as AeccXPipeLib.IAeccStructureStyleProfileOption;
+			this._i = AeccStructureStyleProfileOption_object as Autodesk.AECC.Interop.Pipe.IAeccStructureStyleProfileOption;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_ProfileViewOptions(AeccXPipeLib.AeccStructureViewOptions pnProfileViewOptions) 
+		public void Set_ProfileViewOptions(Autodesk.AECC.Interop.Pipe.AeccStructureViewOptions pnProfileViewOptions) 
 		{
 			this._i.ProfileViewOptions = pnProfileViewOptions;
 		}
@@ -99,7 +99,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_SizeType(AeccXPipeLib.AeccStructureDisplayOptions pnSizeType) 
+		public void Set_SizeType(Autodesk.AECC.Interop.Pipe.AeccStructureDisplayOptions pnSizeType) 
 		{
 			this._i.SizeType = pnSizeType;
 		}
@@ -164,7 +164,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_BlockInsertLocation(AeccXPipeLib.AeccStructureInsertionLocation pnBlockInsertLocation) 
+		public void Set_BlockInsertLocation(Autodesk.AECC.Interop.Pipe.AeccStructureInsertionLocation pnBlockInsertLocation) 
 		{
 			this._i.BlockInsertLocation = pnBlockInsertLocation;
 		}

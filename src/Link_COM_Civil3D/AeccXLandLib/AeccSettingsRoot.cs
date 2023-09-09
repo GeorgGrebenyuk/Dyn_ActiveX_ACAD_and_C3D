@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsRoot 
 	{
-		public AeccXLandLib.IAeccSettingsRoot _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsRoot _i;
 		internal AeccSettingsRoot(object AeccSettingsRoot_object) 
 		{
-			this._i = AeccSettingsRoot_object as AeccXLandLib.IAeccSettingsRoot;
+			this._i = AeccSettingsRoot_object as Autodesk.AECC.Interop.Land.IAeccSettingsRoot;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

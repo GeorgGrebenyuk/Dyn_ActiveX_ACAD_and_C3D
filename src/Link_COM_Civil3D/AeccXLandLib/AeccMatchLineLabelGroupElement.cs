@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccMatchLineLabelGroupElement 
 	{
-		public AeccXLandLib.IAeccMatchLineLabelGroupElement _i;
+		public Autodesk.AECC.Interop.Land.IAeccMatchLineLabelGroupElement _i;
 		internal AeccMatchLineLabelGroupElement(object AeccMatchLineLabelGroupElement_object) 
 		{
-			this._i = AeccMatchLineLabelGroupElement_object as AeccXLandLib.IAeccMatchLineLabelGroupElement;
+			this._i = AeccMatchLineLabelGroupElement_object as Autodesk.AECC.Interop.Land.IAeccMatchLineLabelGroupElement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

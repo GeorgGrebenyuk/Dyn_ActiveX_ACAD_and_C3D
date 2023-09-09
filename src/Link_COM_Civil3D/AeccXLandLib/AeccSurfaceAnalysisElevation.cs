@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceAnalysisElevation 
 	{
-		public AeccXLandLib.IAeccSurfaceAnalysisElevation _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceAnalysisElevation _i;
 		internal AeccSurfaceAnalysisElevation(object AeccSurfaceAnalysisElevation_object) 
 		{
-			this._i = AeccSurfaceAnalysisElevation_object as AeccXLandLib.IAeccSurfaceAnalysisElevation;
+			this._i = AeccSurfaceAnalysisElevation_object as Autodesk.AECC.Interop.Land.IAeccSurfaceAnalysisElevation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

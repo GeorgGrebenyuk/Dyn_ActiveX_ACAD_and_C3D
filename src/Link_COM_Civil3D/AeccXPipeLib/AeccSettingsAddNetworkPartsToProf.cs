@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddNetworkPartsToProf 
 	{
-		public AeccXPipeLib.IAeccSettingsAddNetworkPartsToProf _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsAddNetworkPartsToProf _i;
 		internal AeccSettingsAddNetworkPartsToProf(object AeccSettingsAddNetworkPartsToProf_object) 
 		{
-			this._i = AeccSettingsAddNetworkPartsToProf_object as AeccXPipeLib.IAeccSettingsAddNetworkPartsToProf;
+			this._i = AeccSettingsAddNetworkPartsToProf_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsAddNetworkPartsToProf;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsFeatureLineCreationFromObjects 
 	{
-		public AeccXLandLib.IAeccSettingsFeatureLineCreationFromObjects _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsFeatureLineCreationFromObjects _i;
 		internal AeccSettingsFeatureLineCreationFromObjects(object AeccSettingsFeatureLineCreationFromObjects_object) 
 		{
-			this._i = AeccSettingsFeatureLineCreationFromObjects_object as AeccXLandLib.IAeccSettingsFeatureLineCreationFromObjects;
+			this._i = AeccSettingsFeatureLineCreationFromObjects_object as Autodesk.AECC.Interop.Land.IAeccSettingsFeatureLineCreationFromObjects;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyBoolean 
 	{
-		public AeccXLandLib.IAeccPropertyBoolean _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyBoolean _i;
 		internal AeccPropertyBoolean(object AeccPropertyBoolean_object) 
 		{
-			this._i = AeccPropertyBoolean_object as AeccXLandLib.IAeccPropertyBoolean;
+			this._i = AeccPropertyBoolean_object as Autodesk.AECC.Interop.Land.IAeccPropertyBoolean;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

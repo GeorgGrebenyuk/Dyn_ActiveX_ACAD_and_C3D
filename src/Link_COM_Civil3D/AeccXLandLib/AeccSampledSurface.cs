@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSampledSurface 
 	{
-		public AeccXLandLib.IAeccSampledSurface _i;
+		public Autodesk.AECC.Interop.Land.IAeccSampledSurface _i;
 		internal AeccSampledSurface(object AeccSampledSurface_object) 
 		{
-			this._i = AeccSampledSurface_object as AeccXLandLib.IAeccSampledSurface;
+			this._i = AeccSampledSurface_object as Autodesk.AECC.Interop.Land.IAeccSampledSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -39,7 +39,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_UpdateMode(AeccXLandLib.AeccSectionStateType pVal) 
+		public void Set_UpdateMode(Autodesk.AECC.Interop.Land.AeccSectionStateType pVal) 
 		{
 			this._i.UpdateMode = pVal;
 		}

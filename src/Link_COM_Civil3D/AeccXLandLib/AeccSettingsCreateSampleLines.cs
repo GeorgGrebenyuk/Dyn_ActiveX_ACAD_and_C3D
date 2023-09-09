@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateSampleLines 
 	{
-		public AeccXLandLib.IAeccSettingsCreateSampleLines _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateSampleLines _i;
 		internal AeccSettingsCreateSampleLines(object AeccSettingsCreateSampleLines_object) 
 		{
-			this._i = AeccSettingsCreateSampleLines_object as AeccXLandLib.IAeccSettingsCreateSampleLines;
+			this._i = AeccSettingsCreateSampleLines_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateSampleLines;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

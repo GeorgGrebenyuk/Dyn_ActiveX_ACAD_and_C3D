@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyPoint 
 	{
-		public AeccXSurveyLib.IAeccSurveyPoint _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyPoint _i;
 		internal AeccSurveyPoint(object AeccSurveyPoint_object) 
 		{
-			this._i = AeccSurveyPoint_object as AeccXSurveyLib.IAeccSurveyPoint;
+			this._i = AeccSurveyPoint_object as Autodesk.AECC.Interop.Survey.IAeccSurveyPoint;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -131,7 +131,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void ConvertToUnit(AeccXSurveyLib.AeccSurveyPointDistanceUnit nUnit) 
+		public void ConvertToUnit(Autodesk.AECC.Interop.Survey.AeccSurveyPointDistanceUnit nUnit) 
 		{
 			this._i.ConvertToUnit(nUnit);
 		}

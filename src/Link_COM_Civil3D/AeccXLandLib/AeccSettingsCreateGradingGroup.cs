@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateGradingGroup 
 	{
-		public AeccXLandLib.IAeccSettingsCreateGradingGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateGradingGroup _i;
 		internal AeccSettingsCreateGradingGroup(object AeccSettingsCreateGradingGroup_object) 
 		{
-			this._i = AeccSettingsCreateGradingGroup_object as AeccXLandLib.IAeccSettingsCreateGradingGroup;
+			this._i = AeccSettingsCreateGradingGroup_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateGradingGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

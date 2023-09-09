@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddNetworkPipeTable 
 	{
-		public AeccXPipeLib.IAeccSettingsAddNetworkPipeTable _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsAddNetworkPipeTable _i;
 		internal AeccSettingsAddNetworkPipeTable(object AeccSettingsAddNetworkPipeTable_object) 
 		{
-			this._i = AeccSettingsAddNetworkPipeTable_object as AeccXPipeLib.IAeccSettingsAddNetworkPipeTable;
+			this._i = AeccSettingsAddNetworkPipeTable_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsAddNetworkPipeTable;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

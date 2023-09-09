@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateParcelROW 
 	{
-		public AeccXLandLib.IAeccSettingsCreateParcelROW _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateParcelROW _i;
 		internal AeccSettingsCreateParcelROW(object AeccSettingsCreateParcelROW_object) 
 		{
-			this._i = AeccSettingsCreateParcelROW_object as AeccXLandLib.IAeccSettingsCreateParcelROW;
+			this._i = AeccSettingsCreateParcelROW_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateParcelROW;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

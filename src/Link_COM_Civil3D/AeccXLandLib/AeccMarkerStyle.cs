@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccMarkerStyle 
 	{
-		public AeccXLandLib.IAeccMarkerStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccMarkerStyle _i;
 		internal AeccMarkerStyle(object AeccMarkerStyle_object) 
 		{
-			this._i = AeccMarkerStyle_object as AeccXLandLib.IAeccMarkerStyle;
+			this._i = AeccMarkerStyle_object as Autodesk.AECC.Interop.Land.IAeccMarkerStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_MarkerType(AeccXLandLib.AeccMarkerDisplayType pVal) 
+		public void Set_MarkerType(Autodesk.AECC.Interop.Land.AeccMarkerDisplayType pVal) 
 		{
 			this._i.MarkerType = pVal;
 		}
@@ -34,7 +34,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_CustomMarkerStyle(AeccXLandLib.AeccCustomMarkerType pVal) 
+		public void Set_CustomMarkerStyle(Autodesk.AECC.Interop.Land.AeccCustomMarkerType pVal) 
 		{
 			this._i.CustomMarkerStyle = pVal;
 		}
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_CustomMarkerSuperimposeStyle(AeccXLandLib.AeccCustomMarkerSuperimposeType pVal) 
+		public void Set_CustomMarkerSuperimposeStyle(Autodesk.AECC.Interop.Land.AeccCustomMarkerSuperimposeType pVal) 
 		{
 			this._i.CustomMarkerSuperimposeStyle = pVal;
 		}
@@ -86,7 +86,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_MarkerSizeType(AeccXLandLib.AeccMarkerSizeType pVal) 
+		public void Set_MarkerSizeType(Autodesk.AECC.Interop.Land.AeccMarkerSizeType pVal) 
 		{
 			this._i.MarkerSizeType = pVal;
 		}
@@ -125,7 +125,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Orientation(AeccXLandLib.AeccMarkerOrientationType pVal) 
+		public void Set_Orientation(Autodesk.AECC.Interop.Land.AeccMarkerOrientationType pVal) 
 		{
 			this._i.Orientation = pVal;
 		}

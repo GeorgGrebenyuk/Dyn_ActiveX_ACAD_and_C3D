@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionViewBandStyleSets 
 	{
-		public AeccXLandLib.IAeccSectionViewBandStyleSets _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionViewBandStyleSets _i;
 		internal AeccSectionViewBandStyleSets(object AeccSectionViewBandStyleSets_object) 
 		{
-			this._i = AeccSectionViewBandStyleSets_object as AeccXLandLib.IAeccSectionViewBandStyleSets;
+			this._i = AeccSectionViewBandStyleSets_object as Autodesk.AECC.Interop.Land.IAeccSectionViewBandStyleSets;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

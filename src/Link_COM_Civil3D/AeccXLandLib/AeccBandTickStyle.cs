@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccBandTickStyle 
 	{
-		public AeccXLandLib.IAeccBandTickStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccBandTickStyle _i;
 		internal AeccBandTickStyle(object AeccBandTickStyle_object) 
 		{
-			this._i = AeccBandTickStyle_object as AeccXLandLib.IAeccBandTickStyle;
+			this._i = AeccBandTickStyle_object as Autodesk.AECC.Interop.Land.IAeccBandTickStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

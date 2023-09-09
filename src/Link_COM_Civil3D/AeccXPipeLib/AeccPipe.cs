@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipe 
 	{
-		public AeccXPipeLib.IAeccPipe _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPipe _i;
 		internal AeccPipe(object AeccPipe_object) 
 		{
-			this._i = AeccPipe_object as AeccXPipeLib.IAeccPipe;
+			this._i = AeccPipe_object as Autodesk.AECC.Interop.Pipe.IAeccPipe;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -26,7 +26,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void ConnectToStructure(AeccXPipeLib.AeccPipeConnectorPos ePos,dynamic piDestStructure) 
+		public void ConnectToStructure(Autodesk.AECC.Interop.Pipe.AeccPipeConnectorPos ePos,dynamic piDestStructure) 
 		{
 			this._i.ConnectToStructure(ePos,piDestStructure);
 		}
@@ -34,7 +34,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ConnectToPipe(AeccXPipeLib.AeccPipeConnectorPos ePos,dynamic piDestPipe,AeccXPipeLib.AeccPipeConnectorPos eDestPos) 
+		public dynamic ConnectToPipe(Autodesk.AECC.Interop.Pipe.AeccPipeConnectorPos ePos,dynamic piDestPipe,Autodesk.AECC.Interop.Pipe.AeccPipeConnectorPos eDestPos) 
 		{
 			return this._i.ConnectToPipe(ePos,piDestPipe,eDestPos);
 		}
@@ -42,7 +42,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Disconnect(AeccXPipeLib.AeccPipeConnectorPos ePos) 
+		public void Disconnect(Autodesk.AECC.Interop.Pipe.AeccPipeConnectorPos ePos) 
 		{
 			this._i.Disconnect(ePos);
 		}
@@ -68,7 +68,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_FlowDirectionMethod(AeccXPipeLib.AeccPipeFlowDirectionMethod pFlowDirectionMethod) 
+		public void Set_FlowDirectionMethod(Autodesk.AECC.Interop.Pipe.AeccPipeFlowDirectionMethod pFlowDirectionMethod) 
 		{
 			this._i.FlowDirectionMethod = pFlowDirectionMethod;
 		}
@@ -81,7 +81,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_HoldOnResize(AeccXPipeLib.AeccPipeHoldOnResize pHoldOnResize) 
+		public void Set_HoldOnResize(Autodesk.AECC.Interop.Pipe.AeccPipeHoldOnResize pHoldOnResize) 
 		{
 			this._i.HoldOnResize = pHoldOnResize;
 		}

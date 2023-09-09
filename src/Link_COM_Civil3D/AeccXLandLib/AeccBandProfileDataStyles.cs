@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccBandProfileDataStyles 
 	{
-		public AeccXLandLib.IAeccBandProfileDataStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccBandProfileDataStyles _i;
 		internal AeccBandProfileDataStyles(object AeccBandProfileDataStyles_object) 
 		{
-			this._i = AeccBandProfileDataStyles_object as AeccXLandLib.IAeccBandProfileDataStyles;
+			this._i = AeccBandProfileDataStyles_object as Autodesk.AECC.Interop.Land.IAeccBandProfileDataStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

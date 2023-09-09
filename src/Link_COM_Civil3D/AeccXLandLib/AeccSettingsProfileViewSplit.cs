@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsProfileViewSplit 
 	{
-		public AeccXLandLib.IAeccSettingsProfileViewSplit _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsProfileViewSplit _i;
 		internal AeccSettingsProfileViewSplit(object AeccSettingsProfileViewSplit_object) 
 		{
-			this._i = AeccSettingsProfileViewSplit_object as AeccXLandLib.IAeccSettingsProfileViewSplit;
+			this._i = AeccSettingsProfileViewSplit_object as Autodesk.AECC.Interop.Land.IAeccSettingsProfileViewSplit;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

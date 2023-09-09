@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceContour 
 	{
-		public AeccXLandLib.IAeccSurfaceContour _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceContour _i;
 		internal AeccSurfaceContour(object AeccSurfaceContour_object) 
 		{
-			this._i = AeccSurfaceContour_object as AeccXLandLib.IAeccSurfaceContour;
+			this._i = AeccSurfaceContour_object as Autodesk.AECC.Interop.Land.IAeccSurfaceContour;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

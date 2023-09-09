@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGridSurfaceStatistics 
 	{
-		public AeccXLandLib.IAeccGridSurfaceStatistics _i;
+		public Autodesk.AECC.Interop.Land.IAeccGridSurfaceStatistics _i;
 		internal AeccGridSurfaceStatistics(object AeccGridSurfaceStatistics_object) 
 		{
-			this._i = AeccGridSurfaceStatistics_object as AeccXLandLib.IAeccGridSurfaceStatistics;
+			this._i = AeccGridSurfaceStatistics_object as Autodesk.AECC.Interop.Land.IAeccGridSurfaceStatistics;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

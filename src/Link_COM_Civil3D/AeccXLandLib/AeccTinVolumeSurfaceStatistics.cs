@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccTinVolumeSurfaceStatistics 
 	{
-		public AeccXLandLib.IAeccTinVolumeSurfaceStatistics _i;
+		public Autodesk.AECC.Interop.Land.IAeccTinVolumeSurfaceStatistics _i;
 		internal AeccTinVolumeSurfaceStatistics(object AeccTinVolumeSurfaceStatistics_object) 
 		{
-			this._i = AeccTinVolumeSurfaceStatistics_object as AeccXLandLib.IAeccTinVolumeSurfaceStatistics;
+			this._i = AeccTinVolumeSurfaceStatistics_object as Autodesk.AECC.Interop.Land.IAeccTinVolumeSurfaceStatistics;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

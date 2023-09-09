@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGraphProfileNetworkPart 
 	{
-		public AeccXPipeLib.IAeccGraphProfileNetworkPart _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccGraphProfileNetworkPart _i;
 		internal AeccGraphProfileNetworkPart(object AeccGraphProfileNetworkPart_object) 
 		{
-			this._i = AeccGraphProfileNetworkPart_object as AeccXPipeLib.IAeccGraphProfileNetworkPart;
+			this._i = AeccGraphProfileNetworkPart_object as Autodesk.AECC.Interop.Pipe.IAeccGraphProfileNetworkPart;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

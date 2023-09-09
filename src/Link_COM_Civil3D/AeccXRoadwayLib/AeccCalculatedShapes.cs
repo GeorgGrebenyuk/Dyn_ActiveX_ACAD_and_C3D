@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccCalculatedShapes 
 	{
-		public AeccXRoadwayLib.IAeccCalculatedShapes _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccCalculatedShapes _i;
 		internal AeccCalculatedShapes(object AeccCalculatedShapes_object) 
 		{
-			this._i = AeccCalculatedShapes_object as AeccXRoadwayLib.IAeccCalculatedShapes;
+			this._i = AeccCalculatedShapes_object as Autodesk.AECC.Interop.Roadway.IAeccCalculatedShapes;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

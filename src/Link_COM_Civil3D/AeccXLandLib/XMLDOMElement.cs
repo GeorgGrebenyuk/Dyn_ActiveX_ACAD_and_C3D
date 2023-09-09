@@ -6,10 +6,10 @@
 	///</summary>
 	public class XMLDOMElement 
 	{
-		public AeccXLandLib.IXMLDOMElement _i;
+		public Autodesk.AECC.Interop.Land.IXMLDOMElement _i;
 		internal XMLDOMElement(object XMLDOMElement_object) 
 		{
-			this._i = XMLDOMElement_object as AeccXLandLib.IXMLDOMElement;
+			this._i = XMLDOMElement_object as Autodesk.AECC.Interop.Land.IXMLDOMElement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccViewFrameStyle 
 	{
-		public AeccXLandLib.IAeccViewFrameStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccViewFrameStyle _i;
 		internal AeccViewFrameStyle(object AeccViewFrameStyle_object) 
 		{
-			this._i = AeccViewFrameStyle_object as AeccXLandLib.IAeccViewFrameStyle;
+			this._i = AeccViewFrameStyle_object as Autodesk.AECC.Interop.Land.IAeccViewFrameStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

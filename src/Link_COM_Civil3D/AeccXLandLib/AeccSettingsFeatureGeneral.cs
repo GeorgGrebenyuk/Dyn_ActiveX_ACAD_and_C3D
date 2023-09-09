@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsFeatureGeneral 
 	{
-		public AeccXLandLib.IAeccSettingsFeatureGeneral _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsFeatureGeneral _i;
 		internal AeccSettingsFeatureGeneral(object AeccSettingsFeatureGeneral_object) 
 		{
-			this._i = AeccSettingsFeatureGeneral_object as AeccXLandLib.IAeccSettingsFeatureGeneral;
+			this._i = AeccSettingsFeatureGeneral_object as Autodesk.AECC.Interop.Land.IAeccSettingsFeatureGeneral;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

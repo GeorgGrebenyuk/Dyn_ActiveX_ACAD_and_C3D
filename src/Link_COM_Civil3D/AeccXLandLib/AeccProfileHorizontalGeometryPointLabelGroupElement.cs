@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileHorizontalGeometryPointLabelGroupElement 
 	{
-		public AeccXLandLib.IAeccProfileHorizontalGeometryPointLabelGroupElement _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileHorizontalGeometryPointLabelGroupElement _i;
 		internal AeccProfileHorizontalGeometryPointLabelGroupElement(object AeccProfileHorizontalGeometryPointLabelGroupElement_object) 
 		{
-			this._i = AeccProfileHorizontalGeometryPointLabelGroupElement_object as AeccXLandLib.IAeccProfileHorizontalGeometryPointLabelGroupElement;
+			this._i = AeccProfileHorizontalGeometryPointLabelGroupElement_object as Autodesk.AECC.Interop.Land.IAeccProfileHorizontalGeometryPointLabelGroupElement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

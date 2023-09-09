@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionProjectionLabel 
 	{
-		public AeccXLandLib.IAeccSectionProjectionLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionProjectionLabel _i;
 		internal AeccSectionProjectionLabel(object AeccSectionProjectionLabel_object) 
 		{
-			this._i = AeccSectionProjectionLabel_object as AeccXLandLib.IAeccSectionProjectionLabel;
+			this._i = AeccSectionProjectionLabel_object as Autodesk.AECC.Interop.Land.IAeccSectionProjectionLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

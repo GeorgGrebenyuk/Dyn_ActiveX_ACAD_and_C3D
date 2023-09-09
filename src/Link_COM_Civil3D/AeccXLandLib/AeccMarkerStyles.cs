@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccMarkerStyles 
 	{
-		public AeccXLandLib.IAeccMarkerStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccMarkerStyles _i;
 		internal AeccMarkerStyles(object AeccMarkerStyles_object) 
 		{
-			this._i = AeccMarkerStyles_object as AeccXLandLib.IAeccMarkerStyles;
+			this._i = AeccMarkerStyles_object as Autodesk.AECC.Interop.Land.IAeccMarkerStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

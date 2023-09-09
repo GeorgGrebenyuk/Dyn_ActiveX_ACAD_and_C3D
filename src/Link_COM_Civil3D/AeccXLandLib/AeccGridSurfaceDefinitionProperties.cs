@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGridSurfaceDefinitionProperties 
 	{
-		public AeccXLandLib.IAeccGridSurfaceDefinitionProperties _i;
+		public Autodesk.AECC.Interop.Land.IAeccGridSurfaceDefinitionProperties _i;
 		internal AeccGridSurfaceDefinitionProperties(object AeccGridSurfaceDefinitionProperties_object) 
 		{
-			this._i = AeccGridSurfaceDefinitionProperties_object as AeccXLandLib.IAeccGridSurfaceDefinitionProperties;
+			this._i = AeccGridSurfaceDefinitionProperties_object as Autodesk.AECC.Interop.Land.IAeccGridSurfaceDefinitionProperties;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

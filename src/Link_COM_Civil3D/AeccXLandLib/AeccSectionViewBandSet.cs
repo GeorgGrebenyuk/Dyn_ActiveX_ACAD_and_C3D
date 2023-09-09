@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionViewBandSet 
 	{
-		public AeccXLandLib.IAeccSectionViewBandSet _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionViewBandSet _i;
 		internal AeccSectionViewBandSet(object AeccSectionViewBandSet_object) 
 		{
-			this._i = AeccSectionViewBandSet_object as AeccXLandLib.IAeccSectionViewBandSet;
+			this._i = AeccSectionViewBandSet_object as Autodesk.AECC.Interop.Land.IAeccSectionViewBandSet;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

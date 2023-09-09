@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceWatershedBaseStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceWatershedBaseStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceWatershedBaseStyle _i;
 		internal AeccSurfaceWatershedBaseStyle(object AeccSurfaceWatershedBaseStyle_object) 
 		{
-			this._i = AeccSurfaceWatershedBaseStyle_object as AeccXLandLib.IAeccSurfaceWatershedBaseStyle;
+			this._i = AeccSurfaceWatershedBaseStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceWatershedBaseStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

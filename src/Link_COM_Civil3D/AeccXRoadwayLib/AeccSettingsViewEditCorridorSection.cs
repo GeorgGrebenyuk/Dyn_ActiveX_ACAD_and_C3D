@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsViewEditCorridorSection 
 	{
-		public AeccXRoadwayLib.IAeccSettingsViewEditCorridorSection _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsViewEditCorridorSection _i;
 		internal AeccSettingsViewEditCorridorSection(object AeccSettingsViewEditCorridorSection_object) 
 		{
-			this._i = AeccSettingsViewEditCorridorSection_object as AeccXRoadwayLib.IAeccSettingsViewEditCorridorSection;
+			this._i = AeccSettingsViewEditCorridorSection_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsViewEditCorridorSection;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

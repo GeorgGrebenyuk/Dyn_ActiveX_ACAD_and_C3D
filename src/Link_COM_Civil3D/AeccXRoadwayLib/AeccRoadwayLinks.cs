@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccRoadwayLinks 
 	{
-		public AeccXRoadwayLib.IAeccRoadwayLinks _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccRoadwayLinks _i;
 		internal AeccRoadwayLinks(object AeccRoadwayLinks_object) 
 		{
-			this._i = AeccRoadwayLinks_object as AeccXRoadwayLib.IAeccRoadwayLinks;
+			this._i = AeccRoadwayLinks_object as Autodesk.AECC.Interop.Roadway.IAeccRoadwayLinks;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

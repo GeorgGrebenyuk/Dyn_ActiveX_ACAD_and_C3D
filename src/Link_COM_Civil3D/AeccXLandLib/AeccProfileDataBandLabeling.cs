@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileDataBandLabeling 
 	{
-		public AeccXLandLib.IAeccProfileDataBandLabeling _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileDataBandLabeling _i;
 		internal AeccProfileDataBandLabeling(object AeccProfileDataBandLabeling_object) 
 		{
-			this._i = AeccProfileDataBandLabeling_object as AeccXLandLib.IAeccProfileDataBandLabeling;
+			this._i = AeccProfileDataBandLabeling_object as Autodesk.AECC.Interop.Land.IAeccProfileDataBandLabeling;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

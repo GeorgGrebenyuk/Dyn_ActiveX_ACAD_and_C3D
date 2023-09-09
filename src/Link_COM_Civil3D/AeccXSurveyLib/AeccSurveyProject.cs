@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyProject 
 	{
-		public AeccXSurveyLib.IAeccSurveyProject _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyProject _i;
 		internal AeccSurveyProject(object AeccSurveyProject_object) 
 		{
-			this._i = AeccSurveyProject_object as AeccXSurveyLib.IAeccSurveyProject;
+			this._i = AeccSurveyProject_object as Autodesk.AECC.Interop.Survey.IAeccSurveyProject;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -125,7 +125,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GetLandXMLXPropertyDefinitionsRoot(AeccXSurveyLib.AeccSurveyFeatureType FeatureType) 
+		public dynamic GetLandXMLXPropertyDefinitionsRoot(Autodesk.AECC.Interop.Survey.AeccSurveyFeatureType FeatureType) 
 		{
 			return this._i.GetLandXMLXPropertyDefinitionsRoot(FeatureType);
 		}
@@ -133,7 +133,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GetUserDefinedXPropertyDefinitions(AeccXSurveyLib.AeccSurveyFeatureType FeatureType) 
+		public dynamic GetUserDefinedXPropertyDefinitions(Autodesk.AECC.Interop.Survey.AeccSurveyFeatureType FeatureType) 
 		{
 			return this._i.GetUserDefinedXPropertyDefinitions(FeatureType);
 		}

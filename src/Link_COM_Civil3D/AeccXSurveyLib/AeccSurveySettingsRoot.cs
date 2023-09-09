@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveySettingsRoot 
 	{
-		public AeccXSurveyLib.IAeccSurveySettingsRoot _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveySettingsRoot _i;
 		internal AeccSurveySettingsRoot(object AeccSurveySettingsRoot_object) 
 		{
-			this._i = AeccSurveySettingsRoot_object as AeccXSurveyLib.IAeccSurveySettingsRoot;
+			this._i = AeccSurveySettingsRoot_object as Autodesk.AECC.Interop.Survey.IAeccSurveySettingsRoot;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

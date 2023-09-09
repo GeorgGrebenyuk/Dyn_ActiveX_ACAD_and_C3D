@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsTransparentCommand 
 	{
-		public AeccXLandLib.IAeccSettingsTransparentCommand _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsTransparentCommand _i;
 		internal AeccSettingsTransparentCommand(object AeccSettingsTransparentCommand_object) 
 		{
-			this._i = AeccSettingsTransparentCommand_object as AeccXLandLib.IAeccSettingsTransparentCommand;
+			this._i = AeccSettingsTransparentCommand_object as Autodesk.AECC.Interop.Land.IAeccSettingsTransparentCommand;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

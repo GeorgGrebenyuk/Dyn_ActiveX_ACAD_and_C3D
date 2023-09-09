@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentArc 
 	{
-		public AeccXLandLib.IAeccAlignmentArc _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentArc _i;
 		internal AeccAlignmentArc(object AeccAlignmentArc_object) 
 		{
-			this._i = AeccAlignmentArc_object as AeccXLandLib.IAeccAlignmentArc;
+			this._i = AeccAlignmentArc_object as Autodesk.AECC.Interop.Land.IAeccAlignmentArc;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

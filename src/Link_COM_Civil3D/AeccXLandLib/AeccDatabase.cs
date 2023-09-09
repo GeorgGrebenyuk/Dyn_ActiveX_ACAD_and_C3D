@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccDatabase 
 	{
-		public AeccXLandLib.IAeccDatabase _i;
+		public Autodesk.AECC.Interop.Land.IAeccDatabase _i;
 		internal AeccDatabase(object AeccDatabase_object) 
 		{
-			this._i = AeccDatabase_object as AeccXLandLib.IAeccDatabase;
+			this._i = AeccDatabase_object as Autodesk.AECC.Interop.Land.IAeccDatabase;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -231,7 +231,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void AddEvent(AeccXLandLib.AeccEventMessageType eventType,string strSource,string strDescription) 
+		public void AddEvent(Autodesk.AECC.Interop.Land.AeccEventMessageType eventType,string strSource,string strDescription) 
 		{
 			this._i.AddEvent(eventType,strSource,strDescription);
 		}

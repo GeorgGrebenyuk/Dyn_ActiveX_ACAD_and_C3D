@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceAnalysisWatershed 
 	{
-		public AeccXLandLib.IAeccSurfaceAnalysisWatershed _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceAnalysisWatershed _i;
 		internal AeccSurfaceAnalysisWatershed(object AeccSurfaceAnalysisWatershed_object) 
 		{
-			this._i = AeccSurfaceAnalysisWatershed_object as AeccXLandLib.IAeccSurfaceAnalysisWatershed;
+			this._i = AeccSurfaceAnalysisWatershed_object as Autodesk.AECC.Interop.Land.IAeccSurfaceAnalysisWatershed;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

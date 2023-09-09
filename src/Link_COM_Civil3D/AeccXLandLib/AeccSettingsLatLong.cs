@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsLatLong 
 	{
-		public AeccXLandLib.IAeccSettingsLatLong _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsLatLong _i;
 		internal AeccSettingsLatLong(object AeccSettingsLatLong_object) 
 		{
-			this._i = AeccSettingsLatLong_object as AeccXLandLib.IAeccSettingsLatLong;
+			this._i = AeccSettingsLatLong_object as Autodesk.AECC.Interop.Land.IAeccSettingsLatLong;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

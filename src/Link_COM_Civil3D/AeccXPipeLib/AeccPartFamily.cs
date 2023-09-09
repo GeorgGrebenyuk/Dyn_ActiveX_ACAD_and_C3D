@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPartFamily 
 	{
-		public AeccXPipeLib.IAeccPartFamily _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPartFamily _i;
 		internal AeccPartFamily(object AeccPartFamily_object) 
 		{
-			this._i = AeccPartFamily_object as AeccXPipeLib.IAeccPartFamily;
+			this._i = AeccPartFamily_object as Autodesk.AECC.Interop.Pipe.IAeccPartFamily;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Domain(AeccXPipeLib.AeccPipeNetworkDomain pnDomain) 
+		public void Set_Domain(Autodesk.AECC.Interop.Pipe.AeccPipeNetworkDomain pnDomain) 
 		{
 			this._i.Domain = pnDomain;
 		}

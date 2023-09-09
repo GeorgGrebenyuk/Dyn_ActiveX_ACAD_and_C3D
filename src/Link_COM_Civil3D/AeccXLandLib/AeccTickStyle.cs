@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccTickStyle 
 	{
-		public AeccXLandLib.IAeccTickStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccTickStyle _i;
 		internal AeccTickStyle(object AeccTickStyle_object) 
 		{
-			this._i = AeccTickStyle_object as AeccXLandLib.IAeccTickStyle;
+			this._i = AeccTickStyle_object as Autodesk.AECC.Interop.Land.IAeccTickStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

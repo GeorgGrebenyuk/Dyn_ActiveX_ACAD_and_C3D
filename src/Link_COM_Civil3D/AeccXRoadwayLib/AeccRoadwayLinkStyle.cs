@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccRoadwayLinkStyle 
 	{
-		public AeccXRoadwayLib.IAeccRoadwayLinkStyle _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccRoadwayLinkStyle _i;
 		internal AeccRoadwayLinkStyle(object AeccRoadwayLinkStyle_object) 
 		{
-			this._i = AeccRoadwayLinkStyle_object as AeccXRoadwayLib.IAeccRoadwayLinkStyle;
+			this._i = AeccRoadwayLinkStyle_object as Autodesk.AECC.Interop.Roadway.IAeccRoadwayLinkStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

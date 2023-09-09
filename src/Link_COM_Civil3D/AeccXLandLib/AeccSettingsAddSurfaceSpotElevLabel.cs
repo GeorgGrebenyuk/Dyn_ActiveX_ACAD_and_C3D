@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddSurfaceSpotElevLabel 
 	{
-		public AeccXLandLib.IAeccSettingsAddSurfaceSpotElevLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAddSurfaceSpotElevLabel _i;
 		internal AeccSettingsAddSurfaceSpotElevLabel(object AeccSettingsAddSurfaceSpotElevLabel_object) 
 		{
-			this._i = AeccSettingsAddSurfaceSpotElevLabel_object as AeccXLandLib.IAeccSettingsAddSurfaceSpotElevLabel;
+			this._i = AeccSettingsAddSurfaceSpotElevLabel_object as Autodesk.AECC.Interop.Land.IAeccSettingsAddSurfaceSpotElevLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

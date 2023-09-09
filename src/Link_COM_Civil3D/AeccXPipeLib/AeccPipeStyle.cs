@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipeStyle 
 	{
-		public AeccXPipeLib.IAeccPipeStyle _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPipeStyle _i;
 		internal AeccPipeStyle(object AeccPipeStyle_object) 
 		{
-			this._i = AeccPipeStyle_object as AeccXPipeLib.IAeccPipeStyle;
+			this._i = AeccPipeStyle_object as Autodesk.AECC.Interop.Pipe.IAeccPipeStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -31,7 +31,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_SectionCrossingHatch(AeccXPipeLib.AeccPipeHatchOptions pnHatchOptions) 
+		public void Set_SectionCrossingHatch(Autodesk.AECC.Interop.Pipe.AeccPipeHatchOptions pnHatchOptions) 
 		{
 			this._i.SectionCrossingHatch = pnHatchOptions;
 		}
@@ -39,7 +39,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic DisplayStyle2d(AeccXPipeLib.AeccPipeDisplayComponents nComponent) 
+		public dynamic DisplayStyle2d(Autodesk.AECC.Interop.Pipe.AeccPipeDisplayComponents nComponent) 
 		{
 			return this._i.DisplayStyle2d(nComponent);
 		}
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic DisplayStyle3d(AeccXPipeLib.AeccPipeDisplayComponents nComponent) 
+		public dynamic DisplayStyle3d(Autodesk.AECC.Interop.Pipe.AeccPipeDisplayComponents nComponent) 
 		{
 			return this._i.DisplayStyle3d(nComponent);
 		}
@@ -55,7 +55,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic HatchStyle2d(AeccXPipeLib.AeccPipeHatchComponents nComponent) 
+		public dynamic HatchStyle2d(Autodesk.AECC.Interop.Pipe.AeccPipeHatchComponents nComponent) 
 		{
 			return this._i.HatchStyle2d(nComponent);
 		}
@@ -63,7 +63,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic DisplayStylePlan(AeccXPipeLib.AeccPipeDisplayComponents nComponent) 
+		public dynamic DisplayStylePlan(Autodesk.AECC.Interop.Pipe.AeccPipeDisplayComponents nComponent) 
 		{
 			return this._i.DisplayStylePlan(nComponent);
 		}
@@ -71,7 +71,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic DisplayStyleModel(AeccXPipeLib.AeccPipeDisplayComponents nComponent) 
+		public dynamic DisplayStyleModel(Autodesk.AECC.Interop.Pipe.AeccPipeDisplayComponents nComponent) 
 		{
 			return this._i.DisplayStyleModel(nComponent);
 		}
@@ -79,7 +79,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic DisplayStyleProfile(AeccXPipeLib.AeccPipeDisplayComponents nComponent) 
+		public dynamic DisplayStyleProfile(Autodesk.AECC.Interop.Pipe.AeccPipeDisplayComponents nComponent) 
 		{
 			return this._i.DisplayStyleProfile(nComponent);
 		}
@@ -87,7 +87,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic DisplayStyleSection(AeccXPipeLib.AeccPipeDisplayComponents nComponent) 
+		public dynamic DisplayStyleSection(Autodesk.AECC.Interop.Pipe.AeccPipeDisplayComponents nComponent) 
 		{
 			return this._i.DisplayStyleSection(nComponent);
 		}
@@ -95,7 +95,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic HatchStylePlan(AeccXPipeLib.AeccPipeHatchComponents nComponent) 
+		public dynamic HatchStylePlan(Autodesk.AECC.Interop.Pipe.AeccPipeHatchComponents nComponent) 
 		{
 			return this._i.HatchStylePlan(nComponent);
 		}
@@ -103,7 +103,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic HatchStyleProfile(AeccXPipeLib.AeccPipeHatchComponents nComponent) 
+		public dynamic HatchStyleProfile(Autodesk.AECC.Interop.Pipe.AeccPipeHatchComponents nComponent) 
 		{
 			return this._i.HatchStyleProfile(nComponent);
 		}
@@ -111,7 +111,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic HatchStyleSection(AeccXPipeLib.AeccPipeHatchComponents nComponent) 
+		public dynamic HatchStyleSection(Autodesk.AECC.Interop.Pipe.AeccPipeHatchComponents nComponent) 
 		{
 			return this._i.HatchStyleSection(nComponent);
 		}

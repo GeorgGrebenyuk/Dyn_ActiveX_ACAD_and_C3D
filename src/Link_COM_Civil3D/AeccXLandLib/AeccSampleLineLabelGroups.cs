@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSampleLineLabelGroups 
 	{
-		public AeccXLandLib.IAeccSampleLineLabelGroups _i;
+		public Autodesk.AECC.Interop.Land.IAeccSampleLineLabelGroups _i;
 		internal AeccSampleLineLabelGroups(object AeccSampleLineLabelGroups_object) 
 		{
-			this._i = AeccSampleLineLabelGroups_object as AeccXLandLib.IAeccSampleLineLabelGroups;
+			this._i = AeccSampleLineLabelGroups_object as Autodesk.AECC.Interop.Land.IAeccSampleLineLabelGroups;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

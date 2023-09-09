@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileMinorStationLabelGroup 
 	{
-		public AeccXLandLib.IAeccProfileMinorStationLabelGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileMinorStationLabelGroup _i;
 		internal AeccProfileMinorStationLabelGroup(object AeccProfileMinorStationLabelGroup_object) 
 		{
-			this._i = AeccProfileMinorStationLabelGroup_object as AeccXLandLib.IAeccProfileMinorStationLabelGroup;
+			this._i = AeccProfileMinorStationLabelGroup_object as Autodesk.AECC.Interop.Land.IAeccProfileMinorStationLabelGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumRemainderDistribution 
 	{
-		public AeccXLandLib.IAeccPropertyEnumRemainderDistribution _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumRemainderDistribution _i;
 		internal AeccPropertyEnumRemainderDistribution(object AeccPropertyEnumRemainderDistribution_object) 
 		{
-			this._i = AeccPropertyEnumRemainderDistribution_object as AeccXLandLib.IAeccPropertyEnumRemainderDistribution;
+			this._i = AeccPropertyEnumRemainderDistribution_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumRemainderDistribution;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccRemainderDistributionType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccRemainderDistributionType pVal) 
 		{
 			this._i.Value = pVal;
 		}

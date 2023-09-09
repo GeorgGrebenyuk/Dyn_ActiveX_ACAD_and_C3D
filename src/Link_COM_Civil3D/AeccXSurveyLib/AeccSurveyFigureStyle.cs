@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyFigureStyle 
 	{
-		public AeccXSurveyLib.IAeccSurveyFigureStyle _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyFigureStyle _i;
 		internal AeccSurveyFigureStyle(object AeccSurveyFigureStyle_object) 
 		{
-			this._i = AeccSurveyFigureStyle_object as AeccXSurveyLib.IAeccSurveyFigureStyle;
+			this._i = AeccSurveyFigureStyle_object as Autodesk.AECC.Interop.Survey.IAeccSurveyFigureStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -84,7 +84,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_FigureDisplayMode(AeccXSurveyLib.AeccSurveyFigureElevationDisplayMode pDisplayMode) 
+		public void Set_FigureDisplayMode(Autodesk.AECC.Interop.Survey.AeccSurveyFigureElevationDisplayMode pDisplayMode) 
 		{
 			this._i.FigureDisplayMode = pDisplayMode;
 		}
@@ -214,7 +214,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_AdditionalMarkersPlacementMethod(AeccXSurveyLib.AeccSurveyAdditionalMarkerPlacementMethod pPlacementMethod) 
+		public void Set_AdditionalMarkersPlacementMethod(Autodesk.AECC.Interop.Survey.AeccSurveyAdditionalMarkerPlacementMethod pPlacementMethod) 
 		{
 			this._i.AdditionalMarkersPlacementMethod = pPlacementMethod;
 		}

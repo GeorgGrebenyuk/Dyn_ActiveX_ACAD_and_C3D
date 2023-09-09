@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddSurfaceDemFile 
 	{
-		public AeccXLandLib.IAeccSettingsAddSurfaceDemFile _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAddSurfaceDemFile _i;
 		internal AeccSettingsAddSurfaceDemFile(object AeccSettingsAddSurfaceDemFile_object) 
 		{
-			this._i = AeccSettingsAddSurfaceDemFile_object as AeccXLandLib.IAeccSettingsAddSurfaceDemFile;
+			this._i = AeccSettingsAddSurfaceDemFile_object as Autodesk.AECC.Interop.Land.IAeccSettingsAddSurfaceDemFile;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceTriangleStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceTriangleStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceTriangleStyle _i;
 		internal AeccSurfaceTriangleStyle(object AeccSurfaceTriangleStyle_object) 
 		{
-			this._i = AeccSurfaceTriangleStyle_object as AeccXLandLib.IAeccSurfaceTriangleStyle;
+			this._i = AeccSurfaceTriangleStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceTriangleStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

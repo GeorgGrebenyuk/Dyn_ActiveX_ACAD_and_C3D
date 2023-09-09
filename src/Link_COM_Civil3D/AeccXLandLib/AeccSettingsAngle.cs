@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAngle 
 	{
-		public AeccXLandLib.IAeccSettingsAngle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAngle _i;
 		internal AeccSettingsAngle(object AeccSettingsAngle_object) 
 		{
-			this._i = AeccSettingsAngle_object as AeccXLandLib.IAeccSettingsAngle;
+			this._i = AeccSettingsAngle_object as Autodesk.AECC.Interop.Land.IAeccSettingsAngle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

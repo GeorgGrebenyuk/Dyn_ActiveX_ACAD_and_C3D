@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumPipeNetworkDimensionAnchorOption 
 	{
-		public AeccXPipeLib.IAeccPropertyEnumPipeNetworkDimensionAnchorOption _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPropertyEnumPipeNetworkDimensionAnchorOption _i;
 		internal AeccPropertyEnumPipeNetworkDimensionAnchorOption(object AeccPropertyEnumPipeNetworkDimensionAnchorOption_object) 
 		{
-			this._i = AeccPropertyEnumPipeNetworkDimensionAnchorOption_object as AeccXPipeLib.IAeccPropertyEnumPipeNetworkDimensionAnchorOption;
+			this._i = AeccPropertyEnumPipeNetworkDimensionAnchorOption_object as Autodesk.AECC.Interop.Pipe.IAeccPropertyEnumPipeNetworkDimensionAnchorOption;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXPipeLib.AeccPipeNetworkDimensionAnchorOptionType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Pipe.AeccPipeNetworkDimensionAnchorOptionType pVal) 
 		{
 			this._i.Value = pVal;
 		}

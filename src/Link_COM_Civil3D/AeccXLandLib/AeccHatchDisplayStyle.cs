@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccHatchDisplayStyle 
 	{
-		public AeccXLandLib.IAeccHatchDisplayStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccHatchDisplayStyle _i;
 		internal AeccHatchDisplayStyle(object AeccHatchDisplayStyle_object) 
 		{
-			this._i = AeccHatchDisplayStyle_object as AeccXLandLib.IAeccHatchDisplayStyle;
+			this._i = AeccHatchDisplayStyle_object as Autodesk.AECC.Interop.Land.IAeccHatchDisplayStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_HatchType(AeccXLandLib.AeccHatchType pVal) 
+		public void Set_HatchType(Autodesk.AECC.Interop.Land.AeccHatchType pVal) 
 		{
 			this._i.HatchType = pVal;
 		}

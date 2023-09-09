@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionSegmentLabelGroupElement 
 	{
-		public AeccXLandLib.IAeccSectionSegmentLabelGroupElement _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionSegmentLabelGroupElement _i;
 		internal AeccSectionSegmentLabelGroupElement(object AeccSectionSegmentLabelGroupElement_object) 
 		{
-			this._i = AeccSectionSegmentLabelGroupElement_object as AeccXLandLib.IAeccSectionSegmentLabelGroupElement;
+			this._i = AeccSectionSegmentLabelGroupElement_object as Autodesk.AECC.Interop.Land.IAeccSectionSegmentLabelGroupElement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

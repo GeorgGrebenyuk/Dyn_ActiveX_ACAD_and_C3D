@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipeLabel 
 	{
-		public AeccXPipeLib.IAeccPipeLabel _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPipeLabel _i;
 		internal AeccPipeLabel(object AeccPipeLabel_object) 
 		{
-			this._i = AeccPipeLabel_object as AeccXPipeLib.IAeccPipeLabel;
+			this._i = AeccPipeLabel_object as Autodesk.AECC.Interop.Pipe.IAeccPipeLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

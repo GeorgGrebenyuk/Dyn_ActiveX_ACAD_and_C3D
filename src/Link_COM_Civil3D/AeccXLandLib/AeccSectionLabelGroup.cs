@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionLabelGroup 
 	{
-		public AeccXLandLib.IAeccSectionLabelGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionLabelGroup _i;
 		internal AeccSectionLabelGroup(object AeccSectionLabelGroup_object) 
 		{
-			this._i = AeccSectionLabelGroup_object as AeccXLandLib.IAeccSectionLabelGroup;
+			this._i = AeccSectionLabelGroup_object as Autodesk.AECC.Interop.Land.IAeccSectionLabelGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -36,7 +36,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DimensionAnchorOption(AeccXLandLib.AeccLabelDimensionAnchorType pVal) 
+		public void Set_DimensionAnchorOption(Autodesk.AECC.Interop.Land.AeccLabelDimensionAnchorType pVal) 
 		{
 			this._i.DimensionAnchorOption = pVal;
 		}

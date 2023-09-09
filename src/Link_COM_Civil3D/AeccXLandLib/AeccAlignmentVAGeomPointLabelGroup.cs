@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentVAGeomPointLabelGroup 
 	{
-		public AeccXLandLib.IAeccAlignmentVAGeomPointLabelGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentVAGeomPointLabelGroup _i;
 		internal AeccAlignmentVAGeomPointLabelGroup(object AeccAlignmentVAGeomPointLabelGroup_object) 
 		{
-			this._i = AeccAlignmentVAGeomPointLabelGroup_object as AeccXLandLib.IAeccAlignmentVAGeomPointLabelGroup;
+			this._i = AeccAlignmentVAGeomPointLabelGroup_object as Autodesk.AECC.Interop.Land.IAeccAlignmentVAGeomPointLabelGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -29,7 +29,7 @@
 		///<summary>
 		///
 		///</summary>
-		public bool LabelOnVAGeomPoint(AeccXLandLib.AeccVerticalGeometryPointType Type) 
+		public bool LabelOnVAGeomPoint(Autodesk.AECC.Interop.Land.AeccVerticalGeometryPointType Type) 
 		{
 			return this._i.LabelOnVAGeomPoint(Type);
 		}
@@ -37,7 +37,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_LabelOnVAGeomPoint(AeccXLandLib.AeccVerticalGeometryPointType Type,bool pValue) 
+		public void Set_LabelOnVAGeomPoint(Autodesk.AECC.Interop.Land.AeccVerticalGeometryPointType Type,bool pValue) 
 		{
 			this._i.LabelOnVAGeomPoint = Type,pValue;
 		}

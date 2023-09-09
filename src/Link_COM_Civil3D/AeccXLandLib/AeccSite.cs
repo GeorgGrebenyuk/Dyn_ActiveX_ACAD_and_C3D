@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSite 
 	{
-		public AeccXLandLib.IAeccSite _i;
+		public Autodesk.AECC.Interop.Land.IAeccSite _i;
 		internal AeccSite(object AeccSite_object) 
 		{
-			this._i = AeccSite_object as AeccXLandLib.IAeccSite;
+			this._i = AeccSite_object as Autodesk.AECC.Interop.Land.IAeccSite;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -41,7 +41,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DisplayMode(AeccXLandLib.AeccSiteDisplay3dType pVal) 
+		public void Set_DisplayMode(Autodesk.AECC.Interop.Land.AeccSiteDisplay3dType pVal) 
 		{
 			this._i.DisplayMode = pVal;
 		}

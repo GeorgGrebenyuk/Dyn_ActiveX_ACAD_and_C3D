@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelIncrementStyleSetItem 
 	{
-		public AeccXLandLib.IAeccLabelIncrementStyleSetItem _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelIncrementStyleSetItem _i;
 		internal AeccLabelIncrementStyleSetItem(object AeccLabelIncrementStyleSetItem_object) 
 		{
-			this._i = AeccLabelIncrementStyleSetItem_object as AeccXLandLib.IAeccLabelIncrementStyleSetItem;
+			this._i = AeccLabelIncrementStyleSetItem_object as Autodesk.AECC.Interop.Land.IAeccLabelIncrementStyleSetItem;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

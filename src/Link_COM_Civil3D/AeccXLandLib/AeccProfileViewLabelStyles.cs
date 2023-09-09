@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileViewLabelStyles 
 	{
-		public AeccXLandLib.IAeccProfileViewLabelStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileViewLabelStyles _i;
 		internal AeccProfileViewLabelStyles(object AeccProfileViewLabelStyles_object) 
 		{
-			this._i = AeccProfileViewLabelStyles_object as AeccXLandLib.IAeccProfileViewLabelStyles;
+			this._i = AeccProfileViewLabelStyles_object as Autodesk.AECC.Interop.Land.IAeccProfileViewLabelStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

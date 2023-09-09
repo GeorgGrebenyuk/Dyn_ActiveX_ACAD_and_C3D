@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStationElevationLabel 
 	{
-		public AeccXLandLib.IAeccStationElevationLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccStationElevationLabel _i;
 		internal AeccStationElevationLabel(object AeccStationElevationLabel_object) 
 		{
-			this._i = AeccStationElevationLabel_object as AeccXLandLib.IAeccStationElevationLabel;
+			this._i = AeccStationElevationLabel_object as Autodesk.AECC.Interop.Land.IAeccStationElevationLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -39,7 +39,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_LeaderAttachmentOption(AeccXLandLib.AeccLabelLeaderAttachmentType pVal) 
+		public void Set_LeaderAttachmentOption(Autodesk.AECC.Interop.Land.AeccLabelLeaderAttachmentType pVal) 
 		{
 			this._i.LeaderAttachmentOption = pVal;
 		}

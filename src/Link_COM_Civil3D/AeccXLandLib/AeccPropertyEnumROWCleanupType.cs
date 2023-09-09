@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumROWCleanupType 
 	{
-		public AeccXLandLib.IAeccPropertyEnumROWCleanupType _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumROWCleanupType _i;
 		internal AeccPropertyEnumROWCleanupType(object AeccPropertyEnumROWCleanupType_object) 
 		{
-			this._i = AeccPropertyEnumROWCleanupType_object as AeccXLandLib.IAeccPropertyEnumROWCleanupType;
+			this._i = AeccPropertyEnumROWCleanupType_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumROWCleanupType;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccROWCleanupType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccROWCleanupType pVal) 
 		{
 			this._i.Value = pVal;
 		}

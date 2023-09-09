@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateSubFromPline 
 	{
-		public AeccXRoadwayLib.IAeccSettingsCreateSubFromPline _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsCreateSubFromPline _i;
 		internal AeccSettingsCreateSubFromPline(object AeccSettingsCreateSubFromPline_object) 
 		{
-			this._i = AeccSettingsCreateSubFromPline_object as AeccXRoadwayLib.IAeccSettingsCreateSubFromPline;
+			this._i = AeccSettingsCreateSubFromPline_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsCreateSubFromPline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

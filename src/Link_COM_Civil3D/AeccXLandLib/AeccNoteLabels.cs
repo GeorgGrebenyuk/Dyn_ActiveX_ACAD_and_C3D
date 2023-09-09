@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccNoteLabels 
 	{
-		public AeccXLandLib.IAeccNoteLabels _i;
+		public Autodesk.AECC.Interop.Land.IAeccNoteLabels _i;
 		internal AeccNoteLabels(object AeccNoteLabels_object) 
 		{
-			this._i = AeccNoteLabels_object as AeccXLandLib.IAeccNoteLabels;
+			this._i = AeccNoteLabels_object as Autodesk.AECC.Interop.Land.IAeccNoteLabels;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

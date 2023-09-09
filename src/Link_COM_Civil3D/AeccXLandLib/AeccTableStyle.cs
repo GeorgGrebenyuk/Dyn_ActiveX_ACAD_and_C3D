@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccTableStyle 
 	{
-		public AeccXLandLib.IAeccTableStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccTableStyle _i;
 		internal AeccTableStyle(object AeccTableStyle_object) 
 		{
-			this._i = AeccTableStyle_object as AeccXLandLib.IAeccTableStyle;
+			this._i = AeccTableStyle_object as Autodesk.AECC.Interop.Land.IAeccTableStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -52,7 +52,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_TitleJustification(AeccXLandLib.AeccTableTitleJustificationType pVal) 
+		public void Set_TitleJustification(Autodesk.AECC.Interop.Land.AeccTableTitleJustificationType pVal) 
 		{
 			this._i.TitleJustification = pVal;
 		}
@@ -104,7 +104,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_SortingOrder(AeccXLandLib.AeccTableSortingOrderType pVal) 
+		public void Set_SortingOrder(Autodesk.AECC.Interop.Land.AeccTableSortingOrderType pVal) 
 		{
 			this._i.SortingOrder = pVal;
 		}
@@ -359,7 +359,7 @@
 		///<summary>
 		///method Init
 		///</summary>
-		public void Init(AeccXLandLib.AeccTableStyleType newVal) 
+		public void Init(Autodesk.AECC.Interop.Land.AeccTableStyleType newVal) 
 		{
 			this._i.Init(newVal);
 		}

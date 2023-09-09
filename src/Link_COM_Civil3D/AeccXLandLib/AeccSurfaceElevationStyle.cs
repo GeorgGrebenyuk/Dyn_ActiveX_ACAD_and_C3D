@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceElevationStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceElevationStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceElevationStyle _i;
 		internal AeccSurfaceElevationStyle(object AeccSurfaceElevationStyle_object) 
 		{
-			this._i = AeccSurfaceElevationStyle_object as AeccXLandLib.IAeccSurfaceElevationStyle;
+			this._i = AeccSurfaceElevationStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceElevationStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_GroupValuesBy(AeccXLandLib.AeccGroupValuesByType pVal) 
+		public void Set_GroupValuesBy(Autodesk.AECC.Interop.Land.AeccGroupValuesByType pVal) 
 		{
 			this._i.GroupValuesBy = pVal;
 		}
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_RangePrecision(AeccXLandLib.AeccPrecisionRangeType pVal) 
+		public void Set_RangePrecision(Autodesk.AECC.Interop.Land.AeccPrecisionRangeType pVal) 
 		{
 			this._i.RangePrecision = pVal;
 		}
@@ -60,7 +60,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DisplayType(AeccXLandLib.AeccDisplayType pVal) 
+		public void Set_DisplayType(Autodesk.AECC.Interop.Land.AeccDisplayType pVal) 
 		{
 			this._i.DisplayType = pVal;
 		}

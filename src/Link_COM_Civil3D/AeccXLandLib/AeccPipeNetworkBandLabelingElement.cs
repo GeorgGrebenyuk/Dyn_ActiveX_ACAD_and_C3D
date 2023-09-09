@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipeNetworkBandLabelingElement 
 	{
-		public AeccXLandLib.IAeccPipeNetworkBandLabelingElement _i;
+		public Autodesk.AECC.Interop.Land.IAeccPipeNetworkBandLabelingElement _i;
 		internal AeccPipeNetworkBandLabelingElement(object AeccPipeNetworkBandLabelingElement_object) 
 		{
-			this._i = AeccPipeNetworkBandLabelingElement_object as AeccXLandLib.IAeccPipeNetworkBandLabelingElement;
+			this._i = AeccPipeNetworkBandLabelingElement_object as Autodesk.AECC.Interop.Land.IAeccPipeNetworkBandLabelingElement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

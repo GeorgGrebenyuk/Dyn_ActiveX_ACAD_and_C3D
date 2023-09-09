@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsMoveBlocksToAttribElev 
 	{
-		public AeccXLandLib.IAeccSettingsMoveBlocksToAttribElev _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsMoveBlocksToAttribElev _i;
 		internal AeccSettingsMoveBlocksToAttribElev(object AeccSettingsMoveBlocksToAttribElev_object) 
 		{
-			this._i = AeccSettingsMoveBlocksToAttribElev_object as AeccXLandLib.IAeccSettingsMoveBlocksToAttribElev;
+			this._i = AeccSettingsMoveBlocksToAttribElev_object as Autodesk.AECC.Interop.Land.IAeccSettingsMoveBlocksToAttribElev;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

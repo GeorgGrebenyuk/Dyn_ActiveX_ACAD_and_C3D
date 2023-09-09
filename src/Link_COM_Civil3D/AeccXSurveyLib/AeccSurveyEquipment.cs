@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyEquipment 
 	{
-		public AeccXSurveyLib.IAeccSurveyEquipment _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyEquipment _i;
 		internal AeccSurveyEquipment(object AeccSurveyEquipment_object) 
 		{
-			this._i = AeccSurveyEquipment_object as AeccXSurveyLib.IAeccSurveyEquipment;
+			this._i = AeccSurveyEquipment_object as Autodesk.AECC.Interop.Survey.IAeccSurveyEquipment;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_MeasuringDevice(AeccXSurveyLib.AeccSurveyMeasuringDeviceType pMeasuringDevice) 
+		public void Set_MeasuringDevice(Autodesk.AECC.Interop.Survey.AeccSurveyMeasuringDeviceType pMeasuringDevice) 
 		{
 			this._i.MeasuringDevice = pMeasuringDevice;
 		}
@@ -320,7 +320,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DistanceUnit(AeccXSurveyLib.AeccSurveyDistanceUnit pDistanceUnit) 
+		public void Set_DistanceUnit(Autodesk.AECC.Interop.Survey.AeccSurveyDistanceUnit pDistanceUnit) 
 		{
 			this._i.DistanceUnit = pDistanceUnit;
 		}
@@ -333,7 +333,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_AngleUnit(AeccXSurveyLib.AeccSurveyAngleUnit pAngleUnit) 
+		public void Set_AngleUnit(Autodesk.AECC.Interop.Survey.AeccSurveyAngleUnit pAngleUnit) 
 		{
 			this._i.AngleUnit = pAngleUnit;
 		}
@@ -346,7 +346,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_AngleType(AeccXSurveyLib.AeccSurveyEquipmentAngleType pAngleType) 
+		public void Set_AngleType(Autodesk.AECC.Interop.Survey.AeccSurveyEquipmentAngleType pAngleType) 
 		{
 			this._i.AngleType = pAngleType;
 		}
@@ -359,7 +359,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_VerticalAngleType(AeccXSurveyLib.AeccSurveyEquipmentVerticalAngleType pVerticalAngleType) 
+		public void Set_VerticalAngleType(Autodesk.AECC.Interop.Survey.AeccSurveyEquipmentVerticalAngleType pVerticalAngleType) 
 		{
 			this._i.VerticalAngleType = pVerticalAngleType;
 		}

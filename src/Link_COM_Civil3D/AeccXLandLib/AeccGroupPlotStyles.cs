@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGroupPlotStyles 
 	{
-		public AeccXLandLib.IAeccGroupPlotStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccGroupPlotStyles _i;
 		internal AeccGroupPlotStyles(object AeccGroupPlotStyles_object) 
 		{
-			this._i = AeccGroupPlotStyles_object as AeccXLandLib.IAeccGroupPlotStyles;
+			this._i = AeccGroupPlotStyles_object as Autodesk.AECC.Interop.Land.IAeccGroupPlotStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

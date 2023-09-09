@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddNetworkPartPlanLabel 
 	{
-		public AeccXPipeLib.IAeccSettingsAddNetworkPartPlanLabel _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsAddNetworkPartPlanLabel _i;
 		internal AeccSettingsAddNetworkPartPlanLabel(object AeccSettingsAddNetworkPartPlanLabel_object) 
 		{
-			this._i = AeccSettingsAddNetworkPartPlanLabel_object as AeccXPipeLib.IAeccSettingsAddNetworkPartPlanLabel;
+			this._i = AeccSettingsAddNetworkPartPlanLabel_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsAddNetworkPartPlanLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumMapcheckDefaultAngleType 
 	{
-		public AeccXLandLib.IAeccPropertyEnumMapcheckDefaultAngleType _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumMapcheckDefaultAngleType _i;
 		internal AeccPropertyEnumMapcheckDefaultAngleType(object AeccPropertyEnumMapcheckDefaultAngleType_object) 
 		{
-			this._i = AeccPropertyEnumMapcheckDefaultAngleType_object as AeccXLandLib.IAeccPropertyEnumMapcheckDefaultAngleType;
+			this._i = AeccPropertyEnumMapcheckDefaultAngleType_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumMapcheckDefaultAngleType;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccMapcheckDefaultAngleType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccMapcheckDefaultAngleType pVal) 
 		{
 			this._i.Value = pVal;
 		}

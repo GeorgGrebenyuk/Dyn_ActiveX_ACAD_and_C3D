@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumRegionOptions 
 	{
-		public AeccXLandLib.IAeccPropertyEnumRegionOptions _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumRegionOptions _i;
 		internal AeccPropertyEnumRegionOptions(object AeccPropertyEnumRegionOptions_object) 
 		{
-			this._i = AeccPropertyEnumRegionOptions_object as AeccXLandLib.IAeccPropertyEnumRegionOptions;
+			this._i = AeccPropertyEnumRegionOptions_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumRegionOptions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccSimplifySurfaceRegionOptions pValue) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccSimplifySurfaceRegionOptions pValue) 
 		{
 			this._i.Value = pValue;
 		}

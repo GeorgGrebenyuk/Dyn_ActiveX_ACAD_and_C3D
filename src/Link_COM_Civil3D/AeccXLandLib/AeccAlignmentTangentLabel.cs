@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentTangentLabel 
 	{
-		public AeccXLandLib.IAeccAlignmentTangentLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentTangentLabel _i;
 		internal AeccAlignmentTangentLabel(object AeccAlignmentTangentLabel_object) 
 		{
-			this._i = AeccAlignmentTangentLabel_object as AeccXLandLib.IAeccAlignmentTangentLabel;
+			this._i = AeccAlignmentTangentLabel_object as Autodesk.AECC.Interop.Land.IAeccAlignmentTangentLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

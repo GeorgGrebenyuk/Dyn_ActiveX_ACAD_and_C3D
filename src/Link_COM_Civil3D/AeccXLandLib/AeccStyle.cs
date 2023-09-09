@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStyle 
 	{
-		public AeccXLandLib.IAeccStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccStyle _i;
 		internal AeccStyle(object AeccStyle_object) 
 		{
-			this._i = AeccStyle_object as AeccXLandLib.IAeccStyle;
+			this._i = AeccStyle_object as Autodesk.AECC.Interop.Land.IAeccStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -44,7 +44,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void ExportTo(object destDb,AeccXLandLib.AeccStyleExportConflictResolutionMethod conflictResolution) 
+		public void ExportTo(object destDb,Autodesk.AECC.Interop.Land.AeccStyleExportConflictResolutionMethod conflictResolution) 
 		{
 			this._i.ExportTo(destDb,conflictResolution);
 		}

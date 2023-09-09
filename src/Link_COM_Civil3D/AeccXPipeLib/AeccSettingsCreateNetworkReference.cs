@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateNetworkReference 
 	{
-		public AeccXPipeLib.IAeccSettingsCreateNetworkReference _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsCreateNetworkReference _i;
 		internal AeccSettingsCreateNetworkReference(object AeccSettingsCreateNetworkReference_object) 
 		{
-			this._i = AeccSettingsCreateNetworkReference_object as AeccXPipeLib.IAeccSettingsCreateNetworkReference;
+			this._i = AeccSettingsCreateNetworkReference_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsCreateNetworkReference;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

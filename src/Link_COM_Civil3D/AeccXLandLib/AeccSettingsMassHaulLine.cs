@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsMassHaulLine 
 	{
-		public AeccXLandLib.IAeccSettingsMassHaulLine _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsMassHaulLine _i;
 		internal AeccSettingsMassHaulLine(object AeccSettingsMassHaulLine_object) 
 		{
-			this._i = AeccSettingsMassHaulLine_object as AeccXLandLib.IAeccSettingsMassHaulLine;
+			this._i = AeccSettingsMassHaulLine_object as Autodesk.AECC.Interop.Land.IAeccSettingsMassHaulLine;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

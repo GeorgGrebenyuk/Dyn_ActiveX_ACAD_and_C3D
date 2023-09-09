@@ -6,10 +6,10 @@
 	///</summary>
 	public class XMLDOMText 
 	{
-		public AeccXLandLib.IXMLDOMText _i;
+		public Autodesk.AECC.Interop.Land.IXMLDOMText _i;
 		internal XMLDOMText(object XMLDOMText_object) 
 		{
-			this._i = XMLDOMText_object as AeccXLandLib.IXMLDOMText;
+			this._i = XMLDOMText_object as Autodesk.AECC.Interop.Land.IXMLDOMText;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

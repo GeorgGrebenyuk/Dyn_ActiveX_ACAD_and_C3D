@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccBandVerticalGeometryStyles 
 	{
-		public AeccXLandLib.IAeccBandVerticalGeometryStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccBandVerticalGeometryStyles _i;
 		internal AeccBandVerticalGeometryStyles(object AeccBandVerticalGeometryStyles_object) 
 		{
-			this._i = AeccBandVerticalGeometryStyles_object as AeccXLandLib.IAeccBandVerticalGeometryStyles;
+			this._i = AeccBandVerticalGeometryStyles_object as Autodesk.AECC.Interop.Land.IAeccBandVerticalGeometryStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

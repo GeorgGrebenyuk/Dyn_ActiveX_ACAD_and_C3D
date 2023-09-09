@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyDatabase 
 	{
-		public AeccXSurveyLib.IAeccSurveyDatabase _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyDatabase _i;
 		internal AeccSurveyDatabase(object AeccSurveyDatabase_object) 
 		{
-			this._i = AeccSurveyDatabase_object as AeccXSurveyLib.IAeccSurveyDatabase;
+			this._i = AeccSurveyDatabase_object as Autodesk.AECC.Interop.Survey.IAeccSurveyDatabase;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

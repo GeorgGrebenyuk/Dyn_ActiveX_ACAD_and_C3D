@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateLineByBestFit 
 	{
-		public AeccXLandLib.IAeccSettingsCreateLineByBestFit _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateLineByBestFit _i;
 		internal AeccSettingsCreateLineByBestFit(object AeccSettingsCreateLineByBestFit_object) 
 		{
-			this._i = AeccSettingsCreateLineByBestFit_object as AeccXLandLib.IAeccSettingsCreateLineByBestFit;
+			this._i = AeccSettingsCreateLineByBestFit_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateLineByBestFit;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

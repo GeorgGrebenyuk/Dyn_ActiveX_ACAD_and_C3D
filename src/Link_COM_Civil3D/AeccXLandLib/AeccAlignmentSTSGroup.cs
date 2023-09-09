@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentSTSGroup 
 	{
-		public AeccXLandLib.IAeccAlignmentSTSGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentSTSGroup _i;
 		internal AeccAlignmentSTSGroup(object AeccAlignmentSTSGroup_object) 
 		{
-			this._i = AeccAlignmentSTSGroup_object as AeccXLandLib.IAeccAlignmentSTSGroup;
+			this._i = AeccAlignmentSTSGroup_object as Autodesk.AECC.Interop.Land.IAeccAlignmentSTSGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

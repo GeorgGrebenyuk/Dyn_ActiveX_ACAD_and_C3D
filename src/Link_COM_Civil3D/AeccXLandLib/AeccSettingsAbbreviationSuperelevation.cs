@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAbbreviationSuperelevation 
 	{
-		public AeccXLandLib.IAeccSettingsAbbreviationSuperelevation _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAbbreviationSuperelevation _i;
 		internal AeccSettingsAbbreviationSuperelevation(object AeccSettingsAbbreviationSuperelevation_object) 
 		{
-			this._i = AeccSettingsAbbreviationSuperelevation_object as AeccXLandLib.IAeccSettingsAbbreviationSuperelevation;
+			this._i = AeccSettingsAbbreviationSuperelevation_object as Autodesk.AECC.Interop.Land.IAeccSettingsAbbreviationSuperelevation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

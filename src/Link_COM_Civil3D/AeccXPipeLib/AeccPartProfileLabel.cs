@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPartProfileLabel 
 	{
-		public AeccXPipeLib.IAeccPartProfileLabel _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPartProfileLabel _i;
 		internal AeccPartProfileLabel(object AeccPartProfileLabel_object) 
 		{
-			this._i = AeccPartProfileLabel_object as AeccXPipeLib.IAeccPartProfileLabel;
+			this._i = AeccPartProfileLabel_object as Autodesk.AECC.Interop.Pipe.IAeccPartProfileLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -44,7 +44,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DimensionAnchorOption(AeccXPipeLib.AeccLabelDimensionAnchorType pVal) 
+		public void Set_DimensionAnchorOption(Autodesk.AECC.Interop.Pipe.AeccLabelDimensionAnchorType pVal) 
 		{
 			this._i.DimensionAnchorOption = pVal;
 		}

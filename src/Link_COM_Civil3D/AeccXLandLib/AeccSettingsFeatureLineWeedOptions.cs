@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsFeatureLineWeedOptions 
 	{
-		public AeccXLandLib.IAeccSettingsFeatureLineWeedOptions _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsFeatureLineWeedOptions _i;
 		internal AeccSettingsFeatureLineWeedOptions(object AeccSettingsFeatureLineWeedOptions_object) 
 		{
-			this._i = AeccSettingsFeatureLineWeedOptions_object as AeccXLandLib.IAeccSettingsFeatureLineWeedOptions;
+			this._i = AeccSettingsFeatureLineWeedOptions_object as Autodesk.AECC.Interop.Land.IAeccSettingsFeatureLineWeedOptions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

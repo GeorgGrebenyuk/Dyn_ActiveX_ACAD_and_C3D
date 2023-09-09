@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccInterferenceChecks 
 	{
-		public AeccXPipeLib.IAeccInterferenceChecks _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccInterferenceChecks _i;
 		internal AeccInterferenceChecks(object AeccInterferenceChecks_object) 
 		{
-			this._i = AeccInterferenceChecks_object as AeccXPipeLib.IAeccInterferenceChecks;
+			this._i = AeccInterferenceChecks_object as Autodesk.AECC.Interop.Pipe.IAeccInterferenceChecks;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

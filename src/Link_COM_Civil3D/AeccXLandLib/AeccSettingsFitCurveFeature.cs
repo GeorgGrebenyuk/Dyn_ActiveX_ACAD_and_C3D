@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsFitCurveFeature 
 	{
-		public AeccXLandLib.IAeccSettingsFitCurveFeature _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsFitCurveFeature _i;
 		internal AeccSettingsFitCurveFeature(object AeccSettingsFitCurveFeature_object) 
 		{
-			this._i = AeccSettingsFitCurveFeature_object as AeccXLandLib.IAeccSettingsFitCurveFeature;
+			this._i = AeccSettingsFitCurveFeature_object as Autodesk.AECC.Interop.Land.IAeccSettingsFitCurveFeature;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

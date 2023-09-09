@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceSlopeLabel 
 	{
-		public AeccXLandLib.IAeccSurfaceSlopeLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceSlopeLabel _i;
 		internal AeccSurfaceSlopeLabel(object AeccSurfaceSlopeLabel_object) 
 		{
-			this._i = AeccSurfaceSlopeLabel_object as AeccXLandLib.IAeccSurfaceSlopeLabel;
+			this._i = AeccSurfaceSlopeLabel_object as Autodesk.AECC.Interop.Land.IAeccSurfaceSlopeLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

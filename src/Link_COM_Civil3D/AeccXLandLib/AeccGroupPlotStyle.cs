@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccGroupPlotStyle 
 	{
-		public AeccXLandLib.IAeccGroupPlotStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccGroupPlotStyle _i;
 		internal AeccGroupPlotStyle(object AeccGroupPlotStyle_object) 
 		{
-			this._i = AeccGroupPlotStyle_object as AeccXLandLib.IAeccGroupPlotStyle;
+			this._i = AeccGroupPlotStyle_object as Autodesk.AECC.Interop.Land.IAeccGroupPlotStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_PlotSectionViewsBy(AeccXLandLib.AeccGroupPlotRuleType pVal) 
+		public void Set_PlotSectionViewsBy(Autodesk.AECC.Interop.Land.AeccGroupPlotRuleType pVal) 
 		{
 			this._i.PlotSectionViewsBy = pVal;
 		}
@@ -55,7 +55,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_StartCorner(AeccXLandLib.AeccGroupPlotCornerType pVal) 
+		public void Set_StartCorner(Autodesk.AECC.Interop.Land.AeccGroupPlotCornerType pVal) 
 		{
 			this._i.StartCorner = pVal;
 		}
@@ -68,7 +68,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_AlignSectionViewsAbout(AeccXLandLib.AeccGroupPlotAlignViewType pVal) 
+		public void Set_AlignSectionViewsAbout(Autodesk.AECC.Interop.Land.AeccGroupPlotAlignViewType pVal) 
 		{
 			this._i.AlignSectionViewsAbout = pVal;
 		}
@@ -81,7 +81,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_CellSize(AeccXLandLib.AeccGroupPlotCellSizeType pVal) 
+		public void Set_CellSize(Autodesk.AECC.Interop.Land.AeccGroupPlotCellSizeType pVal) 
 		{
 			this._i.CellSize = pVal;
 		}
@@ -94,7 +94,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_PlotBy(AeccXLandLib.AeccGroupPlotAreaType pVal) 
+		public void Set_PlotBy(Autodesk.AECC.Interop.Land.AeccGroupPlotAreaType pVal) 
 		{
 			this._i.PlotBy = pVal;
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsProfileView 
 	{
-		public AeccXLandLib.IAeccSettingsProfileView _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsProfileView _i;
 		internal AeccSettingsProfileView(object AeccSettingsProfileView_object) 
 		{
-			this._i = AeccSettingsProfileView_object as AeccXLandLib.IAeccSettingsProfileView;
+			this._i = AeccSettingsProfileView_object as Autodesk.AECC.Interop.Land.IAeccSettingsProfileView;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

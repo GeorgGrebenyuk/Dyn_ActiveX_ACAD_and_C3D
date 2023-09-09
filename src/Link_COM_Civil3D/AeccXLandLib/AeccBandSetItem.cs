@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccBandSetItem 
 	{
-		public AeccXLandLib.IAeccBandSetItem _i;
+		public Autodesk.AECC.Interop.Land.IAeccBandSetItem _i;
 		internal AeccBandSetItem(object AeccBandSetItem_object) 
 		{
-			this._i = AeccBandSetItem_object as AeccXLandLib.IAeccBandSetItem;
+			this._i = AeccBandSetItem_object as Autodesk.AECC.Interop.Land.IAeccBandSetItem;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -34,7 +34,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Location(AeccXLandLib.AeccBandSetItemLocationType pVal) 
+		public void Set_Location(Autodesk.AECC.Interop.Land.AeccBandSetItemLocationType pVal) 
 		{
 			this._i.Location = pVal;
 		}

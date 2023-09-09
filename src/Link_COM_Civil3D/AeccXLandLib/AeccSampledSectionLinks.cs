@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSampledSectionLinks 
 	{
-		public AeccXLandLib.IAeccSampledSectionLinks _i;
+		public Autodesk.AECC.Interop.Land.IAeccSampledSectionLinks _i;
 		internal AeccSampledSectionLinks(object AeccSampledSectionLinks_object) 
 		{
-			this._i = AeccSampledSectionLinks_object as AeccXLandLib.IAeccSampledSectionLinks;
+			this._i = AeccSampledSectionLinks_object as Autodesk.AECC.Interop.Land.IAeccSampledSectionLinks;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

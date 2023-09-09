@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAppliedSubassemblies 
 	{
-		public AeccXRoadwayLib.IAeccAppliedSubassemblies _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccAppliedSubassemblies _i;
 		internal AeccAppliedSubassemblies(object AeccAppliedSubassemblies_object) 
 		{
-			this._i = AeccAppliedSubassemblies_object as AeccXRoadwayLib.IAeccAppliedSubassemblies;
+			this._i = AeccAppliedSubassemblies_object as Autodesk.AECC.Interop.Roadway.IAeccAppliedSubassemblies;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

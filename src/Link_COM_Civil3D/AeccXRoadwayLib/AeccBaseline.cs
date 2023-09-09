@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccBaseline 
 	{
-		public AeccXRoadwayLib.IAeccBaseline _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccBaseline _i;
 		internal AeccBaseline(object AeccBaseline_object) 
 		{
-			this._i = AeccBaseline_object as AeccXRoadwayLib.IAeccBaseline;
+			this._i = AeccBaseline_object as Autodesk.AECC.Interop.Roadway.IAeccBaseline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

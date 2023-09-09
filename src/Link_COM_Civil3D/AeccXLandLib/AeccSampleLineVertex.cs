@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSampleLineVertex 
 	{
-		public AeccXLandLib.IAeccSampleLineVertex _i;
+		public Autodesk.AECC.Interop.Land.IAeccSampleLineVertex _i;
 		internal AeccSampleLineVertex(object AeccSampleLineVertex_object) 
 		{
-			this._i = AeccSampleLineVertex_object as AeccXLandLib.IAeccSampleLineVertex;
+			this._i = AeccSampleLineVertex_object as Autodesk.AECC.Interop.Land.IAeccSampleLineVertex;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DirectionFrom(AeccXLandLib.AeccDirectionFromType pVal) 
+		public void Set_DirectionFrom(Autodesk.AECC.Interop.Land.AeccDirectionFromType pVal) 
 		{
 			this._i.DirectionFrom = pVal;
 		}

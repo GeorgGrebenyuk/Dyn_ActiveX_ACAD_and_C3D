@@ -6,10 +6,10 @@
 	///</summary>
 	public class XMLDOMImplementation 
 	{
-		public AeccXLandLib.IXMLDOMImplementation _i;
+		public Autodesk.AECC.Interop.Land.IXMLDOMImplementation _i;
 		internal XMLDOMImplementation(object XMLDOMImplementation_object) 
 		{
-			this._i = XMLDOMImplementation_object as AeccXLandLib.IXMLDOMImplementation;
+			this._i = XMLDOMImplementation_object as Autodesk.AECC.Interop.Land.IXMLDOMImplementation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumStationDelimiterCharacter 
 	{
-		public AeccXLandLib.IAeccPropertyEnumStationDelimiterCharacter _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumStationDelimiterCharacter _i;
 		internal AeccPropertyEnumStationDelimiterCharacter(object AeccPropertyEnumStationDelimiterCharacter_object) 
 		{
-			this._i = AeccPropertyEnumStationDelimiterCharacter_object as AeccXLandLib.IAeccPropertyEnumStationDelimiterCharacter;
+			this._i = AeccPropertyEnumStationDelimiterCharacter_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumStationDelimiterCharacter;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccStationDelimiterCharacterType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccStationDelimiterCharacterType pVal) 
 		{
 			this._i.Value = pVal;
 		}

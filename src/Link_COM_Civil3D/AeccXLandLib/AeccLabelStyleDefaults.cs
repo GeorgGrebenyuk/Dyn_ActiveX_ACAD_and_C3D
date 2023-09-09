@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelStyleDefaults 
 	{
-		public AeccXLandLib.IAeccLabelStyleDefaults _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelStyleDefaults _i;
 		internal AeccLabelStyleDefaults(object AeccLabelStyleDefaults_object) 
 		{
-			this._i = AeccLabelStyleDefaults_object as AeccXLandLib.IAeccLabelStyleDefaults;
+			this._i = AeccLabelStyleDefaults_object as Autodesk.AECC.Interop.Land.IAeccLabelStyleDefaults;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

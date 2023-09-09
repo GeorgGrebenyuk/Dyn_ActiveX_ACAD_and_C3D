@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceStyle _i;
 		internal AeccSurfaceStyle(object AeccSurfaceStyle_object) 
 		{
-			this._i = AeccSurfaceStyle_object as AeccXLandLib.IAeccSurfaceStyle;
+			this._i = AeccSurfaceStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

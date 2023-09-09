@@ -6,10 +6,10 @@
 	///</summary>
 	public class XMLDOMCharacterData 
 	{
-		public AeccXLandLib.IXMLDOMCharacterData _i;
+		public Autodesk.AECC.Interop.Land.IXMLDOMCharacterData _i;
 		internal XMLDOMCharacterData(object XMLDOMCharacterData_object) 
 		{
-			this._i = XMLDOMCharacterData_object as AeccXLandLib.IXMLDOMCharacterData;
+			this._i = XMLDOMCharacterData_object as Autodesk.AECC.Interop.Land.IXMLDOMCharacterData;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

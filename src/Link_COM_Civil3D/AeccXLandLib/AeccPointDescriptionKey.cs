@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPointDescriptionKey 
 	{
-		public AeccXLandLib.IAeccPointDescriptionKey _i;
+		public Autodesk.AECC.Interop.Land.IAeccPointDescriptionKey _i;
 		internal AeccPointDescriptionKey(object AeccPointDescriptionKey_object) 
 		{
-			this._i = AeccPointDescriptionKey_object as AeccXLandLib.IAeccPointDescriptionKey;
+			this._i = AeccPointDescriptionKey_object as Autodesk.AECC.Interop.Land.IAeccPointDescriptionKey;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

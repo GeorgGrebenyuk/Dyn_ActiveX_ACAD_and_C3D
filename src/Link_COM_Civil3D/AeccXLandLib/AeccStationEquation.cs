@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStationEquation 
 	{
-		public AeccXLandLib.IAeccStationEquation _i;
+		public Autodesk.AECC.Interop.Land.IAeccStationEquation _i;
 		internal AeccStationEquation(object AeccStationEquation_object) 
 		{
-			this._i = AeccStationEquation_object as AeccXLandLib.IAeccStationEquation;
+			this._i = AeccStationEquation_object as Autodesk.AECC.Interop.Land.IAeccStationEquation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -52,7 +52,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Type(AeccXLandLib.AeccStationEquationType val) 
+		public void Set_Type(Autodesk.AECC.Interop.Land.AeccStationEquationType val) 
 		{
 			this._i.Type = val;
 		}

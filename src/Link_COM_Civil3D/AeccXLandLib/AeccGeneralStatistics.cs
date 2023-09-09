@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGeneralStatistics 
 	{
-		public AeccXLandLib.IAeccGeneralStatistics _i;
+		public Autodesk.AECC.Interop.Land.IAeccGeneralStatistics _i;
 		internal AeccGeneralStatistics(object AeccGeneralStatistics_object) 
 		{
-			this._i = AeccGeneralStatistics_object as AeccXLandLib.IAeccGeneralStatistics;
+			this._i = AeccGeneralStatistics_object as Autodesk.AECC.Interop.Land.IAeccGeneralStatistics;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

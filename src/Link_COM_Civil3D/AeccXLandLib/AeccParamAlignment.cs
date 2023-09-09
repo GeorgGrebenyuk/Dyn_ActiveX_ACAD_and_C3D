@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParamAlignment 
 	{
-		public AeccXLandLib.IAeccParamAlignment _i;
+		public Autodesk.AECC.Interop.Land.IAeccParamAlignment _i;
 		internal AeccParamAlignment(object AeccParamAlignment_object) 
 		{
-			this._i = AeccParamAlignment_object as AeccXLandLib.IAeccParamAlignment;
+			this._i = AeccParamAlignment_object as Autodesk.AECC.Interop.Land.IAeccParamAlignment;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyFigureStyles 
 	{
-		public AeccXSurveyLib.IAeccSurveyFigureStyles _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyFigureStyles _i;
 		internal AeccSurveyFigureStyles(object AeccSurveyFigureStyles_object) 
 		{
-			this._i = AeccSurveyFigureStyles_object as AeccXSurveyLib.IAeccSurveyFigureStyles;
+			this._i = AeccSurveyFigureStyles_object as Autodesk.AECC.Interop.Survey.IAeccSurveyFigureStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

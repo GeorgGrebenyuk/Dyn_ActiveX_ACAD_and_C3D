@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPointImportOptions 
 	{
-		public AeccXLandLib.IAeccPointImportOptions _i;
+		public Autodesk.AECC.Interop.Land.IAeccPointImportOptions _i;
 		internal AeccPointImportOptions(object AeccPointImportOptions_object) 
 		{
-			this._i = AeccPointImportOptions_object as AeccXLandLib.IAeccPointImportOptions;
+			this._i = AeccPointImportOptions_object as Autodesk.AECC.Interop.Land.IAeccPointImportOptions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -42,7 +42,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_PointDuplicateResolution(AeccXLandLib.AeccPointDuplicateResolutionType DuplicateResol) 
+		public void Set_PointDuplicateResolution(Autodesk.AECC.Interop.Land.AeccPointDuplicateResolutionType DuplicateResol) 
 		{
 			this._i.PointDuplicateResolution = DuplicateResol;
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentGeomPointLabelGroupElement 
 	{
-		public AeccXLandLib.IAeccAlignmentGeomPointLabelGroupElement _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentGeomPointLabelGroupElement _i;
 		internal AeccAlignmentGeomPointLabelGroupElement(object AeccAlignmentGeomPointLabelGroupElement_object) 
 		{
-			this._i = AeccAlignmentGeomPointLabelGroupElement_object as AeccXLandLib.IAeccAlignmentGeomPointLabelGroupElement;
+			this._i = AeccAlignmentGeomPointLabelGroupElement_object as Autodesk.AECC.Interop.Land.IAeccAlignmentGeomPointLabelGroupElement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

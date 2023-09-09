@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumFormat 
 	{
-		public AeccXLandLib.IAeccPropertyEnumFormat _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumFormat _i;
 		internal AeccPropertyEnumFormat(object AeccPropertyEnumFormat_object) 
 		{
-			this._i = AeccPropertyEnumFormat_object as AeccXLandLib.IAeccPropertyEnumFormat;
+			this._i = AeccPropertyEnumFormat_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumFormat;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccFormatType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccFormatType pVal) 
 		{
 			this._i.Value = pVal;
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelStyleTextComponentBorder 
 	{
-		public AeccXLandLib.IAeccLabelStyleTextComponentBorder _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelStyleTextComponentBorder _i;
 		internal AeccLabelStyleTextComponentBorder(object AeccLabelStyleTextComponentBorder_object) 
 		{
-			this._i = AeccLabelStyleTextComponentBorder_object as AeccXLandLib.IAeccLabelStyleTextComponentBorder;
+			this._i = AeccLabelStyleTextComponentBorder_object as Autodesk.AECC.Interop.Land.IAeccLabelStyleTextComponentBorder;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

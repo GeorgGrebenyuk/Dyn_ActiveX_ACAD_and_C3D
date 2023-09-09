@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceElevationLabel 
 	{
-		public AeccXLandLib.IAeccSurfaceElevationLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceElevationLabel _i;
 		internal AeccSurfaceElevationLabel(object AeccSurfaceElevationLabel_object) 
 		{
-			this._i = AeccSurfaceElevationLabel_object as AeccXLandLib.IAeccSurfaceElevationLabel;
+			this._i = AeccSurfaceElevationLabel_object as Autodesk.AECC.Interop.Land.IAeccSurfaceElevationLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -39,7 +39,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_LeaderAttachmentOption(AeccXLandLib.AeccLabelLeaderAttachmentType pVal) 
+		public void Set_LeaderAttachmentOption(Autodesk.AECC.Interop.Land.AeccLabelLeaderAttachmentType pVal) 
 		{
 			this._i.LeaderAttachmentOption = pVal;
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccWatershedDrain 
 	{
-		public AeccXLandLib.IAeccWatershedDrain _i;
+		public Autodesk.AECC.Interop.Land.IAeccWatershedDrain _i;
 		internal AeccWatershedDrain(object AeccWatershedDrain_object) 
 		{
-			this._i = AeccWatershedDrain_object as AeccXLandLib.IAeccWatershedDrain;
+			this._i = AeccWatershedDrain_object as Autodesk.AECC.Interop.Land.IAeccWatershedDrain;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

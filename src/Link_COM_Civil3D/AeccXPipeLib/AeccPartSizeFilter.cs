@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPartSizeFilter 
 	{
-		public AeccXPipeLib.IAeccPartSizeFilter _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPartSizeFilter _i;
 		internal AeccPartSizeFilter(object AeccPartSizeFilter_object) 
 		{
-			this._i = AeccPartSizeFilter_object as AeccXPipeLib.IAeccPartSizeFilter;
+			this._i = AeccPartSizeFilter_object as Autodesk.AECC.Interop.Pipe.IAeccPartSizeFilter;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

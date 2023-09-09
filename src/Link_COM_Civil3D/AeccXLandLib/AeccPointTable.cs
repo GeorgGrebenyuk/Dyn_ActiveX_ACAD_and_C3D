@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPointTable 
 	{
-		public AeccXLandLib.IAeccPointTable _i;
+		public Autodesk.AECC.Interop.Land.IAeccPointTable _i;
 		internal AeccPointTable(object AeccPointTable_object) 
 		{
-			this._i = AeccPointTable_object as AeccXLandLib.IAeccPointTable;
+			this._i = AeccPointTable_object as Autodesk.AECC.Interop.Land.IAeccPointTable;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

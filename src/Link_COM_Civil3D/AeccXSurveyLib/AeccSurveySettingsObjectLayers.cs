@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveySettingsObjectLayers 
 	{
-		public AeccXSurveyLib.IAeccSurveySettingsObjectLayers _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveySettingsObjectLayers _i;
 		internal AeccSurveySettingsObjectLayers(object AeccSurveySettingsObjectLayers_object) 
 		{
-			this._i = AeccSurveySettingsObjectLayers_object as AeccXSurveyLib.IAeccSurveySettingsObjectLayers;
+			this._i = AeccSurveySettingsObjectLayers_object as Autodesk.AECC.Interop.Survey.IAeccSurveySettingsObjectLayers;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

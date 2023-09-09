@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumParcelAnalysis 
 	{
-		public AeccXLandLib.IAeccPropertyEnumParcelAnalysis _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumParcelAnalysis _i;
 		internal AeccPropertyEnumParcelAnalysis(object AeccPropertyEnumParcelAnalysis_object) 
 		{
-			this._i = AeccPropertyEnumParcelAnalysis_object as AeccXLandLib.IAeccPropertyEnumParcelAnalysis;
+			this._i = AeccPropertyEnumParcelAnalysis_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumParcelAnalysis;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccParcelAnalysisType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccParcelAnalysisType pVal) 
 		{
 			this._i.Value = pVal;
 		}

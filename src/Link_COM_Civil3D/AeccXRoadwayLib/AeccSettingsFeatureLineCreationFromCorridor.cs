@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsFeatureLineCreationFromCorridor 
 	{
-		public AeccXRoadwayLib.IAeccSettingsFeatureLineCreationFromCorridor _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsFeatureLineCreationFromCorridor _i;
 		internal AeccSettingsFeatureLineCreationFromCorridor(object AeccSettingsFeatureLineCreationFromCorridor_object) 
 		{
-			this._i = AeccSettingsFeatureLineCreationFromCorridor_object as AeccXRoadwayLib.IAeccSettingsFeatureLineCreationFromCorridor;
+			this._i = AeccSettingsFeatureLineCreationFromCorridor_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsFeatureLineCreationFromCorridor;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

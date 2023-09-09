@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddParcelCurveTable 
 	{
-		public AeccXLandLib.IAeccSettingsAddParcelCurveTable _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAddParcelCurveTable _i;
 		internal AeccSettingsAddParcelCurveTable(object AeccSettingsAddParcelCurveTable_object) 
 		{
-			this._i = AeccSettingsAddParcelCurveTable_object as AeccXLandLib.IAeccSettingsAddParcelCurveTable;
+			this._i = AeccSettingsAddParcelCurveTable_object as Autodesk.AECC.Interop.Land.IAeccSettingsAddParcelCurveTable;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

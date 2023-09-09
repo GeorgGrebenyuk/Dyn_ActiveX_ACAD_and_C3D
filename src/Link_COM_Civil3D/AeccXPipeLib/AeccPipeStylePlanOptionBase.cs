@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipeStylePlanOptionBase 
 	{
-		public AeccXPipeLib.IAeccPipeStylePlanOptionBase _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPipeStylePlanOptionBase _i;
 		internal AeccPipeStylePlanOptionBase(object AeccPipeStylePlanOptionBase_object) 
 		{
-			this._i = AeccPipeStylePlanOptionBase_object as AeccXPipeLib.IAeccPipeStylePlanOptionBase;
+			this._i = AeccPipeStylePlanOptionBase_object as Autodesk.AECC.Interop.Pipe.IAeccPipeStylePlanOptionBase;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -99,7 +99,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_HatchOptions(AeccXPipeLib.AeccPipeHatchOptions pnHatchOptions) 
+		public void Set_HatchOptions(Autodesk.AECC.Interop.Pipe.AeccPipeHatchOptions pnHatchOptions) 
 		{
 			this._i.HatchOptions = pnHatchOptions;
 		}
@@ -112,7 +112,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_WallSizeType(AeccXPipeLib.AeccPipeWallSizeType pnWallSizeType) 
+		public void Set_WallSizeType(Autodesk.AECC.Interop.Pipe.AeccPipeWallSizeType pnWallSizeType) 
 		{
 			this._i.WallSizeType = pnWallSizeType;
 		}
@@ -125,7 +125,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_EndSizeType(AeccXPipeLib.AeccPipeEndSizeType pnEndSizeType) 
+		public void Set_EndSizeType(Autodesk.AECC.Interop.Pipe.AeccPipeEndSizeType pnEndSizeType) 
 		{
 			this._i.EndSizeType = pnEndSizeType;
 		}
@@ -138,7 +138,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_WallSizeOptions(AeccXPipeLib.AeccPipeDisplayOptions pnWallSizeOptions) 
+		public void Set_WallSizeOptions(Autodesk.AECC.Interop.Pipe.AeccPipeDisplayOptions pnWallSizeOptions) 
 		{
 			this._i.WallSizeOptions = pnWallSizeOptions;
 		}
@@ -151,7 +151,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_EndSizeOptions(AeccXPipeLib.AeccPipeDisplayOptions pnEndSizeOptions) 
+		public void Set_EndSizeOptions(Autodesk.AECC.Interop.Pipe.AeccPipeDisplayOptions pnEndSizeOptions) 
 		{
 			this._i.EndSizeOptions = pnEndSizeOptions;
 		}

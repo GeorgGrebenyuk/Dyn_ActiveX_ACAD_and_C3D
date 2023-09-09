@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddParcelLineLabel 
 	{
-		public AeccXLandLib.IAeccSettingsAddParcelLineLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAddParcelLineLabel _i;
 		internal AeccSettingsAddParcelLineLabel(object AeccSettingsAddParcelLineLabel_object) 
 		{
-			this._i = AeccSettingsAddParcelLineLabel_object as AeccXLandLib.IAeccSettingsAddParcelLineLabel;
+			this._i = AeccSettingsAddParcelLineLabel_object as Autodesk.AECC.Interop.Land.IAeccSettingsAddParcelLineLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

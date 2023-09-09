@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCommandsSurface 
 	{
-		public AeccXLandLib.IAeccSettingsCommandsSurface _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCommandsSurface _i;
 		internal AeccSettingsCommandsSurface(object AeccSettingsCommandsSurface_object) 
 		{
-			this._i = AeccSettingsCommandsSurface_object as AeccXLandLib.IAeccSettingsCommandsSurface;
+			this._i = AeccSettingsCommandsSurface_object as Autodesk.AECC.Interop.Land.IAeccSettingsCommandsSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

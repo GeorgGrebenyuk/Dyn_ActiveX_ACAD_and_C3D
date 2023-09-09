@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceBaseStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceBaseStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceBaseStyle _i;
 		internal AeccSurfaceBaseStyle(object AeccSurfaceBaseStyle_object) 
 		{
-			this._i = AeccSurfaceBaseStyle_object as AeccXLandLib.IAeccSurfaceBaseStyle;
+			this._i = AeccSurfaceBaseStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceBaseStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Display3dType(AeccXLandLib.AeccDisplay3dType pVal) 
+		public void Set_Display3dType(Autodesk.AECC.Interop.Land.AeccDisplay3dType pVal) 
 		{
 			this._i.Display3dType = pVal;
 		}

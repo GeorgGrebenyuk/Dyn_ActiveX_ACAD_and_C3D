@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParcelTableStyles 
 	{
-		public AeccXLandLib.IAeccParcelTableStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccParcelTableStyles _i;
 		internal AeccParcelTableStyles(object AeccParcelTableStyles_object) 
 		{
-			this._i = AeccParcelTableStyles_object as AeccXLandLib.IAeccParcelTableStyles;
+			this._i = AeccParcelTableStyles_object as Autodesk.AECC.Interop.Land.IAeccParcelTableStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

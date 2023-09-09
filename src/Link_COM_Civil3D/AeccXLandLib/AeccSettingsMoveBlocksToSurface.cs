@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsMoveBlocksToSurface 
 	{
-		public AeccXLandLib.IAeccSettingsMoveBlocksToSurface _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsMoveBlocksToSurface _i;
 		internal AeccSettingsMoveBlocksToSurface(object AeccSettingsMoveBlocksToSurface_object) 
 		{
-			this._i = AeccSettingsMoveBlocksToSurface_object as AeccXLandLib.IAeccSettingsMoveBlocksToSurface;
+			this._i = AeccSettingsMoveBlocksToSurface_object as Autodesk.AECC.Interop.Land.IAeccSettingsMoveBlocksToSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

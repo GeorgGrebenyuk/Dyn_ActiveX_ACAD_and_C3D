@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccRoadwaySettingsObjectLayers 
 	{
-		public AeccXRoadwayLib.IAeccRoadwaySettingsObjectLayers _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccRoadwaySettingsObjectLayers _i;
 		internal AeccRoadwaySettingsObjectLayers(object AeccRoadwaySettingsObjectLayers_object) 
 		{
-			this._i = AeccRoadwaySettingsObjectLayers_object as AeccXRoadwayLib.IAeccRoadwaySettingsObjectLayers;
+			this._i = AeccRoadwaySettingsObjectLayers_object as Autodesk.AECC.Interop.Roadway.IAeccRoadwaySettingsObjectLayers;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccCalculatedPoint 
 	{
-		public AeccXRoadwayLib.IAeccCalculatedPoint _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccCalculatedPoint _i;
 		internal AeccCalculatedPoint(object AeccCalculatedPoint_object) 
 		{
-			this._i = AeccCalculatedPoint_object as AeccXRoadwayLib.IAeccCalculatedPoint;
+			this._i = AeccCalculatedPoint_object as Autodesk.AECC.Interop.Roadway.IAeccCalculatedPoint;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

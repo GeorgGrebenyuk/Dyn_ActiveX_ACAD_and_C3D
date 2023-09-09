@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccInterferenceCheckCriteria 
 	{
-		public AeccXPipeLib.IAeccInterferenceCheckCriteria _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccInterferenceCheckCriteria _i;
 		internal AeccInterferenceCheckCriteria(object AeccInterferenceCheckCriteria_object) 
 		{
-			this._i = AeccInterferenceCheckCriteria_object as AeccXPipeLib.IAeccInterferenceCheckCriteria;
+			this._i = AeccInterferenceCheckCriteria_object as Autodesk.AECC.Interop.Pipe.IAeccInterferenceCheckCriteria;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -34,7 +34,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_UseDistanceOrScaleFactor(AeccXPipeLib.AeccProximityDistanceScaleFactorOptions pUseDistanceOrScaleFactor) 
+		public void Set_UseDistanceOrScaleFactor(Autodesk.AECC.Interop.Pipe.AeccProximityDistanceScaleFactorOptions pUseDistanceOrScaleFactor) 
 		{
 			this._i.UseDistanceOrScaleFactor = pUseDistanceOrScaleFactor;
 		}

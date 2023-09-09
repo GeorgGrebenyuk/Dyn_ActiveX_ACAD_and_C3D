@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceLabels 
 	{
-		public AeccXLandLib.IAeccSurfaceLabels _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceLabels _i;
 		internal AeccSurfaceLabels(object AeccSurfaceLabels_object) 
 		{
-			this._i = AeccSurfaceLabels_object as AeccXLandLib.IAeccSurfaceLabels;
+			this._i = AeccSurfaceLabels_object as Autodesk.AECC.Interop.Land.IAeccSurfaceLabels;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

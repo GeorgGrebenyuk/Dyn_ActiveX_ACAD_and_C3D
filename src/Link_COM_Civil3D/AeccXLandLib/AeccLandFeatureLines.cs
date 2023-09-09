@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLandFeatureLines 
 	{
-		public AeccXLandLib.IAeccLandFeatureLines _i;
+		public Autodesk.AECC.Interop.Land.IAeccLandFeatureLines _i;
 		internal AeccLandFeatureLines(object AeccLandFeatureLines_object) 
 		{
-			this._i = AeccLandFeatureLines_object as AeccXLandLib.IAeccLandFeatureLines;
+			this._i = AeccLandFeatureLines_object as Autodesk.AECC.Interop.Land.IAeccLandFeatureLines;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

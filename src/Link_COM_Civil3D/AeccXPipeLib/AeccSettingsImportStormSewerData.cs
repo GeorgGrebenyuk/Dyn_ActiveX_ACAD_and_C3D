@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsImportStormSewerData 
 	{
-		public AeccXPipeLib.IAeccSettingsImportStormSewerData _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsImportStormSewerData _i;
 		internal AeccSettingsImportStormSewerData(object AeccSettingsImportStormSewerData_object) 
 		{
-			this._i = AeccSettingsImportStormSewerData_object as AeccXPipeLib.IAeccSettingsImportStormSewerData;
+			this._i = AeccSettingsImportStormSewerData_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsImportStormSewerData;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

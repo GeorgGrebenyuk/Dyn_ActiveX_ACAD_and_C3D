@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAlignmentStyles 
 	{
-		public AeccXLandLib.IAeccSettingsAlignmentStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAlignmentStyles _i;
 		internal AeccSettingsAlignmentStyles(object AeccSettingsAlignmentStyles_object) 
 		{
-			this._i = AeccSettingsAlignmentStyles_object as AeccXLandLib.IAeccSettingsAlignmentStyles;
+			this._i = AeccSettingsAlignmentStyles_object as Autodesk.AECC.Interop.Land.IAeccSettingsAlignmentStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccColumnStyles 
 	{
-		public AeccXLandLib.IAeccColumnStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccColumnStyles _i;
 		internal AeccColumnStyles(object AeccColumnStyles_object) 
 		{
-			this._i = AeccColumnStyles_object as AeccXLandLib.IAeccColumnStyles;
+			this._i = AeccColumnStyles_object as Autodesk.AECC.Interop.Land.IAeccColumnStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

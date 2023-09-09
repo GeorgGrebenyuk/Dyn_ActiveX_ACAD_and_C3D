@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfile 
 	{
-		public AeccXLandLib.IAeccProfile _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfile _i;
 		internal AeccProfile(object AeccProfile_object) 
 		{
-			this._i = AeccProfile_object as AeccXLandLib.IAeccProfile;
+			this._i = AeccProfile_object as Autodesk.AECC.Interop.Land.IAeccProfile;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -39,7 +39,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Type(AeccXLandLib.AeccProfileType Type) 
+		public void Set_Type(Autodesk.AECC.Interop.Land.AeccProfileType Type) 
 		{
 			this._i.Type = Type;
 		}

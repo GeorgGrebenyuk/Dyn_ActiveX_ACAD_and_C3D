@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGraphTitleStyle 
 	{
-		public AeccXLandLib.IAeccGraphTitleStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccGraphTitleStyle _i;
 		internal AeccGraphTitleStyle(object AeccGraphTitleStyle_object) 
 		{
-			this._i = AeccGraphTitleStyle_object as AeccXLandLib.IAeccGraphTitleStyle;
+			this._i = AeccGraphTitleStyle_object as Autodesk.AECC.Interop.Land.IAeccGraphTitleStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -55,7 +55,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Location(AeccXLandLib.AeccTitleLocationType pVal) 
+		public void Set_Location(Autodesk.AECC.Interop.Land.AeccTitleLocationType pVal) 
 		{
 			this._i.Location = pVal;
 		}
@@ -68,7 +68,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Justification(AeccXLandLib.AeccTitlePositionType pVal) 
+		public void Set_Justification(Autodesk.AECC.Interop.Land.AeccTitlePositionType pVal) 
 		{
 			this._i.Justification = pVal;
 		}

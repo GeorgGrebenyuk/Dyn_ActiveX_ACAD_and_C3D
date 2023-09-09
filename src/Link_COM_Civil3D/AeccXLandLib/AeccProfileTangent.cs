@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileTangent 
 	{
-		public AeccXLandLib.IAeccProfileTangent _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileTangent _i;
 		internal AeccProfileTangent(object AeccProfileTangent_object) 
 		{
-			this._i = AeccProfileTangent_object as AeccXLandLib.IAeccProfileTangent;
+			this._i = AeccProfileTangent_object as Autodesk.AECC.Interop.Land.IAeccProfileTangent;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

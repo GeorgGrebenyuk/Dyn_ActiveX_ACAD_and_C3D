@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfilePVICurveCircular 
 	{
-		public AeccXLandLib.IAeccProfilePVICurveCircular _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfilePVICurveCircular _i;
 		internal AeccProfilePVICurveCircular(object AeccProfilePVICurveCircular_object) 
 		{
-			this._i = AeccProfilePVICurveCircular_object as AeccXLandLib.IAeccProfilePVICurveCircular;
+			this._i = AeccProfilePVICurveCircular_object as Autodesk.AECC.Interop.Land.IAeccProfilePVICurveCircular;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

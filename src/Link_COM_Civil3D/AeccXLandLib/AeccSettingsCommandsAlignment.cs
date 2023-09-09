@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCommandsAlignment 
 	{
-		public AeccXLandLib.IAeccSettingsCommandsAlignment _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCommandsAlignment _i;
 		internal AeccSettingsCommandsAlignment(object AeccSettingsCommandsAlignment_object) 
 		{
-			this._i = AeccSettingsCommandsAlignment_object as AeccXLandLib.IAeccSettingsCommandsAlignment;
+			this._i = AeccSettingsCommandsAlignment_object as Autodesk.AECC.Interop.Land.IAeccSettingsCommandsAlignment;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

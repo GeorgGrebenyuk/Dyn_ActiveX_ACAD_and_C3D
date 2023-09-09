@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsSurfaceExportToDem 
 	{
-		public AeccXLandLib.IAeccSettingsSurfaceExportToDem _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsSurfaceExportToDem _i;
 		internal AeccSettingsSurfaceExportToDem(object AeccSettingsSurfaceExportToDem_object) 
 		{
-			this._i = AeccSettingsSurfaceExportToDem_object as AeccXLandLib.IAeccSettingsSurfaceExportToDem;
+			this._i = AeccSettingsSurfaceExportToDem_object as Autodesk.AECC.Interop.Land.IAeccSettingsSurfaceExportToDem;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

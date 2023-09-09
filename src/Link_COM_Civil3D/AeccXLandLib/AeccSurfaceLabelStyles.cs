@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceLabelStyles 
 	{
-		public AeccXLandLib.IAeccSurfaceLabelStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceLabelStyles _i;
 		internal AeccSurfaceLabelStyles(object AeccSurfaceLabelStyles_object) 
 		{
-			this._i = AeccSurfaceLabelStyles_object as AeccXLandLib.IAeccSurfaceLabelStyles;
+			this._i = AeccSurfaceLabelStyles_object as Autodesk.AECC.Interop.Land.IAeccSurfaceLabelStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

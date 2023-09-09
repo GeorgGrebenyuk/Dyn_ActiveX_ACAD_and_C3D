@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsGoogleEarthOptions 
 	{
-		public AeccXLandLib.IAeccSettingsGoogleEarthOptions _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsGoogleEarthOptions _i;
 		internal AeccSettingsGoogleEarthOptions(object AeccSettingsGoogleEarthOptions_object) 
 		{
-			this._i = AeccSettingsGoogleEarthOptions_object as AeccXLandLib.IAeccSettingsGoogleEarthOptions;
+			this._i = AeccSettingsGoogleEarthOptions_object as Autodesk.AECC.Interop.Land.IAeccSettingsGoogleEarthOptions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

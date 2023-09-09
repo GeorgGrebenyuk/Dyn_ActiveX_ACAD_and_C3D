@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyObservation 
 	{
-		public AeccXSurveyLib.IAeccSurveyObservation _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyObservation _i;
 		internal AeccSurveyObservation(object AeccSurveyObservation_object) 
 		{
-			this._i = AeccSurveyObservation_object as AeccXSurveyLib.IAeccSurveyObservation;
+			this._i = AeccSurveyObservation_object as Autodesk.AECC.Interop.Survey.IAeccSurveyObservation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -39,7 +39,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_AngleType(AeccXSurveyLib.AeccSurveyAngleType pAngleType) 
+		public void Set_AngleType(Autodesk.AECC.Interop.Survey.AeccSurveyAngleType pAngleType) 
 		{
 			this._i.AngleType = pAngleType;
 		}
@@ -65,7 +65,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DistanceType(AeccXSurveyLib.AeccSurveyDistanceType pDistanceType) 
+		public void Set_DistanceType(Autodesk.AECC.Interop.Survey.AeccSurveyDistanceType pDistanceType) 
 		{
 			this._i.DistanceType = pDistanceType;
 		}
@@ -91,7 +91,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_VerticalType(AeccXSurveyLib.AeccSurveyVerticalType pVerticalType) 
+		public void Set_VerticalType(Autodesk.AECC.Interop.Survey.AeccSurveyVerticalType pVerticalType) 
 		{
 			this._i.VerticalType = pVerticalType;
 		}
@@ -117,7 +117,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_TargetType(AeccXSurveyLib.AeccSurveyTargetType pTargetType) 
+		public void Set_TargetType(Autodesk.AECC.Interop.Survey.AeccSurveyTargetType pTargetType) 
 		{
 			this._i.TargetType = pTargetType;
 		}
@@ -194,7 +194,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_EquipmentMeasuringDevice(AeccXSurveyLib.AeccSurveyMeasuringDeviceType pMeasuringDevice) 
+		public void Set_EquipmentMeasuringDevice(Autodesk.AECC.Interop.Survey.AeccSurveyMeasuringDeviceType pMeasuringDevice) 
 		{
 			this._i.EquipmentMeasuringDevice = pMeasuringDevice;
 		}
@@ -467,7 +467,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_EquipmentDistanceUnit(AeccXSurveyLib.AeccSurveyDistanceUnit pDistanceUnit) 
+		public void Set_EquipmentDistanceUnit(Autodesk.AECC.Interop.Survey.AeccSurveyDistanceUnit pDistanceUnit) 
 		{
 			this._i.EquipmentDistanceUnit = pDistanceUnit;
 		}
@@ -480,7 +480,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_EquipmentAngleUnit(AeccXSurveyLib.AeccSurveyAngleUnit pAngleUnit) 
+		public void Set_EquipmentAngleUnit(Autodesk.AECC.Interop.Survey.AeccSurveyAngleUnit pAngleUnit) 
 		{
 			this._i.EquipmentAngleUnit = pAngleUnit;
 		}
@@ -493,7 +493,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_EquipmentAngleType(AeccXSurveyLib.AeccSurveyEquipmentAngleType pAngleType) 
+		public void Set_EquipmentAngleType(Autodesk.AECC.Interop.Survey.AeccSurveyEquipmentAngleType pAngleType) 
 		{
 			this._i.EquipmentAngleType = pAngleType;
 		}
@@ -506,7 +506,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_EquipmentVerticalAngleType(AeccXSurveyLib.AeccSurveyEquipmentVerticalAngleType pVerticalAngleType) 
+		public void Set_EquipmentVerticalAngleType(Autodesk.AECC.Interop.Survey.AeccSurveyEquipmentVerticalAngleType pVerticalAngleType) 
 		{
 			this._i.EquipmentVerticalAngleType = pVerticalAngleType;
 		}

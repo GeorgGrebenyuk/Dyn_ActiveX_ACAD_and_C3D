@@ -6,10 +6,10 @@
 	///</summary>
 	public class XMLDOMProcessingInstruction 
 	{
-		public AeccXLandLib.IXMLDOMProcessingInstruction _i;
+		public Autodesk.AECC.Interop.Land.IXMLDOMProcessingInstruction _i;
 		internal XMLDOMProcessingInstruction(object XMLDOMProcessingInstruction_object) 
 		{
-			this._i = XMLDOMProcessingInstruction_object as AeccXLandLib.IXMLDOMProcessingInstruction;
+			this._i = XMLDOMProcessingInstruction_object as Autodesk.AECC.Interop.Land.IXMLDOMProcessingInstruction;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

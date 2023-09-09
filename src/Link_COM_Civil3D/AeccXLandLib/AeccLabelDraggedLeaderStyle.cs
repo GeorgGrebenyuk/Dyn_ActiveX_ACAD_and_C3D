@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelDraggedLeaderStyle 
 	{
-		public AeccXLandLib.IAeccLabelDraggedLeaderStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelDraggedLeaderStyle _i;
 		internal AeccLabelDraggedLeaderStyle(object AeccLabelDraggedLeaderStyle_object) 
 		{
-			this._i = AeccLabelDraggedLeaderStyle_object as AeccXLandLib.IAeccLabelDraggedLeaderStyle;
+			this._i = AeccLabelDraggedLeaderStyle_object as Autodesk.AECC.Interop.Land.IAeccLabelDraggedLeaderStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionLabelSet 
 	{
-		public AeccXLandLib.IAeccSectionLabelSet _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionLabelSet _i;
 		internal AeccSectionLabelSet(object AeccSectionLabelSet_object) 
 		{
-			this._i = AeccSectionLabelSet_object as AeccXLandLib.IAeccSectionLabelSet;
+			this._i = AeccSectionLabelSet_object as Autodesk.AECC.Interop.Land.IAeccSectionLabelSet;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

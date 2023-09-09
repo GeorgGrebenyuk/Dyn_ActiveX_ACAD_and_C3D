@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSheetStyle 
 	{
-		public AeccXLandLib.IAeccSheetStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSheetStyle _i;
 		internal AeccSheetStyle(object AeccSheetStyle_object) 
 		{
-			this._i = AeccSheetStyle_object as AeccXLandLib.IAeccSheetStyle;
+			this._i = AeccSheetStyle_object as Autodesk.AECC.Interop.Land.IAeccSheetStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

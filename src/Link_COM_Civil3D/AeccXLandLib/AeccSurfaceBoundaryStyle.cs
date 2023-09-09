@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceBoundaryStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceBoundaryStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceBoundaryStyle _i;
 		internal AeccSurfaceBoundaryStyle(object AeccSurfaceBoundaryStyle_object) 
 		{
-			this._i = AeccSurfaceBoundaryStyle_object as AeccXLandLib.IAeccSurfaceBoundaryStyle;
+			this._i = AeccSurfaceBoundaryStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceBoundaryStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

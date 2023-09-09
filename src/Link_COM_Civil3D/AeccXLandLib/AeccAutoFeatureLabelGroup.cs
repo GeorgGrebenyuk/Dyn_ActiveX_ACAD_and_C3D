@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAutoFeatureLabelGroup 
 	{
-		public AeccXLandLib.IAeccAutoFeatureLabelGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccAutoFeatureLabelGroup _i;
 		internal AeccAutoFeatureLabelGroup(object AeccAutoFeatureLabelGroup_object) 
 		{
-			this._i = AeccAutoFeatureLabelGroup_object as AeccXLandLib.IAeccAutoFeatureLabelGroup;
+			this._i = AeccAutoFeatureLabelGroup_object as Autodesk.AECC.Interop.Land.IAeccAutoFeatureLabelGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

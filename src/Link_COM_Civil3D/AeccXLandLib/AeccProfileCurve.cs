@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileCurve 
 	{
-		public AeccXLandLib.IAeccProfileCurve _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileCurve _i;
 		internal AeccProfileCurve(object AeccProfileCurve_object) 
 		{
-			this._i = AeccProfileCurve_object as AeccXLandLib.IAeccProfileCurve;
+			this._i = AeccProfileCurve_object as Autodesk.AECC.Interop.Land.IAeccProfileCurve;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

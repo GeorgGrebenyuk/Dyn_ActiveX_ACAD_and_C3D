@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumRadiusLookupMethod 
 	{
-		public AeccXLandLib.IAeccPropertyEnumRadiusLookupMethod _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumRadiusLookupMethod _i;
 		internal AeccPropertyEnumRadiusLookupMethod(object AeccPropertyEnumRadiusLookupMethod_object) 
 		{
-			this._i = AeccPropertyEnumRadiusLookupMethod_object as AeccXLandLib.IAeccPropertyEnumRadiusLookupMethod;
+			this._i = AeccPropertyEnumRadiusLookupMethod_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumRadiusLookupMethod;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccRadiusLookupMethodType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccRadiusLookupMethodType pVal) 
 		{
 			this._i.Value = pVal;
 		}

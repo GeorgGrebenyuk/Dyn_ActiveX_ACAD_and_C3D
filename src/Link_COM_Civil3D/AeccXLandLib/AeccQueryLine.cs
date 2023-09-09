@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccQueryLine 
 	{
-		public AeccXLandLib.IAeccQueryLine _i;
+		public Autodesk.AECC.Interop.Land.IAeccQueryLine _i;
 		internal AeccQueryLine(object AeccQueryLine_object) 
 		{
-			this._i = AeccQueryLine_object as AeccXLandLib.IAeccQueryLine;
+			this._i = AeccQueryLine_object as Autodesk.AECC.Interop.Land.IAeccQueryLine;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_SetOperator(AeccXLandLib.AeccQuerySetOperatorType pVal) 
+		public void Set_SetOperator(Autodesk.AECC.Interop.Land.AeccQuerySetOperatorType pVal) 
 		{
 			this._i.SetOperator = pVal;
 		}
@@ -42,7 +42,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Property(AeccXLandLib.AeccQueryPropertyType pVal) 
+		public void Set_Property(Autodesk.AECC.Interop.Land.AeccQueryPropertyType pVal) 
 		{
 			this._i.Property = pVal;
 		}
@@ -55,7 +55,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Operator(AeccXLandLib.AeccQueryOperatorType pVal) 
+		public void Set_Operator(Autodesk.AECC.Interop.Land.AeccQueryOperatorType pVal) 
 		{
 			this._i.Operator = pVal;
 		}

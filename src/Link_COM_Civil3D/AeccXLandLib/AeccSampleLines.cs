@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSampleLines 
 	{
-		public AeccXLandLib.IAeccSampleLines _i;
+		public Autodesk.AECC.Interop.Land.IAeccSampleLines _i;
 		internal AeccSampleLines(object AeccSampleLines_object) 
 		{
-			this._i = AeccSampleLines_object as AeccXLandLib.IAeccSampleLines;
+			this._i = AeccSampleLines_object as Autodesk.AECC.Interop.Land.IAeccSampleLines;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -69,7 +69,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void AddByStationRange(string bstrName,AeccXLandLib.AeccSampleLineDuplicateActionType DuplicateActionType,dynamic StationRangeParameters) 
+		public void AddByStationRange(string bstrName,Autodesk.AECC.Interop.Land.AeccSampleLineDuplicateActionType DuplicateActionType,dynamic StationRangeParameters) 
 		{
 			this._i.AddByStationRange(bstrName,DuplicateActionType,StationRangeParameters);
 		}

@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumSheetSet 
 	{
-		public AeccXLandLib.IAeccPropertyEnumSheetSet _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumSheetSet _i;
 		internal AeccPropertyEnumSheetSet(object AeccPropertyEnumSheetSet_object) 
 		{
-			this._i = AeccPropertyEnumSheetSet_object as AeccXLandLib.IAeccPropertyEnumSheetSet;
+			this._i = AeccPropertyEnumSheetSet_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumSheetSet;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccSheetSetType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccSheetSetType pVal) 
 		{
 			this._i.Value = pVal;
 		}

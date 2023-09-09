@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccRoadwayStyleSetItem 
 	{
-		public AeccXRoadwayLib.IAeccRoadwayStyleSetItem _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccRoadwayStyleSetItem _i;
 		internal AeccRoadwayStyleSetItem(object AeccRoadwayStyleSetItem_object) 
 		{
-			this._i = AeccRoadwayStyleSetItem_object as AeccXRoadwayLib.IAeccRoadwayStyleSetItem;
+			this._i = AeccRoadwayStyleSetItem_object as Autodesk.AECC.Interop.Roadway.IAeccRoadwayStyleSetItem;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccConnectors 
 	{
-		public AeccXPipeLib.IAeccConnectors _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccConnectors _i;
 		internal AeccConnectors(object AeccConnectors_object) 
 		{
-			this._i = AeccConnectors_object as AeccXPipeLib.IAeccConnectors;
+			this._i = AeccConnectors_object as Autodesk.AECC.Interop.Pipe.IAeccConnectors;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

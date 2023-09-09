@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsTableCreation 
 	{
-		public AeccXLandLib.IAeccSettingsTableCreation _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsTableCreation _i;
 		internal AeccSettingsTableCreation(object AeccSettingsTableCreation_object) 
 		{
-			this._i = AeccSettingsTableCreation_object as AeccXLandLib.IAeccSettingsTableCreation;
+			this._i = AeccSettingsTableCreation_object as Autodesk.AECC.Interop.Land.IAeccSettingsTableCreation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

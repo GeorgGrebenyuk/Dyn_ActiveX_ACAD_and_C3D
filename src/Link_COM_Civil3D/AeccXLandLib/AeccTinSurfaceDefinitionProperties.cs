@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccTinSurfaceDefinitionProperties 
 	{
-		public AeccXLandLib.IAeccTinSurfaceDefinitionProperties _i;
+		public Autodesk.AECC.Interop.Land.IAeccTinSurfaceDefinitionProperties _i;
 		internal AeccTinSurfaceDefinitionProperties(object AeccTinSurfaceDefinitionProperties_object) 
 		{
-			this._i = AeccTinSurfaceDefinitionProperties_object as AeccXLandLib.IAeccTinSurfaceDefinitionProperties;
+			this._i = AeccTinSurfaceDefinitionProperties_object as Autodesk.AECC.Interop.Land.IAeccTinSurfaceDefinitionProperties;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -73,7 +73,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_ElevationToUse(AeccXLandLib.AeccBreaklineElevationToUseType pVal) 
+		public void Set_ElevationToUse(Autodesk.AECC.Interop.Land.AeccBreaklineElevationToUseType pVal) 
 		{
 			this._i.ElevationToUse = pVal;
 		}

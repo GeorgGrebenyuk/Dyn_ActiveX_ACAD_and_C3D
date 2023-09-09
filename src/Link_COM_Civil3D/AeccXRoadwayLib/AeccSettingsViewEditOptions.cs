@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsViewEditOptions 
 	{
-		public AeccXRoadwayLib.IAeccSettingsViewEditOptions _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsViewEditOptions _i;
 		internal AeccSettingsViewEditOptions(object AeccSettingsViewEditOptions_object) 
 		{
-			this._i = AeccSettingsViewEditOptions_object as AeccXRoadwayLib.IAeccSettingsViewEditOptions;
+			this._i = AeccSettingsViewEditOptions_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsViewEditOptions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

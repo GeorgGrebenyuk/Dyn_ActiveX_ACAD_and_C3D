@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccBandSuperElevationStyle 
 	{
-		public AeccXLandLib.IAeccBandSuperElevationStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccBandSuperElevationStyle _i;
 		internal AeccBandSuperElevationStyle(object AeccBandSuperElevationStyle_object) 
 		{
-			this._i = AeccBandSuperElevationStyle_object as AeccXLandLib.IAeccBandSuperElevationStyle;
+			this._i = AeccBandSuperElevationStyle_object as Autodesk.AECC.Interop.Land.IAeccBandSuperElevationStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

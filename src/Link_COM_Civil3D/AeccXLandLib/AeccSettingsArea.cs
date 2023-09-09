@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsArea 
 	{
-		public AeccXLandLib.IAeccSettingsArea _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsArea _i;
 		internal AeccSettingsArea(object AeccSettingsArea_object) 
 		{
-			this._i = AeccSettingsArea_object as AeccXLandLib.IAeccSettingsArea;
+			this._i = AeccSettingsArea_object as Autodesk.AECC.Interop.Land.IAeccSettingsArea;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

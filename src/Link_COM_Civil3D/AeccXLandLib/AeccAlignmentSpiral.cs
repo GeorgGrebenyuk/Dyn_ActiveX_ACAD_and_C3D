@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentSpiral 
 	{
-		public AeccXLandLib.IAeccAlignmentSpiral _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentSpiral _i;
 		internal AeccAlignmentSpiral(object AeccAlignmentSpiral_object) 
 		{
-			this._i = AeccAlignmentSpiral_object as AeccXLandLib.IAeccAlignmentSpiral;
+			this._i = AeccAlignmentSpiral_object as Autodesk.AECC.Interop.Land.IAeccAlignmentSpiral;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

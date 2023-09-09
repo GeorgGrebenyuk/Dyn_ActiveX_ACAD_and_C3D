@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileStyles 
 	{
-		public AeccXLandLib.IAeccProfileStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileStyles _i;
 		internal AeccProfileStyles(object AeccProfileStyles_object) 
 		{
-			this._i = AeccProfileStyles_object as AeccXLandLib.IAeccProfileStyles;
+			this._i = AeccProfileStyles_object as Autodesk.AECC.Interop.Land.IAeccProfileStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

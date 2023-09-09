@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProperty 
 	{
-		public AeccXLandLib.IAeccProperty _i;
+		public Autodesk.AECC.Interop.Land.IAeccProperty _i;
 		internal AeccProperty(object AeccProperty_object) 
 		{
-			this._i = AeccProperty_object as AeccXLandLib.IAeccProperty;
+			this._i = AeccProperty_object as Autodesk.AECC.Interop.Land.IAeccProperty;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

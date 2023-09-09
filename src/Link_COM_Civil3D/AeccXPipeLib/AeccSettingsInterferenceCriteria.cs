@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsInterferenceCriteria 
 	{
-		public AeccXPipeLib.IAeccSettingsInterferenceCriteria _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsInterferenceCriteria _i;
 		internal AeccSettingsInterferenceCriteria(object AeccSettingsInterferenceCriteria_object) 
 		{
-			this._i = AeccSettingsInterferenceCriteria_object as AeccXPipeLib.IAeccSettingsInterferenceCriteria;
+			this._i = AeccSettingsInterferenceCriteria_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsInterferenceCriteria;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfacePointFile 
 	{
-		public AeccXLandLib.IAeccSurfacePointFile _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfacePointFile _i;
 		internal AeccSurfacePointFile(object AeccSurfacePointFile_object) 
 		{
-			this._i = AeccSurfacePointFile_object as AeccXLandLib.IAeccSurfacePointFile;
+			this._i = AeccSurfacePointFile_object as Autodesk.AECC.Interop.Land.IAeccSurfacePointFile;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

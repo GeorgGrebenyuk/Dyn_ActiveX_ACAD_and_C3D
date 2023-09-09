@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyFigureNodes 
 	{
-		public AeccXSurveyLib.IAeccSurveyFigureNodes _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyFigureNodes _i;
 		internal AeccSurveyFigureNodes(object AeccSurveyFigureNodes_object) 
 		{
-			this._i = AeccSurveyFigureNodes_object as AeccXSurveyLib.IAeccSurveyFigureNodes;
+			this._i = AeccSurveyFigureNodes_object as Autodesk.AECC.Interop.Survey.IAeccSurveyFigureNodes;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

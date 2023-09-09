@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelGradeBreaksStyleSet 
 	{
-		public AeccXLandLib.IAeccLabelGradeBreaksStyleSet _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelGradeBreaksStyleSet _i;
 		internal AeccLabelGradeBreaksStyleSet(object AeccLabelGradeBreaksStyleSet_object) 
 		{
-			this._i = AeccLabelGradeBreaksStyleSet_object as AeccXLandLib.IAeccLabelGradeBreaksStyleSet;
+			this._i = AeccLabelGradeBreaksStyleSet_object as Autodesk.AECC.Interop.Land.IAeccLabelGradeBreaksStyleSet;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

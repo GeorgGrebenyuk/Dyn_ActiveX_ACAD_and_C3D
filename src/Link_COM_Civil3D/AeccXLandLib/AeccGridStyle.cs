@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGridStyle 
 	{
-		public AeccXLandLib.IAeccGridStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccGridStyle _i;
 		internal AeccGridStyle(object AeccGridStyle_object) 
 		{
-			this._i = AeccGridStyle_object as AeccXLandLib.IAeccGridStyle;
+			this._i = AeccGridStyle_object as Autodesk.AECC.Interop.Land.IAeccGridStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

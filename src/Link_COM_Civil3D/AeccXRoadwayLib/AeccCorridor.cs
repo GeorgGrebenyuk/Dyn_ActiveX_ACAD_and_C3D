@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccCorridor 
 	{
-		public AeccXRoadwayLib.IAeccCorridor _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccCorridor _i;
 		internal AeccCorridor(object AeccCorridor_object) 
 		{
-			this._i = AeccCorridor_object as AeccXRoadwayLib.IAeccCorridor;
+			this._i = AeccCorridor_object as Autodesk.AECC.Interop.Roadway.IAeccCorridor;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

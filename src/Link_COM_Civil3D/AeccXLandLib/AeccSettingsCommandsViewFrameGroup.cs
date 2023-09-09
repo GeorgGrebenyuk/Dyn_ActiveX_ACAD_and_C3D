@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCommandsViewFrameGroup 
 	{
-		public AeccXLandLib.IAeccSettingsCommandsViewFrameGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCommandsViewFrameGroup _i;
 		internal AeccSettingsCommandsViewFrameGroup(object AeccSettingsCommandsViewFrameGroup_object) 
 		{
-			this._i = AeccSettingsCommandsViewFrameGroup_object as AeccXLandLib.IAeccSettingsCommandsViewFrameGroup;
+			this._i = AeccSettingsCommandsViewFrameGroup_object as Autodesk.AECC.Interop.Land.IAeccSettingsCommandsViewFrameGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

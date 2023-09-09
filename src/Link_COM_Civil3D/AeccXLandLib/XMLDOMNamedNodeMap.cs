@@ -6,10 +6,10 @@
 	///</summary>
 	public class XMLDOMNamedNodeMap 
 	{
-		public AeccXLandLib.IXMLDOMNamedNodeMap _i;
+		public Autodesk.AECC.Interop.Land.IXMLDOMNamedNodeMap _i;
 		internal XMLDOMNamedNodeMap(object XMLDOMNamedNodeMap_object) 
 		{
-			this._i = XMLDOMNamedNodeMap_object as AeccXLandLib.IXMLDOMNamedNodeMap;
+			this._i = XMLDOMNamedNodeMap_object as Autodesk.AECC.Interop.Land.IXMLDOMNamedNodeMap;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

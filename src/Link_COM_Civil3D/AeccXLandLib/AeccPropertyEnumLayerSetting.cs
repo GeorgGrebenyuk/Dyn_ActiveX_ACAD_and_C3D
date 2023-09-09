@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumLayerSetting 
 	{
-		public AeccXLandLib.IAeccPropertyEnumLayerSetting _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumLayerSetting _i;
 		internal AeccPropertyEnumLayerSetting(object AeccPropertyEnumLayerSetting_object) 
 		{
-			this._i = AeccPropertyEnumLayerSetting_object as AeccXLandLib.IAeccPropertyEnumLayerSetting;
+			this._i = AeccPropertyEnumLayerSetting_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumLayerSetting;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccLayerSettingType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccLayerSettingType pVal) 
 		{
 			this._i.Value = pVal;
 		}

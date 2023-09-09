@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccSurveyObservations 
 	{
-		public AeccXSurveyLib.IAeccSurveyObservations _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyObservations _i;
 		internal AeccSurveyObservations(object AeccSurveyObservations_object) 
 		{
-			this._i = AeccSurveyObservations_object as AeccXSurveyLib.IAeccSurveyObservations;
+			this._i = AeccSurveyObservations_object as Autodesk.AECC.Interop.Survey.IAeccSurveyObservations;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Create(dynamic nPointNumber,AeccXSurveyLib.AeccSurveyAngleType AngleType,double dAngle,AeccXSurveyLib.AeccSurveyDistanceType DistanceType,double dDistance,AeccXSurveyLib.AeccSurveyVerticalType VerticalType,double dVertical,AeccXSurveyLib.AeccSurveyTargetType TargetType,double dTargetHeight,string bstrDescription) 
+		public dynamic Create(dynamic nPointNumber,Autodesk.AECC.Interop.Survey.AeccSurveyAngleType AngleType,double dAngle,Autodesk.AECC.Interop.Survey.AeccSurveyDistanceType DistanceType,double dDistance,Autodesk.AECC.Interop.Survey.AeccSurveyVerticalType VerticalType,double dVertical,Autodesk.AECC.Interop.Survey.AeccSurveyTargetType TargetType,double dTargetHeight,string bstrDescription) 
 		{
 			return this._i.Create(nPointNumber,AngleType,dAngle,DistanceType,dDistance,VerticalType,dVertical,TargetType,dTargetHeight,bstrDescription);
 		}

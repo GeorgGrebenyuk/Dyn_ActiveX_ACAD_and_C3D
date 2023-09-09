@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsJoinFeatures 
 	{
-		public AeccXLandLib.IAeccSettingsJoinFeatures _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsJoinFeatures _i;
 		internal AeccSettingsJoinFeatures(object AeccSettingsJoinFeatures_object) 
 		{
-			this._i = AeccSettingsJoinFeatures_object as AeccXLandLib.IAeccSettingsJoinFeatures;
+			this._i = AeccSettingsJoinFeatures_object as Autodesk.AECC.Interop.Land.IAeccSettingsJoinFeatures;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

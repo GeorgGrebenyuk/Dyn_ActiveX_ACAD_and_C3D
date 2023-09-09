@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsParcelAnalysis 
 	{
-		public AeccXLandLib.IAeccSettingsParcelAnalysis _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsParcelAnalysis _i;
 		internal AeccSettingsParcelAnalysis(object AeccSettingsParcelAnalysis_object) 
 		{
-			this._i = AeccSettingsParcelAnalysis_object as AeccXLandLib.IAeccSettingsParcelAnalysis;
+			this._i = AeccSettingsParcelAnalysis_object as Autodesk.AECC.Interop.Land.IAeccSettingsParcelAnalysis;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

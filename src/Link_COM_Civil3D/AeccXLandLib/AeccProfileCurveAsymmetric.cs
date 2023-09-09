@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileCurveAsymmetric 
 	{
-		public AeccXLandLib.IAeccProfileCurveAsymmetric _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileCurveAsymmetric _i;
 		internal AeccProfileCurveAsymmetric(object AeccProfileCurveAsymmetric_object) 
 		{
-			this._i = AeccProfileCurveAsymmetric_object as AeccXLandLib.IAeccProfileCurveAsymmetric;
+			this._i = AeccProfileCurveAsymmetric_object as Autodesk.AECC.Interop.Land.IAeccProfileCurveAsymmetric;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

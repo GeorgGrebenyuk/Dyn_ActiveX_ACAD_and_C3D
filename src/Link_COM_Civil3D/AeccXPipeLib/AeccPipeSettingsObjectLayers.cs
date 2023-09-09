@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipeSettingsObjectLayers 
 	{
-		public AeccXPipeLib.IAeccPipeSettingsObjectLayers _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPipeSettingsObjectLayers _i;
 		internal AeccPipeSettingsObjectLayers(object AeccPipeSettingsObjectLayers_object) 
 		{
-			this._i = AeccPipeSettingsObjectLayers_object as AeccXPipeLib.IAeccPipeSettingsObjectLayers;
+			this._i = AeccPipeSettingsObjectLayers_object as Autodesk.AECC.Interop.Pipe.IAeccPipeSettingsObjectLayers;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

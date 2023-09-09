@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccCalculatedSubentity 
 	{
-		public AeccXRoadwayLib.IAeccCalculatedSubentity _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccCalculatedSubentity _i;
 		internal AeccCalculatedSubentity(object AeccCalculatedSubentity_object) 
 		{
-			this._i = AeccCalculatedSubentity_object as AeccXRoadwayLib.IAeccCalculatedSubentity;
+			this._i = AeccCalculatedSubentity_object as Autodesk.AECC.Interop.Roadway.IAeccCalculatedSubentity;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

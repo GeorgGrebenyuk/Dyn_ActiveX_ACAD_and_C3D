@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumProfileViewStartCorner 
 	{
-		public AeccXLandLib.IAeccPropertyEnumProfileViewStartCorner _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumProfileViewStartCorner _i;
 		internal AeccPropertyEnumProfileViewStartCorner(object AeccPropertyEnumProfileViewStartCorner_object) 
 		{
-			this._i = AeccPropertyEnumProfileViewStartCorner_object as AeccXLandLib.IAeccPropertyEnumProfileViewStartCorner;
+			this._i = AeccPropertyEnumProfileViewStartCorner_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumProfileViewStartCorner;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccProfileViewStartCornerType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccProfileViewStartCornerType pVal) 
 		{
 			this._i.Value = pVal;
 		}

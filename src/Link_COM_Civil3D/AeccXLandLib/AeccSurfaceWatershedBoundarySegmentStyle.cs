@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceWatershedBoundarySegmentStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceWatershedBoundarySegmentStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceWatershedBoundarySegmentStyle _i;
 		internal AeccSurfaceWatershedBoundarySegmentStyle(object AeccSurfaceWatershedBoundarySegmentStyle_object) 
 		{
-			this._i = AeccSurfaceWatershedBoundarySegmentStyle_object as AeccXLandLib.IAeccSurfaceWatershedBoundarySegmentStyle;
+			this._i = AeccSurfaceWatershedBoundarySegmentStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceWatershedBoundarySegmentStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

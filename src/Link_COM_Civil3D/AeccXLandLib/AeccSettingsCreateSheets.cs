@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateSheets 
 	{
-		public AeccXLandLib.IAeccSettingsCreateSheets _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateSheets _i;
 		internal AeccSettingsCreateSheets(object AeccSettingsCreateSheets_object) 
 		{
-			this._i = AeccSettingsCreateSheets_object as AeccXLandLib.IAeccSettingsCreateSheets;
+			this._i = AeccSettingsCreateSheets_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateSheets;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

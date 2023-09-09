@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumStructureLabelPlacement 
 	{
-		public AeccXPipeLib.IAeccPropertyEnumStructureLabelPlacement _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPropertyEnumStructureLabelPlacement _i;
 		internal AeccPropertyEnumStructureLabelPlacement(object AeccPropertyEnumStructureLabelPlacement_object) 
 		{
-			this._i = AeccPropertyEnumStructureLabelPlacement_object as AeccXPipeLib.IAeccPropertyEnumStructureLabelPlacement;
+			this._i = AeccPropertyEnumStructureLabelPlacement_object as Autodesk.AECC.Interop.Pipe.IAeccPropertyEnumStructureLabelPlacement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXPipeLib.AeccStructureLabelPlacementType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Pipe.AeccStructureLabelPlacementType pVal) 
 		{
 			this._i.Value = pVal;
 		}

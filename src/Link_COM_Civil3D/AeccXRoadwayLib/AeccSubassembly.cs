@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSubassembly 
 	{
-		public AeccXRoadwayLib.IAeccSubassembly _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSubassembly _i;
 		internal AeccSubassembly(object AeccSubassembly_object) 
 		{
-			this._i = AeccSubassembly_object as AeccXRoadwayLib.IAeccSubassembly;
+			this._i = AeccSubassembly_object as Autodesk.AECC.Interop.Roadway.IAeccSubassembly;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -26,7 +26,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_GeometryGenerateMode(AeccXRoadwayLib.AeccSubassemblyGeometryGenerateMode pVal) 
+		public void Set_GeometryGenerateMode(Autodesk.AECC.Interop.Roadway.AeccSubassemblyGeometryGenerateMode pVal) 
 		{
 			this._i.GeometryGenerateMode = pVal;
 		}

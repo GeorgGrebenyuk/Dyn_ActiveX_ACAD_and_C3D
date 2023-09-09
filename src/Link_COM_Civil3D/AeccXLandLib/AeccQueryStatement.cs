@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccQueryStatement 
 	{
-		public AeccXLandLib.IAeccQueryStatement _i;
+		public Autodesk.AECC.Interop.Land.IAeccQueryStatement _i;
 		internal AeccQueryStatement(object AeccQueryStatement_object) 
 		{
-			this._i = AeccQueryStatement_object as AeccXLandLib.IAeccQueryStatement;
+			this._i = AeccQueryStatement_object as Autodesk.AECC.Interop.Land.IAeccQueryStatement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

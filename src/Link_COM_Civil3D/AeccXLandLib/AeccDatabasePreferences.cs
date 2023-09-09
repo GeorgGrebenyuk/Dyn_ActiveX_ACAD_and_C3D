@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccDatabasePreferences 
 	{
-		public AeccXLandLib.IAeccDatabasePreferences _i;
+		public Autodesk.AECC.Interop.Land.IAeccDatabasePreferences _i;
 		internal AeccDatabasePreferences(object AeccDatabasePreferences_object) 
 		{
-			this._i = AeccDatabasePreferences_object as AeccXLandLib.IAeccDatabasePreferences;
+			this._i = AeccDatabasePreferences_object as Autodesk.AECC.Interop.Land.IAeccDatabasePreferences;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

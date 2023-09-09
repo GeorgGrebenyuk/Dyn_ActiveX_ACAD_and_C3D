@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateArcByBestFit 
 	{
-		public AeccXLandLib.IAeccSettingsCreateArcByBestFit _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateArcByBestFit _i;
 		internal AeccSettingsCreateArcByBestFit(object AeccSettingsCreateArcByBestFit_object) 
 		{
-			this._i = AeccSettingsCreateArcByBestFit_object as AeccXLandLib.IAeccSettingsCreateArcByBestFit;
+			this._i = AeccSettingsCreateArcByBestFit_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateArcByBestFit;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

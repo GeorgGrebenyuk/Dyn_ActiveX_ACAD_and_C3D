@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccTableStyles 
 	{
-		public AeccXLandLib.IAeccTableStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccTableStyles _i;
 		internal AeccTableStyles(object AeccTableStyles_object) 
 		{
-			this._i = AeccTableStyles_object as AeccXLandLib.IAeccTableStyles;
+			this._i = AeccTableStyles_object as Autodesk.AECC.Interop.Land.IAeccTableStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

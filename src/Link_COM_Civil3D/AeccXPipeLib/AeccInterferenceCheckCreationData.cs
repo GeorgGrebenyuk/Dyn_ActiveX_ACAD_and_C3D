@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccInterferenceCheckCreationData 
 	{
-		public AeccXPipeLib.IAeccInterferenceCheckCreationData _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccInterferenceCheckCreationData _i;
 		internal AeccInterferenceCheckCreationData(object AeccInterferenceCheckCreationData_object) 
 		{
-			this._i = AeccInterferenceCheckCreationData_object as AeccXPipeLib.IAeccInterferenceCheckCreationData;
+			this._i = AeccInterferenceCheckCreationData_object as Autodesk.AECC.Interop.Pipe.IAeccInterferenceCheckCreationData;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionViewStyles 
 	{
-		public AeccXLandLib.IAeccSectionViewStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionViewStyles _i;
 		internal AeccSectionViewStyles(object AeccSectionViewStyles_object) 
 		{
-			this._i = AeccSectionViewStyles_object as AeccXLandLib.IAeccSectionViewStyles;
+			this._i = AeccSectionViewStyles_object as Autodesk.AECC.Interop.Land.IAeccSectionViewStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

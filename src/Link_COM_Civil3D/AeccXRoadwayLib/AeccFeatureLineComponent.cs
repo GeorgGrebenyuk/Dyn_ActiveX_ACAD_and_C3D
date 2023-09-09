@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccFeatureLineComponent 
 	{
-		public AeccXRoadwayLib.IAeccFeatureLineComponent _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccFeatureLineComponent _i;
 		internal AeccFeatureLineComponent(object AeccFeatureLineComponent_object) 
 		{
-			this._i = AeccFeatureLineComponent_object as AeccXRoadwayLib.IAeccFeatureLineComponent;
+			this._i = AeccFeatureLineComponent_object as Autodesk.AECC.Interop.Roadway.IAeccFeatureLineComponent;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

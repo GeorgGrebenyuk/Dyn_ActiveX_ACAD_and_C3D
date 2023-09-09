@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsDrawing 
 	{
-		public AeccXLandLib.IAeccSettingsDrawing _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsDrawing _i;
 		internal AeccSettingsDrawing(object AeccSettingsDrawing_object) 
 		{
-			this._i = AeccSettingsDrawing_object as AeccXLandLib.IAeccSettingsDrawing;
+			this._i = AeccSettingsDrawing_object as Autodesk.AECC.Interop.Land.IAeccSettingsDrawing;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

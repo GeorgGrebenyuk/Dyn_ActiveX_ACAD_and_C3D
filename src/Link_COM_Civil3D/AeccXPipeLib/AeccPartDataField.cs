@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPartDataField 
 	{
-		public AeccXPipeLib.IAeccPartDataField _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPartDataField _i;
 		internal AeccPartDataField(object AeccPartDataField_object) 
 		{
-			this._i = AeccPartDataField_object as AeccXPipeLib.IAeccPartDataField;
+			this._i = AeccPartDataField_object as Autodesk.AECC.Interop.Pipe.IAeccPartDataField;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -86,7 +86,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Usage(AeccXPipeLib.AeccPipeNetworkUsage pnUsage) 
+		public void Set_Usage(Autodesk.AECC.Interop.Pipe.AeccPipeNetworkUsage pnUsage) 
 		{
 			this._i.Usage = pnUsage;
 		}
@@ -117,7 +117,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_CalculatedType(AeccXPipeLib.AeccPartDataFieldType pnType) 
+		public void Set_CalculatedType(Autodesk.AECC.Interop.Pipe.AeccPartDataFieldType pnType) 
 		{
 			this._i.CalculatedType = pnType;
 		}
@@ -130,7 +130,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_RawDataSource(AeccXPipeLib.AeccPipeNetworkDataSource pnDataSource) 
+		public void Set_RawDataSource(Autodesk.AECC.Interop.Pipe.AeccPipeNetworkDataSource pnDataSource) 
 		{
 			this._i.RawDataSource = pnDataSource;
 		}

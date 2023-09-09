@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipeDatabase 
 	{
-		public AeccXPipeLib.IAeccPipeDatabase _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPipeDatabase _i;
 		internal AeccPipeDatabase(object AeccPipeDatabase_object) 
 		{
-			this._i = AeccPipeDatabase_object as AeccXPipeLib.IAeccPipeDatabase;
+			this._i = AeccPipeDatabase_object as Autodesk.AECC.Interop.Pipe.IAeccPipeDatabase;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

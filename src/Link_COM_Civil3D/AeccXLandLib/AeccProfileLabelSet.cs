@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileLabelSet 
 	{
-		public AeccXLandLib.IAeccProfileLabelSet _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileLabelSet _i;
 		internal AeccProfileLabelSet(object AeccProfileLabelSet_object) 
 		{
-			this._i = AeccProfileLabelSet_object as AeccXLandLib.IAeccProfileLabelSet;
+			this._i = AeccProfileLabelSet_object as Autodesk.AECC.Interop.Land.IAeccProfileLabelSet;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

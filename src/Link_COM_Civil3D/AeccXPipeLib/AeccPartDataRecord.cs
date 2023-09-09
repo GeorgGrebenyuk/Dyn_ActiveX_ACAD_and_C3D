@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPartDataRecord 
 	{
-		public AeccXPipeLib.IAeccPartDataRecord _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPartDataRecord _i;
 		internal AeccPartDataRecord(object AeccPartDataRecord_object) 
 		{
-			this._i = AeccPartDataRecord_object as AeccXPipeLib.IAeccPartDataRecord;
+			this._i = AeccPartDataRecord_object as Autodesk.AECC.Interop.Pipe.IAeccPartDataRecord;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

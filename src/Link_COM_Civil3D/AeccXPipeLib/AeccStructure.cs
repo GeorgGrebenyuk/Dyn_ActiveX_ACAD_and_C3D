@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccStructure 
 	{
-		public AeccXPipeLib.IAeccStructure _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccStructure _i;
 		internal AeccStructure(object AeccStructure_object) 
 		{
-			this._i = AeccStructure_object as AeccXPipeLib.IAeccStructure;
+			this._i = AeccStructure_object as Autodesk.AECC.Interop.Pipe.IAeccStructure;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void ConnectToPipe(dynamic piPipe,AeccXPipeLib.AeccPipeConnectorPos eDestPos) 
+		public void ConnectToPipe(dynamic piPipe,Autodesk.AECC.Interop.Pipe.AeccPipeConnectorPos eDestPos) 
 		{
 			this._i.ConnectToPipe(piPipe,eDestPos);
 		}
@@ -305,7 +305,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_ControlSumpBy(AeccXPipeLib.AeccStructureControlSumpBy eValue) 
+		public void Set_ControlSumpBy(Autodesk.AECC.Interop.Pipe.AeccStructureControlSumpBy eValue) 
 		{
 			this._i.ControlSumpBy = eValue;
 		}

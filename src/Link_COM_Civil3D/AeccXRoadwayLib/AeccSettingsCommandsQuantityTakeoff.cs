@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCommandsQuantityTakeoff 
 	{
-		public AeccXRoadwayLib.IAeccSettingsCommandsQuantityTakeoff _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsCommandsQuantityTakeoff _i;
 		internal AeccSettingsCommandsQuantityTakeoff(object AeccSettingsCommandsQuantityTakeoff_object) 
 		{
-			this._i = AeccSettingsCommandsQuantityTakeoff_object as AeccXRoadwayLib.IAeccSettingsCommandsQuantityTakeoff;
+			this._i = AeccSettingsCommandsQuantityTakeoff_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsCommandsQuantityTakeoff;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

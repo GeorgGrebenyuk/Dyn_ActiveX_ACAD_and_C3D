@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsPipe 
 	{
-		public AeccXPipeLib.IAeccSettingsPipe _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsPipe _i;
 		internal AeccSettingsPipe(object AeccSettingsPipe_object) 
 		{
-			this._i = AeccSettingsPipe_object as AeccXPipeLib.IAeccSettingsPipe;
+			this._i = AeccSettingsPipe_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsPipe;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

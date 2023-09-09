@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCommandsSectionView 
 	{
-		public AeccXLandLib.IAeccSettingsCommandsSectionView _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCommandsSectionView _i;
 		internal AeccSettingsCommandsSectionView(object AeccSettingsCommandsSectionView_object) 
 		{
-			this._i = AeccSettingsCommandsSectionView_object as AeccXLandLib.IAeccSettingsCommandsSectionView;
+			this._i = AeccSettingsCommandsSectionView_object as Autodesk.AECC.Interop.Land.IAeccSettingsCommandsSectionView;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccMaterialSection 
 	{
-		public AeccXLandLib.IAeccMaterialSection _i;
+		public Autodesk.AECC.Interop.Land.IAeccMaterialSection _i;
 		internal AeccMaterialSection(object AeccMaterialSection_object) 
 		{
-			this._i = AeccMaterialSection_object as AeccXLandLib.IAeccMaterialSection;
+			this._i = AeccMaterialSection_object as Autodesk.AECC.Interop.Land.IAeccMaterialSection;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

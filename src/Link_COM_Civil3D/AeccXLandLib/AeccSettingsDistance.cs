@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsDistance 
 	{
-		public AeccXLandLib.IAeccSettingsDistance _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsDistance _i;
 		internal AeccSettingsDistance(object AeccSettingsDistance_object) 
 		{
-			this._i = AeccSettingsDistance_object as AeccXLandLib.IAeccSettingsDistance;
+			this._i = AeccSettingsDistance_object as Autodesk.AECC.Interop.Land.IAeccSettingsDistance;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

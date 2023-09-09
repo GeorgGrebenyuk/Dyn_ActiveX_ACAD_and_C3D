@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCommandsPoint 
 	{
-		public AeccXLandLib.IAeccSettingsCommandsPoint _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCommandsPoint _i;
 		internal AeccSettingsCommandsPoint(object AeccSettingsCommandsPoint_object) 
 		{
-			this._i = AeccSettingsCommandsPoint_object as AeccXLandLib.IAeccSettingsCommandsPoint;
+			this._i = AeccSettingsCommandsPoint_object as Autodesk.AECC.Interop.Land.IAeccSettingsCommandsPoint;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateAlignfromCorridor 
 	{
-		public AeccXRoadwayLib.IAeccSettingsCreateAlignfromCorridor _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsCreateAlignfromCorridor _i;
 		internal AeccSettingsCreateAlignfromCorridor(object AeccSettingsCreateAlignfromCorridor_object) 
 		{
-			this._i = AeccSettingsCreateAlignfromCorridor_object as AeccXRoadwayLib.IAeccSettingsCreateAlignfromCorridor;
+			this._i = AeccSettingsCreateAlignfromCorridor_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsCreateAlignfromCorridor;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

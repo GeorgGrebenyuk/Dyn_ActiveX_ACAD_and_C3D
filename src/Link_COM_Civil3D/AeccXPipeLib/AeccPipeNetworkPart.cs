@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPipeNetworkPart 
 	{
-		public AeccXPipeLib.IAeccPipeNetworkPart _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPipeNetworkPart _i;
 		internal AeccPipeNetworkPart(object AeccPipeNetworkPart_object) 
 		{
-			this._i = AeccPipeNetworkPart_object as AeccXPipeLib.IAeccPipeNetworkPart;
+			this._i = AeccPipeNetworkPart_object as Autodesk.AECC.Interop.Pipe.IAeccPipeNetworkPart;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

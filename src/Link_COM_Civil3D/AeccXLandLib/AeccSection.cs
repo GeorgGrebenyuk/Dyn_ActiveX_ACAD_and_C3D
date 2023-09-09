@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSection 
 	{
-		public AeccXLandLib.IAeccSection _i;
+		public Autodesk.AECC.Interop.Land.IAeccSection _i;
 		internal AeccSection(object AeccSection_object) 
 		{
-			this._i = AeccSection_object as AeccXLandLib.IAeccSection;
+			this._i = AeccSection_object as Autodesk.AECC.Interop.Land.IAeccSection;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -54,7 +54,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DataType(AeccXLandLib.AeccSectionDataType pVal) 
+		public void Set_DataType(Autodesk.AECC.Interop.Land.AeccSectionDataType pVal) 
 		{
 			this._i.DataType = pVal;
 		}
@@ -67,7 +67,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_StaticDynamic(AeccXLandLib.AeccSectionStateType pVal) 
+		public void Set_StaticDynamic(Autodesk.AECC.Interop.Land.AeccSectionStateType pVal) 
 		{
 			this._i.StaticDynamic = pVal;
 		}

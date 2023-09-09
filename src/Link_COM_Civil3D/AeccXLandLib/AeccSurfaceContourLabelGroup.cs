@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceContourLabelGroup 
 	{
-		public AeccXLandLib.IAeccSurfaceContourLabelGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceContourLabelGroup _i;
 		internal AeccSurfaceContourLabelGroup(object AeccSurfaceContourLabelGroup_object) 
 		{
-			this._i = AeccSurfaceContourLabelGroup_object as AeccXLandLib.IAeccSurfaceContourLabelGroup;
+			this._i = AeccSurfaceContourLabelGroup_object as Autodesk.AECC.Interop.Land.IAeccSurfaceContourLabelGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

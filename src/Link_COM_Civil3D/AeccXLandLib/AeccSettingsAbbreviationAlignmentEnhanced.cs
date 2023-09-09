@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAbbreviationAlignmentEnhanced 
 	{
-		public AeccXLandLib.IAeccSettingsAbbreviationAlignmentEnhanced _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAbbreviationAlignmentEnhanced _i;
 		internal AeccSettingsAbbreviationAlignmentEnhanced(object AeccSettingsAbbreviationAlignmentEnhanced_object) 
 		{
-			this._i = AeccSettingsAbbreviationAlignmentEnhanced_object as AeccXLandLib.IAeccSettingsAbbreviationAlignmentEnhanced;
+			this._i = AeccSettingsAbbreviationAlignmentEnhanced_object as Autodesk.AECC.Interop.Land.IAeccSettingsAbbreviationAlignmentEnhanced;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

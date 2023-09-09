@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumPathObjectType 
 	{
-		public AeccXLandLib.IAeccPropertyEnumPathObjectType _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumPathObjectType _i;
 		internal AeccPropertyEnumPathObjectType(object AeccPropertyEnumPathObjectType_object) 
 		{
-			this._i = AeccPropertyEnumPathObjectType_object as AeccXLandLib.IAeccPropertyEnumPathObjectType;
+			this._i = AeccPropertyEnumPathObjectType_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumPathObjectType;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccPathObjectType pValue) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccPathObjectType pValue) 
 		{
 			this._i.Value = pValue;
 		}

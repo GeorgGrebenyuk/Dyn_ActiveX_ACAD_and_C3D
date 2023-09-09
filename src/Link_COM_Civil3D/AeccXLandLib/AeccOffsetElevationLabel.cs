@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccOffsetElevationLabel 
 	{
-		public AeccXLandLib.IAeccOffsetElevationLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccOffsetElevationLabel _i;
 		internal AeccOffsetElevationLabel(object AeccOffsetElevationLabel_object) 
 		{
-			this._i = AeccOffsetElevationLabel_object as AeccXLandLib.IAeccOffsetElevationLabel;
+			this._i = AeccOffsetElevationLabel_object as Autodesk.AECC.Interop.Land.IAeccOffsetElevationLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

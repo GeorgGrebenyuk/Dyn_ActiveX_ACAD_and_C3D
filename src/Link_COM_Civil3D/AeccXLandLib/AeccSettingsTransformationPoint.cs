@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsTransformationPoint 
 	{
-		public AeccXLandLib.IAeccSettingsTransformationPoint _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsTransformationPoint _i;
 		internal AeccSettingsTransformationPoint(object AeccSettingsTransformationPoint_object) 
 		{
-			this._i = AeccSettingsTransformationPoint_object as AeccXLandLib.IAeccSettingsTransformationPoint;
+			this._i = AeccSettingsTransformationPoint_object as Autodesk.AECC.Interop.Land.IAeccSettingsTransformationPoint;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

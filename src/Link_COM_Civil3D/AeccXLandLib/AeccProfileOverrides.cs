@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileOverrides 
 	{
-		public AeccXLandLib.IAeccProfileOverrides _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileOverrides _i;
 		internal AeccProfileOverrides(object AeccProfileOverrides_object) 
 		{
-			this._i = AeccProfileOverrides_object as AeccXLandLib.IAeccProfileOverrides;
+			this._i = AeccProfileOverrides_object as Autodesk.AECC.Interop.Land.IAeccProfileOverrides;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

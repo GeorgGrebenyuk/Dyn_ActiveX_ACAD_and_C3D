@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumMapcheckDefaultCurveTraverseMethod 
 	{
-		public AeccXLandLib.IAeccPropertyEnumMapcheckDefaultCurveTraverseMethod _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumMapcheckDefaultCurveTraverseMethod _i;
 		internal AeccPropertyEnumMapcheckDefaultCurveTraverseMethod(object AeccPropertyEnumMapcheckDefaultCurveTraverseMethod_object) 
 		{
-			this._i = AeccPropertyEnumMapcheckDefaultCurveTraverseMethod_object as AeccXLandLib.IAeccPropertyEnumMapcheckDefaultCurveTraverseMethod;
+			this._i = AeccPropertyEnumMapcheckDefaultCurveTraverseMethod_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumMapcheckDefaultCurveTraverseMethod;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccMapcheckDefaultCurveTraverseMethod pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccMapcheckDefaultCurveTraverseMethod pVal) 
 		{
 			this._i.Value = pVal;
 		}

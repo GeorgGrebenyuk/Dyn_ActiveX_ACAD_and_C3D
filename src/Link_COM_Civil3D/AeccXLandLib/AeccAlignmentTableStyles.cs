@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentTableStyles 
 	{
-		public AeccXLandLib.IAeccAlignmentTableStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentTableStyles _i;
 		internal AeccAlignmentTableStyles(object AeccAlignmentTableStyles_object) 
 		{
-			this._i = AeccAlignmentTableStyles_object as AeccXLandLib.IAeccAlignmentTableStyles;
+			this._i = AeccAlignmentTableStyles_object as Autodesk.AECC.Interop.Land.IAeccAlignmentTableStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

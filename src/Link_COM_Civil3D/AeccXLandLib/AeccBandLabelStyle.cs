@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccBandLabelStyle 
 	{
-		public AeccXLandLib.IAeccBandLabelStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccBandLabelStyle _i;
 		internal AeccBandLabelStyle(object AeccBandLabelStyle_object) 
 		{
-			this._i = AeccBandLabelStyle_object as AeccXLandLib.IAeccBandLabelStyle;
+			this._i = AeccBandLabelStyle_object as Autodesk.AECC.Interop.Land.IAeccBandLabelStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

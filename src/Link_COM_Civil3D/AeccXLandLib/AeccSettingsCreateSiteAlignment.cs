@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateSiteAlignment 
 	{
-		public AeccXLandLib.IAeccSettingsCreateSiteAlignment _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateSiteAlignment _i;
 		internal AeccSettingsCreateSiteAlignment(object AeccSettingsCreateSiteAlignment_object) 
 		{
-			this._i = AeccSettingsCreateSiteAlignment_object as AeccXLandLib.IAeccSettingsCreateSiteAlignment;
+			this._i = AeccSettingsCreateSiteAlignment_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateSiteAlignment;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

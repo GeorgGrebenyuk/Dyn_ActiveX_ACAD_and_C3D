@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAssemblyInsertionDefaults 
 	{
-		public AeccXRoadwayLib.IAeccSettingsAssemblyInsertionDefaults _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsAssemblyInsertionDefaults _i;
 		internal AeccSettingsAssemblyInsertionDefaults(object AeccSettingsAssemblyInsertionDefaults_object) 
 		{
-			this._i = AeccSettingsAssemblyInsertionDefaults_object as AeccXRoadwayLib.IAeccSettingsAssemblyInsertionDefaults;
+			this._i = AeccSettingsAssemblyInsertionDefaults_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsAssemblyInsertionDefaults;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

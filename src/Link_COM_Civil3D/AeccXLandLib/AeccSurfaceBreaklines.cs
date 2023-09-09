@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceBreaklines 
 	{
-		public AeccXLandLib.IAeccSurfaceBreaklines _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceBreaklines _i;
 		internal AeccSurfaceBreaklines(object AeccSurfaceBreaklines_object) 
 		{
-			this._i = AeccSurfaceBreaklines_object as AeccXLandLib.IAeccSurfaceBreaklines;
+			this._i = AeccSurfaceBreaklines_object as Autodesk.AECC.Interop.Land.IAeccSurfaceBreaklines;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -69,7 +69,7 @@
 		///<summary>
 		///
 		///</summary>
-		public object AddBreaklineFromFile(string Description,string Filname,double MidOrdinateDistance,AeccXLandLib.AeccBreaklineFileLinkageType FileLinkageType) 
+		public object AddBreaklineFromFile(string Description,string Filname,double MidOrdinateDistance,Autodesk.AECC.Interop.Land.AeccBreaklineFileLinkageType FileLinkageType) 
 		{
 			return this._i.AddBreaklineFromFile(Description,Filname,MidOrdinateDistance,FileLinkageType);
 		}

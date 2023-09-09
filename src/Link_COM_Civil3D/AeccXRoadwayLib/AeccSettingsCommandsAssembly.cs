@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCommandsAssembly 
 	{
-		public AeccXRoadwayLib.IAeccSettingsCommandsAssembly _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsCommandsAssembly _i;
 		internal AeccSettingsCommandsAssembly(object AeccSettingsCommandsAssembly_object) 
 		{
-			this._i = AeccSettingsCommandsAssembly_object as AeccXRoadwayLib.IAeccSettingsCommandsAssembly;
+			this._i = AeccSettingsCommandsAssembly_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsCommandsAssembly;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

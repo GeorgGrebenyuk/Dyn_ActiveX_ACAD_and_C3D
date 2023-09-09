@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsTableCreationSectionView 
 	{
-		public AeccXLandLib.IAeccSettingsTableCreationSectionView _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsTableCreationSectionView _i;
 		internal AeccSettingsTableCreationSectionView(object AeccSettingsTableCreationSectionView_object) 
 		{
-			this._i = AeccSettingsTableCreationSectionView_object as AeccXLandLib.IAeccSettingsTableCreationSectionView;
+			this._i = AeccSettingsTableCreationSectionView_object as Autodesk.AECC.Interop.Land.IAeccSettingsTableCreationSectionView;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

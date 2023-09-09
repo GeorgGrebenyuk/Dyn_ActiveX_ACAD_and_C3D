@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddIntersectionLabel 
 	{
-		public AeccXLandLib.IAeccSettingsAddIntersectionLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAddIntersectionLabel _i;
 		internal AeccSettingsAddIntersectionLabel(object AeccSettingsAddIntersectionLabel_object) 
 		{
-			this._i = AeccSettingsAddIntersectionLabel_object as AeccXLandLib.IAeccSettingsAddIntersectionLabel;
+			this._i = AeccSettingsAddIntersectionLabel_object as Autodesk.AECC.Interop.Land.IAeccSettingsAddIntersectionLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

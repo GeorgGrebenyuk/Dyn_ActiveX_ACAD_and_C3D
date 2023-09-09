@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPartSectionLabels 
 	{
-		public AeccXPipeLib.IAeccPartSectionLabels _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPartSectionLabels _i;
 		internal AeccPartSectionLabels(object AeccPartSectionLabels_object) 
 		{
-			this._i = AeccPartSectionLabels_object as AeccXPipeLib.IAeccPartSectionLabels;
+			this._i = AeccPartSectionLabels_object as Autodesk.AECC.Interop.Pipe.IAeccPartSectionLabels;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

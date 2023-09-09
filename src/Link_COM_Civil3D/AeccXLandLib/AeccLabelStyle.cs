@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelStyle 
 	{
-		public AeccXLandLib.IAeccLabelStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelStyle _i;
 		internal AeccLabelStyle(object AeccLabelStyle_object) 
 		{
-			this._i = AeccLabelStyle_object as AeccXLandLib.IAeccLabelStyle;
+			this._i = AeccLabelStyle_object as Autodesk.AECC.Interop.Land.IAeccLabelStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -71,7 +71,7 @@
 		///<summary>
 		///
 		///</summary>
-		private void HiddenField_Init(AeccXLandLib.AeccLabelStyleType newVal) 
+		private void HiddenField_Init(Autodesk.AECC.Interop.Land.AeccLabelStyleType newVal) 
 		{
 			
 		}

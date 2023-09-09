@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGridVolumeSurface 
 	{
-		public AeccXLandLib.IAeccGridVolumeSurface _i;
+		public Autodesk.AECC.Interop.Land.IAeccGridVolumeSurface _i;
 		internal AeccGridVolumeSurface(object AeccGridVolumeSurface_object) 
 		{
-			this._i = AeccGridVolumeSurface_object as AeccXLandLib.IAeccGridVolumeSurface;
+			this._i = AeccGridVolumeSurface_object as Autodesk.AECC.Interop.Land.IAeccGridVolumeSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParcelSegmentElement 
 	{
-		public AeccXLandLib.IAeccParcelSegmentElement _i;
+		public Autodesk.AECC.Interop.Land.IAeccParcelSegmentElement _i;
 		internal AeccParcelSegmentElement(object AeccParcelSegmentElement_object) 
 		{
-			this._i = AeccParcelSegmentElement_object as AeccXLandLib.IAeccParcelSegmentElement;
+			this._i = AeccParcelSegmentElement_object as Autodesk.AECC.Interop.Land.IAeccParcelSegmentElement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

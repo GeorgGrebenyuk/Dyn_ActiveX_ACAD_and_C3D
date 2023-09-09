@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyNetworkStyle 
 	{
-		public AeccXSurveyLib.IAeccSurveyNetworkStyle _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyNetworkStyle _i;
 		internal AeccSurveyNetworkStyle(object AeccSurveyNetworkStyle_object) 
 		{
-			this._i = AeccSurveyNetworkStyle_object as AeccXSurveyLib.IAeccSurveyNetworkStyle;
+			this._i = AeccSurveyNetworkStyle_object as Autodesk.AECC.Interop.Survey.IAeccSurveyNetworkStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -91,7 +91,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_NetworkDisplayMode(AeccXSurveyLib.AeccSurveyNetworkElevationDisplayMode pDisplayMode) 
+		public void Set_NetworkDisplayMode(Autodesk.AECC.Interop.Survey.AeccSurveyNetworkElevationDisplayMode pDisplayMode) 
 		{
 			this._i.NetworkDisplayMode = pDisplayMode;
 		}

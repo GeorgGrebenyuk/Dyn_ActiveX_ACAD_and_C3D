@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAxisTitleStyle 
 	{
-		public AeccXLandLib.IAeccAxisTitleStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccAxisTitleStyle _i;
 		internal AeccAxisTitleStyle(object AeccAxisTitleStyle_object) 
 		{
-			this._i = AeccAxisTitleStyle_object as AeccXLandLib.IAeccAxisTitleStyle;
+			this._i = AeccAxisTitleStyle_object as Autodesk.AECC.Interop.Land.IAeccAxisTitleStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -42,7 +42,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Position(AeccXLandLib.AeccTitlePositionType pVal) 
+		public void Set_Position(Autodesk.AECC.Interop.Land.AeccTitlePositionType pVal) 
 		{
 			this._i.Position = pVal;
 		}

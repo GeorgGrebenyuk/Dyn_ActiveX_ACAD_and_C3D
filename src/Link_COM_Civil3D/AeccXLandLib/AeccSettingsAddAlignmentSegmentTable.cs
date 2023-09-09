@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddAlignmentSegmentTable 
 	{
-		public AeccXLandLib.IAeccSettingsAddAlignmentSegmentTable _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAddAlignmentSegmentTable _i;
 		internal AeccSettingsAddAlignmentSegmentTable(object AeccSettingsAddAlignmentSegmentTable_object) 
 		{
-			this._i = AeccSettingsAddAlignmentSegmentTable_object as AeccXLandLib.IAeccSettingsAddAlignmentSegmentTable;
+			this._i = AeccSettingsAddAlignmentSegmentTable_object as Autodesk.AECC.Interop.Land.IAeccSettingsAddAlignmentSegmentTable;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

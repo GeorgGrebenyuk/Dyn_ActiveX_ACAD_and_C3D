@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumBreaklineElevation 
 	{
-		public AeccXLandLib.IAeccPropertyEnumBreaklineElevation _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumBreaklineElevation _i;
 		internal AeccPropertyEnumBreaklineElevation(object AeccPropertyEnumBreaklineElevation_object) 
 		{
-			this._i = AeccPropertyEnumBreaklineElevation_object as AeccXLandLib.IAeccPropertyEnumBreaklineElevation;
+			this._i = AeccPropertyEnumBreaklineElevation_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumBreaklineElevation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccBreaklineElevationToUseType pValue) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccBreaklineElevationToUseType pValue) 
 		{
 			this._i.Value = pValue;
 		}

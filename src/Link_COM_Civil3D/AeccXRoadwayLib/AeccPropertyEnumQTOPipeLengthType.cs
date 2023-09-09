@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumQTOPipeLengthType 
 	{
-		public AeccXRoadwayLib.IAeccPropertyEnumQTOPipeLengthType _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccPropertyEnumQTOPipeLengthType _i;
 		internal AeccPropertyEnumQTOPipeLengthType(object AeccPropertyEnumQTOPipeLengthType_object) 
 		{
-			this._i = AeccPropertyEnumQTOPipeLengthType_object as AeccXRoadwayLib.IAeccPropertyEnumQTOPipeLengthType;
+			this._i = AeccPropertyEnumQTOPipeLengthType_object as Autodesk.AECC.Interop.Roadway.IAeccPropertyEnumQTOPipeLengthType;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXRoadwayLib.AeccQTOPipeLengthType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Roadway.AeccQTOPipeLengthType pVal) 
 		{
 			this._i.Value = pVal;
 		}

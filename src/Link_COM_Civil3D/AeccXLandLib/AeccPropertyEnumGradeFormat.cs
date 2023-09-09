@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumGradeFormat 
 	{
-		public AeccXLandLib.IAeccPropertyEnumGradeFormat _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumGradeFormat _i;
 		internal AeccPropertyEnumGradeFormat(object AeccPropertyEnumGradeFormat_object) 
 		{
-			this._i = AeccPropertyEnumGradeFormat_object as AeccXLandLib.IAeccPropertyEnumGradeFormat;
+			this._i = AeccPropertyEnumGradeFormat_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumGradeFormat;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccGradeFormatType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccGradeFormatType pVal) 
 		{
 			this._i.Value = pVal;
 		}

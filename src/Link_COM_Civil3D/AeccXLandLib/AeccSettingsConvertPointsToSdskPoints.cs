@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsConvertPointsToSdskPoints 
 	{
-		public AeccXLandLib.IAeccSettingsConvertPointsToSdskPoints _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsConvertPointsToSdskPoints _i;
 		internal AeccSettingsConvertPointsToSdskPoints(object AeccSettingsConvertPointsToSdskPoints_object) 
 		{
-			this._i = AeccSettingsConvertPointsToSdskPoints_object as AeccXLandLib.IAeccSettingsConvertPointsToSdskPoints;
+			this._i = AeccSettingsConvertPointsToSdskPoints_object as Autodesk.AECC.Interop.Land.IAeccSettingsConvertPointsToSdskPoints;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

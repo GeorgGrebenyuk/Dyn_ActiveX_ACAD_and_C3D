@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsComputeMaterials 
 	{
-		public AeccXRoadwayLib.IAeccSettingsComputeMaterials _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsComputeMaterials _i;
 		internal AeccSettingsComputeMaterials(object AeccSettingsComputeMaterials_object) 
 		{
-			this._i = AeccSettingsComputeMaterials_object as AeccXRoadwayLib.IAeccSettingsComputeMaterials;
+			this._i = AeccSettingsComputeMaterials_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsComputeMaterials;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

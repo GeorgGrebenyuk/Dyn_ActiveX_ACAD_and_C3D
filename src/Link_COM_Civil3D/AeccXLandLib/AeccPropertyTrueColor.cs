@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyTrueColor 
 	{
-		public AeccXLandLib.IAeccPropertyTrueColor _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyTrueColor _i;
 		internal AeccPropertyTrueColor(object AeccPropertyTrueColor_object) 
 		{
-			this._i = AeccPropertyTrueColor_object as AeccXLandLib.IAeccPropertyTrueColor;
+			this._i = AeccPropertyTrueColor_object as Autodesk.AECC.Interop.Land.IAeccPropertyTrueColor;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyXProperty 
 	{
-		public AeccXSurveyLib.IAeccSurveyXProperty _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyXProperty _i;
 		internal AeccSurveyXProperty(object AeccSurveyXProperty_object) 
 		{
-			this._i = AeccSurveyXProperty_object as AeccXSurveyLib.IAeccSurveyXProperty;
+			this._i = AeccSurveyXProperty_object as Autodesk.AECC.Interop.Survey.IAeccSurveyXProperty;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

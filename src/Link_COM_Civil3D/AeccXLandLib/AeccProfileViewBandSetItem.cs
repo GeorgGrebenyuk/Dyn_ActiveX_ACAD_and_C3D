@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfileViewBandSetItem 
 	{
-		public AeccXLandLib.IAeccProfileViewBandSetItem _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfileViewBandSetItem _i;
 		internal AeccProfileViewBandSetItem(object AeccProfileViewBandSetItem_object) 
 		{
-			this._i = AeccProfileViewBandSetItem_object as AeccXLandLib.IAeccProfileViewBandSetItem;
+			this._i = AeccProfileViewBandSetItem_object as Autodesk.AECC.Interop.Land.IAeccProfileViewBandSetItem;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

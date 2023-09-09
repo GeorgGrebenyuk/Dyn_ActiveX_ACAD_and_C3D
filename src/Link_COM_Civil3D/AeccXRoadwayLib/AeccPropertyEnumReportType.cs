@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumReportType 
 	{
-		public AeccXRoadwayLib.IAeccPropertyEnumReportType _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccPropertyEnumReportType _i;
 		internal AeccPropertyEnumReportType(object AeccPropertyEnumReportType_object) 
 		{
-			this._i = AeccPropertyEnumReportType_object as AeccXRoadwayLib.IAeccPropertyEnumReportType;
+			this._i = AeccPropertyEnumReportType_object as Autodesk.AECC.Interop.Roadway.IAeccPropertyEnumReportType;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXRoadwayLib.AeccReportType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Roadway.AeccReportType pVal) 
 		{
 			this._i.Value = pVal;
 		}

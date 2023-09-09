@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddContourLabelingGroup 
 	{
-		public AeccXLandLib.IAeccSettingsAddContourLabelingGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAddContourLabelingGroup _i;
 		internal AeccSettingsAddContourLabelingGroup(object AeccSettingsAddContourLabelingGroup_object) 
 		{
-			this._i = AeccSettingsAddContourLabelingGroup_object as AeccXLandLib.IAeccSettingsAddContourLabelingGroup;
+			this._i = AeccSettingsAddContourLabelingGroup_object as Autodesk.AECC.Interop.Land.IAeccSettingsAddContourLabelingGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

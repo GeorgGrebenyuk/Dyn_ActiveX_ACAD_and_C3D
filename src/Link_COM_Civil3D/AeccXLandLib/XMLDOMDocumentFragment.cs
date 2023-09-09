@@ -6,10 +6,10 @@
 	///</summary>
 	public class XMLDOMDocumentFragment 
 	{
-		public AeccXLandLib.IXMLDOMDocumentFragment _i;
+		public Autodesk.AECC.Interop.Land.IXMLDOMDocumentFragment _i;
 		internal XMLDOMDocumentFragment(object XMLDOMDocumentFragment_object) 
 		{
-			this._i = XMLDOMDocumentFragment_object as AeccXLandLib.IXMLDOMDocumentFragment;
+			this._i = XMLDOMDocumentFragment_object as Autodesk.AECC.Interop.Land.IXMLDOMDocumentFragment;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

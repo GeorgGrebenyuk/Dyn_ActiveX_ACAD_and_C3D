@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelStyleDirectionArrowComponent 
 	{
-		public AeccXLandLib.IAeccLabelStyleDirectionArrowComponent _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelStyleDirectionArrowComponent _i;
 		internal AeccLabelStyleDirectionArrowComponent(object AeccLabelStyleDirectionArrowComponent_object) 
 		{
-			this._i = AeccLabelStyleDirectionArrowComponent_object as AeccXLandLib.IAeccLabelStyleDirectionArrowComponent;
+			this._i = AeccLabelStyleDirectionArrowComponent_object as Autodesk.AECC.Interop.Land.IAeccLabelStyleDirectionArrowComponent;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

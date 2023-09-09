@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStationEquations 
 	{
-		public AeccXLandLib.IAeccStationEquations _i;
+		public Autodesk.AECC.Interop.Land.IAeccStationEquations _i;
 		internal AeccStationEquations(object AeccStationEquations_object) 
 		{
-			this._i = AeccStationEquations_object as AeccXLandLib.IAeccStationEquations;
+			this._i = AeccStationEquations_object as Autodesk.AECC.Interop.Land.IAeccStationEquations;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -29,7 +29,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Add(double RawStationBack,double StationBack,double StationAhead,AeccXLandLib.AeccStationEquationType StationEquationType) 
+		public dynamic Add(double RawStationBack,double StationBack,double StationAhead,Autodesk.AECC.Interop.Land.AeccStationEquationType StationEquationType) 
 		{
 			return this._i.Add(RawStationBack,StationBack,StationAhead,StationEquationType);
 		}

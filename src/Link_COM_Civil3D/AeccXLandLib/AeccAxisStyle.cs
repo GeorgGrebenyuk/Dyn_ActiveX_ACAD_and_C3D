@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAxisStyle 
 	{
-		public AeccXLandLib.IAeccAxisStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccAxisStyle _i;
 		internal AeccAxisStyle(object AeccAxisStyle_object) 
 		{
-			this._i = AeccAxisStyle_object as AeccXLandLib.IAeccAxisStyle;
+			this._i = AeccAxisStyle_object as Autodesk.AECC.Interop.Land.IAeccAxisStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

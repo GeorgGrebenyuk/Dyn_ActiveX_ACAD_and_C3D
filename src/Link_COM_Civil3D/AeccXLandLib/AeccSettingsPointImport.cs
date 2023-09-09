@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsPointImport 
 	{
-		public AeccXLandLib.IAeccSettingsPointImport _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsPointImport _i;
 		internal AeccSettingsPointImport(object AeccSettingsPointImport_object) 
 		{
-			this._i = AeccSettingsPointImport_object as AeccXLandLib.IAeccSettingsPointImport;
+			this._i = AeccSettingsPointImport_object as Autodesk.AECC.Interop.Land.IAeccSettingsPointImport;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

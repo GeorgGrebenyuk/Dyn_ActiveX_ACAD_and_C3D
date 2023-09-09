@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGeneralLabel 
 	{
-		public AeccXLandLib.IAeccGeneralLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccGeneralLabel _i;
 		internal AeccGeneralLabel(object AeccGeneralLabel_object) 
 		{
-			this._i = AeccGeneralLabel_object as AeccXLandLib.IAeccGeneralLabel;
+			this._i = AeccGeneralLabel_object as Autodesk.AECC.Interop.Land.IAeccGeneralLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

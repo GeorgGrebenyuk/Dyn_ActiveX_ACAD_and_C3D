@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLandFeatureLine 
 	{
-		public AeccXLandLib.IAeccLandFeatureLine _i;
+		public Autodesk.AECC.Interop.Land.IAeccLandFeatureLine _i;
 		internal AeccLandFeatureLine(object AeccLandFeatureLine_object) 
 		{
-			this._i = AeccLandFeatureLine_object as AeccXLandLib.IAeccLandFeatureLine;
+			this._i = AeccLandFeatureLine_object as Autodesk.AECC.Interop.Land.IAeccLandFeatureLine;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -61,7 +61,7 @@
 		///<summary>
 		///
 		///</summary>
-		public object GetPoints(AeccXLandLib.AeccLandFeatureLinePointType pointType) 
+		public object GetPoints(Autodesk.AECC.Interop.Land.AeccLandFeatureLinePointType pointType) 
 		{
 			return this._i.GetPoints(pointType);
 		}
@@ -93,7 +93,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void InsertFeaturePoint(object varPoint,AeccXLandLib.AeccLandFeatureLinePointType pointType) 
+		public void InsertFeaturePoint(object varPoint,Autodesk.AECC.Interop.Land.AeccLandFeatureLinePointType pointType) 
 		{
 			this._i.InsertFeaturePoint(varPoint,pointType);
 		}
@@ -101,7 +101,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void InsertFeaturePoints(object varPoints,AeccXLandLib.AeccLandFeatureLinePointType pointType) 
+		public void InsertFeaturePoints(object varPoints,Autodesk.AECC.Interop.Land.AeccLandFeatureLinePointType pointType) 
 		{
 			this._i.InsertFeaturePoints(varPoints,pointType);
 		}

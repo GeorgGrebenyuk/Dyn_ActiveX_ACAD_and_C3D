@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsMultiProfileViewCreation 
 	{
-		public AeccXLandLib.IAeccSettingsMultiProfileViewCreation _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsMultiProfileViewCreation _i;
 		internal AeccSettingsMultiProfileViewCreation(object AeccSettingsMultiProfileViewCreation_object) 
 		{
-			this._i = AeccSettingsMultiProfileViewCreation_object as AeccXLandLib.IAeccSettingsMultiProfileViewCreation;
+			this._i = AeccSettingsMultiProfileViewCreation_object as Autodesk.AECC.Interop.Land.IAeccSettingsMultiProfileViewCreation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

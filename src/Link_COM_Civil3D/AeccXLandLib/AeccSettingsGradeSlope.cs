@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsGradeSlope 
 	{
-		public AeccXLandLib.IAeccSettingsGradeSlope _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsGradeSlope _i;
 		internal AeccSettingsGradeSlope(object AeccSettingsGradeSlope_object) 
 		{
-			this._i = AeccSettingsGradeSlope_object as AeccXLandLib.IAeccSettingsGradeSlope;
+			this._i = AeccSettingsGradeSlope_object as Autodesk.AECC.Interop.Land.IAeccSettingsGradeSlope;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

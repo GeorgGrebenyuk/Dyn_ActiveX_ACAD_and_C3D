@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccUserDefinedPropertyClassifications 
 	{
-		public AeccXLandLib.IAeccUserDefinedPropertyClassifications _i;
+		public Autodesk.AECC.Interop.Land.IAeccUserDefinedPropertyClassifications _i;
 		internal AeccUserDefinedPropertyClassifications(object AeccUserDefinedPropertyClassifications_object) 
 		{
-			this._i = AeccUserDefinedPropertyClassifications_object as AeccXLandLib.IAeccUserDefinedPropertyClassifications;
+			this._i = AeccUserDefinedPropertyClassifications_object as Autodesk.AECC.Interop.Land.IAeccUserDefinedPropertyClassifications;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSampleLineVertices 
 	{
-		public AeccXLandLib.IAeccSampleLineVertices _i;
+		public Autodesk.AECC.Interop.Land.IAeccSampleLineVertices _i;
 		internal AeccSampleLineVertices(object AeccSampleLineVertices_object) 
 		{
-			this._i = AeccSampleLineVertices_object as AeccXLandLib.IAeccSampleLineVertices;
+			this._i = AeccSampleLineVertices_object as Autodesk.AECC.Interop.Land.IAeccSampleLineVertices;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -39,7 +39,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Add(object Location,AeccXLandLib.AeccAlignmentSideType AlignmentSide,AeccXLandLib.AeccDirectionFromType DirectionFrom) 
+		public dynamic Add(object Location,Autodesk.AECC.Interop.Land.AeccAlignmentSideType AlignmentSide,Autodesk.AECC.Interop.Land.AeccDirectionFromType DirectionFrom) 
 		{
 			return this._i.Add(Location,AlignmentSide,DirectionFrom);
 		}
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Insert(dynamic Index,object Location,AeccXLandLib.AeccAlignmentSideType AlignmentSide,AeccXLandLib.AeccDirectionFromType DirectionFrom) 
+		public dynamic Insert(dynamic Index,object Location,Autodesk.AECC.Interop.Land.AeccAlignmentSideType AlignmentSide,Autodesk.AECC.Interop.Land.AeccDirectionFromType DirectionFrom) 
 		{
 			return this._i.Insert(Index,Location,AlignmentSide,DirectionFrom);
 		}

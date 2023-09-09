@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccDesignSpeed 
 	{
-		public AeccXLandLib.IAeccDesignSpeed _i;
+		public Autodesk.AECC.Interop.Land.IAeccDesignSpeed _i;
 		internal AeccDesignSpeed(object AeccDesignSpeed_object) 
 		{
-			this._i = AeccDesignSpeed_object as AeccXLandLib.IAeccDesignSpeed;
+			this._i = AeccDesignSpeed_object as Autodesk.AECC.Interop.Land.IAeccDesignSpeed;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

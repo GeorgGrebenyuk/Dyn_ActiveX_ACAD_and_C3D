@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStationRange 
 	{
-		public AeccXLandLib.IAeccStationRange _i;
+		public Autodesk.AECC.Interop.Land.IAeccStationRange _i;
 		internal AeccStationRange(object AeccStationRange_object) 
 		{
-			this._i = AeccStationRange_object as AeccXLandLib.IAeccStationRange;
+			this._i = AeccStationRange_object as Autodesk.AECC.Interop.Land.IAeccStationRange;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -242,7 +242,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_SampleLineDefaultDirection(AeccXLandLib.AeccDirectionFromType pVal) 
+		public void Set_SampleLineDefaultDirection(Autodesk.AECC.Interop.Land.AeccDirectionFromType pVal) 
 		{
 			this._i.SampleLineDefaultDirection = pVal;
 		}

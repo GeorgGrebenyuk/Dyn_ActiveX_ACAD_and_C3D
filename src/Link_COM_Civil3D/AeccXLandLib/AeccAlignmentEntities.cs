@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentEntities 
 	{
-		public AeccXLandLib.IAeccAlignmentEntities _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentEntities _i;
 		internal AeccAlignmentEntities(object AeccAlignmentEntities_object) 
 		{
-			this._i = AeccAlignmentEntities_object as AeccXLandLib.IAeccAlignmentEntities;
+			this._i = AeccAlignmentEntities_object as Autodesk.AECC.Interop.Land.IAeccAlignmentEntities;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -141,7 +141,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFreeCurve1(dynamic PreviousElementId,dynamic NextElementId,AeccXLandLib.AeccAlignmentFreeCurveConstraintType ConstraintType,double ConstraintValue,bool GreaterThan180,AeccXLandLib.AeccAlignmentFreeCurveType CurveType) 
+		public dynamic AddFreeCurve1(dynamic PreviousElementId,dynamic NextElementId,Autodesk.AECC.Interop.Land.AeccAlignmentFreeCurveConstraintType ConstraintType,double ConstraintValue,bool GreaterThan180,Autodesk.AECC.Interop.Land.AeccAlignmentFreeCurveType CurveType) 
 		{
 			return this._i.AddFreeCurve1(PreviousElementId,NextElementId,ConstraintType,ConstraintValue,GreaterThan180,CurveType);
 		}
@@ -157,7 +157,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFreeSCSGroup1(dynamic PreviousElementId,dynamic NextElementId,double Spiral1Length,double Radius,double Spiral2Length,bool GreaterThan180,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition) 
+		public dynamic AddFreeSCSGroup1(dynamic PreviousElementId,dynamic NextElementId,double Spiral1Length,double Radius,double Spiral2Length,bool GreaterThan180,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition) 
 		{
 			return this._i.AddFreeSCSGroup1(PreviousElementId,NextElementId,Spiral1Length,Radius,Spiral2Length,GreaterThan180,spiralDefinition);
 		}
@@ -165,7 +165,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFreeSCSGroup2(dynamic PreviousElementId,dynamic NextElementId,double Spiral1AValue,double Radius,double Spiral2AValue,bool GreaterThan180,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition) 
+		public dynamic AddFreeSCSGroup2(dynamic PreviousElementId,dynamic NextElementId,double Spiral1AValue,double Radius,double Spiral2AValue,bool GreaterThan180,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition) 
 		{
 			return this._i.AddFreeSCSGroup2(PreviousElementId,NextElementId,Spiral1AValue,Radius,Spiral2AValue,GreaterThan180,spiralDefinition);
 		}
@@ -205,7 +205,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFloatingLine5(dynamic nElementId,bool bAppend,double dSpParam,bool bIsSpParamAValue,object ptPassThru,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition) 
+		public dynamic AddFloatingLine5(dynamic nElementId,bool bAppend,double dSpParam,bool bIsSpParamAValue,object ptPassThru,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition) 
 		{
 			return this._i.AddFloatingLine5(nElementId,bAppend,dSpParam,bIsSpParamAValue,ptPassThru,spiralDefinition);
 		}
@@ -213,7 +213,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFloatingLine6(dynamic nElementId,bool bAppend,double dSpParam,bool bIsSpParamAValue,double dTanLength,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition) 
+		public dynamic AddFloatingLine6(dynamic nElementId,bool bAppend,double dSpParam,bool bIsSpParamAValue,double dTanLength,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition) 
 		{
 			return this._i.AddFloatingLine6(nElementId,bAppend,dSpParam,bIsSpParamAValue,dTanLength,spiralDefinition);
 		}
@@ -221,7 +221,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFloatingCurve1(dynamic PreviousElementId,object PassThroughPoint,double Radius,bool GreaterThan180,AeccXLandLib.AeccAlignmentFloatingCurveType CurveType) 
+		public dynamic AddFloatingCurve1(dynamic PreviousElementId,object PassThroughPoint,double Radius,bool GreaterThan180,Autodesk.AECC.Interop.Land.AeccAlignmentFloatingCurveType CurveType) 
 		{
 			return this._i.AddFloatingCurve1(PreviousElementId,PassThroughPoint,Radius,GreaterThan180,CurveType);
 		}
@@ -245,7 +245,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFloatingCurve4(object PassThroughPoint,double Radius,bool GreaterThan180,AeccXLandLib.AeccAlignmentFloatingCurveType CurveType,dynamic NextElementId) 
+		public dynamic AddFloatingCurve4(object PassThroughPoint,double Radius,bool GreaterThan180,Autodesk.AECC.Interop.Land.AeccAlignmentFloatingCurveType CurveType,dynamic NextElementId) 
 		{
 			return this._i.AddFloatingCurve4(PassThroughPoint,Radius,GreaterThan180,CurveType,NextElementId);
 		}
@@ -269,7 +269,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFloatingCurve7(dynamic PreviousElementId,double Radius,AeccXLandLib.AeccAlignmentFreeCurveConstraintType ConstraintType,double ConstraintValue,bool bClockwise) 
+		public dynamic AddFloatingCurve7(dynamic PreviousElementId,double Radius,Autodesk.AECC.Interop.Land.AeccAlignmentFreeCurveConstraintType ConstraintType,double ConstraintValue,bool bClockwise) 
 		{
 			return this._i.AddFloatingCurve7(PreviousElementId,Radius,ConstraintType,ConstraintValue,bClockwise);
 		}
@@ -277,7 +277,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFloatingCurve8(double Radius,AeccXLandLib.AeccAlignmentFreeCurveConstraintType ConstraintType,double ConstraintValue,bool bClockwise,dynamic NextElementId) 
+		public dynamic AddFloatingCurve8(double Radius,Autodesk.AECC.Interop.Land.AeccAlignmentFreeCurveConstraintType ConstraintType,double ConstraintValue,bool bClockwise,dynamic NextElementId) 
 		{
 			return this._i.AddFloatingCurve8(Radius,ConstraintType,ConstraintValue,bClockwise,NextElementId);
 		}
@@ -285,7 +285,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFloatingCurve9(dynamic nElementId,bool bAppend,double dSpParam,double dRadius,object ptPassThrough,bool bGreater180,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition,bool bIsSpParamAValue) 
+		public dynamic AddFloatingCurve9(dynamic nElementId,bool bAppend,double dSpParam,double dRadius,object ptPassThrough,bool bGreater180,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition,bool bIsSpParamAValue) 
 		{
 			return this._i.AddFloatingCurve9(nElementId,bAppend,dSpParam,dRadius,ptPassThrough,bGreater180,spiralDefinition,bIsSpParamAValue);
 		}
@@ -293,7 +293,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFloatingCurve10(dynamic nElementId,bool bAppend,double dSpParam,double dRadius,double dArcLength,bool bIsCW,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition,bool bIsSpParamAValue) 
+		public dynamic AddFloatingCurve10(dynamic nElementId,bool bAppend,double dSpParam,double dRadius,double dArcLength,bool bIsCW,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition,bool bIsSpParamAValue) 
 		{
 			return this._i.AddFloatingCurve10(nElementId,bAppend,dSpParam,dRadius,dArcLength,bIsCW,spiralDefinition,bIsSpParamAValue);
 		}
@@ -301,7 +301,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFixedSpiral1(dynamic PreviousElementId,object StartPoint,object SpiralPI,double Radius,double Length,AeccXLandLib.AeccAlignmentSpiralCurvatureType SpiralType,bool bClockwise,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition) 
+		public dynamic AddFixedSpiral1(dynamic PreviousElementId,object StartPoint,object SpiralPI,double Radius,double Length,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralCurvatureType SpiralType,bool bClockwise,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition) 
 		{
 			return this._i.AddFixedSpiral1(PreviousElementId,StartPoint,SpiralPI,Radius,Length,SpiralType,bClockwise,spiralDefinition);
 		}
@@ -309,7 +309,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFixedSpiral2(dynamic PreviousElementId,object StartPoint,object SpiralPI,double StartRadius,double EndRadius,double Length,bool bClockwise,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition) 
+		public dynamic AddFixedSpiral2(dynamic PreviousElementId,object StartPoint,object SpiralPI,double StartRadius,double EndRadius,double Length,bool bClockwise,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition) 
 		{
 			return this._i.AddFixedSpiral2(PreviousElementId,StartPoint,SpiralPI,StartRadius,EndRadius,Length,bClockwise,spiralDefinition);
 		}
@@ -317,7 +317,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFixedSpiral3(dynamic PreviousElementId,object StartPoint,object SpiralPI,object EndPoint,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition) 
+		public dynamic AddFixedSpiral3(dynamic PreviousElementId,object StartPoint,object SpiralPI,object EndPoint,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition) 
 		{
 			return this._i.AddFixedSpiral3(PreviousElementId,StartPoint,SpiralPI,EndPoint,spiralDefinition);
 		}
@@ -325,7 +325,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFreeSTSGroup1(dynamic nPreviousElementId,dynamic nNextElementId,double dSp1Param,double dSp2Param,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition,bool bIsSpParamAVal) 
+		public dynamic AddFreeSTSGroup1(dynamic nPreviousElementId,dynamic nNextElementId,double dSp1Param,double dSp2Param,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition,bool bIsSpParamAVal) 
 		{
 			return this._i.AddFreeSTSGroup1(nPreviousElementId,nNextElementId,dSp1Param,dSp2Param,spiralDefinition,bIsSpParamAVal);
 		}
@@ -333,7 +333,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddFreeSTSGroup2(dynamic nPreviousElement,dynamic nNextElement,double dTanLength,AeccXLandLib.AeccAlignmentSpiralType spiralDefinition) 
+		public dynamic AddFreeSTSGroup2(dynamic nPreviousElement,dynamic nNextElement,double dTanLength,Autodesk.AECC.Interop.Land.AeccAlignmentSpiralType spiralDefinition) 
 		{
 			return this._i.AddFreeSTSGroup2(nPreviousElement,nNextElement,dTanLength,spiralDefinition);
 		}

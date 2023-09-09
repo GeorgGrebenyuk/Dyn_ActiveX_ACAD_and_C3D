@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentEntity 
 	{
-		public AeccXLandLib.IAeccAlignmentEntity _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentEntity _i;
 		internal AeccAlignmentEntity(object AeccAlignmentEntity_object) 
 		{
-			this._i = AeccAlignmentEntity_object as AeccXLandLib.IAeccAlignmentEntity;
+			this._i = AeccAlignmentEntity_object as Autodesk.AECC.Interop.Land.IAeccAlignmentEntity;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

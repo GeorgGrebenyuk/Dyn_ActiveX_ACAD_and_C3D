@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCurveAndSpiralOption 
 	{
-		public AeccXLandLib.IAeccSettingsCurveAndSpiralOption _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCurveAndSpiralOption _i;
 		internal AeccSettingsCurveAndSpiralOption(object AeccSettingsCurveAndSpiralOption_object) 
 		{
-			this._i = AeccSettingsCurveAndSpiralOption_object as AeccXLandLib.IAeccSettingsCurveAndSpiralOption;
+			this._i = AeccSettingsCurveAndSpiralOption_object as Autodesk.AECC.Interop.Land.IAeccSettingsCurveAndSpiralOption;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParamString 
 	{
-		public AeccXLandLib.IAeccParamString _i;
+		public Autodesk.AECC.Interop.Land.IAeccParamString _i;
 		internal AeccParamString(object AeccParamString_object) 
 		{
-			this._i = AeccParamString_object as AeccXLandLib.IAeccParamString;
+			this._i = AeccParamString_object as Autodesk.AECC.Interop.Land.IAeccParamString;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -34,7 +34,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_TypeInfo(AeccXLandLib.AeccTypeInfoString pVal) 
+		public void Set_TypeInfo(Autodesk.AECC.Interop.Land.AeccTypeInfoString pVal) 
 		{
 			this._i.TypeInfo = pVal;
 		}

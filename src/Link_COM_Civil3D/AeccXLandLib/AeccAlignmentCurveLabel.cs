@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentCurveLabel 
 	{
-		public AeccXLandLib.IAeccAlignmentCurveLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentCurveLabel _i;
 		internal AeccAlignmentCurveLabel(object AeccAlignmentCurveLabel_object) 
 		{
-			this._i = AeccAlignmentCurveLabel_object as AeccXLandLib.IAeccAlignmentCurveLabel;
+			this._i = AeccAlignmentCurveLabel_object as Autodesk.AECC.Interop.Land.IAeccAlignmentCurveLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

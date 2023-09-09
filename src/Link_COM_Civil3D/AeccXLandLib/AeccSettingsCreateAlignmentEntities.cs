@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateAlignmentEntities 
 	{
-		public AeccXLandLib.IAeccSettingsCreateAlignmentEntities _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateAlignmentEntities _i;
 		internal AeccSettingsCreateAlignmentEntities(object AeccSettingsCreateAlignmentEntities_object) 
 		{
-			this._i = AeccSettingsCreateAlignmentEntities_object as AeccXLandLib.IAeccSettingsCreateAlignmentEntities;
+			this._i = AeccSettingsCreateAlignmentEntities_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateAlignmentEntities;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

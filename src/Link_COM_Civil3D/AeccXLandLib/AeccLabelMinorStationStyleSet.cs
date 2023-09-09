@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelMinorStationStyleSet 
 	{
-		public AeccXLandLib.IAeccLabelMinorStationStyleSet _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelMinorStationStyleSet _i;
 		internal AeccLabelMinorStationStyleSet(object AeccLabelMinorStationStyleSet_object) 
 		{
-			this._i = AeccLabelMinorStationStyleSet_object as AeccXLandLib.IAeccLabelMinorStationStyleSet;
+			this._i = AeccLabelMinorStationStyleSet_object as Autodesk.AECC.Interop.Land.IAeccLabelMinorStationStyleSet;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

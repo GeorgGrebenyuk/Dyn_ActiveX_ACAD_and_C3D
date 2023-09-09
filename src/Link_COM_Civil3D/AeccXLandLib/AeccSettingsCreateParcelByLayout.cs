@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateParcelByLayout 
 	{
-		public AeccXLandLib.IAeccSettingsCreateParcelByLayout _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateParcelByLayout _i;
 		internal AeccSettingsCreateParcelByLayout(object AeccSettingsCreateParcelByLayout_object) 
 		{
-			this._i = AeccSettingsCreateParcelByLayout_object as AeccXLandLib.IAeccSettingsCreateParcelByLayout;
+			this._i = AeccSettingsCreateParcelByLayout_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateParcelByLayout;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

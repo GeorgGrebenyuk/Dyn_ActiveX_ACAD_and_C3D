@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumProfileViewSplitStation 
 	{
-		public AeccXLandLib.IAeccPropertyEnumProfileViewSplitStation _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumProfileViewSplitStation _i;
 		internal AeccPropertyEnumProfileViewSplitStation(object AeccPropertyEnumProfileViewSplitStation_object) 
 		{
-			this._i = AeccPropertyEnumProfileViewSplitStation_object as AeccXLandLib.IAeccPropertyEnumProfileViewSplitStation;
+			this._i = AeccPropertyEnumProfileViewSplitStation_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumProfileViewSplitStation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccProfileViewSplitStationType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccProfileViewSplitStationType pVal) 
 		{
 			this._i.Value = pVal;
 		}

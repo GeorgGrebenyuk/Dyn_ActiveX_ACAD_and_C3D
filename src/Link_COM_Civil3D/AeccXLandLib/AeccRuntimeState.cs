@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccRuntimeState 
 	{
-		public AeccXLandLib.IAeccRuntimeState _i;
+		public Autodesk.AECC.Interop.Land.IAeccRuntimeState _i;
 		internal AeccRuntimeState(object AeccRuntimeState_object) 
 		{
-			this._i = AeccRuntimeState_object as AeccXLandLib.IAeccRuntimeState;
+			this._i = AeccRuntimeState_object as Autodesk.AECC.Interop.Land.IAeccRuntimeState;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

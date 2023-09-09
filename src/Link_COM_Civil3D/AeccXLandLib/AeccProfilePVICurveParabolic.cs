@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfilePVICurveParabolic 
 	{
-		public AeccXLandLib.IAeccProfilePVICurveParabolic _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfilePVICurveParabolic _i;
 		internal AeccProfilePVICurveParabolic(object AeccProfilePVICurveParabolic_object) 
 		{
-			this._i = AeccProfilePVICurveParabolic_object as AeccXLandLib.IAeccProfilePVICurveParabolic;
+			this._i = AeccProfilePVICurveParabolic_object as Autodesk.AECC.Interop.Land.IAeccProfilePVICurveParabolic;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

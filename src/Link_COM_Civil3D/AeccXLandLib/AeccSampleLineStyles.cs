@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSampleLineStyles 
 	{
-		public AeccXLandLib.IAeccSampleLineStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccSampleLineStyles _i;
 		internal AeccSampleLineStyles(object AeccSampleLineStyles_object) 
 		{
-			this._i = AeccSampleLineStyles_object as AeccXLandLib.IAeccSampleLineStyles;
+			this._i = AeccSampleLineStyles_object as Autodesk.AECC.Interop.Land.IAeccSampleLineStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

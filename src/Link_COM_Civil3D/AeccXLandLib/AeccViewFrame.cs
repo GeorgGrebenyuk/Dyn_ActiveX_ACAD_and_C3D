@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccViewFrame 
 	{
-		public AeccXLandLib.IAeccViewFrame _i;
+		public Autodesk.AECC.Interop.Land.IAeccViewFrame _i;
 		internal AeccViewFrame(object AeccViewFrame_object) 
 		{
-			this._i = AeccViewFrame_object as AeccXLandLib.IAeccViewFrame;
+			this._i = AeccViewFrame_object as Autodesk.AECC.Interop.Land.IAeccViewFrame;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

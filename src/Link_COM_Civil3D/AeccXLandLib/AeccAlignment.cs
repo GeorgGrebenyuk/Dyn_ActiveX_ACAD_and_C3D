@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignment 
 	{
-		public AeccXLandLib.IAeccAlignment _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignment _i;
 		internal AeccAlignment(object AeccAlignment_object) 
 		{
-			this._i = AeccAlignment_object as AeccXLandLib.IAeccAlignment;
+			this._i = AeccAlignment_object as Autodesk.AECC.Interop.Land.IAeccAlignment;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -109,7 +109,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GetStations(AeccXLandLib.AeccStationType StationType,double MajorInterval,double MinorInterval) 
+		public dynamic GetStations(Autodesk.AECC.Interop.Land.AeccStationType StationType,double MajorInterval,double MinorInterval) 
 		{
 			return this._i.GetStations(StationType,MajorInterval,MinorInterval);
 		}
@@ -192,7 +192,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void DistanceToAlignment(double StationOnThisAlignment,dynamic pOtherAlignment,out double DistanceToOtherAlignment,out double StationOnOtherAlignment,AeccXLandLib.AeccSideToAlignmentType side) 
+		public void DistanceToAlignment(double StationOnThisAlignment,dynamic pOtherAlignment,out double DistanceToOtherAlignment,out double StationOnOtherAlignment,Autodesk.AECC.Interop.Land.AeccSideToAlignmentType side) 
 		{
 			this._i.DistanceToAlignment(StationOnThisAlignment,pOtherAlignment,out DistanceToOtherAlignment,out StationOnOtherAlignment,side);
 		}
@@ -208,7 +208,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GetLWPolyline => this._i.GetLWPolyline;
+		public dynamic GetLWPolyline => this._i.GetLWPolyline();
 
 		///<summary>
 		///
@@ -223,7 +223,7 @@
 		///</summary>
 		public double InstantaneousRadius(double dRawStation) 
 		{
-			return this._i.InstantaneousRadius(dRawStation);
+			return this._i.InstantaneousRadius[dRawStation];
 		}
 
 		///<summary>

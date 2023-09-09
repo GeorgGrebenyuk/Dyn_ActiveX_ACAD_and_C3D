@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStructureStylePlanOption 
 	{
-		public AeccXPipeLib.IAeccStructureStylePlanOption _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccStructureStylePlanOption _i;
 		internal AeccStructureStylePlanOption(object AeccStructureStylePlanOption_object) 
 		{
-			this._i = AeccStructureStylePlanOption_object as AeccXPipeLib.IAeccStructureStylePlanOption;
+			this._i = AeccStructureStylePlanOption_object as Autodesk.AECC.Interop.Pipe.IAeccStructureStylePlanOption;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_PlanViewOptions(AeccXPipeLib.AeccStructureViewOptions pnPlanViewOptions) 
+		public void Set_PlanViewOptions(Autodesk.AECC.Interop.Pipe.AeccStructureViewOptions pnPlanViewOptions) 
 		{
 			this._i.PlanViewOptions = pnPlanViewOptions;
 		}
@@ -99,7 +99,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_SizeType(AeccXPipeLib.AeccStructureDisplayOptions pnSizeType) 
+		public void Set_SizeType(Autodesk.AECC.Interop.Pipe.AeccStructureDisplayOptions pnSizeType) 
 		{
 			this._i.SizeType = pnSizeType;
 		}

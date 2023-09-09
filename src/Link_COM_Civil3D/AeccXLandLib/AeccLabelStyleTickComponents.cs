@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelStyleTickComponents 
 	{
-		public AeccXLandLib.IAeccLabelStyleTickComponents _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelStyleTickComponents _i;
 		internal AeccLabelStyleTickComponents(object AeccLabelStyleTickComponents_object) 
 		{
-			this._i = AeccLabelStyleTickComponents_object as AeccXLandLib.IAeccLabelStyleTickComponents;
+			this._i = AeccLabelStyleTickComponents_object as Autodesk.AECC.Interop.Land.IAeccLabelStyleTickComponents;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccWatershedRegionBoundaryPoint 
 	{
-		public AeccXLandLib.IAeccWatershedRegionBoundaryPoint _i;
+		public Autodesk.AECC.Interop.Land.IAeccWatershedRegionBoundaryPoint _i;
 		internal AeccWatershedRegionBoundaryPoint(object AeccWatershedRegionBoundaryPoint_object) 
 		{
-			this._i = AeccWatershedRegionBoundaryPoint_object as AeccXLandLib.IAeccWatershedRegionBoundaryPoint;
+			this._i = AeccWatershedRegionBoundaryPoint_object as Autodesk.AECC.Interop.Land.IAeccWatershedRegionBoundaryPoint;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

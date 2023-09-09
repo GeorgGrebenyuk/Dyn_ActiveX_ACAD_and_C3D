@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAbbreviationProfile 
 	{
-		public AeccXLandLib.IAeccSettingsAbbreviationProfile _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAbbreviationProfile _i;
 		internal AeccSettingsAbbreviationProfile(object AeccSettingsAbbreviationProfile_object) 
 		{
-			this._i = AeccSettingsAbbreviationProfile_object as AeccXLandLib.IAeccSettingsAbbreviationProfile;
+			this._i = AeccSettingsAbbreviationProfile_object as Autodesk.AECC.Interop.Land.IAeccSettingsAbbreviationProfile;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

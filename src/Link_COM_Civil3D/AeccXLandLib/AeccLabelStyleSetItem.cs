@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelStyleSetItem 
 	{
-		public AeccXLandLib.IAeccLabelStyleSetItem _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelStyleSetItem _i;
 		internal AeccLabelStyleSetItem(object AeccLabelStyleSetItem_object) 
 		{
-			this._i = AeccLabelStyleSetItem_object as AeccXLandLib.IAeccLabelStyleSetItem;
+			this._i = AeccLabelStyleSetItem_object as Autodesk.AECC.Interop.Land.IAeccLabelStyleSetItem;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -39,7 +39,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DimensionAnchorOption(AeccXLandLib.AeccLabelDimensionAnchorType pVal) 
+		public void Set_DimensionAnchorOption(Autodesk.AECC.Interop.Land.AeccLabelDimensionAnchorType pVal) 
 		{
 			this._i.DimensionAnchorOption = pVal;
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAlignmentSuperElevation 
 	{
-		public AeccXLandLib.IAeccSettingsAlignmentSuperElevation _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsAlignmentSuperElevation _i;
 		internal AeccSettingsAlignmentSuperElevation(object AeccSettingsAlignmentSuperElevation_object) 
 		{
-			this._i = AeccSettingsAlignmentSuperElevation_object as AeccXLandLib.IAeccSettingsAlignmentSuperElevation;
+			this._i = AeccSettingsAlignmentSuperElevation_object as Autodesk.AECC.Interop.Land.IAeccSettingsAlignmentSuperElevation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

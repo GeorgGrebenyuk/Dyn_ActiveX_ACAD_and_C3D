@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumPlottedTextDisplay 
 	{
-		public AeccXLandLib.IAeccPropertyEnumPlottedTextDisplay _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumPlottedTextDisplay _i;
 		internal AeccPropertyEnumPlottedTextDisplay(object AeccPropertyEnumPlottedTextDisplay_object) 
 		{
-			this._i = AeccPropertyEnumPlottedTextDisplay_object as AeccXLandLib.IAeccPropertyEnumPlottedTextDisplay;
+			this._i = AeccPropertyEnumPlottedTextDisplay_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumPlottedTextDisplay;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccPlottedTextDisplayType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccPlottedTextDisplayType pVal) 
 		{
 			this._i.Value = pVal;
 		}

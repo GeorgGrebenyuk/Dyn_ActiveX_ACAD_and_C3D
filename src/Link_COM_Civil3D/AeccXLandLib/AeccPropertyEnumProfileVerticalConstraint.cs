@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumProfileVerticalConstraint 
 	{
-		public AeccXLandLib.IAeccPropertyEnumProfileVerticalConstraint _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumProfileVerticalConstraint _i;
 		internal AeccPropertyEnumProfileVerticalConstraint(object AeccPropertyEnumProfileVerticalConstraint_object) 
 		{
-			this._i = AeccPropertyEnumProfileVerticalConstraint_object as AeccXLandLib.IAeccPropertyEnumProfileVerticalConstraint;
+			this._i = AeccPropertyEnumProfileVerticalConstraint_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumProfileVerticalConstraint;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccProfileVerticalConstraintType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccProfileVerticalConstraintType pVal) 
 		{
 			this._i.Value = pVal;
 		}

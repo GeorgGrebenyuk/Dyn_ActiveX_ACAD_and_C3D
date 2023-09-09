@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsTakeOff 
 	{
-		public AeccXRoadwayLib.IAeccSettingsTakeOff _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsTakeOff _i;
 		internal AeccSettingsTakeOff(object AeccSettingsTakeOff_object) 
 		{
-			this._i = AeccSettingsTakeOff_object as AeccXRoadwayLib.IAeccSettingsTakeOff;
+			this._i = AeccSettingsTakeOff_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsTakeOff;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

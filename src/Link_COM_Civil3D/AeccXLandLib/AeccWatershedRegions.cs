@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccWatershedRegions 
 	{
-		public AeccXLandLib.IAeccWatershedRegions _i;
+		public Autodesk.AECC.Interop.Land.IAeccWatershedRegions _i;
 		internal AeccWatershedRegions(object AeccWatershedRegions_object) 
 		{
-			this._i = AeccWatershedRegions_object as AeccXLandLib.IAeccWatershedRegions;
+			this._i = AeccWatershedRegions_object as Autodesk.AECC.Interop.Land.IAeccWatershedRegions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

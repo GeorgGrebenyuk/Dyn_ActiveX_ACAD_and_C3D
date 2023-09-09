@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccCustomSubassembly 
 	{
-		public AeccXRoadwayLib.IAeccCustomSubassembly _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccCustomSubassembly _i;
 		internal AeccCustomSubassembly(object AeccCustomSubassembly_object) 
 		{
-			this._i = AeccCustomSubassembly_object as AeccXRoadwayLib.IAeccCustomSubassembly;
+			this._i = AeccCustomSubassembly_object as Autodesk.AECC.Interop.Roadway.IAeccCustomSubassembly;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

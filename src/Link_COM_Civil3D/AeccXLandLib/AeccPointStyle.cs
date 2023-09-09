@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPointStyle 
 	{
-		public AeccXLandLib.IAeccPointStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccPointStyle _i;
 		internal AeccPointStyle(object AeccPointStyle_object) 
 		{
-			this._i = AeccPointStyle_object as AeccXLandLib.IAeccPointStyle;
+			this._i = AeccPointStyle_object as Autodesk.AECC.Interop.Land.IAeccPointStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Display3dType(AeccXLandLib.AeccPointDisplay3dType pVal) 
+		public void Set_Display3dType(Autodesk.AECC.Interop.Land.AeccPointDisplay3dType pVal) 
 		{
 			this._i.Display3dType = pVal;
 		}
@@ -60,7 +60,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_MarkerType(AeccXLandLib.AeccMarkerDisplayType pVal) 
+		public void Set_MarkerType(Autodesk.AECC.Interop.Land.AeccMarkerDisplayType pVal) 
 		{
 			this._i.MarkerType = pVal;
 		}
@@ -73,7 +73,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_CustomMarkerStyle(AeccXLandLib.AeccCustomMarkerType pVal) 
+		public void Set_CustomMarkerStyle(Autodesk.AECC.Interop.Land.AeccCustomMarkerType pVal) 
 		{
 			this._i.CustomMarkerStyle = pVal;
 		}
@@ -86,7 +86,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_CustomMarkerSuperimposeStyle(AeccXLandLib.AeccCustomMarkerSuperimposeType pVal) 
+		public void Set_CustomMarkerSuperimposeStyle(Autodesk.AECC.Interop.Land.AeccCustomMarkerSuperimposeType pVal) 
 		{
 			this._i.CustomMarkerSuperimposeStyle = pVal;
 		}
@@ -125,7 +125,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_MarkerSizeType(AeccXLandLib.AeccMarkerSizeType pVal) 
+		public void Set_MarkerSizeType(Autodesk.AECC.Interop.Land.AeccMarkerSizeType pVal) 
 		{
 			this._i.MarkerSizeType = pVal;
 		}
@@ -164,7 +164,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_OrientationReference(AeccXLandLib.AeccMarkerOrientationType pVal) 
+		public void Set_OrientationReference(Autodesk.AECC.Interop.Land.AeccMarkerOrientationType pVal) 
 		{
 			this._i.OrientationReference = pVal;
 		}

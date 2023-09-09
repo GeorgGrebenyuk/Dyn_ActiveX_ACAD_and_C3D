@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCurveTessellationOption 
 	{
-		public AeccXLandLib.IAeccSettingsCurveTessellationOption _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCurveTessellationOption _i;
 		internal AeccSettingsCurveTessellationOption(object AeccSettingsCurveTessellationOption_object) 
 		{
-			this._i = AeccSettingsCurveTessellationOption_object as AeccXLandLib.IAeccSettingsCurveTessellationOption;
+			this._i = AeccSettingsCurveTessellationOption_object as Autodesk.AECC.Interop.Land.IAeccSettingsCurveTessellationOption;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

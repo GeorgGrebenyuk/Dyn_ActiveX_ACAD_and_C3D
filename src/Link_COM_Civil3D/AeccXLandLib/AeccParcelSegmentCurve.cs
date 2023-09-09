@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParcelSegmentCurve 
 	{
-		public AeccXLandLib.IAeccParcelSegmentCurve _i;
+		public Autodesk.AECC.Interop.Land.IAeccParcelSegmentCurve _i;
 		internal AeccParcelSegmentCurve(object AeccParcelSegmentCurve_object) 
 		{
-			this._i = AeccParcelSegmentCurve_object as AeccXLandLib.IAeccParcelSegmentCurve;
+			this._i = AeccParcelSegmentCurve_object as Autodesk.AECC.Interop.Land.IAeccParcelSegmentCurve;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParamsDouble 
 	{
-		public AeccXLandLib.IAeccParamsDouble _i;
+		public Autodesk.AECC.Interop.Land.IAeccParamsDouble _i;
 		internal AeccParamsDouble(object AeccParamsDouble_object) 
 		{
-			this._i = AeccParamsDouble_object as AeccXLandLib.IAeccParamsDouble;
+			this._i = AeccParamsDouble_object as Autodesk.AECC.Interop.Land.IAeccParamsDouble;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

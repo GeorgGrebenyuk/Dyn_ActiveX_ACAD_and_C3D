@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsSamplingIncrements 
 	{
-		public AeccXLandLib.IAeccSettingsSamplingIncrements _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsSamplingIncrements _i;
 		internal AeccSettingsSamplingIncrements(object AeccSettingsSamplingIncrements_object) 
 		{
-			this._i = AeccSettingsSamplingIncrements_object as AeccXLandLib.IAeccSettingsSamplingIncrements;
+			this._i = AeccSettingsSamplingIncrements_object as Autodesk.AECC.Interop.Land.IAeccSettingsSamplingIncrements;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

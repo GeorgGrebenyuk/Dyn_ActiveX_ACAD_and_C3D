@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentDesignCheck 
 	{
-		public AeccXLandLib.IAeccAlignmentDesignCheck _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentDesignCheck _i;
 		internal AeccAlignmentDesignCheck(object AeccAlignmentDesignCheck_object) 
 		{
-			this._i = AeccAlignmentDesignCheck_object as AeccXLandLib.IAeccAlignmentDesignCheck;
+			this._i = AeccAlignmentDesignCheck_object as Autodesk.AECC.Interop.Land.IAeccAlignmentDesignCheck;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -60,7 +60,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Type(AeccXLandLib.AeccAlignmentDesignCheckType pValue) 
+		public void Set_Type(Autodesk.AECC.Interop.Land.AeccAlignmentDesignCheckType pValue) 
 		{
 			this._i.Type = pValue;
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGridVolumeCreationData 
 	{
-		public AeccXLandLib.IAeccGridVolumeCreationData _i;
+		public Autodesk.AECC.Interop.Land.IAeccGridVolumeCreationData _i;
 		internal AeccGridVolumeCreationData(object AeccGridVolumeCreationData_object) 
 		{
-			this._i = AeccGridVolumeCreationData_object as AeccXLandLib.IAeccGridVolumeCreationData;
+			this._i = AeccGridVolumeCreationData_object as Autodesk.AECC.Interop.Land.IAeccGridVolumeCreationData;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

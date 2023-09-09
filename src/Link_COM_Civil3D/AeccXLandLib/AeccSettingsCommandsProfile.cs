@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCommandsProfile 
 	{
-		public AeccXLandLib.IAeccSettingsCommandsProfile _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCommandsProfile _i;
 		internal AeccSettingsCommandsProfile(object AeccSettingsCommandsProfile_object) 
 		{
-			this._i = AeccSettingsCommandsProfile_object as AeccXLandLib.IAeccSettingsCommandsProfile;
+			this._i = AeccSettingsCommandsProfile_object as Autodesk.AECC.Interop.Land.IAeccSettingsCommandsProfile;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

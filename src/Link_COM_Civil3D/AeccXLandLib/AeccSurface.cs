@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurface 
 	{
-		public AeccXLandLib.IAeccSurface _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurface _i;
 		internal AeccSurface(object AeccSurface_object) 
 		{
-			this._i = AeccSurface_object as AeccXLandLib.IAeccSurface;
+			this._i = AeccSurface_object as Autodesk.AECC.Interop.Land.IAeccSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -120,7 +120,7 @@
 		///<summary>
 		///
 		///</summary>
-		public object ExtractBorder(AeccXLandLib.AeccDisplayOrientation ViewType) 
+		public object ExtractBorder(Autodesk.AECC.Interop.Land.AeccDisplayOrientation ViewType) 
 		{
 			return this._i.ExtractBorder(ViewType);
 		}
@@ -128,7 +128,7 @@
 		///<summary>
 		///
 		///</summary>
-		public object ExtractContour(AeccXLandLib.AeccDisplayOrientation ViewType,AeccXLandLib.AeccSurfaceFilterType FilterType,double dMinElevation,double dMaxElevation) 
+		public object ExtractContour(Autodesk.AECC.Interop.Land.AeccDisplayOrientation ViewType,Autodesk.AECC.Interop.Land.AeccSurfaceFilterType FilterType,double dMinElevation,double dMaxElevation) 
 		{
 			return this._i.ExtractContour(ViewType,FilterType,dMinElevation,dMaxElevation);
 		}

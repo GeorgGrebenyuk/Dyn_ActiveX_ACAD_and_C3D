@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyNetwork 
 	{
-		public AeccXSurveyLib.IAeccSurveyNetwork _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyNetwork _i;
 		internal AeccSurveyNetwork(object AeccSurveyNetwork_object) 
 		{
-			this._i = AeccSurveyNetwork_object as AeccXSurveyLib.IAeccSurveyNetwork;
+			this._i = AeccSurveyNetwork_object as Autodesk.AECC.Interop.Survey.IAeccSurveyNetwork;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

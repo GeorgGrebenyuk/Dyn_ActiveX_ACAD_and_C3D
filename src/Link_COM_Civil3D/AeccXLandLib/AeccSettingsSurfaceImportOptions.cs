@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsSurfaceImportOptions 
 	{
-		public AeccXLandLib.IAeccSettingsSurfaceImportOptions _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsSurfaceImportOptions _i;
 		internal AeccSettingsSurfaceImportOptions(object AeccSettingsSurfaceImportOptions_object) 
 		{
-			this._i = AeccSettingsSurfaceImportOptions_object as AeccXLandLib.IAeccSettingsSurfaceImportOptions;
+			this._i = AeccSettingsSurfaceImportOptions_object as Autodesk.AECC.Interop.Land.IAeccSettingsSurfaceImportOptions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

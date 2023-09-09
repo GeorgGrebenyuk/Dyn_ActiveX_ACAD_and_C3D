@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParamOffsetTarget 
 	{
-		public AeccXRoadwayLib.IAeccParamOffsetTarget _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccParamOffsetTarget _i;
 		internal AeccParamOffsetTarget(object AeccParamOffsetTarget_object) 
 		{
-			this._i = AeccParamOffsetTarget_object as AeccXRoadwayLib.IAeccParamOffsetTarget;
+			this._i = AeccParamOffsetTarget_object as Autodesk.AECC.Interop.Roadway.IAeccParamOffsetTarget;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

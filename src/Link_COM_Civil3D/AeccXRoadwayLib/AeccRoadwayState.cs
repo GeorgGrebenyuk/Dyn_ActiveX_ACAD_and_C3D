@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccRoadwayState 
 	{
-		public AeccXRoadwayLib.IAeccRoadwayState _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccRoadwayState _i;
 		internal AeccRoadwayState(object AeccRoadwayState_object) 
 		{
-			this._i = AeccRoadwayState_object as AeccXRoadwayLib.IAeccRoadwayState;
+			this._i = AeccRoadwayState_object as Autodesk.AECC.Interop.Roadway.IAeccRoadwayState;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -51,7 +51,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_LayoutModeDisplayType(AeccXRoadwayLib.AeccRoadwayLayoutModeDisplay pVal) 
+		public void Set_LayoutModeDisplayType(Autodesk.AECC.Interop.Roadway.AeccRoadwayLayoutModeDisplay pVal) 
 		{
 			this._i.LayoutModeDisplayType = pVal;
 		}
@@ -88,7 +88,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Error(dynamic nErrorNumber,AeccXRoadwayLib.AeccRoadwayErrorLevel nErrorLevel,string bstrDescription,string bstrSource,bool bShowInEventViewer) 
+		public void Error(dynamic nErrorNumber,Autodesk.AECC.Interop.Roadway.AeccRoadwayErrorLevel nErrorLevel,string bstrDescription,string bstrSource,bool bShowInEventViewer) 
 		{
 			this._i.Error(nErrorNumber,nErrorLevel,bstrDescription,bstrSource,bShowInEventViewer);
 		}

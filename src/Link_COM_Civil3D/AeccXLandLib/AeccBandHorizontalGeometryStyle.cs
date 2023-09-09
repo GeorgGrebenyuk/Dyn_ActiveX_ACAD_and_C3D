@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccBandHorizontalGeometryStyle 
 	{
-		public AeccXLandLib.IAeccBandHorizontalGeometryStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccBandHorizontalGeometryStyle _i;
 		internal AeccBandHorizontalGeometryStyle(object AeccBandHorizontalGeometryStyle_object) 
 		{
-			this._i = AeccBandHorizontalGeometryStyle_object as AeccXLandLib.IAeccBandHorizontalGeometryStyle;
+			this._i = AeccBandHorizontalGeometryStyle_object as Autodesk.AECC.Interop.Land.IAeccBandHorizontalGeometryStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

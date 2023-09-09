@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsMapCheckOption 
 	{
-		public AeccXLandLib.IAeccSettingsMapCheckOption _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsMapCheckOption _i;
 		internal AeccSettingsMapCheckOption(object AeccSettingsMapCheckOption_object) 
 		{
-			this._i = AeccSettingsMapCheckOption_object as AeccXLandLib.IAeccSettingsMapCheckOption;
+			this._i = AeccSettingsMapCheckOption_object as Autodesk.AECC.Interop.Land.IAeccSettingsMapCheckOption;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

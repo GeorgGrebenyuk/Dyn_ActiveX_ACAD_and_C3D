@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGraphOverride 
 	{
-		public AeccXLandLib.IAeccGraphOverride _i;
+		public Autodesk.AECC.Interop.Land.IAeccGraphOverride _i;
 		internal AeccGraphOverride(object AeccGraphOverride_object) 
 		{
-			this._i = AeccGraphOverride_object as AeccXLandLib.IAeccGraphOverride;
+			this._i = AeccGraphOverride_object as Autodesk.AECC.Interop.Land.IAeccGraphOverride;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

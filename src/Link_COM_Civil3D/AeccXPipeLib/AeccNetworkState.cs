@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccNetworkState 
 	{
-		public AeccXPipeLib.IAeccNetworkState _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccNetworkState _i;
 		internal AeccNetworkState(object AeccNetworkState_object) 
 		{
-			this._i = AeccNetworkState_object as AeccXPipeLib.IAeccNetworkState;
+			this._i = AeccNetworkState_object as Autodesk.AECC.Interop.Pipe.IAeccNetworkState;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

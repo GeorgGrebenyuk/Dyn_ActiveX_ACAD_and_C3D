@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateProfileFromCorridor 
 	{
-		public AeccXRoadwayLib.IAeccSettingsCreateProfileFromCorridor _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsCreateProfileFromCorridor _i;
 		internal AeccSettingsCreateProfileFromCorridor(object AeccSettingsCreateProfileFromCorridor_object) 
 		{
-			this._i = AeccSettingsCreateProfileFromCorridor_object as AeccXRoadwayLib.IAeccSettingsCreateProfileFromCorridor;
+			this._i = AeccSettingsCreateProfileFromCorridor_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsCreateProfileFromCorridor;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

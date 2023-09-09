@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumPointNumbersAssigned 
 	{
-		public AeccXLandLib.IAeccPropertyEnumPointNumbersAssigned _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumPointNumbersAssigned _i;
 		internal AeccPropertyEnumPointNumbersAssigned(object AeccPropertyEnumPointNumbersAssigned_object) 
 		{
-			this._i = AeccPropertyEnumPointNumbersAssigned_object as AeccXLandLib.IAeccPropertyEnumPointNumbersAssigned;
+			this._i = AeccPropertyEnumPointNumbersAssigned_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumPointNumbersAssigned;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccPointNumbersAssignedType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccPointNumbersAssignedType pVal) 
 		{
 			this._i.Value = pVal;
 		}

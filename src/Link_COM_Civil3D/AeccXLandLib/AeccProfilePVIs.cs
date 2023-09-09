@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccProfilePVIs 
 	{
-		public AeccXLandLib.IAeccProfilePVIs _i;
+		public Autodesk.AECC.Interop.Land.IAeccProfilePVIs _i;
 		internal AeccProfilePVIs(object AeccProfilePVIs_object) 
 		{
-			this._i = AeccProfilePVIs_object as AeccXLandLib.IAeccProfilePVIs;
+			this._i = AeccProfilePVIs_object as Autodesk.AECC.Interop.Land.IAeccProfilePVIs;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -37,7 +37,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Add(double Station,double Elevation,AeccXLandLib.AeccProfilePVICurveType CurveType,object Param1,object Param2) 
+		public dynamic Add(double Station,double Elevation,Autodesk.AECC.Interop.Land.AeccProfilePVICurveType CurveType,object Param1,object Param2) 
 		{
 			return this._i.Add(Station,Elevation,CurveType,Param1,Param2);
 		}

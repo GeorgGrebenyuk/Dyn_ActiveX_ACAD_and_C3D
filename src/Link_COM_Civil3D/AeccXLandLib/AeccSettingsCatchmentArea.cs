@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCatchmentArea 
 	{
-		public AeccXLandLib.IAeccSettingsCatchmentArea _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCatchmentArea _i;
 		internal AeccSettingsCatchmentArea(object AeccSettingsCatchmentArea_object) 
 		{
-			this._i = AeccSettingsCatchmentArea_object as AeccXLandLib.IAeccSettingsCatchmentArea;
+			this._i = AeccSettingsCatchmentArea_object as Autodesk.AECC.Interop.Land.IAeccSettingsCatchmentArea;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccCorridorSurfaceBaseMask 
 	{
-		public AeccXRoadwayLib.IAeccCorridorSurfaceBaseMask _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccCorridorSurfaceBaseMask _i;
 		internal AeccCorridorSurfaceBaseMask(object AeccCorridorSurfaceBaseMask_object) 
 		{
-			this._i = AeccCorridorSurfaceBaseMask_object as AeccXRoadwayLib.IAeccCorridorSurfaceBaseMask;
+			this._i = AeccCorridorSurfaceBaseMask_object as Autodesk.AECC.Interop.Roadway.IAeccCorridorSurfaceBaseMask;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

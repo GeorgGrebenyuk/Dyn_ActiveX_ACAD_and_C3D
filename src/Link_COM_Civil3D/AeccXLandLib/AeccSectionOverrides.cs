@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionOverrides 
 	{
-		public AeccXLandLib.IAeccSectionOverrides _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionOverrides _i;
 		internal AeccSectionOverrides(object AeccSectionOverrides_object) 
 		{
-			this._i = AeccSectionOverrides_object as AeccXLandLib.IAeccSectionOverrides;
+			this._i = AeccSectionOverrides_object as Autodesk.AECC.Interop.Land.IAeccSectionOverrides;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

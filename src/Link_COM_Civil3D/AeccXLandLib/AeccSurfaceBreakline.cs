@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceBreakline 
 	{
-		public AeccXLandLib.IAeccSurfaceBreakline _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceBreakline _i;
 		internal AeccSurfaceBreakline(object AeccSurfaceBreakline_object) 
 		{
-			this._i = AeccSurfaceBreakline_object as AeccXLandLib.IAeccSurfaceBreakline;
+			this._i = AeccSurfaceBreakline_object as Autodesk.AECC.Interop.Land.IAeccSurfaceBreakline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

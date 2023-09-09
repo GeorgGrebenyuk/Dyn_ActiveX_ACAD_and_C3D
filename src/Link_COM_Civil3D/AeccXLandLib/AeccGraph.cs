@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccGraph 
 	{
-		public AeccXLandLib.IAeccGraph _i;
+		public Autodesk.AECC.Interop.Land.IAeccGraph _i;
 		internal AeccGraph(object AeccGraph_object) 
 		{
-			this._i = AeccGraph_object as AeccXLandLib.IAeccGraph;
+			this._i = AeccGraph_object as Autodesk.AECC.Interop.Land.IAeccGraph;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

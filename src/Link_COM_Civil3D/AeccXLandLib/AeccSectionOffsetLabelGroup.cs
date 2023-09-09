@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionOffsetLabelGroup 
 	{
-		public AeccXLandLib.IAeccSectionOffsetLabelGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionOffsetLabelGroup _i;
 		internal AeccSectionOffsetLabelGroup(object AeccSectionOffsetLabelGroup_object) 
 		{
-			this._i = AeccSectionOffsetLabelGroup_object as AeccXLandLib.IAeccSectionOffsetLabelGroup;
+			this._i = AeccSectionOffsetLabelGroup_object as Autodesk.AECC.Interop.Land.IAeccSectionOffsetLabelGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

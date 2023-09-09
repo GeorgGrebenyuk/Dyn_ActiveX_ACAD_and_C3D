@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsIntersection 
 	{
-		public AeccXLandLib.IAeccSettingsIntersection _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsIntersection _i;
 		internal AeccSettingsIntersection(object AeccSettingsIntersection_object) 
 		{
-			this._i = AeccSettingsIntersection_object as AeccXLandLib.IAeccSettingsIntersection;
+			this._i = AeccSettingsIntersection_object as Autodesk.AECC.Interop.Land.IAeccSettingsIntersection;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

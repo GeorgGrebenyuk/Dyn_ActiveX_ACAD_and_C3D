@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumAngleUnit 
 	{
-		public AeccXLandLib.IAeccPropertyEnumAngleUnit _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumAngleUnit _i;
 		internal AeccPropertyEnumAngleUnit(object AeccPropertyEnumAngleUnit_object) 
 		{
-			this._i = AeccPropertyEnumAngleUnit_object as AeccXLandLib.IAeccPropertyEnumAngleUnit;
+			this._i = AeccPropertyEnumAngleUnit_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumAngleUnit;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccAngleUnitType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccAngleUnitType pVal) 
 		{
 			this._i.Value = pVal;
 		}

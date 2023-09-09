@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParamsString 
 	{
-		public AeccXLandLib.IAeccParamsString _i;
+		public Autodesk.AECC.Interop.Land.IAeccParamsString _i;
 		internal AeccParamsString(object AeccParamsString_object) 
 		{
-			this._i = AeccParamsString_object as AeccXLandLib.IAeccParamsString;
+			this._i = AeccParamsString_object as Autodesk.AECC.Interop.Land.IAeccParamsString;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

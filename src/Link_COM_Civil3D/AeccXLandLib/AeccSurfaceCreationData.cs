@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceCreationData 
 	{
-		public AeccXLandLib.IAeccSurfaceCreationData _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceCreationData _i;
 		internal AeccSurfaceCreationData(object AeccSurfaceCreationData_object) 
 		{
-			this._i = AeccSurfaceCreationData_object as AeccXLandLib.IAeccSurfaceCreationData;
+			this._i = AeccSurfaceCreationData_object as Autodesk.AECC.Interop.Land.IAeccSurfaceCreationData;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

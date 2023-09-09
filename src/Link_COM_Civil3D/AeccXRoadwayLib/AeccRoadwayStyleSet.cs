@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccRoadwayStyleSet 
 	{
-		public AeccXRoadwayLib.IAeccRoadwayStyleSet _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccRoadwayStyleSet _i;
 		internal AeccRoadwayStyleSet(object AeccRoadwayStyleSet_object) 
 		{
-			this._i = AeccRoadwayStyleSet_object as AeccXRoadwayLib.IAeccRoadwayStyleSet;
+			this._i = AeccRoadwayStyleSet_object as Autodesk.AECC.Interop.Roadway.IAeccRoadwayStyleSet;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Count(AeccXRoadwayLib.AeccRoadwayStyleType nStyleType) 
+		public dynamic Count(Autodesk.AECC.Interop.Roadway.AeccRoadwayStyleType nStyleType) 
 		{
 			return this._i.Count(nStyleType);
 		}
@@ -24,7 +24,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Item(AeccXRoadwayLib.AeccRoadwayStyleType nStyleType,AeccXRoadwayLib.AeccRoadwayStyleItemType pItemType,string strCode) 
+		public dynamic Item(Autodesk.AECC.Interop.Roadway.AeccRoadwayStyleType nStyleType,Autodesk.AECC.Interop.Roadway.AeccRoadwayStyleItemType pItemType,string strCode) 
 		{
 			return this._i.Item(nStyleType,pItemType,strCode);
 		}
@@ -32,7 +32,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Add(AeccXRoadwayLib.AeccRoadwayStyleType nStyleType,string strCode,dynamic pICodeStyle) 
+		public dynamic Add(Autodesk.AECC.Interop.Roadway.AeccRoadwayStyleType nStyleType,string strCode,dynamic pICodeStyle) 
 		{
 			return this._i.Add(nStyleType,strCode,pICodeStyle);
 		}
@@ -40,7 +40,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Remove(AeccXRoadwayLib.AeccRoadwayStyleType nStyleType,string strCode) 
+		public void Remove(Autodesk.AECC.Interop.Roadway.AeccRoadwayStyleType nStyleType,string strCode) 
 		{
 			this._i.Remove(nStyleType,strCode);
 		}

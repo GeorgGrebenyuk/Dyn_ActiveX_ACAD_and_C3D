@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentCurve 
 	{
-		public AeccXLandLib.IAeccAlignmentCurve _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentCurve _i;
 		internal AeccAlignmentCurve(object AeccAlignmentCurve_object) 
 		{
-			this._i = AeccAlignmentCurve_object as AeccXLandLib.IAeccAlignmentCurve;
+			this._i = AeccAlignmentCurve_object as Autodesk.AECC.Interop.Land.IAeccAlignmentCurve;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

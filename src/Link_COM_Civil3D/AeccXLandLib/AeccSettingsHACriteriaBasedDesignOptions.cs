@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsHACriteriaBasedDesignOptions 
 	{
-		public AeccXLandLib.IAeccSettingsHACriteriaBasedDesignOptions _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsHACriteriaBasedDesignOptions _i;
 		internal AeccSettingsHACriteriaBasedDesignOptions(object AeccSettingsHACriteriaBasedDesignOptions_object) 
 		{
-			this._i = AeccSettingsHACriteriaBasedDesignOptions_object as AeccXLandLib.IAeccSettingsHACriteriaBasedDesignOptions;
+			this._i = AeccSettingsHACriteriaBasedDesignOptions_object as Autodesk.AECC.Interop.Land.IAeccSettingsHACriteriaBasedDesignOptions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

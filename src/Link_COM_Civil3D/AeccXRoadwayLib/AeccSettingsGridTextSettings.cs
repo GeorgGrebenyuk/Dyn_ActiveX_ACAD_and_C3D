@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsGridTextSettings 
 	{
-		public AeccXRoadwayLib.IAeccSettingsGridTextSettings _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsGridTextSettings _i;
 		internal AeccSettingsGridTextSettings(object AeccSettingsGridTextSettings_object) 
 		{
-			this._i = AeccSettingsGridTextSettings_object as AeccXRoadwayLib.IAeccSettingsGridTextSettings;
+			this._i = AeccSettingsGridTextSettings_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsGridTextSettings;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

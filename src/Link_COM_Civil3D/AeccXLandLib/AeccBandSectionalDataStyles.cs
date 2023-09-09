@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccBandSectionalDataStyles 
 	{
-		public AeccXLandLib.IAeccBandSectionalDataStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccBandSectionalDataStyles _i;
 		internal AeccBandSectionalDataStyles(object AeccBandSectionalDataStyles_object) 
 		{
-			this._i = AeccBandSectionalDataStyles_object as AeccXLandLib.IAeccBandSectionalDataStyles;
+			this._i = AeccBandSectionalDataStyles_object as Autodesk.AECC.Interop.Land.IAeccBandSectionalDataStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

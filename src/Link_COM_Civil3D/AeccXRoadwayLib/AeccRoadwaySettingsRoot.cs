@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccRoadwaySettingsRoot 
 	{
-		public AeccXRoadwayLib.IAeccRoadwaySettingsRoot _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccRoadwaySettingsRoot _i;
 		internal AeccRoadwaySettingsRoot(object AeccRoadwaySettingsRoot_object) 
 		{
-			this._i = AeccRoadwaySettingsRoot_object as AeccXRoadwayLib.IAeccRoadwaySettingsRoot;
+			this._i = AeccRoadwaySettingsRoot_object as Autodesk.AECC.Interop.Roadway.IAeccRoadwaySettingsRoot;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

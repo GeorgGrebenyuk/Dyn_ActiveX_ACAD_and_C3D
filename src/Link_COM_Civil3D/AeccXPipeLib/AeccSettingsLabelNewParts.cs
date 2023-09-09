@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsLabelNewParts 
 	{
-		public AeccXPipeLib.IAeccSettingsLabelNewParts _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsLabelNewParts _i;
 		internal AeccSettingsLabelNewParts(object AeccSettingsLabelNewParts_object) 
 		{
-			this._i = AeccSettingsLabelNewParts_object as AeccXPipeLib.IAeccSettingsLabelNewParts;
+			this._i = AeccSettingsLabelNewParts_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsLabelNewParts;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

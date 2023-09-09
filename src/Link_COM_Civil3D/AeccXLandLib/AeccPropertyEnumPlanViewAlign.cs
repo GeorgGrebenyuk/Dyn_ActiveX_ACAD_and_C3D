@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumPlanViewAlign 
 	{
-		public AeccXLandLib.IAeccPropertyEnumPlanViewAlign _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumPlanViewAlign _i;
 		internal AeccPropertyEnumPlanViewAlign(object AeccPropertyEnumPlanViewAlign_object) 
 		{
-			this._i = AeccPropertyEnumPlanViewAlign_object as AeccXLandLib.IAeccPropertyEnumPlanViewAlign;
+			this._i = AeccPropertyEnumPlanViewAlign_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumPlanViewAlign;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccPlanViewAlignType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccPlanViewAlignType pVal) 
 		{
 			this._i.Value = pVal;
 		}

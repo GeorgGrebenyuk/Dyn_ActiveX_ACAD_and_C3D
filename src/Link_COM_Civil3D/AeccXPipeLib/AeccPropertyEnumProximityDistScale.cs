@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumProximityDistScale 
 	{
-		public AeccXPipeLib.IAeccPropertyEnumProximityDistScale _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPropertyEnumProximityDistScale _i;
 		internal AeccPropertyEnumProximityDistScale(object AeccPropertyEnumProximityDistScale_object) 
 		{
-			this._i = AeccPropertyEnumProximityDistScale_object as AeccXPipeLib.IAeccPropertyEnumProximityDistScale;
+			this._i = AeccPropertyEnumProximityDistScale_object as Autodesk.AECC.Interop.Pipe.IAeccPropertyEnumProximityDistScale;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXPipeLib.AeccProximityDistanceScaleFactorOptions pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Pipe.AeccProximityDistanceScaleFactorOptions pVal) 
 		{
 			this._i.Value = pVal;
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionGradeBreakLabelGroup 
 	{
-		public AeccXLandLib.IAeccSectionGradeBreakLabelGroup _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionGradeBreakLabelGroup _i;
 		internal AeccSectionGradeBreakLabelGroup(object AeccSectionGradeBreakLabelGroup_object) 
 		{
-			this._i = AeccSectionGradeBreakLabelGroup_object as AeccXLandLib.IAeccSectionGradeBreakLabelGroup;
+			this._i = AeccSectionGradeBreakLabelGroup_object as Autodesk.AECC.Interop.Land.IAeccSectionGradeBreakLabelGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

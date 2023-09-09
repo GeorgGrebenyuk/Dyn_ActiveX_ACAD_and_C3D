@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentLabelGroupElement 
 	{
-		public AeccXLandLib.IAeccAlignmentLabelGroupElement _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentLabelGroupElement _i;
 		internal AeccAlignmentLabelGroupElement(object AeccAlignmentLabelGroupElement_object) 
 		{
-			this._i = AeccAlignmentLabelGroupElement_object as AeccXLandLib.IAeccAlignmentLabelGroupElement;
+			this._i = AeccAlignmentLabelGroupElement_object as Autodesk.AECC.Interop.Land.IAeccAlignmentLabelGroupElement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

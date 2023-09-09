@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPointGroups 
 	{
-		public AeccXLandLib.IAeccPointGroups _i;
+		public Autodesk.AECC.Interop.Land.IAeccPointGroups _i;
 		internal AeccPointGroups(object AeccPointGroups_object) 
 		{
-			this._i = AeccPointGroups_object as AeccXLandLib.IAeccPointGroups;
+			this._i = AeccPointGroups_object as Autodesk.AECC.Interop.Land.IAeccPointGroups;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

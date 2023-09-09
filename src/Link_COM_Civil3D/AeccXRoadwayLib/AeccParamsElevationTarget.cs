@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParamsElevationTarget 
 	{
-		public AeccXRoadwayLib.IAeccParamsElevationTarget _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccParamsElevationTarget _i;
 		internal AeccParamsElevationTarget(object AeccParamsElevationTarget_object) 
 		{
-			this._i = AeccParamsElevationTarget_object as AeccXRoadwayLib.IAeccParamsElevationTarget;
+			this._i = AeccParamsElevationTarget_object as Autodesk.AECC.Interop.Roadway.IAeccParamsElevationTarget;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsVolume 
 	{
-		public AeccXLandLib.IAeccSettingsVolume _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsVolume _i;
 		internal AeccSettingsVolume(object AeccSettingsVolume_object) 
 		{
-			this._i = AeccSettingsVolume_object as AeccXLandLib.IAeccSettingsVolume;
+			this._i = AeccSettingsVolume_object as Autodesk.AECC.Interop.Land.IAeccSettingsVolume;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPartDataFieldSortData 
 	{
-		public AeccXPipeLib.IAeccPartDataFieldSortData _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccPartDataFieldSortData _i;
 		internal AeccPartDataFieldSortData(object AeccPartDataFieldSortData_object) 
 		{
-			this._i = AeccPartDataFieldSortData_object as AeccXPipeLib.IAeccPartDataFieldSortData;
+			this._i = AeccPartDataFieldSortData_object as Autodesk.AECC.Interop.Pipe.IAeccPartDataFieldSortData;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

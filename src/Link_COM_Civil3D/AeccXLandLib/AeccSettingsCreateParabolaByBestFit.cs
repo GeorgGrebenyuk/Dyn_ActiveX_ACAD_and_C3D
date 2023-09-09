@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateParabolaByBestFit 
 	{
-		public AeccXLandLib.IAeccSettingsCreateParabolaByBestFit _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateParabolaByBestFit _i;
 		internal AeccSettingsCreateParabolaByBestFit(object AeccSettingsCreateParabolaByBestFit_object) 
 		{
-			this._i = AeccSettingsCreateParabolaByBestFit_object as AeccXLandLib.IAeccSettingsCreateParabolaByBestFit;
+			this._i = AeccSettingsCreateParabolaByBestFit_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateParabolaByBestFit;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

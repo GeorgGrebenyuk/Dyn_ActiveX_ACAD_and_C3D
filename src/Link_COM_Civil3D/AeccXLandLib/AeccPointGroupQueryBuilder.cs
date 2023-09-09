@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPointGroupQueryBuilder 
 	{
-		public AeccXLandLib.IAeccPointGroupQueryBuilder _i;
+		public Autodesk.AECC.Interop.Land.IAeccPointGroupQueryBuilder _i;
 		internal AeccPointGroupQueryBuilder(object AeccPointGroupQueryBuilder_object) 
 		{
-			this._i = AeccPointGroupQueryBuilder_object as AeccXLandLib.IAeccPointGroupQueryBuilder;
+			this._i = AeccPointGroupQueryBuilder_object as Autodesk.AECC.Interop.Land.IAeccPointGroupQueryBuilder;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

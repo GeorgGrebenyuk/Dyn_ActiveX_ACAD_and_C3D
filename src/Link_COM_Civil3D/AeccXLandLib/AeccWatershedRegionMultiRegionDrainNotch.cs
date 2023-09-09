@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccWatershedRegionMultiRegionDrainNotch 
 	{
-		public AeccXLandLib.IAeccWatershedRegionMultiRegionDrainNotch _i;
+		public Autodesk.AECC.Interop.Land.IAeccWatershedRegionMultiRegionDrainNotch _i;
 		internal AeccWatershedRegionMultiRegionDrainNotch(object AeccWatershedRegionMultiRegionDrainNotch_object) 
 		{
-			this._i = AeccWatershedRegionMultiRegionDrainNotch_object as AeccXLandLib.IAeccWatershedRegionMultiRegionDrainNotch;
+			this._i = AeccWatershedRegionMultiRegionDrainNotch_object as Autodesk.AECC.Interop.Land.IAeccWatershedRegionMultiRegionDrainNotch;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

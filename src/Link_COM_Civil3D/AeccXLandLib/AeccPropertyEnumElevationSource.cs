@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPropertyEnumElevationSource 
 	{
-		public AeccXLandLib.IAeccPropertyEnumElevationSource _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumElevationSource _i;
 		internal AeccPropertyEnumElevationSource(object AeccPropertyEnumElevationSource_object) 
 		{
-			this._i = AeccPropertyEnumElevationSource_object as AeccXLandLib.IAeccPropertyEnumElevationSource;
+			this._i = AeccPropertyEnumElevationSource_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumElevationSource;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccElevationSourceType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccElevationSourceType pVal) 
 		{
 			this._i.Value = pVal;
 		}

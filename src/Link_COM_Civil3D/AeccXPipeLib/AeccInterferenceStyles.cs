@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccInterferenceStyles 
 	{
-		public AeccXPipeLib.IAeccInterferenceStyles _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccInterferenceStyles _i;
 		internal AeccInterferenceStyles(object AeccInterferenceStyles_object) 
 		{
-			this._i = AeccInterferenceStyles_object as AeccXPipeLib.IAeccInterferenceStyles;
+			this._i = AeccInterferenceStyles_object as Autodesk.AECC.Interop.Pipe.IAeccInterferenceStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

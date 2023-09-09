@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccTinVolumeSurfaceDefinitionProperties 
 	{
-		public AeccXLandLib.IAeccTinVolumeSurfaceDefinitionProperties _i;
+		public Autodesk.AECC.Interop.Land.IAeccTinVolumeSurfaceDefinitionProperties _i;
 		internal AeccTinVolumeSurfaceDefinitionProperties(object AeccTinVolumeSurfaceDefinitionProperties_object) 
 		{
-			this._i = AeccTinVolumeSurfaceDefinitionProperties_object as AeccXLandLib.IAeccTinVolumeSurfaceDefinitionProperties;
+			this._i = AeccTinVolumeSurfaceDefinitionProperties_object as Autodesk.AECC.Interop.Land.IAeccTinVolumeSurfaceDefinitionProperties;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -73,7 +73,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_ElevationToUse(AeccXLandLib.AeccBreaklineElevationToUseType pVal) 
+		public void Set_ElevationToUse(Autodesk.AECC.Interop.Land.AeccBreaklineElevationToUseType pVal) 
 		{
 			this._i.ElevationToUse = pVal;
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsObjectLayer 
 	{
-		public AeccXLandLib.IAeccSettingsObjectLayer _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsObjectLayer _i;
 		internal AeccSettingsObjectLayer(object AeccSettingsObjectLayer_object) 
 		{
-			this._i = AeccSettingsObjectLayer_object as AeccXLandLib.IAeccSettingsObjectLayer;
+			this._i = AeccSettingsObjectLayer_object as Autodesk.AECC.Interop.Land.IAeccSettingsObjectLayer;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -29,7 +29,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Modifier(AeccXLandLib.AeccObjectLayerModifierType pVal) 
+		public void Set_Modifier(Autodesk.AECC.Interop.Land.AeccObjectLayerModifierType pVal) 
 		{
 			this._i.Modifier = pVal;
 		}

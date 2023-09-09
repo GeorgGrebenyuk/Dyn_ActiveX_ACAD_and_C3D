@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsTransformation 
 	{
-		public AeccXLandLib.IAeccSettingsTransformation _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsTransformation _i;
 		internal AeccSettingsTransformation(object AeccSettingsTransformation_object) 
 		{
-			this._i = AeccSettingsTransformation_object as AeccXLandLib.IAeccSettingsTransformation;
+			this._i = AeccSettingsTransformation_object as Autodesk.AECC.Interop.Land.IAeccSettingsTransformation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -52,7 +52,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_GridScaleFactorComputation(AeccXLandLib.AeccGridScaleFactorType pVal) 
+		public void Set_GridScaleFactorComputation(Autodesk.AECC.Interop.Land.AeccGridScaleFactorType pVal) 
 		{
 			this._i.GridScaleFactorComputation = pVal;
 		}

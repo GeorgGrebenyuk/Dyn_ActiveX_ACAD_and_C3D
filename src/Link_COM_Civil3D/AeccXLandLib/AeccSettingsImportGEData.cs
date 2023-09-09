@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsImportGEData 
 	{
-		public AeccXLandLib.IAeccSettingsImportGEData _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsImportGEData _i;
 		internal AeccSettingsImportGEData(object AeccSettingsImportGEData_object) 
 		{
-			this._i = AeccSettingsImportGEData_object as AeccXLandLib.IAeccSettingsImportGEData;
+			this._i = AeccSettingsImportGEData_object as Autodesk.AECC.Interop.Land.IAeccSettingsImportGEData;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

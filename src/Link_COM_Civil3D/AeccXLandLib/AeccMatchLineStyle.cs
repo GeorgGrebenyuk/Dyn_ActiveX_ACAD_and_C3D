@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccMatchLineStyle 
 	{
-		public AeccXLandLib.IAeccMatchLineStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccMatchLineStyle _i;
 		internal AeccMatchLineStyle(object AeccMatchLineStyle_object) 
 		{
-			this._i = AeccMatchLineStyle_object as AeccXLandLib.IAeccMatchLineStyle;
+			this._i = AeccMatchLineStyle_object as Autodesk.AECC.Interop.Land.IAeccMatchLineStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

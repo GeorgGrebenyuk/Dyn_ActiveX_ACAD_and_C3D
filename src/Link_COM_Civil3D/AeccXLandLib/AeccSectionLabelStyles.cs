@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionLabelStyles 
 	{
-		public AeccXLandLib.IAeccSectionLabelStyles _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionLabelStyles _i;
 		internal AeccSectionLabelStyles(object AeccSectionLabelStyles_object) 
 		{
-			this._i = AeccSectionLabelStyles_object as AeccXLandLib.IAeccSectionLabelStyles;
+			this._i = AeccSectionLabelStyles_object as Autodesk.AECC.Interop.Land.IAeccSectionLabelStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

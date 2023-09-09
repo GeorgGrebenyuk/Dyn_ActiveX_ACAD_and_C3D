@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsSuperimposeProfile 
 	{
-		public AeccXLandLib.IAeccSettingsSuperimposeProfile _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsSuperimposeProfile _i;
 		internal AeccSettingsSuperimposeProfile(object AeccSettingsSuperimposeProfile_object) 
 		{
-			this._i = AeccSettingsSuperimposeProfile_object as AeccXLandLib.IAeccSettingsSuperimposeProfile;
+			this._i = AeccSettingsSuperimposeProfile_object as Autodesk.AECC.Interop.Land.IAeccSettingsSuperimposeProfile;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

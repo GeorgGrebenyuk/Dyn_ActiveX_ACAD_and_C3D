@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsSurfaceCreation 
 	{
-		public AeccXLandLib.IAeccSettingsSurfaceCreation _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsSurfaceCreation _i;
 		internal AeccSettingsSurfaceCreation(object AeccSettingsSurfaceCreation_object) 
 		{
-			this._i = AeccSettingsSurfaceCreation_object as AeccXLandLib.IAeccSettingsSurfaceCreation;
+			this._i = AeccSettingsSurfaceCreation_object as Autodesk.AECC.Interop.Land.IAeccSettingsSurfaceCreation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

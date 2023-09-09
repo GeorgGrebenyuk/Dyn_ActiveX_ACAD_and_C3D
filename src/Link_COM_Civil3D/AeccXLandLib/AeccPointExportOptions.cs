@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPointExportOptions 
 	{
-		public AeccXLandLib.IAeccPointExportOptions _i;
+		public Autodesk.AECC.Interop.Land.IAeccPointExportOptions _i;
 		internal AeccPointExportOptions(object AeccPointExportOptions_object) 
 		{
-			this._i = AeccPointExportOptions_object as AeccXLandLib.IAeccPointExportOptions;
+			this._i = AeccPointExportOptions_object as Autodesk.AECC.Interop.Land.IAeccPointExportOptions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

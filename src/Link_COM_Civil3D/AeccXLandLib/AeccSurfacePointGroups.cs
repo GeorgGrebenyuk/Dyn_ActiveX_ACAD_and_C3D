@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfacePointGroups 
 	{
-		public AeccXLandLib.IAeccSurfacePointGroups _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfacePointGroups _i;
 		internal AeccSurfacePointGroups(object AeccSurfacePointGroups_object) 
 		{
-			this._i = AeccSurfacePointGroups_object as AeccXLandLib.IAeccSurfacePointGroups;
+			this._i = AeccSurfacePointGroups_object as Autodesk.AECC.Interop.Land.IAeccSurfacePointGroups;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

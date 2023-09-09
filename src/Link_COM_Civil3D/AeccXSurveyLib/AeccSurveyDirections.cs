@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccSurveyDirections 
 	{
-		public AeccXSurveyLib.IAeccSurveyDirections _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyDirections _i;
 		internal AeccSurveyDirections(object AeccSurveyDirections_object) 
 		{
-			this._i = AeccSurveyDirections_object as AeccXSurveyLib.IAeccSurveyDirections;
+			this._i = AeccSurveyDirections_object as Autodesk.AECC.Interop.Survey.IAeccSurveyDirections;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Create(dynamic FromPointNumber,dynamic ToPointNumber,double Direction,AeccXSurveyLib.AeccSurveyDirectionType DirectionType) 
+		public dynamic Create(dynamic FromPointNumber,dynamic ToPointNumber,double Direction,Autodesk.AECC.Interop.Survey.AeccSurveyDirectionType DirectionType) 
 		{
 			return this._i.Create(FromPointNumber,ToPointNumber,Direction,DirectionType);
 		}

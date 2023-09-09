@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsAddSpanningPipePlanLabel 
 	{
-		public AeccXPipeLib.IAeccSettingsAddSpanningPipePlanLabel _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsAddSpanningPipePlanLabel _i;
 		internal AeccSettingsAddSpanningPipePlanLabel(object AeccSettingsAddSpanningPipePlanLabel_object) 
 		{
-			this._i = AeccSettingsAddSpanningPipePlanLabel_object as AeccXPipeLib.IAeccSettingsAddSpanningPipePlanLabel;
+			this._i = AeccSettingsAddSpanningPipePlanLabel_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsAddSpanningPipePlanLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

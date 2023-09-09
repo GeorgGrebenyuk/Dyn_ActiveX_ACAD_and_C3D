@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccLabelDraggedComponentStyle 
 	{
-		public AeccXLandLib.IAeccLabelDraggedComponentStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccLabelDraggedComponentStyle _i;
 		internal AeccLabelDraggedComponentStyle(object AeccLabelDraggedComponentStyle_object) 
 		{
-			this._i = AeccLabelDraggedComponentStyle_object as AeccXLandLib.IAeccLabelDraggedComponentStyle;
+			this._i = AeccLabelDraggedComponentStyle_object as Autodesk.AECC.Interop.Land.IAeccLabelDraggedComponentStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

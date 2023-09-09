@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParcelsProperties 
 	{
-		public AeccXLandLib.IAeccParcelsProperties _i;
+		public Autodesk.AECC.Interop.Land.IAeccParcelsProperties _i;
 		internal AeccParcelsProperties(object AeccParcelsProperties_object) 
 		{
-			this._i = AeccParcelsProperties_object as AeccXLandLib.IAeccParcelsProperties;
+			this._i = AeccParcelsProperties_object as Autodesk.AECC.Interop.Land.IAeccParcelsProperties;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -47,7 +47,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GetUserDefinedPropertyClassification(out AeccXLandLib.AeccUDPClassificationApplyWay classificationApplyWay) 
+		public dynamic GetUserDefinedPropertyClassification(out Autodesk.AECC.Interop.Land.AeccUDPClassificationApplyWay classificationApplyWay) 
 		{
 			return this._i.GetUserDefinedPropertyClassification(out classificationApplyWay);
 		}
@@ -55,7 +55,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void SetUserDefinedPropertyClassification(AeccXLandLib.AeccUDPClassificationApplyWay classificationApplyWay,object Classification) 
+		public void SetUserDefinedPropertyClassification(Autodesk.AECC.Interop.Land.AeccUDPClassificationApplyWay classificationApplyWay,object Classification) 
 		{
 			this._i.SetUserDefinedPropertyClassification(classificationApplyWay,Classification);
 		}

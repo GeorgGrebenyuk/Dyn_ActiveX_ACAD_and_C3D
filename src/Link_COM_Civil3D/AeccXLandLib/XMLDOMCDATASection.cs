@@ -6,10 +6,10 @@
 	///</summary>
 	public class XMLDOMCDATASection 
 	{
-		public AeccXLandLib.IXMLDOMCDATASection _i;
+		public Autodesk.AECC.Interop.Land.IXMLDOMCDATASection _i;
 		internal XMLDOMCDATASection(object XMLDOMCDATASection_object) 
 		{
-			this._i = XMLDOMCDATASection_object as AeccXLandLib.IXMLDOMCDATASection;
+			this._i = XMLDOMCDATASection_object as Autodesk.AECC.Interop.Land.IXMLDOMCDATASection;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

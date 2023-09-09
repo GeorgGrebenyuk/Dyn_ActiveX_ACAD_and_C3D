@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumLeaderAttachment 
 	{
-		public AeccXLandLib.IAeccPropertyEnumLeaderAttachment _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumLeaderAttachment _i;
 		internal AeccPropertyEnumLeaderAttachment(object AeccPropertyEnumLeaderAttachment_object) 
 		{
-			this._i = AeccPropertyEnumLeaderAttachment_object as AeccXLandLib.IAeccPropertyEnumLeaderAttachment;
+			this._i = AeccPropertyEnumLeaderAttachment_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumLeaderAttachment;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccLeaderAttachmentType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccLeaderAttachmentType pVal) 
 		{
 			this._i.Value = pVal;
 		}

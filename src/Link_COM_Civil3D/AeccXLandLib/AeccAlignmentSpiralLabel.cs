@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentSpiralLabel 
 	{
-		public AeccXLandLib.IAeccAlignmentSpiralLabel _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentSpiralLabel _i;
 		internal AeccAlignmentSpiralLabel(object AeccAlignmentSpiralLabel_object) 
 		{
-			this._i = AeccAlignmentSpiralLabel_object as AeccXLandLib.IAeccAlignmentSpiralLabel;
+			this._i = AeccAlignmentSpiralLabel_object as Autodesk.AECC.Interop.Land.IAeccAlignmentSpiralLabel;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

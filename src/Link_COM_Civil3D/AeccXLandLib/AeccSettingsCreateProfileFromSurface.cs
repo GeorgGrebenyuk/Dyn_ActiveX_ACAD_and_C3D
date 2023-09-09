@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsCreateProfileFromSurface 
 	{
-		public AeccXLandLib.IAeccSettingsCreateProfileFromSurface _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsCreateProfileFromSurface _i;
 		internal AeccSettingsCreateProfileFromSurface(object AeccSettingsCreateProfileFromSurface_object) 
 		{
-			this._i = AeccSettingsCreateProfileFromSurface_object as AeccXLandLib.IAeccSettingsCreateProfileFromSurface;
+			this._i = AeccSettingsCreateProfileFromSurface_object as Autodesk.AECC.Interop.Land.IAeccSettingsCreateProfileFromSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceContourStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceContourStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceContourStyle _i;
 		internal AeccSurfaceContourStyle(object AeccSurfaceContourStyle_object) 
 		{
-			this._i = AeccSurfaceContourStyle_object as AeccXLandLib.IAeccSurfaceContourStyle;
+			this._i = AeccSurfaceContourStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceContourStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -73,7 +73,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_GroupRangeValuesBy(AeccXLandLib.AeccGroupValuesByType pVal) 
+		public void Set_GroupRangeValuesBy(Autodesk.AECC.Interop.Land.AeccGroupValuesByType pVal) 
 		{
 			this._i.GroupRangeValuesBy = pVal;
 		}
@@ -99,7 +99,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_RangePrecision(AeccXLandLib.AeccPrecisionRangeType pVal) 
+		public void Set_RangePrecision(Autodesk.AECC.Interop.Land.AeccPrecisionRangeType pVal) 
 		{
 			this._i.RangePrecision = pVal;
 		}
@@ -203,7 +203,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_SmoothingType(AeccXLandLib.AeccContourSmoothingType pVal) 
+		public void Set_SmoothingType(Autodesk.AECC.Interop.Land.AeccContourSmoothingType pVal) 
 		{
 			this._i.SmoothingType = pVal;
 		}

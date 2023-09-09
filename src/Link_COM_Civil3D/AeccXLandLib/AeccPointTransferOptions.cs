@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccPointTransferOptions 
 	{
-		public AeccXLandLib.IAeccPointTransferOptions _i;
+		public Autodesk.AECC.Interop.Land.IAeccPointTransferOptions _i;
 		internal AeccPointTransferOptions(object AeccPointTransferOptions_object) 
 		{
-			this._i = AeccPointTransferOptions_object as AeccXLandLib.IAeccPointTransferOptions;
+			this._i = AeccPointTransferOptions_object as Autodesk.AECC.Interop.Land.IAeccPointTransferOptions;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

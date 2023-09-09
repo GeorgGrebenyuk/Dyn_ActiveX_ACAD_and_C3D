@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSectionMinorOffsetLabelGroupElement 
 	{
-		public AeccXLandLib.IAeccSectionMinorOffsetLabelGroupElement _i;
+		public Autodesk.AECC.Interop.Land.IAeccSectionMinorOffsetLabelGroupElement _i;
 		internal AeccSectionMinorOffsetLabelGroupElement(object AeccSectionMinorOffsetLabelGroupElement_object) 
 		{
-			this._i = AeccSectionMinorOffsetLabelGroupElement_object as AeccXLandLib.IAeccSectionMinorOffsetLabelGroupElement;
+			this._i = AeccSectionMinorOffsetLabelGroupElement_object as Autodesk.AECC.Interop.Land.IAeccSectionMinorOffsetLabelGroupElement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

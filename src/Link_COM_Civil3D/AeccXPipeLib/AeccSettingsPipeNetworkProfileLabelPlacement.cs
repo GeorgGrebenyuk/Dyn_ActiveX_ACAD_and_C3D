@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsPipeNetworkProfileLabelPlacement 
 	{
-		public AeccXPipeLib.IAeccSettingsPipeNetworkProfileLabelPlacement _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsPipeNetworkProfileLabelPlacement _i;
 		internal AeccSettingsPipeNetworkProfileLabelPlacement(object AeccSettingsPipeNetworkProfileLabelPlacement_object) 
 		{
-			this._i = AeccSettingsPipeNetworkProfileLabelPlacement_object as AeccXPipeLib.IAeccSettingsPipeNetworkProfileLabelPlacement;
+			this._i = AeccSettingsPipeNetworkProfileLabelPlacement_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsPipeNetworkProfileLabelPlacement;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

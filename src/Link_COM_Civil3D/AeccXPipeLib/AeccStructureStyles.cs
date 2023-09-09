@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccStructureStyles 
 	{
-		public AeccXPipeLib.IAeccStructureStyles _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccStructureStyles _i;
 		internal AeccStructureStyles(object AeccStructureStyles_object) 
 		{
-			this._i = AeccStructureStyles_object as AeccXPipeLib.IAeccStructureStyles;
+			this._i = AeccStructureStyles_object as Autodesk.AECC.Interop.Pipe.IAeccStructureStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

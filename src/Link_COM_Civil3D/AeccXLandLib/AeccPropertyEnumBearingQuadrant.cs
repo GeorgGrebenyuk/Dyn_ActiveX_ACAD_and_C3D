@@ -6,17 +6,17 @@
 	///</summary>
 	public class AeccPropertyEnumBearingQuadrant 
 	{
-		public AeccXLandLib.IAeccPropertyEnumBearingQuadrant _i;
+		public Autodesk.AECC.Interop.Land.IAeccPropertyEnumBearingQuadrant _i;
 		internal AeccPropertyEnumBearingQuadrant(object AeccPropertyEnumBearingQuadrant_object) 
 		{
-			this._i = AeccPropertyEnumBearingQuadrant_object as AeccXLandLib.IAeccPropertyEnumBearingQuadrant;
+			this._i = AeccPropertyEnumBearingQuadrant_object as Autodesk.AECC.Interop.Land.IAeccPropertyEnumBearingQuadrant;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Value(AeccXLandLib.AeccBearingQuadrantType pVal) 
+		public void Set_Value(Autodesk.AECC.Interop.Land.AeccBearingQuadrantType pVal) 
 		{
 			this._i.Value = pVal;
 		}

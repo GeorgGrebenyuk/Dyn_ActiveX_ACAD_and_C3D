@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsElevation 
 	{
-		public AeccXLandLib.IAeccSettingsElevation _i;
+		public Autodesk.AECC.Interop.Land.IAeccSettingsElevation _i;
 		internal AeccSettingsElevation(object AeccSettingsElevation_object) 
 		{
-			this._i = AeccSettingsElevation_object as AeccXLandLib.IAeccSettingsElevation;
+			this._i = AeccSettingsElevation_object as Autodesk.AECC.Interop.Land.IAeccSettingsElevation;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

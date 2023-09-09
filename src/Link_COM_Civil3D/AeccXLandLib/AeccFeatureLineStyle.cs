@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccFeatureLineStyle 
 	{
-		public AeccXLandLib.IAeccFeatureLineStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccFeatureLineStyle _i;
 		internal AeccFeatureLineStyle(object AeccFeatureLineStyle_object) 
 		{
-			this._i = AeccFeatureLineStyle_object as AeccXLandLib.IAeccFeatureLineStyle;
+			this._i = AeccFeatureLineStyle_object as Autodesk.AECC.Interop.Land.IAeccFeatureLineStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

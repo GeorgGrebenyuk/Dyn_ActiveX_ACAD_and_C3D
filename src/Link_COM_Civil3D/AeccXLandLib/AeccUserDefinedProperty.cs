@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccUserDefinedProperty 
 	{
-		public AeccXLandLib.IAeccUserDefinedProperty _i;
+		public Autodesk.AECC.Interop.Land.IAeccUserDefinedProperty _i;
 		internal AeccUserDefinedProperty(object AeccUserDefinedProperty_object) 
 		{
-			this._i = AeccUserDefinedProperty_object as AeccXLandLib.IAeccUserDefinedProperty;
+			this._i = AeccUserDefinedProperty_object as Autodesk.AECC.Interop.Land.IAeccUserDefinedProperty;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -39,7 +39,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_PropertyFieldType(AeccXLandLib.AeccUDPPropertyFieldType pVal) 
+		public void Set_PropertyFieldType(Autodesk.AECC.Interop.Land.AeccUDPPropertyFieldType pVal) 
 		{
 			this._i.PropertyFieldType = pVal;
 		}

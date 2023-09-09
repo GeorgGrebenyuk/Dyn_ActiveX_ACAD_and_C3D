@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsShowSpanningPipes 
 	{
-		public AeccXPipeLib.IAeccSettingsShowSpanningPipes _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsShowSpanningPipes _i;
 		internal AeccSettingsShowSpanningPipes(object AeccSettingsShowSpanningPipes_object) 
 		{
-			this._i = AeccSettingsShowSpanningPipes_object as AeccXPipeLib.IAeccSettingsShowSpanningPipes;
+			this._i = AeccSettingsShowSpanningPipes_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsShowSpanningPipes;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

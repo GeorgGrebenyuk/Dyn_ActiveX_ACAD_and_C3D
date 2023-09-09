@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurveyDirection 
 	{
-		public AeccXSurveyLib.IAeccSurveyDirection _i;
+		public Autodesk.AECC.Interop.Survey.IAeccSurveyDirection _i;
 		internal AeccSurveyDirection(object AeccSurveyDirection_object) 
 		{
-			this._i = AeccSurveyDirection_object as AeccXSurveyLib.IAeccSurveyDirection;
+			this._i = AeccSurveyDirection_object as Autodesk.AECC.Interop.Survey.IAeccSurveyDirection;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -44,7 +44,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DirectionType(AeccXSurveyLib.AeccSurveyDirectionType pDirectionType) 
+		public void Set_DirectionType(Autodesk.AECC.Interop.Survey.AeccSurveyDirectionType pDirectionType) 
 		{
 			this._i.DirectionType = pDirectionType;
 		}

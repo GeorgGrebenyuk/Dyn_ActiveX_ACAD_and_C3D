@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsPipeNetworkStyles 
 	{
-		public AeccXPipeLib.IAeccSettingsPipeNetworkStyles _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccSettingsPipeNetworkStyles _i;
 		internal AeccSettingsPipeNetworkStyles(object AeccSettingsPipeNetworkStyles_object) 
 		{
-			this._i = AeccSettingsPipeNetworkStyles_object as AeccXPipeLib.IAeccSettingsPipeNetworkStyles;
+			this._i = AeccSettingsPipeNetworkStyles_object as Autodesk.AECC.Interop.Pipe.IAeccSettingsPipeNetworkStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSettingsGridSettings 
 	{
-		public AeccXRoadwayLib.IAeccSettingsGridSettings _i;
+		public Autodesk.AECC.Interop.Roadway.IAeccSettingsGridSettings _i;
 		internal AeccSettingsGridSettings(object AeccSettingsGridSettings_object) 
 		{
-			this._i = AeccSettingsGridSettings_object as AeccXRoadwayLib.IAeccSettingsGridSettings;
+			this._i = AeccSettingsGridSettings_object as Autodesk.AECC.Interop.Roadway.IAeccSettingsGridSettings;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccCollectableObject 
 	{
-		public AeccXLandLib.IAeccCollectableObject _i;
+		public Autodesk.AECC.Interop.Land.IAeccCollectableObject _i;
 		internal AeccCollectableObject(object AeccCollectableObject_object) 
 		{
-			this._i = AeccCollectableObject_object as AeccXLandLib.IAeccCollectableObject;
+			this._i = AeccCollectableObject_object as Autodesk.AECC.Interop.Land.IAeccCollectableObject;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

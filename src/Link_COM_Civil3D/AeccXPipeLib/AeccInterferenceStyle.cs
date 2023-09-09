@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccInterferenceStyle 
 	{
-		public AeccXPipeLib.IAeccInterferenceStyle _i;
+		public Autodesk.AECC.Interop.Pipe.IAeccInterferenceStyle _i;
 		internal AeccInterferenceStyle(object AeccInterferenceStyle_object) 
 		{
-			this._i = AeccInterferenceStyle_object as AeccXPipeLib.IAeccInterferenceStyle;
+			this._i = AeccInterferenceStyle_object as Autodesk.AECC.Interop.Pipe.IAeccInterferenceStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -54,7 +54,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_ModelOptions(AeccXPipeLib.AeccInterferenceModelOptions pModelOptions) 
+		public void Set_ModelOptions(Autodesk.AECC.Interop.Pipe.AeccInterferenceModelOptions pModelOptions) 
 		{
 			this._i.ModelOptions = pModelOptions;
 		}
@@ -67,7 +67,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_InterferenceSizeType(AeccXPipeLib.AeccInterferenceSizeType pInterferenceSizeType) 
+		public void Set_InterferenceSizeType(Autodesk.AECC.Interop.Pipe.AeccInterferenceSizeType pInterferenceSizeType) 
 		{
 			this._i.InterferenceSizeType = pInterferenceSizeType;
 		}
@@ -80,7 +80,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_ModelSizeOptions(AeccXPipeLib.AeccInterferenceModelSizeOptions pModelSizeOptions) 
+		public void Set_ModelSizeOptions(Autodesk.AECC.Interop.Pipe.AeccInterferenceModelSizeOptions pModelSizeOptions) 
 		{
 			this._i.ModelSizeOptions = pModelSizeOptions;
 		}

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccMatchLine 
 	{
-		public AeccXLandLib.IAeccMatchLine _i;
+		public Autodesk.AECC.Interop.Land.IAeccMatchLine _i;
 		internal AeccMatchLine(object AeccMatchLine_object) 
 		{
-			this._i = AeccMatchLine_object as AeccXLandLib.IAeccMatchLine;
+			this._i = AeccMatchLine_object as Autodesk.AECC.Interop.Land.IAeccMatchLine;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

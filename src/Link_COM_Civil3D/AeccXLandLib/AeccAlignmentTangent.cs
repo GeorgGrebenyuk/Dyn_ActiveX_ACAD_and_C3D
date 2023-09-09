@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccAlignmentTangent 
 	{
-		public AeccXLandLib.IAeccAlignmentTangent _i;
+		public Autodesk.AECC.Interop.Land.IAeccAlignmentTangent _i;
 		internal AeccAlignmentTangent(object AeccAlignmentTangent_object) 
 		{
-			this._i = AeccAlignmentTangent_object as AeccXLandLib.IAeccAlignmentTangent;
+			this._i = AeccAlignmentTangent_object as Autodesk.AECC.Interop.Land.IAeccAlignmentTangent;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

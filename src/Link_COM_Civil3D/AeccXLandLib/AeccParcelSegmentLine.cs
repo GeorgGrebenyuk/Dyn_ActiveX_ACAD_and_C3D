@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccParcelSegmentLine 
 	{
-		public AeccXLandLib.IAeccParcelSegmentLine _i;
+		public Autodesk.AECC.Interop.Land.IAeccParcelSegmentLine _i;
 		internal AeccParcelSegmentLine(object AeccParcelSegmentLine_object) 
 		{
-			this._i = AeccParcelSegmentLine_object as AeccXLandLib.IAeccParcelSegmentLine;
+			this._i = AeccParcelSegmentLine_object as Autodesk.AECC.Interop.Land.IAeccParcelSegmentLine;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 	}

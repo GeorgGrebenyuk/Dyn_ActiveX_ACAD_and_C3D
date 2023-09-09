@@ -6,10 +6,10 @@
 	///</summary>
 	public class AeccSurfaceWatershedSegmentStyle 
 	{
-		public AeccXLandLib.IAeccSurfaceWatershedSegmentStyle _i;
+		public Autodesk.AECC.Interop.Land.IAeccSurfaceWatershedSegmentStyle _i;
 		internal AeccSurfaceWatershedSegmentStyle(object AeccSurfaceWatershedSegmentStyle_object) 
 		{
-			this._i = AeccSurfaceWatershedSegmentStyle_object as AeccXLandLib.IAeccSurfaceWatershedSegmentStyle;
+			this._i = AeccSurfaceWatershedSegmentStyle_object as Autodesk.AECC.Interop.Land.IAeccSurfaceWatershedSegmentStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
