@@ -52,7 +52,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic StartAngle => this._i.StartAngle;
+		public double StartAngle => this._i.StartAngle;
 
 		///<summary>
 		///
@@ -65,12 +65,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic EndAngle => this._i.EndAngle;
+		public double EndAngle => this._i.EndAngle;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_EndAngle(dynamic Angle) 
+		public void Set_EndAngle(double Angle) 
 		{
 			this._i.EndAngle = Angle;
 		}
@@ -78,12 +78,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic TotalAngle => this._i.TotalAngle;
+		public double TotalAngle => this._i.TotalAngle;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic ArcLength => this._i.ArcLength;
+		public double ArcLength => this._i.ArcLength;
 
 		///<summary>
 		///

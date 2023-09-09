@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -26,9 +28,13 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetXData(string AppName,out object XDataType,out object XDataValue) 
+		public List<object> GetXData(string AppName) 
 		{
-			this._i.GetXData(AppName,out XDataType,out XDataValue);
+			object XDataType;
+			object XDataValue;
+
+            this._i.GetXData(AppName,out XDataType,out XDataValue);
+			return new List<object> { XDataType, XDataValue };
 		}
 
 		///<summary>

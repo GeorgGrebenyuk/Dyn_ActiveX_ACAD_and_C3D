@@ -18,18 +18,12 @@
 		///</summary>
 		public string StyleName => this._i.StyleName;
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Style => this._i.Style;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_Style(object Style) 
+		public dynamic Style => this._i.get_Style();
+		public void Set_Style(object Style)
 		{
-			this._i.Style = Style;
-		}
+            this._i.set_Style(Style);
+
+        }
 
 		///<summary>
 		///

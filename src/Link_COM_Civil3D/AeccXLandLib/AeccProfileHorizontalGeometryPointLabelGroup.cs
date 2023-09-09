@@ -18,7 +18,7 @@
 		///</summary>
 		public bool LabelOnHAGeomPoint(Autodesk.AECC.Interop.Land.AeccGeometryPointType Type) 
 		{
-			return this._i.LabelOnHAGeomPoint(Type);
+			return this._i.LabelOnHAGeomPoint[Type];
 		}
 
 		///<summary>
@@ -26,7 +26,7 @@
 		///</summary>
 		public void Set_LabelOnHAGeomPoint(Autodesk.AECC.Interop.Land.AeccGeometryPointType Type,bool pValue) 
 		{
-			this._i.LabelOnHAGeomPoint = Type,pValue;
+			this._i.LabelOnHAGeomPoint[Type] = pValue;
 		}
 	}
 }

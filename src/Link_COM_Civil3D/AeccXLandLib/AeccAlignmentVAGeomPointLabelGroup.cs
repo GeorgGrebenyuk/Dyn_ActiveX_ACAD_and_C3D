@@ -16,14 +16,14 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Profile => this._i.Profile;
+		public dynamic Profile => this._i.get_Profile();
 
 		///<summary>
 		///
 		///</summary>
 		public void Set_Profile(object ppProfile) 
 		{
-			this._i.Profile = ppProfile;
+			this._i.set_Profile(ppProfile);
 		}
 
 		///<summary>
@@ -31,7 +31,7 @@
 		///</summary>
 		public bool LabelOnVAGeomPoint(Autodesk.AECC.Interop.Land.AeccVerticalGeometryPointType Type) 
 		{
-			return this._i.LabelOnVAGeomPoint(Type);
+			return this._i.LabelOnVAGeomPoint[Type];
 		}
 
 		///<summary>
@@ -39,7 +39,7 @@
 		///</summary>
 		public void Set_LabelOnVAGeomPoint(Autodesk.AECC.Interop.Land.AeccVerticalGeometryPointType Type,bool pValue) 
 		{
-			this._i.LabelOnVAGeomPoint = Type,pValue;
+			this._i.LabelOnVAGeomPoint[Type] = pValue;
 		}
 	}
 }

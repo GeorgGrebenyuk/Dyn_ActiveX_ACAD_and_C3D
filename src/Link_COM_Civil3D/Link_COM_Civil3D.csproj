@@ -1107,22 +1107,6 @@
     <Compile Include="AeccXLandLib\AeccWatershedRegionMultiRegionDrainNotch.cs" />
     <Compile Include="AeccXLandLib\AeccWatershedRegions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMAttribute.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMCDATASection.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMCharacterData.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMComment.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMDocument.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMDocumentFragment.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMDocumentType.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMElement.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMEntityReference.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMImplementation.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMNamedNodeMap.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMNode.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMNodeList.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMParseError.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMProcessingInstruction.cs" />
-    <Compile Include="AeccXLandLib\XMLDOMText.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

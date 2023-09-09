@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace DynAXDBLib 
 {
@@ -765,9 +766,10 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public bool IsMergedCell(int row,int col,out int minRow,out int maxRow,out int minCol,out int maxCol) 
+		public bool IsMergedCell(int row,int col,int minRow, int maxRow, int minCol, int maxCol) 
 		{
-			return this._i.IsMergedCell(row,col,out minRow,out maxRow,out minCol,out maxCol);
+			bool data = this._i.IsMergedCell(row,col,out minRow,out maxRow,out minCol,out maxCol);
+			return data;
 		}
 
 		///<summary>
@@ -805,41 +807,13 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public bool HitTest(object wpt,object wviewVec,out int resultRowIndex,out int resultColumnIndex) 
-		{
-			return this._i.HitTest(wpt,wviewVec,out resultRowIndex,out resultColumnIndex);
-		}
+		public bool HitTest(object wpt,object wviewVec)
+        {
+			int resultRowIndex;
+			int resultColumnIndex;
 
-		///<summary>
-		///
-		///</summary>
-		public void Select(object wpt,object wvwVec,object wvwxVec,double wxaper,double wyaper,bool allowOutside,out int resultRowIndex,out int resultColumnIndex) 
-		{
-			this._i.Select(wpt,wvwVec,wvwxVec,wxaper,wyaper,allowOutside,out resultRowIndex,out resultColumnIndex);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SelectSubRegion(object wpt1,object wpt2,object wvwVec,object wvwxVec,AXDBLib.AcSelect seltype,bool bIncludeCurrentSelection,out int rowMin,out int rowMax,out int colMin,out int colMax) 
-		{
-			this._i.SelectSubRegion(wpt1,wpt2,wvwVec,wvwxVec,seltype,bIncludeCurrentSelection,out rowMin,out rowMax,out colMin,out colMax);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void ReselectSubRegion() 
-		{
-			this._i.ReselectSubRegion();
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void GetSubSelection(out int rowMin,out int rowMax,out int colMin,out int colMax) 
-		{
-			this._i.GetSubSelection(out rowMin,out rowMax,out colMin,out colMax);
+            bool data =  this._i.HitTest(wpt,wviewVec,out resultRowIndex,out resultColumnIndex);
+			return data;
 		}
 
 		///<summary>
@@ -879,9 +853,13 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public void GetDataType(AXDBLib.AcRowType rowType,out AXDBLib.AcValueDataType pDataType,out AXDBLib.AcValueUnitType pUnitType) 
+		public List<object> GetDataType(AXDBLib.AcRowType rowType) 
 		{
-			this._i.GetDataType(rowType,out pDataType,out pUnitType);
+			AXDBLib.AcValueDataType pDataType;
+			AXDBLib.AcValueUnitType pUnitType;
+
+            this._i.GetDataType(rowType,out pDataType,out pUnitType);
+			return new List<object> { pDataType, pUnitType };
 		}
 
 		///<summary>
@@ -920,9 +898,13 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public void GetCellDataType(int row,int col,out AXDBLib.AcValueDataType pDataType,out AXDBLib.AcValueUnitType pUnitType) 
+		public List<object> GetCellDataType(int row,int col) 
 		{
-			this._i.GetCellDataType(row,col,out pDataType,out pUnitType);
+            AXDBLib.AcValueDataType pDataType;
+            AXDBLib.AcValueUnitType pUnitType;
+
+            this._i.GetCellDataType(row,col,out pDataType,out pUnitType);
+			return new List<object> { pDataType, pUnitType };
 		}
 
 		///<summary>
@@ -1120,9 +1102,12 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public void GetCustomData(int nRow,int nCol,string szKey,out object pData) 
+		public object GetCustomData(int nRow,int nCol,string szKey) 
 		{
-			this._i.GetCustomData(nRow,nCol,szKey,out pData);
+			object pData;
+
+            this._i.GetCustomData(nRow,nCol,szKey,out pData);
+			return pData;
 		}
 
 		///<summary>
@@ -1165,53 +1150,7 @@ namespace DynAXDBLib
 			this._i.SetContentColor2(nRow,nCol,nContent,pColor);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public void GetDataType2(int nRow,int nCol,int nContent,out AXDBLib.AcValueDataType pDataType,out AXDBLib.AcValueUnitType pUnitType) 
-		{
-			this._i.GetDataType2(nRow,nCol,nContent,out pDataType,out pUnitType);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetDataType2(int nRow,int nCol,int nContent,AXDBLib.AcValueDataType dataType,AXDBLib.AcValueUnitType unitType) 
-		{
-			this._i.SetDataType2(nRow,nCol,nContent,dataType,unitType);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public string GetTextStyle2(int nRow,int nCol,int nContent) 
-		{
-			return this._i.GetTextStyle2(nRow,nCol,nContent);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetTextStyle2(int nRow,int nCol,int nContent,string bstrStyleName) 
-		{
-			this._i.SetTextStyle2(nRow,nCol,nContent,bstrStyleName);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public double GetTextHeight2(int nRow,int nCol,int nContent) 
-		{
-			return this._i.GetTextHeight2(nRow,nCol,nContent);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetTextHeight2(int nRow,int nCol,int nContent,double Height) 
-		{
-			this._i.SetTextHeight2(nRow,nCol,nContent,Height);
-		}
+		
 
 		///<summary>
 		///
@@ -1229,21 +1168,7 @@ namespace DynAXDBLib
 			this._i.SetRotation(nRow,nCol,nContent,Value);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool GetAutoScale2(int nRow,int nCol,int nContent) 
-		{
-			return this._i.GetAutoScale2(nRow,nCol,nContent);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetAutoScale2(int nRow,int nCol,int nContent,bool bAutoFit) 
-		{
-			this._i.SetAutoScale2(nRow,nCol,nContent,bAutoFit);
-		}
+		
 
 		///<summary>
 		///
@@ -1269,22 +1194,7 @@ namespace DynAXDBLib
 			this._i.RemoveAllOverrides(nRow,nCol);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic GetGridLineWeight2(int nRow,int nCol,AXDBLib.AcGridLineType nGridLineType) 
-		{
-			return this._i.GetGridLineWeight2(nRow,nCol,nGridLineType);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetGridLineWeight2(int nRow,int nCol,AXDBLib.AcGridLineType nGridLineType,dynamic Lineweight) 
-		{
-			this._i.SetGridLineWeight2(nRow,nCol,nGridLineType,Lineweight);
-		}
-
+		
 		///<summary>
 		///
 		///</summary>
@@ -1301,37 +1211,7 @@ namespace DynAXDBLib
 			this._i.SetGridLinetype(nRow,nCol,nGridLineType,idLinetype);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic GetGridColor2(int nRow,int nCol,AXDBLib.AcGridLineType nGridLineType) 
-		{
-			return this._i.GetGridColor2(nRow,nCol,nGridLineType);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetGridColor2(int nRow,int nCol,AXDBLib.AcGridLineType nGridLineType,dynamic pColor) 
-		{
-			this._i.SetGridColor2(nRow,nCol,nGridLineType,pColor);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public bool GetGridVisibility2(int nRow,int nCol,AXDBLib.AcGridLineType nGridLineType) 
-		{
-			return this._i.GetGridVisibility2(nRow,nCol,nGridLineType);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetGridVisibility2(int nRow,int nCol,AXDBLib.AcGridLineType nGridLineType,bool bVisible) 
-		{
-			this._i.SetGridVisibility2(nRow,nCol,nGridLineType,bVisible);
-		}
+		
 
 		///<summary>
 		///

@@ -225,21 +225,21 @@
 		///</summary>
 		public double CurrentAssemblyFixedElevation => this._i.CurrentAssemblyFixedElevation;
 
-		///<summary>
-		///
-		///</summary>
-		public string ResourceString(dynamic long) 
-		{
-			return this._i.ResourceString(long);
-		}
+		/////<summary>
+		/////
+		/////</summary>
+		//public string ResourceString(dynamic Long) 
+		//{
+		//	return this._i.ResourceString;
+		//}
 
-		///<summary>
-		///
-		///</summary>
-		public string ResourceStringEx(string bstrId) 
-		{
-			return this._i.ResourceStringEx(bstrId);
-		}
+		/////<summary>
+		/////
+		/////</summary>
+		//public string ResourceStringEx(string bstrId) 
+		//{
+		//	return this._i.ResourceStringEx(bstrId);
+		//}
 
 		///<summary>
 		///

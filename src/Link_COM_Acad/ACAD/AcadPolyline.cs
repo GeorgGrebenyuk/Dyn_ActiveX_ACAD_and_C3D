@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -81,18 +83,22 @@
 			this._i.SetBulge(Index,bulge);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public void GetWidth(int Index,out double StartWidth) 
-		{
-			this._i.GetWidth(Index,out StartWidth);
-		}
+        ///<summary>
+        ///
+        ///</summary>
+        public List<double> GetWidth(int Index)
+        {
+            double StartWidth;
+            double EndWidth = 0.0;
 
-		///<summary>
-		///
-		///</summary>
-		public void SetWidth(int Index,double StartWidth, double EndWidth) 
+            this._i.GetWidth(Index, out StartWidth, ref EndWidth);
+            return new List<double> { StartWidth, EndWidth };
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public void SetWidth(int Index,double StartWidth, double EndWidth) 
 		{
 			this._i.SetWidth(Index,StartWidth, EndWidth);
 		}

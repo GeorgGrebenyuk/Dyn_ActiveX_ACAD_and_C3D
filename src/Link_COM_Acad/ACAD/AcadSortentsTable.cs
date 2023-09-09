@@ -56,23 +56,27 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Block => this._i.Block;
+		public dynamic Block => this._i.Block();
 
 		///<summary>
 		///
 		///</summary>
-		public void GetFullDrawOrder(out object Objects,bool honorSortentsSysvar) 
+		public object GetFullDrawOrder(bool honorSortentsSysvar) 
 		{
-			this._i.GetFullDrawOrder(out Objects,honorSortentsSysvar);
+			object objects = null;
+			this._i.GetFullDrawOrder(out objects, honorSortentsSysvar);
+			return objects;
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void GetRelativeDrawOrder(out object Objects,bool honorSortentsSysvar) 
+		public object GetRelativeDrawOrder(bool honorSortentsSysvar) 
 		{
-			this._i.GetRelativeDrawOrder(out Objects,honorSortentsSysvar);
-		}
+            object objects = null;
+            this._i.GetRelativeDrawOrder(out objects, honorSortentsSysvar);
+            return objects;
+        }
 
 		///<summary>
 		///

@@ -18,7 +18,7 @@
 		///</summary>
 		public bool LabelOnGeomPoint(Autodesk.AECC.Interop.Land.AeccGeometryPointType Type) 
 		{
-			return this._i.LabelOnGeomPoint(Type);
+			return this._i.LabelOnGeomPoint[Type];
 		}
 
 		///<summary>
@@ -26,7 +26,7 @@
 		///</summary>
 		public void Set_LabelOnGeomPoint(Autodesk.AECC.Interop.Land.AeccGeometryPointType Type,bool pValue) 
 		{
-			this._i.LabelOnGeomPoint = Type,pValue;
+			this._i.LabelOnGeomPoint[Type] = pValue;
 		}
 	}
 }

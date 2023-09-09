@@ -341,13 +341,13 @@
 			this._i.IsConditionalSA = pbIsConditionalSA;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string GetResourceString(dynamic long) 
-		{
-			return this._i.GetResourceString(long);
-		}
+		/////<summary>
+		/////
+		/////</summary>
+		//public string GetResourceString(dynamic long) 
+		//{
+		//	return this._i.GetResourceString(long);
+		//}
 
 		///<summary>
 		///

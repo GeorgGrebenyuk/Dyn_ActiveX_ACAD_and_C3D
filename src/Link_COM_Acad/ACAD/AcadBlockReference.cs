@@ -55,12 +55,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Rotation => this._i.Rotation;
+		public double Rotation => this._i.Rotation;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Rotation(dynamic rotAngle) 
+		public void Set_Rotation(double rotAngle) 
 		{
 			this._i.Rotation = rotAngle;
 		}
@@ -68,12 +68,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic XScaleFactor => this._i.XScaleFactor;
+		public double XScaleFactor => this._i.XScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_XScaleFactor(dynamic ScaleFactor) 
+		public void Set_XScaleFactor(double ScaleFactor) 
 		{
 			this._i.XScaleFactor = ScaleFactor;
 		}
@@ -81,12 +81,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic YScaleFactor => this._i.YScaleFactor;
+		public double YScaleFactor => this._i.YScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_YScaleFactor(dynamic ScaleFactor) 
+		public void Set_YScaleFactor(double ScaleFactor) 
 		{
 			this._i.YScaleFactor = ScaleFactor;
 		}
@@ -94,12 +94,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ZScaleFactor => this._i.ZScaleFactor;
+		public double ZScaleFactor => this._i.ZScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_ZScaleFactor(dynamic ScaleFactor) 
+		public void Set_ZScaleFactor(double ScaleFactor) 
 		{
 			this._i.ZScaleFactor = ScaleFactor;
 		}
@@ -107,7 +107,7 @@
 		///<summary>
 		///
 		///</summary>
-		public object Explode => this._i.Explode();
+		public dynamic Explode => this._i.Explode();
 
 		///<summary>
 		///
@@ -166,12 +166,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic XEffectiveScaleFactor => this._i.XEffectiveScaleFactor;
+		public double XEffectiveScaleFactor => this._i.XEffectiveScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_XEffectiveScaleFactor(dynamic ScaleFactor) 
+		public void Set_XEffectiveScaleFactor(double ScaleFactor) 
 		{
 			this._i.XEffectiveScaleFactor = ScaleFactor;
 		}
@@ -179,12 +179,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic YEffectiveScaleFactor => this._i.YEffectiveScaleFactor;
+		public double YEffectiveScaleFactor => this._i.YEffectiveScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_YEffectiveScaleFactor(dynamic ScaleFactor) 
+		public void Set_YEffectiveScaleFactor(double ScaleFactor) 
 		{
 			this._i.YEffectiveScaleFactor = ScaleFactor;
 		}
@@ -192,12 +192,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ZEffectiveScaleFactor => this._i.ZEffectiveScaleFactor;
+		public double ZEffectiveScaleFactor => this._i.ZEffectiveScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_ZEffectiveScaleFactor(dynamic ScaleFactor) 
+		public void Set_ZEffectiveScaleFactor(double ScaleFactor) 
 		{
 			this._i.ZEffectiveScaleFactor = ScaleFactor;
 		}

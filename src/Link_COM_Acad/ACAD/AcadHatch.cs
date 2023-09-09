@@ -182,10 +182,13 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public void GetLoopAt(int Index,out object ObjectArray) 
+		public object GetLoopAt(int Index) 
 		{
-			this._i.GetLoopAt(Index,out ObjectArray);
-		}
+			object out_info;
+			this._i.GetLoopAt(Index,out out_info);
+			return out_info;
+
+        }
 
 		///<summary>
 		///

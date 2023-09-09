@@ -78,9 +78,9 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_DisplayOrder(dynamic short) 
+		public void Set_DisplayOrder(dynamic Short) 
 		{
-			this._i.DisplayOrder = short;
+			this._i.DisplayOrder = Short;
 		}
 
 		///<summary>

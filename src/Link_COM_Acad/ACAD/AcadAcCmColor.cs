@@ -16,7 +16,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_EntityColor(dynamic eColor) 
+		public void Set_EntityColor(int eColor) 
 		{
 			this._i.EntityColor = eColor;
 		}
@@ -24,7 +24,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic EntityColor => this._i.EntityColor;
+		public int EntityColor => this._i.EntityColor;
 
 		///<summary>
 		///
@@ -55,22 +55,22 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Red => this._i.Red;
+		public int Red => this._i.Red;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Blue => this._i.Blue;
+		public int Blue => this._i.Blue;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Green => this._i.Green;
+		public int Green => this._i.Green;
 
 		///<summary>
 		///
 		///</summary>
-		public void SetRGB(dynamic Red,dynamic Green,dynamic Blue) 
+		public void SetRGB(int Red, int Green, int Blue) 
 		{
 			this._i.SetRGB(Red,Green,Blue);
 		}

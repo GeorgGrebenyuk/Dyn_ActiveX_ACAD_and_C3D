@@ -16,7 +16,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic FieldLength => this._i.FieldLength;
+		public int FieldLength => this._i.FieldLength;
 
 		///<summary>
 		///
@@ -133,7 +133,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Rotation => this._i.Rotation;
+		public double Rotation => this._i.Rotation;
 
 		///<summary>
 		///
@@ -146,12 +146,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ScaleFactor => this._i.ScaleFactor;
+		public double ScaleFactor => this._i.ScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_ScaleFactor(dynamic scalFactor) 
+		public void Set_ScaleFactor(double scalFactor) 
 		{
 			this._i.ScaleFactor = scalFactor;
 		}
@@ -159,12 +159,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ObliqueAngle => this._i.ObliqueAngle;
+		public double ObliqueAngle => this._i.ObliqueAngle;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_ObliqueAngle(dynamic obliAngle) 
+		public void Set_ObliqueAngle(double obliAngle) 
 		{
 			this._i.ObliqueAngle = obliAngle;
 		}
@@ -211,12 +211,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic TextGenerationFlag => this._i.TextGenerationFlag;
+		public int TextGenerationFlag => this._i.TextGenerationFlag;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_TextGenerationFlag(dynamic textGenFlag) 
+		public void Set_TextGenerationFlag(int textGenFlag) 
 		{
 			this._i.TextGenerationFlag = textGenFlag;
 		}
@@ -237,12 +237,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Mode => this._i.Mode;
+		public int Mode => this._i.Mode;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Mode(dynamic Mode) 
+		public void Set_Mode(int Mode) 
 		{
 			this._i.Mode = Mode;
 		}

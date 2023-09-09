@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -264,9 +266,13 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetDataType(AXDBLib.AcRowType rowType,out AXDBLib.AcValueDataType pDataType,out AXDBLib.AcValueUnitType pUnitType) 
+		public List<object> GetDataType(AXDBLib.AcRowType rowType) 
 		{
-			this._i.GetDataType(rowType,out pDataType,out pUnitType);
+			AXDBLib.AcValueDataType pDataType;
+			AXDBLib.AcValueUnitType pUnitType;
+
+            this._i.GetDataType(rowType,out pDataType,out pUnitType);
+			return new List<object> { pDataType,pUnitType};
 		}
 
 		///<summary>
@@ -370,101 +376,7 @@
 			this._i.SetTextStyleId(bstrCellStyle,val);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double GetTextHeight2(string bstrCellStyle) 
-		{
-			return this._i.GetTextHeight2(bstrCellStyle);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetTextHeight2(string bstrCellStyle,double Height) 
-		{
-			this._i.SetTextHeight2(bstrCellStyle,Height);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic GetAlignment2(string bstrCellStyle) 
-		{
-			return this._i.GetAlignment2(bstrCellStyle);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetAlignment2(string bstrCellStyle,AXDBLib.AcCellAlignment cellAlignment) 
-		{
-			this._i.SetAlignment2(bstrCellStyle,cellAlignment);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic GetColor2(string bstrCellStyle) 
-		{
-			return this._i.GetColor2(bstrCellStyle);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetColor2(string bstrCellStyle,dynamic color) 
-		{
-			this._i.SetColor2(bstrCellStyle,color);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic GetBackgroundColor2(string bstrCellStyle) 
-		{
-			return this._i.GetBackgroundColor2(bstrCellStyle);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetBackgroundColor2(string bstrCellStyle,dynamic color) 
-		{
-			this._i.SetBackgroundColor2(bstrCellStyle,color);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void GetDataType2(string bstrCellStyle,out AXDBLib.AcValueDataType pDataType,out AXDBLib.AcValueUnitType pUnitType) 
-		{
-			this._i.GetDataType2(bstrCellStyle,out pDataType,out pUnitType);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetDataType2(string bstrCellStyle,AXDBLib.AcValueDataType nDataType,AXDBLib.AcValueUnitType nUnitType) 
-		{
-			this._i.SetDataType2(bstrCellStyle,nDataType,nUnitType);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void GetFormat2(string bstrCellStyle,out string pbstrFormat) 
-		{
-			this._i.GetFormat2(bstrCellStyle,out pbstrFormat);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public void SetFormat2(string bstrCellStyle,string bstrFormat) 
-		{
-			this._i.SetFormat2(bstrCellStyle,bstrFormat);
-		}
+	
 
 		///<summary>
 		///

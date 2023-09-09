@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -174,10 +176,16 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetBoundingBox(out object MinPoint,out object MaxPoint) 
+		public List<double[]> GetBoundingBox() 
 		{
-			this._i.GetBoundingBox(out MinPoint,out MaxPoint);
-		}
+			object MinPoint;
+            object MaxPoint;
+
+            this._i.GetBoundingBox(out MinPoint,out MaxPoint);
+			List<double[]> ps = new List<double[]>() { (double[])MinPoint, (double[])MaxPoint };
+			return ps;
+
+        }
 
 		///<summary>
 		///

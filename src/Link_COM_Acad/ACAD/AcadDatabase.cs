@@ -16,17 +16,17 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ModelSpace => this._i.ModelSpace;
+		public AcadBlock ModelSpace => new AcadBlock( this._i.ModelSpace);
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic PaperSpace => this._i.PaperSpace;
+        public AcadBlock PaperSpace => new AcadBlock(this._i.PaperSpace);
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Blocks => this._i.Blocks;
+        ///<summary>
+        ///
+        ///</summary>
+        public dynamic Blocks => this._i.Blocks;
 
 		///<summary>
 		///

@@ -1,4 +1,8 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+using System.Data.OleDb;
+using System.Runtime.InteropServices.WindowsRuntime;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -201,9 +205,15 @@
 		///<summary>
 		///
 		///</summary>
-		public void HitTest(object varPtHit,out bool pHit,out int pSegmentIndex,out object pPtOnSegment,out AXDBLib.AcSectionSubItem pSubItem) 
-		{
-			this._i.HitTest(varPtHit,out pHit,out pSegmentIndex,out pPtOnSegment,out pSubItem);
+		public List<object> HitTest(object varPtHit)
+        {
+			bool pHit;
+			int pSegmentIndex;
+			object pPtOnSegment;
+			AXDBLib.AcSectionSubItem pSubItem;
+
+            this._i.HitTest(varPtHit,out pHit,out pSegmentIndex,out pPtOnSegment,out pSubItem);
+			return new List<object> { pHit, pSegmentIndex, pPtOnSegment, pSubItem };
 		}
 
 		///<summary>
@@ -222,9 +232,16 @@
 		///<summary>
 		///
 		///</summary>
-		public void GenerateSectionGeometry(dynamic pEntity,out object pIntersectionBoundaryObjs,out object pIntersectionFillObjs,out object pBackgroudnObjs,out object pForegroudObjs,out object pCurveTangencyObjs) 
-		{
-			this._i.GenerateSectionGeometry(pEntity,out pIntersectionBoundaryObjs,out pIntersectionFillObjs,out pBackgroudnObjs,out pForegroudObjs,out pCurveTangencyObjs);
+		public List<object> GenerateSectionGeometry(dynamic pEntity)
+        {
+			object pIntersectionBoundaryObjs;
+			object pIntersectionFillObjs;
+			object pBackgroudnObjs;
+			object pForegroudObjs;
+			object pCurveTangencyObjs;
+
+            this._i.GenerateSectionGeometry(pEntity,out pIntersectionBoundaryObjs,out pIntersectionFillObjs,out pBackgroudnObjs,out pForegroudObjs,out pCurveTangencyObjs);
+			return new List<object> { pIntersectionBoundaryObjs, pIntersectionFillObjs, pBackgroudnObjs, pForegroudObjs, pCurveTangencyObjs };
 		}
 	}
 }

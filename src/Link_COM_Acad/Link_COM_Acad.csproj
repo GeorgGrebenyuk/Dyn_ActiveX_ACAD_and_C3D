@@ -52,7 +52,6 @@
     <Compile Include="ACAD\AcadBlockReference.cs" />
     <Compile Include="ACAD\AcadBlocks.cs" />
     <Compile Include="ACAD\AcadCircle.cs" />
-    <Compile Include="ACAD\AcadComparedReference.cs" />
     <Compile Include="ACAD\AcadDatabase.cs" />
     <Compile Include="ACAD\AcadDatabasePreferences.cs" />
     <Compile Include="ACAD\AcadDictionaries.cs" />
@@ -106,7 +105,6 @@
     <Compile Include="ACAD\AcadMText.cs" />
     <Compile Include="ACAD\AcadNurbSurface.cs" />
     <Compile Include="ACAD\AcadObject.cs" />
-    <Compile Include="ACAD\AcadObjectEvents.cs" />
     <Compile Include="ACAD\AcadOle.cs" />
     <Compile Include="ACAD\AcadPaperSpace.cs" />
     <Compile Include="ACAD\AcadPlaneSurface.cs" />
@@ -114,7 +112,6 @@
     <Compile Include="ACAD\AcadPlotConfigurations.cs" />
     <Compile Include="ACAD\AcadPoint.cs" />
     <Compile Include="ACAD\AcadPointCloud.cs" />
-    <Compile Include="ACAD\AcadPointCloudEx2.cs" />
     <Compile Include="ACAD\AcadPolyfaceMesh.cs" />
     <Compile Include="ACAD\AcadPolygonMesh.cs" />
     <Compile Include="ACAD\AcadPolyline.cs" />
@@ -166,8 +163,6 @@
     <Compile Include="ACAD\AcadWipeout.cs" />
     <Compile Include="ACAD\AcadXline.cs" />
     <Compile Include="ACAD\AcadXRecord.cs" />
-    <Compile Include="ACAD\AxDbDocument.cs" />
-    <Compile Include="ACAD\AxDbDocumentEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -18,7 +18,7 @@
 		///</summary>
 		public bool LabelOnSEPoint(Autodesk.AECC.Interop.Land.AeccSuperElevTransPointType Type) 
 		{
-			return this._i.LabelOnSEPoint(Type);
+			return this._i.LabelOnSEPoint[Type];
 		}
 
 		///<summary>
@@ -26,7 +26,7 @@
 		///</summary>
 		public void Set_LabelOnSEPoint(Autodesk.AECC.Interop.Land.AeccSuperElevTransPointType Type,bool pValue) 
 		{
-			this._i.LabelOnSEPoint = Type,pValue;
+			this._i.LabelOnSEPoint[Type]=pValue;
 		}
 	}
 }

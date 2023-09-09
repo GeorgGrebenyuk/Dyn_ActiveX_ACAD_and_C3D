@@ -24,7 +24,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Count => this._i.Count;
+		public int Count => this._i.Count;
 
 		///<summary>
 		///
@@ -593,9 +593,11 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddMLeader(object PointsArray,out int leaderLineIndex) 
+		public dynamic AddMLeader(object PointsArray) 
 		{
-			return this._i.AddMLeader(PointsArray,out leaderLineIndex);
+			int leaderLineIndex;
+            var data = this._i.AddMLeader(PointsArray,out leaderLineIndex);
+			return data;
 		}
 	}
 }

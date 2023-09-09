@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -125,17 +127,22 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetCustomByIndex(int Index,out string pKey,out string pValue) 
+		public List<string> GetCustomByIndex(int Index) 
 		{
+			string pKey;
+			string pValue;
 			this._i.GetCustomByIndex(Index,out pKey,out pValue);
+			return new List<string> { pKey, pValue };
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void GetCustomByKey(string key,out string pValue) 
+		public string GetCustomByKey(string key) 
 		{
-			this._i.GetCustomByKey(key,out pValue);
+			string pValue;
+            this._i.GetCustomByKey(key,out pValue);
+			return pValue;
 		}
 
 		///<summary>

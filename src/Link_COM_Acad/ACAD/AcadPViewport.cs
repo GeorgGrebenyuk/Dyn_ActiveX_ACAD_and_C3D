@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -229,15 +231,19 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetGridSpacing(out double XSpacing,out double YSpacing) 
-		{
-			this._i.GetGridSpacing(out XSpacing,out YSpacing);
-		}
+        public List<double> GetGridSpacing()
+        {
+            double XSpacing;
+            double YSpacing;
 
-		///<summary>
-		///
-		///</summary>
-		public void SetGridSpacing(double XSpacing,double YSpacing) 
+            this._i.GetGridSpacing(out XSpacing, out YSpacing);
+            return new List<double> { XSpacing, YSpacing };
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public void SetGridSpacing(double XSpacing,double YSpacing) 
 		{
 			this._i.SetGridSpacing(XSpacing,YSpacing);
 		}
@@ -245,15 +251,19 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetSnapSpacing(out double XSpacing,out double YSpacing) 
-		{
-			this._i.GetSnapSpacing(out XSpacing,out YSpacing);
-		}
+        public List<double> GetSnapSpacing()
+        {
+            double XSpacing;
+            double YSpacing;
 
-		///<summary>
-		///
-		///</summary>
-		public void SetSnapSpacing(double XSpacing,double YSpacing) 
+            this._i.GetSnapSpacing(out XSpacing, out YSpacing);
+            return new List<double> { XSpacing, YSpacing };
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public void SetSnapSpacing(double XSpacing,double YSpacing) 
 		{
 			this._i.SetSnapSpacing(XSpacing,YSpacing);
 		}

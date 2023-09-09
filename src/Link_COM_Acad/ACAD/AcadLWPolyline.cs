@@ -1,4 +1,7 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+using System.Net.Http.Headers;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -84,9 +87,13 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetWidth(int Index,out double StartWidth,out double EndWidth) 
-		{
-			this._i.GetWidth(Index,out StartWidth,out EndWidth);
+		public List<double> GetWidth(int Index)
+        {
+			double StartWidth;
+			double EndWidth;
+
+            this._i.GetWidth(Index,out StartWidth,out EndWidth);
+			return new List<double> { StartWidth, EndWidth };
 		}
 
 		///<summary>

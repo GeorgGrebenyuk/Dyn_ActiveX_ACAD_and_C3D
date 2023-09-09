@@ -59,10 +59,13 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic CheckInterference(dynamic Object,bool CreateInterferenceSolid,out bool SolidsInterfere) 
+		public dynamic CheckInterference(dynamic Object,bool CreateInterferenceSolid) 
 		{
-			return this._i.CheckInterference(Object,CreateInterferenceSolid,out SolidsInterfere);
-		}
+			bool SolidsInterfere;
+			var data = this._i.CheckInterference(Object, CreateInterferenceSolid, out SolidsInterfere);
+			return data;
+
+        }
 
 		///<summary>
 		///

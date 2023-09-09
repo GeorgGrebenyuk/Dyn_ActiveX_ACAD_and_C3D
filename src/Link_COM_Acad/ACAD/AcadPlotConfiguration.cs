@@ -1,4 +1,7 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+using System.Net.Http.Headers;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -185,9 +188,13 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetCustomScale(out double Numerator,out double Denominator) 
-		{
-			this._i.GetCustomScale(out Numerator,out Denominator);
+		public List<double> GetCustomScale()
+        {
+			double Numerator;
+			double Denominator;
+
+            this._i.GetCustomScale(out Numerator,out Denominator);
+			return new List<double> { Numerator, Denominator };
 		}
 
 		///<summary>
@@ -253,17 +260,25 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetPaperMargins(out object LowerLeft,out object UpperRight) 
-		{
-			this._i.GetPaperMargins(out LowerLeft,out UpperRight);
+		public List<object> GetPaperMargins()
+        {
+			object LowerLeft;
+			object UpperRight;
+
+            this._i.GetPaperMargins(out LowerLeft,out UpperRight);
+			return new List<object> { LowerLeft, UpperRight };
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void GetPaperSize(out double Width,out double Height) 
+		public List<double> GetPaperSize() 
 		{
-			this._i.GetPaperSize(out Width,out Height);
+			double Width;
+			double Height;
+
+            this._i.GetPaperSize(out Width,out Height);
+			return new List<double> { Width, Height };
 		}
 
 		///<summary>
@@ -282,9 +297,13 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetWindowToPlot(out object LowerLeft,out object UpperRight) 
-		{
-			this._i.GetWindowToPlot(out LowerLeft,out UpperRight);
+		public List<object> GetWindowToPlot()
+        {
+			object LowerLeft;
+			object UpperRight;
+
+            this._i.GetWindowToPlot(out LowerLeft,out UpperRight);
+			return new List<object> { LowerLeft, UpperRight };
 		}
 
 		///<summary>

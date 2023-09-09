@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -112,9 +114,16 @@
 		///<summary>
 		///
 		///</summary>
-		public void GetFont(out string TypeFace,out bool Bold,out bool Italic,out dynamic Charset,out dynamic PitchAndFamily) 
-		{
-			this._i.GetFont(out TypeFace,out Bold,out Italic,out Charset,out PitchAndFamily);
+		public List<object> GetFont()
+        {
+			string TypeFace;
+            bool Bold;
+			bool Italic;
+			int Charset;
+            int PitchAndFamily;
+
+            this._i.GetFont(out TypeFace,out Bold,out Italic,out Charset,out PitchAndFamily);
+			return new List<object> { TypeFace, Bold, Italic, Charset, PitchAndFamily };
 		}
 
 		///<summary>

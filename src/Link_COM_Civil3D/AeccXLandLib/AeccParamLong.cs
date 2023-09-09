@@ -47,13 +47,13 @@
 		///</summary>
 		public dynamic EnumCount => this._i.EnumCount;
 
-		///<summary>
-		///
-		///</summary>
-		public void GetEnumData(dynamic long,out string pbstrName,out string pbstrDisplayName,out dynamic pValue) 
-		{
-			this._i.GetEnumData(long,out pbstrName,out pbstrDisplayName,out pValue);
-		}
+		/////<summary>
+		/////
+		/////</summary>
+		//public void GetEnumData(dynamic long,out string pbstrName,out string pbstrDisplayName,out dynamic pValue) 
+		//{
+		//	this._i.GetEnumData(long,out pbstrName,out pbstrDisplayName,out pValue);
+		//}
 
 		///<summary>
 		///
