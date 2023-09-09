@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Link_COM_Acad", "Link_COM_Acad\Link_COM_Acad.csproj", "{88664255-EBF2-410C-95CF-0A95BAF87790}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Link_COM_Civil3D", "Link_COM_Civil3D\Link_COM_Civil3D.csproj", "{9A8AB0C6-D4B0-4A28-9195-8DF4BFEE9148}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88664255-EBF2-410C-95CF-0A95BAF87790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88664255-EBF2-410C-95CF-0A95BAF87790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88664255-EBF2-410C-95CF-0A95BAF87790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88664255-EBF2-410C-95CF-0A95BAF87790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8AB0C6-D4B0-4A28-9195-8DF4BFEE9148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8AB0C6-D4B0-4A28-9195-8DF4BFEE9148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8AB0C6-D4B0-4A28-9195-8DF4BFEE9148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8AB0C6-D4B0-4A28-9195-8DF4BFEE9148}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F1F8EE9-AAD4-47C9-AF9E-F21417D65765}
+	EndGlobalSection
+EndGlobal

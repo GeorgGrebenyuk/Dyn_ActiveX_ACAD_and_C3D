@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88664255-EBF2-410C-95CF-0A95BAF87790}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Link_COM_Acad</RootNamespace>
+    <AssemblyName>Link_COM_Acad</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACAD\Acad3DFace.cs" />
+    <Compile Include="ACAD\Acad3DPolyline.cs" />
+    <Compile Include="ACAD\Acad3DSolid.cs" />
+    <Compile Include="ACAD\AcadAcCmColor.cs" />
+    <Compile Include="ACAD\AcadArc.cs" />
+    <Compile Include="ACAD\AcadAttribute.cs" />
+    <Compile Include="ACAD\AcadAttributeReference.cs" />
+    <Compile Include="ACAD\AcadBlock.cs" />
+    <Compile Include="ACAD\AcadBlockReference.cs" />
+    <Compile Include="ACAD\AcadBlocks.cs" />
+    <Compile Include="ACAD\AcadCircle.cs" />
+    <Compile Include="ACAD\AcadComparedReference.cs" />
+    <Compile Include="ACAD\AcadDatabase.cs" />
+    <Compile Include="ACAD\AcadDatabasePreferences.cs" />
+    <Compile Include="ACAD\AcadDictionaries.cs" />
+    <Compile Include="ACAD\AcadDictionary.cs" />
+    <Compile Include="ACAD\AcadDim3PointAngular.cs" />
+    <Compile Include="ACAD\AcadDimAligned.cs" />
+    <Compile Include="ACAD\AcadDimAngular.cs" />
+    <Compile Include="ACAD\AcadDimArcLength.cs" />
+    <Compile Include="ACAD\AcadDimDiametric.cs" />
+    <Compile Include="ACAD\AcadDimension.cs" />
+    <Compile Include="ACAD\AcadDimOrdinate.cs" />
+    <Compile Include="ACAD\AcadDimRadial.cs" />
+    <Compile Include="ACAD\AcadDimRadialLarge.cs" />
+    <Compile Include="ACAD\AcadDimRotated.cs" />
+    <Compile Include="ACAD\AcadDimStyle.cs" />
+    <Compile Include="ACAD\AcadDimStyles.cs" />
+    <Compile Include="ACAD\AcadDwfUnderlay.cs" />
+    <Compile Include="ACAD\AcadDynamicBlockReferenceProperty.cs" />
+    <Compile Include="ACAD\AcadEllipse.cs" />
+    <Compile Include="ACAD\AcadEntity.cs" />
+    <Compile Include="ACAD\AcadExternalReference.cs" />
+    <Compile Include="ACAD\AcadExtrudedSurface.cs" />
+    <Compile Include="ACAD\AcadGeomapImage.cs" />
+    <Compile Include="ACAD\AcadGeoPositionMarker.cs" />
+    <Compile Include="ACAD\AcadGroup.cs" />
+    <Compile Include="ACAD\AcadGroups.cs" />
+    <Compile Include="ACAD\AcadHatch.cs" />
+    <Compile Include="ACAD\AcadHelix.cs" />
+    <Compile Include="ACAD\AcadHyperlink.cs" />
+    <Compile Include="ACAD\AcadHyperlinks.cs" />
+    <Compile Include="ACAD\AcadIdPair.cs" />
+    <Compile Include="ACAD\AcadLayer.cs" />
+    <Compile Include="ACAD\AcadLayers.cs" />
+    <Compile Include="ACAD\AcadLayerStateManager.cs" />
+    <Compile Include="ACAD\AcadLayout.cs" />
+    <Compile Include="ACAD\AcadLayouts.cs" />
+    <Compile Include="ACAD\AcadLeader.cs" />
+    <Compile Include="ACAD\AcadLine.cs" />
+    <Compile Include="ACAD\AcadLineType.cs" />
+    <Compile Include="ACAD\AcadLineTypes.cs" />
+    <Compile Include="ACAD\AcadLoftedSurface.cs" />
+    <Compile Include="ACAD\AcadLWPolyline.cs" />
+    <Compile Include="ACAD\AcadMaterial.cs" />
+    <Compile Include="ACAD\AcadMaterials.cs" />
+    <Compile Include="ACAD\AcadMInsertBlock.cs" />
+    <Compile Include="ACAD\AcadMLeader.cs" />
+    <Compile Include="ACAD\AcadMLeaderLeader.cs" />
+    <Compile Include="ACAD\AcadMLeaderStyle.cs" />
+    <Compile Include="ACAD\AcadMLine.cs" />
+    <Compile Include="ACAD\AcadModelSpace.cs" />
+    <Compile Include="ACAD\AcadMText.cs" />
+    <Compile Include="ACAD\AcadNurbSurface.cs" />
+    <Compile Include="ACAD\AcadObject.cs" />
+    <Compile Include="ACAD\AcadObjectEvents.cs" />
+    <Compile Include="ACAD\AcadOle.cs" />
+    <Compile Include="ACAD\AcadPaperSpace.cs" />
+    <Compile Include="ACAD\AcadPlaneSurface.cs" />
+    <Compile Include="ACAD\AcadPlotConfiguration.cs" />
+    <Compile Include="ACAD\AcadPlotConfigurations.cs" />
+    <Compile Include="ACAD\AcadPoint.cs" />
+    <Compile Include="ACAD\AcadPointCloud.cs" />
+    <Compile Include="ACAD\AcadPointCloudEx2.cs" />
+    <Compile Include="ACAD\AcadPolyfaceMesh.cs" />
+    <Compile Include="ACAD\AcadPolygonMesh.cs" />
+    <Compile Include="ACAD\AcadPolyline.cs" />
+    <Compile Include="ACAD\AcadPViewport.cs" />
+    <Compile Include="ACAD\AcadRasterImage.cs" />
+    <Compile Include="ACAD\AcadRay.cs" />
+    <Compile Include="ACAD\AcadRegion.cs" />
+    <Compile Include="ACAD\AcadRegisteredApplication.cs" />
+    <Compile Include="ACAD\AcadRegisteredApplications.cs" />
+    <Compile Include="ACAD\AcadRevolvedSurface.cs" />
+    <Compile Include="ACAD\AcadSection.cs" />
+    <Compile Include="ACAD\AcadSection2.cs" />
+    <Compile Include="ACAD\AcadSectionManager.cs" />
+    <Compile Include="ACAD\AcadSectionSettings.cs" />
+    <Compile Include="ACAD\AcadSectionTypeSettings.cs" />
+    <Compile Include="ACAD\AcadSectionTypeSettings2.cs" />
+    <Compile Include="ACAD\AcadSecurityParams.cs" />
+    <Compile Include="ACAD\AcadShadowDisplay.cs" />
+    <Compile Include="ACAD\AcadShape.cs" />
+    <Compile Include="ACAD\AcadSolid.cs" />
+    <Compile Include="ACAD\AcadSortentsTable.cs" />
+    <Compile Include="ACAD\AcadSpline.cs" />
+    <Compile Include="ACAD\AcadSubDMesh.cs" />
+    <Compile Include="ACAD\AcadSubDMeshEdge.cs" />
+    <Compile Include="ACAD\AcadSubDMeshFace.cs" />
+    <Compile Include="ACAD\AcadSubDMeshVertex.cs" />
+    <Compile Include="ACAD\AcadSubEntity.cs" />
+    <Compile Include="ACAD\AcadSubEntSolidEdge.cs" />
+    <Compile Include="ACAD\AcadSubEntSolidFace.cs" />
+    <Compile Include="ACAD\AcadSubEntSolidNode.cs" />
+    <Compile Include="ACAD\AcadSubEntSolidVertex.cs" />
+    <Compile Include="ACAD\AcadSummaryInfo.cs" />
+    <Compile Include="ACAD\AcadSurface.cs" />
+    <Compile Include="ACAD\AcadSweptSurface.cs" />
+    <Compile Include="ACAD\AcadTable.cs" />
+    <Compile Include="ACAD\AcadTableStyle.cs" />
+    <Compile Include="ACAD\AcadText.cs" />
+    <Compile Include="ACAD\AcadTextStyle.cs" />
+    <Compile Include="ACAD\AcadTextStyles.cs" />
+    <Compile Include="ACAD\AcadTolerance.cs" />
+    <Compile Include="ACAD\AcadTrace.cs" />
+    <Compile Include="ACAD\AcadUCS.cs" />
+    <Compile Include="ACAD\AcadUCSs.cs" />
+    <Compile Include="ACAD\AcadUnderlay.cs" />
+    <Compile Include="ACAD\AcadView.cs" />
+    <Compile Include="ACAD\AcadViewport.cs" />
+    <Compile Include="ACAD\AcadViewports.cs" />
+    <Compile Include="ACAD\AcadViews.cs" />
+    <Compile Include="ACAD\AcadWipeout.cs" />
+    <Compile Include="ACAD\AcadXline.cs" />
+    <Compile Include="ACAD\AcadXRecord.cs" />
+    <Compile Include="ACAD\AxDbDocument.cs" />
+    <Compile Include="ACAD\AxDbDocumentEvents.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
