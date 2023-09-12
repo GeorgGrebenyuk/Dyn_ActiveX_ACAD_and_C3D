@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,31 +14,48 @@
 			this._i = AcadLine_object as Autodesk.AutoCAD.Interop.Common.IAcadLine;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadLine(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadLine;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadLine(AcadBlock AcadBlock, Point StartPoint, Point EndPoint)
+        {
+            this._i =  AcadBlock._i.AddLine(Technical.PointByDynPoint(StartPoint), Technical.PointByDynPoint(EndPoint));
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public Point StartPoint => Technical.PointByDoubleArray(this._i.StartPoint);
 
 		///<summary>
 		///
 		///</summary>
-		public object StartPoint => this._i.StartPoint;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_StartPoint(object StartPoint) 
+		public void Set_StartPoint(Point StartPoint) 
 		{
-			this._i.StartPoint = StartPoint;
+			this._i.StartPoint = Technical.PointByDynPoint(StartPoint);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public object EndPoint => this._i.EndPoint;
+		public Point EndPoint => Technical.PointByDoubleArray(this._i.EndPoint);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_EndPoint(object EndPoint) 
+		public void Set_EndPoint(Point EndPoint) 
 		{
-			this._i.EndPoint = EndPoint;
+			this._i.EndPoint = Technical.PointByDynPoint(EndPoint);
 		}
 
 		///<summary>

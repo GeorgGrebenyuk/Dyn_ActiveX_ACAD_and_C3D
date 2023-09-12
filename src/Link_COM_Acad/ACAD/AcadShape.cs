@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +14,29 @@
 			this._i = AcadShape_object as Autodesk.AutoCAD.Interop.Common.IAcadShape;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadShape(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadShape;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object InsertionPoint => this._i.InsertionPoint;
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadShape(AcadBlock AcadBlock, string Name, Point InsertionPoint, double ScaleFactor, double RotationAngle)
+        {
+            this._i = AcadBlock._i.AddShape(Name, Technical.PointByDynPoint(InsertionPoint), ScaleFactor, RotationAngle);
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public Point InsertionPoint => Technical.PointByDoubleArray(this._i.InsertionPoint);
 
 		///<summary>
 		///
@@ -68,12 +88,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ScaleFactor => this._i.ScaleFactor;
+		public double ScaleFactor => this._i.ScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_ScaleFactor(dynamic scalFactor) 
+		public void Set_ScaleFactor(double scalFactor) 
 		{
 			this._i.ScaleFactor = scalFactor;
 		}
@@ -81,12 +101,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ObliqueAngle => this._i.ObliqueAngle;
+		public double ObliqueAngle => this._i.ObliqueAngle;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_ObliqueAngle(dynamic obliAngle) 
+		public void Set_ObliqueAngle(double obliAngle) 
 		{
 			this._i.ObliqueAngle = obliAngle;
 		}

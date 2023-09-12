@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +14,29 @@
 			this._i = AcadMText_object as Autodesk.AutoCAD.Interop.Common.IAcadMText;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadMText(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadMText;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        ///Create new MText
+        ///</summary>
+        public AcadMText(AcadBlock AcadBlock, Point InsertionPoint, double Width, string Text)
+        {
+            this._i = AcadBlock._i.AddMText(Technical.PointByDynPoint(InsertionPoint), Width, Text);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public string TextString => this._i.TextString;
+
+        ///<summary>
+        ///
+        ///</summary>
+        public string TextString => this._i.TextString;
 
 		///<summary>
 		///

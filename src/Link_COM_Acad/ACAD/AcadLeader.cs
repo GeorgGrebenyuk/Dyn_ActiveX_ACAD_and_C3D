@@ -1,4 +1,8 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +16,31 @@
 			this._i = AcadLeader_object as Autodesk.AutoCAD.Interop.Common.IAcadLeader;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
-
-		///<summary>
-		///
-		///</summary>
-		public object Coordinates => this._i.Coordinates;
+		/// <summary>
+		/// Try cast from AcadEntity
+		/// </summary>
+		/// <param name="AcadEntity"></param>
+		/// <exception cref="System.Exception"></exception>
+		public AcadLeader(AcadEntity AcadEntity)
+		{
+			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadLeader;
+			if (this._i == null) throw new System.Exception("Invalid casting");
+		}
+		/// <summary>
+		/// Create new Leader
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="PointsArray"></param>
+		/// <param name="Annotation"></param>
+		/// <param name="Type"></param>
+        public AcadLeader (AcadBlock AcadBlock, List<Point> PointsArray, AcadEntity Annotation, Autodesk.AutoCAD.Interop.Common.AcLeaderType Type)
+        {
+            this._i = AcadBlock._i.AddLeader(PointsArray.Select(a => Technical.PointByDynPoint(a)).ToArray(), Annotation._i, Type);
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public dynamic Coordinates => this._i.Coordinates;
 
 		///<summary>
 		///

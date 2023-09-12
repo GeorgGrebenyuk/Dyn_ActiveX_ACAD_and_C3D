@@ -12,11 +12,21 @@
 			this._i = AcadSurface_object as Autodesk.AutoCAD.Interop.Common.IAcadSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadSurface(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadSurface;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public string SurfaceType => this._i.SurfaceType;
+        ///<summary>
+        ///
+        ///</summary>
+        public string SurfaceType => this._i.SurfaceType;
 
 		///<summary>
 		///

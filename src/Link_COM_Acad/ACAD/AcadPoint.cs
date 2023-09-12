@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,18 +14,38 @@
 			this._i = AcadPoint_object as Autodesk.AutoCAD.Interop.Common.IAcadPoint;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadPoint(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadPoint;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+
+
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadPoint(AcadBlock AcadBlock, Point Point)
+        {
+            this._i = AcadBlock._i.AddPoint(Technical.PointByDynPoint(Point));
+        }
+
+
+        ///<summary>
+        ///
+        ///</summary>
+        public Point Coordinates => Technical.PointByDoubleArray(this._i.Coordinates);
 
 		///<summary>
 		///
 		///</summary>
-		public object Coordinates => this._i.Coordinates;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_Coordinates(object Coordinates) 
+		public void Set_Coordinates(Point Coordinates) 
 		{
-			this._i.Coordinates = Coordinates;
+			this._i.Coordinates = Technical.PointByDynPoint(Coordinates);
 		}
 
 		///<summary>

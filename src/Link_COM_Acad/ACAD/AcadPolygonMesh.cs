@@ -1,4 +1,8 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +16,28 @@
 			this._i = AcadPolygonMesh_object as Autodesk.AutoCAD.Interop.Common.IAcadPolygonMesh;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadPolygonMesh(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadPolygonMesh;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadPolygonMesh(AcadBlock AcadBlock, int M, int N, List<Point> PointsMatrix)
+        {
+            this._i = AcadBlock._i.Add3DMesh(M, N, PointsMatrix.Select(p=>Technical.PointByDynPoint(p)).ToArray());
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object Coordinates => this._i.Coordinates;
+        ///<summary>
+        ///
+        ///</summary>
+        public object Coordinates => this._i.Coordinates;
 
 		///<summary>
 		///

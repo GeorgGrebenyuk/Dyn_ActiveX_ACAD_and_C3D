@@ -1,4 +1,8 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +16,30 @@
 			this._i = Acad3DPolyline_object as Autodesk.AutoCAD.Interop.Common.IAcad3DPolyline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public Acad3DPolyline(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcad3DPolyline;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object Coordinates => this._i.Coordinates;
+
+        ///<summary>
+        ///
+        ///</summary>
+        public Acad3DPolyline(AcadBlock AcadBlock, List<Point> PointsArray)
+        {
+            this._i = AcadBlock._i.Add3DPoly(PointsArray.Select(p=>Technical.PointByDynPoint(p)).ToArray());
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public object Coordinates => this._i.Coordinates;
 
 		///<summary>
 		///

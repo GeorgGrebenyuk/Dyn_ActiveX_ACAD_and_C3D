@@ -1,4 +1,8 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +16,31 @@
 			this._i = AcadSpline_object as Autodesk.AutoCAD.Interop.Common.IAcadSpline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadSpline(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadSpline;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public int NumberOfControlPoints => this._i.NumberOfControlPoints;
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadSpline (AcadBlock AcadBlock, List<Point> PointsArray, Vector StartTangent, Vector EndTangent)
+        {
+            this._i = AcadBlock._i.AddSpline(
+				PointsArray.Select(p => Technical.PointByDynPoint(p)).ToArray(), 
+				Technical.VectorByDynVector(StartTangent), Technical.VectorByDynVector(EndTangent));
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public int NumberOfControlPoints => this._i.NumberOfControlPoints;
 
 		///<summary>
 		///

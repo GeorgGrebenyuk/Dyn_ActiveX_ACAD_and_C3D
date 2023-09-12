@@ -12,11 +12,18 @@
 			this._i = AcadMaterial_object as Autodesk.AutoCAD.Interop.Common.IAcadMaterial;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        ///<summary>
+        /// Create new Material
+        ///</summary>
+        public AcadMaterial (AcadMaterials AcadMaterials, string Name)
+        {
+            this._i = AcadMaterials._i.Add(Name);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public string Description => this._i.Description;
+        ///<summary>
+        ///
+        ///</summary>
+        public string Description => this._i.Description;
 
 		///<summary>
 		///

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http.Headers;
 
 namespace DynAXDBLib 
@@ -15,11 +17,27 @@ namespace DynAXDBLib
 			this._i = AcadLWPolyline_object as Autodesk.AutoCAD.Interop.Common.IAcadLWPolyline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
-
-		///<summary>
-		///
-		///</summary>
-		public object Coordinates => this._i.Coordinates;
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadLWPolyline(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadLWPolyline;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadLWPolyline(AcadBlock AcadBlock, List<Point> VerticesList)
+        {
+            this._i = AcadBlock._i.AddLightWeightPolyline(VerticesList.Select(p=>Technical.PointByDynPoint(p).ToArray()));
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public object Coordinates => this._i.Coordinates;
 
 		///<summary>
 		///

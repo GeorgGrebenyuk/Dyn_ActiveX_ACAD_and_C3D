@@ -45,7 +45,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Groups => this._i.Groups;
+		public AcadGroups Groups => new AcadGroups(this._i.Groups);
 
 		///<summary>
 		///
@@ -80,7 +80,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic UserCoordinateSystems => this._i.UserCoordinateSystems;
+		public AcadUCSs UserCoordinateSystems => new AcadUCSs(this._i.UserCoordinateSystems);
 
 		///<summary>
 		///
@@ -150,7 +150,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Layouts => this._i.Layouts;
+		public AcadLayouts Layouts => new AcadLayouts(this._i.Layouts);
 
 		///<summary>
 		///
@@ -175,6 +175,6 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Materials => this._i.Materials;
+		public AcadMaterials Materials => new AcadMaterials(this._i.Materials);
 	}
 }

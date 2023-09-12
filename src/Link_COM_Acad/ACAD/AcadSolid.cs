@@ -1,4 +1,7 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+using System.Reflection;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +15,34 @@
 			this._i = AcadSolid_object as Autodesk.AutoCAD.Interop.Common.IAcadSolid;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadSolid(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadSolid;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object Coordinates => this._i.Coordinates;
+        ///<summary>
+        ///Create new solid
+        ///</summary>
+        public AcadSolid(AcadBlock AcadBlock, Point Point1, Point Point2, Point Point3, Point Point4)
+        {
+            this._i = AcadBlock._i.AddSolid(
+                Technical.PointByDynPoint(Point1),
+                Technical.PointByDynPoint(Point2),
+                Technical.PointByDynPoint(Point3),
+                Technical.PointByDynPoint(Point4));
+        }
+
+
+        ///<summary>
+        ///
+        ///</summary>
+        public object Coordinates => this._i.Coordinates;
 
 		///<summary>
 		///

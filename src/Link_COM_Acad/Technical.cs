@@ -16,6 +16,10 @@ namespace DynAXDBLib
         {
             return new double [] {  p.X, p.Y, p.Z };
         }
+        public static double[] VectorByDynVector(dg.Vector v)
+        {
+            return new double[] { v.X, v.Y, v.Z };
+        }
         public static Point PointByDoubleArray(dynamic array)
         {
             if (((double[])array).Length == 2) return Point.ByCoordinates(array[0], array[1]);

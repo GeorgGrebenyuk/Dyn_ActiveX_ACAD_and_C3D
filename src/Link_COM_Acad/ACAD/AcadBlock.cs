@@ -63,16 +63,6 @@ namespace DynAXDBLib
 			return new AcadEntity(this._i.AddCustomObject(ClassName));
 		}
 
-
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic Add3DMesh(int M, int N, object PointsMatrix)
-		{
-			return this._i.Add3DMesh(M, N, PointsMatrix);
-		}
-
 		///<summary>
 		///
 		///</summary>
@@ -80,41 +70,12 @@ namespace DynAXDBLib
 		{
 			return this._i.Add3DPoly(PointsArray);
 		}
-
-
-
 		///<summary>
 		///
 		///</summary>
 		public dynamic AddAttribute(double Height, Autodesk.AutoCAD.Interop.Common.AcAttributeMode Mode, string Prompt, object InsertionPoint, string Tag, string Value)
 		{
 			return this._i.AddAttribute(Height, Mode, Prompt, InsertionPoint, Tag, Value);
-		}
-		//
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddBox(object Origin, double Length, double Width, double Height)
-		{
-			return this._i.AddBox(Origin, Length, Width, Height);
-		}
-
-		
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddCone(object Center, double BaseRadius, double Height)
-		{
-			return this._i.AddCone(Center, BaseRadius, Height);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddCylinder(object Center, double Radius, double Height)
-		{
-			return this._i.AddCylinder(Center, Radius, Height);
 		}
 
 		///<summary>
@@ -200,45 +161,7 @@ namespace DynAXDBLib
 			return this._i.AddExtrudedSolidAlongPath(Profile, Path);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddLeader(object PointsArray, dynamic Annotation, Autodesk.AutoCAD.Interop.Common.AcLeaderType Type)
-		{
-			return this._i.AddLeader(PointsArray, Annotation, Type);
-		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddMText(object InsertionPoint, double Width, string Text)
-		{
-			return this._i.AddMText(InsertionPoint, Width, Text);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddPoint(object Point)
-		{
-			return this._i.AddPoint(Point);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddLightWeightPolyline(object VerticesList)
-		{
-			return this._i.AddLightWeightPolyline(VerticesList);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddPolyline(object VerticesList)
-		{
-			return this._i.AddPolyline(VerticesList);
-		}
 
 		///<summary>
 		///
@@ -264,37 +187,10 @@ namespace DynAXDBLib
 			return this._i.AddRevolvedSolid(Profile, AxisPoint, AxisDir, Angle);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddShape(string Name, object InsertionPoint, double ScaleFactor, double RotationAngle)
-		{
-			return this._i.AddShape(Name, InsertionPoint, ScaleFactor, RotationAngle);
-		}
+		
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddSolid(object Point1, object Point2, object point3, object Point4)
-		{
-			return this._i.AddSolid(Point1, Point2, point3, Point4);
-		}
+		
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddSphere(object Center, double Radius)
-		{
-			return this._i.AddSphere(Center, Radius);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddSpline(object PointsArray, object StartTangent, object EndTangent)
-		{
-			return this._i.AddSpline(PointsArray, StartTangent, EndTangent);
-		}
 
 		///<summary>
 		///
@@ -304,13 +200,7 @@ namespace DynAXDBLib
 			return this._i.AddTolerance(Text, InsertionPoint, Direction);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddTorus(object Center, double TorusRadius, double TubeRadius)
-		{
-			return this._i.AddTorus(Center, TorusRadius, TubeRadius);
-		}
+		
 
 		///<summary>
 		///
@@ -320,13 +210,7 @@ namespace DynAXDBLib
 			return this._i.AddTrace(PointsArray);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddWedge(object Center, double Length, double Width, double Height)
-		{
-			return this._i.AddWedge(Center, Length, Width, Height);
-		}
+		
 
 		///<summary>
 		///
@@ -338,21 +222,9 @@ namespace DynAXDBLib
 
 		
 
-		/////<summary>
-		/////
-		/////</summary>
-		//public dynamic AddHatch(int PatternType, string PatternName, bool Associativity, object HatchObjectType)
-		//{
-		//	return this._i.AddHatch(PatternType, PatternName, Associativity, HatchObjectType);
-		//}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddLine(object StartPoint, object EndPoint)
-		{
-			return this._i.AddLine(StartPoint, EndPoint);
-		}
+
+		
 
 		///<summary>
 		///
@@ -377,13 +249,7 @@ namespace DynAXDBLib
 		//	return this._i.AddMInsertBlock(InsertionPoint, Name, Xscale, Yscale, Zscale, Rotation, NumRows, NumColumns, RowSpacing, ColumnSpacing, Password);
 		//}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddPolyfaceMesh(object VertexList, object FaceList)
-		{
-			return this._i.AddPolyfaceMesh(VertexList, FaceList);
-		}
+		
 
 		///<summary>
 		///

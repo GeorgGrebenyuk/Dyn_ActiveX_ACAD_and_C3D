@@ -13,11 +13,28 @@ namespace DynAXDBLib
 			this._i = AcadHatch_object as Autodesk.AutoCAD.Interop.Common.IAcadHatch;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadHatch(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadHatch;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        /////<summary>
+        /////
+        /////</summary>
+        //public dynamic AddHatch(int PatternType, string PatternName, bool Associativity, object HatchObjectType)
+        //{
+        //	return this._i.AddHatch(PatternType, PatternName, Associativity, HatchObjectType);
+        //}
 
-		///<summary>
-		///
-		///</summary>
-		public object Normal => this._i.Normal;
+        ///<summary>
+        ///
+        ///</summary>
+        public object Normal => this._i.Normal;
 
 		///<summary>
 		///
