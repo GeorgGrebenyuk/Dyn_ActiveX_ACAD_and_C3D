@@ -91,6 +91,8 @@
     <Compile Include="ACAD\AcadObject.cs" />
     <Compile Include="ACAD\AcadDocument.cs" />
     <Compile Include="ACAD\AcadPlaneSurface.cs" />
+    <Compile Include="ACAD\AcadPlotConfiguration.cs" />
+    <Compile Include="ACAD\AcadPlotConfigurations.cs" />
     <Compile Include="ACAD\AcadPoint.cs" />
     <Compile Include="ACAD\AcadPolyfaceMesh.cs" />
     <Compile Include="ACAD\AcadPolygonMesh.cs" />

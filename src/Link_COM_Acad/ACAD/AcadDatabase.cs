@@ -155,7 +155,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic PlotConfigurations => this._i.PlotConfigurations;
+		public AcadPlotConfigurations PlotConfigurations => new AcadPlotConfigurations(this._i.PlotConfigurations);
 
 		///<summary>
 		///
