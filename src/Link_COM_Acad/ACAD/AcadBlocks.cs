@@ -6,32 +6,32 @@
 	///</summary>
 	public class AcadBlocks 
 	{
-		public AXDBLib.IAcadBlocks _i;
+		public Autodesk.AutoCAD.Interop.Common.IAcadBlocks _i;
 		internal AcadBlocks(object AcadBlocks_object) 
 		{
-			this._i = AcadBlocks_object as AXDBLib.IAcadBlocks;
+			this._i = AcadBlocks_object as Autodesk.AutoCAD.Interop.Common.IAcadBlocks;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Item(object Index) 
+		public AcadBlock Item(object Index) 
 		{
-			return this._i.Item(Index);
+			return new AcadBlock(this._i.Item(Index));
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Count => this._i.Count;
+		public int Count => this._i.Count;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Add(object InsertionPoint,string Name) 
+		public AcadBlock Add(object InsertionPoint,string Name) 
 		{
-			return this._i.Add(InsertionPoint,Name);
+			return new AcadBlock(this._i.Add(InsertionPoint,Name));
 		}
 	}
 }

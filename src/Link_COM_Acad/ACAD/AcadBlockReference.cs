@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadBlockReference 
 	{
-		public AXDBLib.IAcadBlockReference _i;
+		public Autodesk.AutoCAD.Interop.Common.IAcadBlockReference _i;
 		internal AcadBlockReference(object AcadBlockReference_object) 
 		{
-			this._i = AcadBlockReference_object as AXDBLib.IAcadBlockReference;
+			this._i = AcadBlockReference_object as Autodesk.AutoCAD.Interop.Common.IAcadBlockReference;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

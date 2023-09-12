@@ -6,17 +6,39 @@
 	///</summary>
 	public class AcadRasterImage 
 	{
-		public AXDBLib.IAcadRasterImage _i;
+		public Autodesk.AutoCAD.Interop.Common.IAcadRasterImage _i;
 		internal AcadRasterImage(object AcadRasterImage_object) 
 		{
-			this._i = AcadRasterImage_object as AXDBLib.IAcadRasterImage;
+			this._i = AcadRasterImage_object as Autodesk.AutoCAD.Interop.Common.IAcadRasterImage;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+		/// <summary>
+		/// Create new raster image
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="imageFileName"></param>
+		/// <param name="InsertionPoint"></param>
+		/// <param name="ScaleFactor"></param>
+		/// <param name="RotationAngle"></param>
+        public AcadRasterImage (AcadBlock AcadBlock, string imageFileName, Autodesk.DesignScript.Geometry.Point InsertionPoint, double ScaleFactor, double RotationAngle)
+        {
+            this._i = AcadBlock._i.AddRaster(imageFileName, Technical.PointByDynPoint(InsertionPoint), ScaleFactor, RotationAngle);
+        }
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadRasterImage(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadRasterImage;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public int Brightness => this._i.Brightness;
+        ///<summary>
+        ///
+        ///</summary>
+        public int Brightness => this._i.Brightness;
 
 		///<summary>
 		///

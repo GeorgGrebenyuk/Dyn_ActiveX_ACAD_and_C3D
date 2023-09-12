@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -6,32 +8,43 @@
 	///</summary>
 	public class AcadTextStyles 
 	{
-		public AXDBLib.IAcadTextStyles _i;
+		public Autodesk.AutoCAD.Interop.Common.IAcadTextStyles _i;
 		internal AcadTextStyles(object AcadTextStyles_object) 
 		{
-			this._i = AcadTextStyles_object as AXDBLib.IAcadTextStyles;
+			this._i = AcadTextStyles_object as Autodesk.AutoCAD.Interop.Common.IAcadTextStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Item(object Index) 
+		public AcadTextStyle Item(int Index) 
 		{
-			return this._i.Item(Index);
+			return new AcadTextStyle(this._i.Item(Index));
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Count => this._i.Count;
+		public int Count => this._i.Count;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Add(string Name) 
+		public AcadTextStyle Add(string Name) 
 		{
-			return this._i.Add(Name);
+			return new AcadTextStyle(this._i.Add(Name));
 		}
+
+		public List<AcadTextStyle> GetAll()
+		{
+			List<AcadTextStyle> st = new List<AcadTextStyle>();
+			for (int i = 0; i < this._i.Count; i++)
+			{
+				st.Add(new AcadTextStyle(this._i.Item(i)));
+            }
+			return st;
+
+        }
 	}
 }

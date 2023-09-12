@@ -6,17 +6,38 @@
 	///</summary>
 	public class AcadText 
 	{
-		public AXDBLib.IAcadText _i;
+		public Autodesk.AutoCAD.Interop.Common.IAcadText _i;
 		internal AcadText(object AcadText_object) 
 		{
-			this._i = AcadText_object as AXDBLib.IAcadText;
+			this._i = AcadText_object as Autodesk.AutoCAD.Interop.Common.IAcadText;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadText (AcadEntity AcadEntity)
+		{
+			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadText;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+		/// <summary>
+		/// Create new text
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="TextString"></param>
+		/// <param name="InsertionPoint"></param>
+		/// <param name="Height"></param>
+		public AcadText (AcadBlock AcadBlock, string TextString, Autodesk.DesignScript.Geometry.Point InsertionPoint, double Height)
+		{
+            this._i = AcadBlock._i.AddText(TextString, Technical.PointByDynPoint(InsertionPoint), Height);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public string TextString => this._i.TextString;
+        ///<summary>
+        ///
+        ///</summary>
+        public string TextString => this._i.TextString;
 
 		///<summary>
 		///
@@ -47,7 +68,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_Alignment(AXDBLib.AcAlignment align) 
+		public void Set_Alignment(Autodesk.AutoCAD.Interop.Common.AcAlignment align) 
 		{
 			this._i.Alignment = align;
 		}
@@ -60,7 +81,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_HorizontalAlignment(AXDBLib.AcHorizontalAlignment horizAlign) 
+		public void Set_HorizontalAlignment(Autodesk.AutoCAD.Interop.Common.AcHorizontalAlignment horizAlign) 
 		{
 			this._i.HorizontalAlignment = horizAlign;
 		}
@@ -73,7 +94,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_VerticalAlignment(AXDBLib.AcVerticalAlignment vertiAlign) 
+		public void Set_VerticalAlignment(Autodesk.AutoCAD.Interop.Common.AcVerticalAlignment vertiAlign) 
 		{
 			this._i.VerticalAlignment = vertiAlign;
 		}

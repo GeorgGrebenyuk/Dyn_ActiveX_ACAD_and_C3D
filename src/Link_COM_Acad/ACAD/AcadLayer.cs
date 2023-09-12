@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadLayer 
 	{
-		public AXDBLib.IAcadLayer _i;
+		public Autodesk.AutoCAD.Interop.Common.IAcadLayer _i;
 		internal AcadLayer(object AcadLayer_object) 
 		{
-			this._i = AcadLayer_object as AXDBLib.IAcadLayer;
+			this._i = AcadLayer_object as Autodesk.AutoCAD.Interop.Common.IAcadLayer;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -21,7 +21,7 @@
 		///<summary>
 		///
 		///</summary>
-		public void Set_color(AXDBLib.AcColor color) 
+		public void Set_color(Autodesk.AutoCAD.Interop.Common.AcColor color) 
 		{
 			this._i.color = color;
 		}

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DynAXDBLib 
 {
@@ -8,17 +9,30 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadObject 
 	{
-		public AXDBLib.IAcadObject _i;
-		internal AcadObject(object AcadObject_object) 
+		public Autodesk.AutoCAD.Interop.Common.IAcadObject _i;
+		internal AcadObject(object AcadObject_object, int i = 0) 
 		{
-			this._i = AcadObject_object as AXDBLib.IAcadObject;
+			this._i = AcadObject_object as Autodesk.AutoCAD.Interop.Common.IAcadObject;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Cast to AcadObject from any object
+        /// </summary>
+        /// <param name="AnyModelObject"></param>
+        public AcadObject(dynamic AnyModelObject)
+        {
+            try
+            {
+                this._i = AnyModelObject._i as Autodesk.AutoCAD.Interop.Common.IAcadObject;
+                if (this._i == null) throw new Exception("Invalid castings");
+            }
+            catch { }
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public string Handle => this._i.Handle;
+        ///<summary>
+        ///
+        ///</summary>
+        public string Handle => this._i.Handle;
 
 		///<summary>
 		///
@@ -56,17 +70,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic ObjectID => this._i.ObjectID;
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic Application => this._i.Application;
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic Database => this._i.Database;
+		public long ObjectID => this._i.ObjectID;
 
 		///<summary>
 		///
@@ -76,17 +80,12 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic GetExtensionDictionary => this._i.GetExtensionDictionary();
+		public object GetExtensionDictionary => this._i.GetExtensionDictionary();
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic OwnerID => this._i.OwnerID;
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic Document => this._i.Document;
+		public long OwnerID => this._i.OwnerID;
 
 		///<summary>
 		///

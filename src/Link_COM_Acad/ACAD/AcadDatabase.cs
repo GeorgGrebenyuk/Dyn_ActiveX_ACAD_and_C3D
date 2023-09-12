@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -6,17 +8,21 @@
 	///</summary>
 	public class AcadDatabase 
 	{
-		public AXDBLib.IAcadDatabase _i;
+		public Autodesk.AutoCAD.Interop.Common.IAcadDatabase _i;
 		internal AcadDatabase(object AcadDatabase_object) 
 		{
-			this._i = AcadDatabase_object as AXDBLib.IAcadDatabase;
+			this._i = AcadDatabase_object as Autodesk.AutoCAD.Interop.Common.IAcadDatabase;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+		public AcadDatabase (AcadDocument AcadDocument)
+		{
+			this._i = AcadDocument._i.Database;
 
-		///<summary>
-		///
-		///</summary>
-		public AcadBlock ModelSpace => new AcadBlock( this._i.ModelSpace);
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadBlock ModelSpace => new AcadBlock( this._i.ModelSpace);
 
 		///<summary>
 		///
@@ -26,7 +32,7 @@
         ///<summary>
         ///
         ///</summary>
-        public dynamic Blocks => this._i.Blocks;
+        public AcadBlocks Blocks => new AcadBlocks(this._i.Blocks);
 
 		///<summary>
 		///
@@ -49,7 +55,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Layers => this._i.Layers;
+		public AcadLayers Layers => new AcadLayers(this._i.Layers);
 
 		///<summary>
 		///
@@ -69,7 +75,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic TextStyles => this._i.TextStyles;
+		public AcadTextStyles TextStyles => new AcadTextStyles(this._i.TextStyles);
 
 		///<summary>
 		///
@@ -128,17 +134,17 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic HandleToObject(string Handle) 
+		public AcadEntity HandleToObject(string Handle) 
 		{
-			return this._i.HandleToObject(Handle);
+			return new AcadEntity(this._i.HandleToObject(Handle));
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic ObjectIdToObject(dynamic ObjectID) 
+		public AcadEntity ObjectIdToObject(dynamic ObjectID) 
 		{
-			return this._i.ObjectIdToObject(ObjectID);
+			return new AcadEntity(this._i.ObjectIdToObject(ObjectID));
 		}
 
 		///<summary>
@@ -159,7 +165,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic SummaryInfo => this._i.SummaryInfo;
+		public AcadSummaryInfo SummaryInfo => new AcadSummaryInfo(this._i.SummaryInfo);
 
 		///<summary>
 		///
