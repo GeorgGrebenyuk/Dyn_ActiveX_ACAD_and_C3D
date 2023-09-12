@@ -1,4 +1,7 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,19 +15,33 @@
 			this._i = AcadGroup_object as Autodesk.AutoCAD.Interop.Common.IAcadGroup;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic Item(object Index) 
+        ///<summary>
+        ///Create new group
+        ///</summary>
+        public AcadGroup (AcadGroups AcadGroups, string Name)
+        {
+            this._i = AcadGroups._i.Add(Name);
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadEntity Item(object Index) 
 		{
-			return this._i.Item(Index);
+			return new AcadEntity(this._i.Item(Index));
 		}
-
+		public List<AcadEntity> GetAll()
+		{
+			List<AcadEntity> ents = new List<AcadEntity>();
+			foreach (var e in this._i)
+			{
+				ents.Add(new AcadEntity(e));
+            }
+			return ents;
+		}
 		///<summary>
 		///
 		///</summary>
-		public dynamic Count => this._i.Count;
+		public int Count => this._i.Count;
 
 		///<summary>
 		///0x00020120
@@ -106,17 +123,17 @@
 		///<summary>
 		///
 		///</summary>
-		public void AppendItems(object Objects) 
+		public void AppendItems(List<AcadEntity> Objects) 
 		{
-			this._i.AppendItems(Objects);
+			this._i.AppendItems(Objects.Select(a=>a._i).ToArray());
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void RemoveItems(object Objects) 
+		public void RemoveItems(List<AcadEntity> Objects) 
 		{
-			this._i.RemoveItems(Objects);
+			this._i.RemoveItems(Objects.Select(a => a._i).ToArray());
 		}
 
 		///<summary>

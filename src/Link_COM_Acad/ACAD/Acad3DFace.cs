@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +14,32 @@
 			this._i = Acad3DFace_object as Autodesk.AutoCAD.Interop.Common.IAcad3DFace;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public Acad3DFace(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.Acad3DFace;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        ///Create new 3D face
+        ///</summary>
+        public Acad3DFace(AcadBlock AcadBlock, Point Point1, Point Point2, Point Point3, Point Point4)
+        {
+            this._i =  AcadBlock._i.Add3DFace(
+				Technical.PointByDynPoint(Point1), 
+				Technical.PointByDynPoint(Point2), 
+				Technical.PointByDynPoint(Point3), 
+				Technical.PointByDynPoint(Point4));
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object Coordinates => this._i.Coordinates;
+        ///<summary>
+        ///
+        ///</summary>
+        public object Coordinates => this._i.Coordinates;
 
 		///<summary>
 		///

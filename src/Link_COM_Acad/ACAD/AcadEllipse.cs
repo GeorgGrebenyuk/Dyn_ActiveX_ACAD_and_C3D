@@ -1,4 +1,5 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,29 +13,46 @@
 			this._i = AcadEllipse_object as Autodesk.AutoCAD.Interop.Common.IAcadEllipse;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadEllipse(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadEllipse;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        ///Create new Ellopse
+        ///</summary>
+        public AcadEllipse (AcadBlock AcadBlock, Point Center, object MajorAxis, double RadiusRatio)
+        {
+            this._i = AcadBlock._i.AddEllipse(Technical.PointByDynPoint(Center), MajorAxis, RadiusRatio);
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public Point StartPoint => Technical.PointByDoubleArray(this._i.StartPoint);
 
 		///<summary>
 		///
 		///</summary>
-		public object StartPoint => this._i.StartPoint;
+		public Point Center => Technical.PointByDoubleArray(this._i.Center);
 
 		///<summary>
 		///
 		///</summary>
-		public object Center => this._i.Center;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_Center(object Center) 
+		public void Set_Center(Point Center) 
 		{
-			this._i.Center = Center;
+			this._i.Center = Technical.PointByDynPoint(Center);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public object EndPoint => this._i.EndPoint;
+		public Point EndPoint => Technical.PointByDoubleArray(this._i.EndPoint);
 
 		///<summary>
 		///

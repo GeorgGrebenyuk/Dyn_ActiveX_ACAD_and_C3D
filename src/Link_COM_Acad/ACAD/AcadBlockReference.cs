@@ -1,4 +1,5 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +13,32 @@
 			this._i = AcadBlockReference_object as Autodesk.AutoCAD.Interop.Common.IAcadBlockReference;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadBlockReference(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadBlockReference;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        /////<summary>
+        /////
+        /////</summary>
+        //public AcadBlockReference InsertBlock(object InsertionPoint, string Name, double Xscale, double Yscale, double Zscale, double Rotation, object Password)
+        //{
+        //	try
+        //	{
+        //              return new AcadBlockReference(this._i.InsertBlock(InsertionPoint, Name, Xscale, Yscale, Zscale, Rotation, Password));
+        //          }
+        //	catch (System.Exception ex) { throw ex; }
+        //}
 
-		///<summary>
-		///
-		///</summary>
-		public object InsertionPoint => this._i.InsertionPoint;
+        ///<summary>
+        ///
+        ///</summary>
+        public Point InsertionPoint => Technical.PointByDoubleArray(this._i.InsertionPoint)
 
 		///<summary>
 		///

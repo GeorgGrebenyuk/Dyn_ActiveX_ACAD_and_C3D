@@ -1,4 +1,5 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -29,7 +30,7 @@
 		/// <param name="TextString"></param>
 		/// <param name="InsertionPoint"></param>
 		/// <param name="Height"></param>
-		public AcadText (AcadBlock AcadBlock, string TextString, Autodesk.DesignScript.Geometry.Point InsertionPoint, double Height)
+		public AcadText (AcadBlock AcadBlock, string TextString, Point InsertionPoint, double Height)
 		{
             this._i = AcadBlock._i.AddText(TextString, Technical.PointByDynPoint(InsertionPoint), Height);
         }

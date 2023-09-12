@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,16 +14,33 @@
 			this._i = AcadArc_object as Autodesk.AutoCAD.Interop.Common.IAcadArc;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+		/// <summary>
+		/// Try cast from AcadEntity
+		/// </summary>
+		/// <param name="AcadEntity"></param>
+		/// <exception cref="System.Exception"></exception>
+		public AcadArc(AcadEntity AcadEntity)
+		{
+			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadArc;
+			if (this._i == null) throw new System.Exception("Invalid casting");
+		}
+        ///<summary>
+        ///Create new Arc
+        ///</summary>
+        public AcadArc(AcadBlock AcadBlock, Point Center, double Radius, double StartAngle, double EndAngle)
+        {
+            this._i = AcadBlock._i.AddArc(Technical.PointByDynPoint(Center), Radius, StartAngle, EndAngle);
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public Point StartPoint => Technical.PointByDoubleArray(this._i.StartPoint);
 
 		///<summary>
 		///
 		///</summary>
-		public object StartPoint => this._i.StartPoint;
-
-		///<summary>
-		///
-		///</summary>
-		public object Center => this._i.Center;
+		public Point Center => Technical.PointByDoubleArray(this._i.Center);
 
 		///<summary>
 		///
@@ -34,7 +53,7 @@
 		///<summary>
 		///
 		///</summary>
-		public object EndPoint => this._i.EndPoint;
+		public Point EndPoint => Technical.PointByDoubleArray(this._i.EndPoint);
 
 		///<summary>
 		///

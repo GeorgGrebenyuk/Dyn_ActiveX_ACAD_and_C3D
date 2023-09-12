@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autodesk.DesignScript.Geometry;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,11 @@ namespace DynAXDBLib
         public static double[] PointByDynPoint(dg.Point p)
         {
             return new double [] {  p.X, p.Y, p.Z };
+        }
+        public static Point PointByDoubleArray(dynamic array)
+        {
+            if (((double[])array).Length == 2) return Point.ByCoordinates(array[0], array[1]);
+            else return Point.ByCoordinates(array[0], array[1], array[2]);
         }
     }
 }

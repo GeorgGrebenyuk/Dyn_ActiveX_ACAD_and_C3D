@@ -63,13 +63,7 @@ namespace DynAXDBLib
 			return new AcadEntity(this._i.AddCustomObject(ClassName));
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Add3DFace(object Point1, object Point2, object point3, object Point4)
-		{
-			return this._i.Add3DFace(Point1, Point2, point3, Point4);
-		}
+
 
 		///<summary>
 		///
@@ -87,13 +81,7 @@ namespace DynAXDBLib
 			return this._i.Add3DPoly(PointsArray);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddArc(object Center, double Radius, double StartAngle, double EndAngle)
-		{
-			return this._i.AddArc(Center, Radius, StartAngle, EndAngle);
-		}
+
 
 		///<summary>
 		///
@@ -111,13 +99,7 @@ namespace DynAXDBLib
 			return this._i.AddBox(Origin, Length, Width, Height);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddCircle(object Center, double Radius)
-		{
-			return this._i.AddCircle(Center, Radius);
-		}
+		
 
 		///<summary>
 		///
@@ -183,13 +165,7 @@ namespace DynAXDBLib
 			return this._i.AddDimRadial(Center, ChordPoint, LeaderLength);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddEllipse(object Center, object MajorAxis, double RadiusRatio)
-		{
-			return this._i.AddEllipse(Center, MajorAxis, RadiusRatio);
-		}
+		
 
 		///<summary>
 		///
@@ -360,17 +336,7 @@ namespace DynAXDBLib
 			return this._i.AddXline(Point1, Point2);
 		}
 
-		/////<summary>
-		/////
-		/////</summary>
-		//public AcadBlockReference InsertBlock(object InsertionPoint, string Name, double Xscale, double Yscale, double Zscale, double Rotation, object Password)
-		//{
-		//	try
-		//	{
-  //              return new AcadBlockReference(this._i.InsertBlock(InsertionPoint, Name, Xscale, Yscale, Zscale, Rotation, Password));
-  //          }
-		//	catch (System.Exception ex) { throw ex; }
-		//}
+		
 
 		/////<summary>
 		/////
