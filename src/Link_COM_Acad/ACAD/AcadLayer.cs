@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadLayer 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadLayer _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadLayer _i;
 		internal AcadLayer(object AcadLayer_object) 
 		{
-			this._i = AcadLayer_object as Autodesk.AutoCAD.Interop.Common.IAcadLayer;
+			this._i = AcadLayer_object as Autodesk.AutoCAD.Interop.Common.AcadLayer;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadSurface 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadSurface _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadSurface _i;
 		internal AcadSurface(object AcadSurface_object) 
 		{
-			this._i = AcadSurface_object as Autodesk.AutoCAD.Interop.Common.IAcadSurface;
+			this._i = AcadSurface_object as Autodesk.AutoCAD.Interop.Common.AcadSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -19,7 +19,7 @@
         /// <exception cref="System.Exception"></exception>
         public AcadSurface(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadSurface;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadSurface;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 

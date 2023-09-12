@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadPolyfaceMesh 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadPolyfaceMesh _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadPolyfaceMesh _i;
 		internal AcadPolyfaceMesh(object AcadPolyfaceMesh_object) 
 		{
-			this._i = AcadPolyfaceMesh_object as Autodesk.AutoCAD.Interop.Common.IAcadPolyfaceMesh;
+			this._i = AcadPolyfaceMesh_object as Autodesk.AutoCAD.Interop.Common.AcadPolyfaceMesh;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -19,7 +19,7 @@
         /// <exception cref="System.Exception"></exception>
         public AcadPolyfaceMesh(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadPolyfaceMesh;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadPolyfaceMesh;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
         ///<summary>

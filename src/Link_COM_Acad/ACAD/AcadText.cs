@@ -7,10 +7,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadText 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadText _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadText _i;
 		internal AcadText(object AcadText_object) 
 		{
-			this._i = AcadText_object as Autodesk.AutoCAD.Interop.Common.IAcadText;
+			this._i = AcadText_object as Autodesk.AutoCAD.Interop.Common.AcadText;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -20,7 +20,7 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public AcadText (AcadEntity AcadEntity)
 		{
-			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadText;
+			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadText;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 		/// <summary>

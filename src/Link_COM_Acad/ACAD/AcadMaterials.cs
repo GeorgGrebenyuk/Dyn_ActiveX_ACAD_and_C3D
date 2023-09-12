@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadMaterials 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadMaterials _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadMaterials _i;
 		internal AcadMaterials(object AcadMaterials_object) 
 		{
-			this._i = AcadMaterials_object as Autodesk.AutoCAD.Interop.Common.IAcadMaterials;
+			this._i = AcadMaterials_object as Autodesk.AutoCAD.Interop.Common.AcadMaterials;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

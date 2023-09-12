@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadTextStyles 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadTextStyles _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadTextStyles _i;
 		internal AcadTextStyles(object AcadTextStyles_object) 
 		{
-			this._i = AcadTextStyles_object as Autodesk.AutoCAD.Interop.Common.IAcadTextStyles;
+			this._i = AcadTextStyles_object as Autodesk.AutoCAD.Interop.Common.AcadTextStyles;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

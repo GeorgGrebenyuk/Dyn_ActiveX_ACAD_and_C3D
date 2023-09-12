@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadSummaryInfo 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadSummaryInfo _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadSummaryInfo _i;
 		internal AcadSummaryInfo(object AcadSummaryInfo_object) 
 		{
-			this._i = AcadSummaryInfo_object as Autodesk.AutoCAD.Interop.Common.IAcadSummaryInfo;
+			this._i = AcadSummaryInfo_object as Autodesk.AutoCAD.Interop.Common.AcadSummaryInfo;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

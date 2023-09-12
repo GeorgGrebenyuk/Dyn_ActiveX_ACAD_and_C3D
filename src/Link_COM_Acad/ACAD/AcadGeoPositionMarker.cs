@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -6,24 +8,46 @@
 	///</summary>
 	public class AcadGeoPositionMarker 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadGeoPositionMarker _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadGeoPositionMarker _i;
 		internal AcadGeoPositionMarker(object AcadGeoPositionMarker_object) 
 		{
-			this._i = AcadGeoPositionMarker_object as Autodesk.AutoCAD.Interop.Common.IAcadGeoPositionMarker;
+			this._i = AcadGeoPositionMarker_object as Autodesk.AutoCAD.Interop.Common.AcadGeoPositionMarker;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadGeoPositionMarker(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadGeoPositionMarker;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        /// <summary>
+        /// Copy existed AcadGeoPositionMarker
+        /// </summary>
+        /// <param name="AcadGeoPositionMarker"></param>
+        /// <param name="NewName"></param>
+        /// <param name="newPosition"></param>
+        public AcadGeoPositionMarker(AcadGeoPositionMarker AcadGeoPositionMarker, string NewName, Point newPosition)
+        {
+            this._i = AcadGeoPositionMarker._i.Copy() as Autodesk.AutoCAD.Interop.Common.AcadGeoPositionMarker;
+            this._i.TextString = NewName;
+			this.Set_Position(newPosition);
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public Point Position => Technical.PointByDoubleArray(this._i.Position);
 
 		///<summary>
 		///
 		///</summary>
-		public object Position => this._i.Position;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_Position(object Position) 
+		public void Set_Position(Point Position) 
 		{
-			this._i.Position = Position;
+			this._i.Position = Technical.PointByDynPoint(Position);
 		}
 
 		///<summary>
@@ -68,7 +92,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic DrawingDirection => this._i.DrawingDirection;
+		public object DrawingDirection => this._i.DrawingDirection;
 
 		///<summary>
 		///
@@ -107,12 +131,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Rotation => this._i.Rotation;
+		public double Rotation => this._i.Rotation;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Rotation(dynamic rotAngle) 
+		public void Set_Rotation(double rotAngle) 
 		{
 			this._i.Rotation = rotAngle;
 		}

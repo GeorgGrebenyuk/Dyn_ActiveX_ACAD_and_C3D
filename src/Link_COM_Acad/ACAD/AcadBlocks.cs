@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadBlocks 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadBlocks _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadBlocks _i;
 		internal AcadBlocks(object AcadBlocks_object) 
 		{
-			this._i = AcadBlocks_object as Autodesk.AutoCAD.Interop.Common.IAcadBlocks;
+			this._i = AcadBlocks_object as Autodesk.AutoCAD.Interop.Common.AcadBlocks;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

@@ -9,10 +9,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadSolid 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadSolid _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadSolid _i;
 		internal AcadSolid(object AcadSolid_object) 
 		{
-			this._i = AcadSolid_object as Autodesk.AutoCAD.Interop.Common.IAcadSolid;
+			this._i = AcadSolid_object as Autodesk.AutoCAD.Interop.Common.AcadSolid;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -22,7 +22,7 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public AcadSolid(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadSolid;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadSolid;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 

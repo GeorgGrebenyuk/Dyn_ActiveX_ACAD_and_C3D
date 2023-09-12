@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadExtrudedSurface 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadExtrudedSurface _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadExtrudedSurface _i;
 		internal AcadExtrudedSurface(object AcadExtrudedSurface_object) 
 		{
-			this._i = AcadExtrudedSurface_object as Autodesk.AutoCAD.Interop.Common.IAcadExtrudedSurface;
+			this._i = AcadExtrudedSurface_object as Autodesk.AutoCAD.Interop.Common.AcadExtrudedSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

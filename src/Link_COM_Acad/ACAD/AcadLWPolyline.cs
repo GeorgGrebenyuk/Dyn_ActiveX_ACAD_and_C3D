@@ -11,10 +11,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadLWPolyline 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadLWPolyline _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadLWPolyline _i;
 		internal AcadLWPolyline(object AcadLWPolyline_object) 
 		{
-			this._i = AcadLWPolyline_object as Autodesk.AutoCAD.Interop.Common.IAcadLWPolyline;
+			this._i = AcadLWPolyline_object as Autodesk.AutoCAD.Interop.Common.AcadLWPolyline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -24,7 +24,7 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public AcadLWPolyline(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadLWPolyline;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadLWPolyline;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
         ///<summary>

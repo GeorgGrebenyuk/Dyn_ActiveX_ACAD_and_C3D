@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadRasterImage 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadRasterImage _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadRasterImage _i;
 		internal AcadRasterImage(object AcadRasterImage_object) 
 		{
-			this._i = AcadRasterImage_object as Autodesk.AutoCAD.Interop.Common.IAcadRasterImage;
+			this._i = AcadRasterImage_object as Autodesk.AutoCAD.Interop.Common.AcadRasterImage;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 		/// <summary>
@@ -31,7 +31,7 @@
         /// <exception cref="System.Exception"></exception>
         public AcadRasterImage(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadRasterImage;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadRasterImage;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 

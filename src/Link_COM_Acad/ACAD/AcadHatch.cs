@@ -7,10 +7,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadHatch 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadHatch _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadHatch _i;
 		internal AcadHatch(object AcadHatch_object) 
 		{
-			this._i = AcadHatch_object as Autodesk.AutoCAD.Interop.Common.IAcadHatch;
+			this._i = AcadHatch_object as Autodesk.AutoCAD.Interop.Common.AcadHatch;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -20,7 +20,7 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public AcadHatch(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadHatch;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadHatch;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
         /////<summary>

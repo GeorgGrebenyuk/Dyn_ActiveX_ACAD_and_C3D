@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace DynAXDBLib 
 {
@@ -10,7 +11,8 @@ namespace DynAXDBLib
 	public class AcadEntity 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadEntity _i;
-		internal AcadEntity(object AcadEntity_object, int i = 0) 
+        
+        internal AcadEntity(object AcadEntity_object, int i = 0) 
 		{
 			this._i = AcadEntity_object as Autodesk.AutoCAD.Interop.Common.AcadEntity;
 			if (this._i == null) throw new System.Exception("Invalid casting");
@@ -19,15 +21,22 @@ namespace DynAXDBLib
         /// Cast to AcadEntity from any object
         /// </summary>
         /// <param name="AnyModelObject"></param>
-        public AcadEntity (dynamic AnyModelObject)
+        public static AcadEntity CastFromAnyObject (dynamic AnyModelObject)
 		{
 			try
 			{
-				this._i = AnyModelObject._i as Autodesk.AutoCAD.Interop.Common.AcadEntity;
-				if (this._i == null) throw new Exception("Invalid castings");
+				var casted_interface = AnyModelObject._i as Autodesk.AutoCAD.Interop.Common.AcadEntity;
+				if (casted_interface == null) throw new Exception("Invalid castings");
+				return new AcadEntity(casted_interface);
 			}
 			catch { }
-		}
+            throw new Exception("Invalid castings");
+        }
+
+		public static AcadEntity SelectSingle(AcadDocument acadDocument)
+		{
+			return new AcadEntity(acadDocument._i.ActiveSelectionSet.Item(0));
+        }
 
         ///<summary>
         ///

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadNurbSurface 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadNurbSurface _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadNurbSurface _i;
 		internal AcadNurbSurface(object AcadNurbSurface_object) 
 		{
-			this._i = AcadNurbSurface_object as Autodesk.AutoCAD.Interop.Common.IAcadNurbSurface;
+			this._i = AcadNurbSurface_object as Autodesk.AutoCAD.Interop.Common.AcadNurbSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

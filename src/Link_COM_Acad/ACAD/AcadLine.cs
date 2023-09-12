@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadLine 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadLine _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadLine _i;
 		internal AcadLine(object AcadLine_object) 
 		{
-			this._i = AcadLine_object as Autodesk.AutoCAD.Interop.Common.IAcadLine;
+			this._i = AcadLine_object as Autodesk.AutoCAD.Interop.Common.AcadLine;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -21,7 +21,7 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public AcadLine(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadLine;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadLine;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
         ///<summary>

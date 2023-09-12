@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadGroups 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadGroups _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadGroups _i;
 		internal AcadGroups(object AcadGroups_object) 
 		{
-			this._i = AcadGroups_object as Autodesk.AutoCAD.Interop.Common.IAcadGroups;
+			this._i = AcadGroups_object as Autodesk.AutoCAD.Interop.Common.AcadGroups;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

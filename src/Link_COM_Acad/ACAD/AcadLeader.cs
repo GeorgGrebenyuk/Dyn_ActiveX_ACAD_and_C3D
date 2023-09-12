@@ -10,10 +10,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadLeader 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadLeader _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadLeader _i;
 		internal AcadLeader(object AcadLeader_object) 
 		{
-			this._i = AcadLeader_object as Autodesk.AutoCAD.Interop.Common.IAcadLeader;
+			this._i = AcadLeader_object as Autodesk.AutoCAD.Interop.Common.AcadLeader;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 		/// <summary>
@@ -23,7 +23,7 @@ namespace DynAXDBLib
 		/// <exception cref="System.Exception"></exception>
 		public AcadLeader(AcadEntity AcadEntity)
 		{
-			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadLeader;
+			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadLeader;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 		/// <summary>
@@ -35,7 +35,8 @@ namespace DynAXDBLib
 		/// <param name="Type"></param>
         public AcadLeader (AcadBlock AcadBlock, List<Point> PointsArray, AcadEntity Annotation, Autodesk.AutoCAD.Interop.Common.AcLeaderType Type)
         {
-            this._i = AcadBlock._i.AddLeader(PointsArray.Select(a => Technical.PointByDynPoint(a)).ToArray(), Annotation._i, Type);
+            this._i = AcadBlock._i.AddLeader(PointsArray.Select(a => Technical.PointByDynPoint(a)).ToArray(), 
+				(Autodesk.AutoCAD.Interop.Common.AcadEntity)Annotation._i, Type);
         }
         ///<summary>
         ///

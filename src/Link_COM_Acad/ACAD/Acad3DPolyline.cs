@@ -10,10 +10,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class Acad3DPolyline 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcad3DPolyline _i;
+		public Autodesk.AutoCAD.Interop.Common.Acad3DPolyline _i;
 		internal Acad3DPolyline(object Acad3DPolyline_object) 
 		{
-			this._i = Acad3DPolyline_object as Autodesk.AutoCAD.Interop.Common.IAcad3DPolyline;
+			this._i = Acad3DPolyline_object as Autodesk.AutoCAD.Interop.Common.Acad3DPolyline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -23,7 +23,8 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public Acad3DPolyline(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcad3DPolyline;
+			
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.Acad3DPolyline;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
@@ -33,6 +34,7 @@ namespace DynAXDBLib
         ///</summary>
         public Acad3DPolyline(AcadBlock AcadBlock, List<Point> PointsArray)
         {
+            
             this._i = AcadBlock._i.Add3DPoly(PointsArray.Select(p=>Technical.PointByDynPoint(p)).ToArray());
         }
 

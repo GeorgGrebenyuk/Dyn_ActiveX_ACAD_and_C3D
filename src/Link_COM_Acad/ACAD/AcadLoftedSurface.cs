@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadLoftedSurface 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadLoftedSurface _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadLoftedSurface _i;
 		internal AcadLoftedSurface(object AcadLoftedSurface_object) 
 		{
-			this._i = AcadLoftedSurface_object as Autodesk.AutoCAD.Interop.Common.IAcadLoftedSurface;
+			this._i = AcadLoftedSurface_object as Autodesk.AutoCAD.Interop.Common.AcadLoftedSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

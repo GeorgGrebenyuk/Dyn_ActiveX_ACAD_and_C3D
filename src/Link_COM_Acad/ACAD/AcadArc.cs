@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadArc 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadArc _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadArc _i;
 		internal AcadArc(object AcadArc_object) 
 		{
-			this._i = AcadArc_object as Autodesk.AutoCAD.Interop.Common.IAcadArc;
+			this._i = AcadArc_object as Autodesk.AutoCAD.Interop.Common.AcadArc;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 		/// <summary>

@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadDatabase 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDatabase _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDatabase _i;
 		internal AcadDatabase(object AcadDatabase_object) 
 		{
-			this._i = AcadDatabase_object as Autodesk.AutoCAD.Interop.Common.IAcadDatabase;
+			this._i = AcadDatabase_object as Autodesk.AutoCAD.Interop.Common.AcadDatabase;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 		public AcadDatabase (AcadDocument AcadDocument)

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadLayout 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadLayout _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadLayout _i;
 		internal AcadLayout(object AcadLayout_object) 
 		{
-			this._i = AcadLayout_object as Autodesk.AutoCAD.Interop.Common.IAcadLayout;
+			this._i = AcadLayout_object as Autodesk.AutoCAD.Interop.Common.AcadLayout;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

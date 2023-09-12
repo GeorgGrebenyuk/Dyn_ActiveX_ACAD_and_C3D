@@ -10,10 +10,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadSpline 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadSpline _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadSpline _i;
 		internal AcadSpline(object AcadSpline_object) 
 		{
-			this._i = AcadSpline_object as Autodesk.AutoCAD.Interop.Common.IAcadSpline;
+			this._i = AcadSpline_object as Autodesk.AutoCAD.Interop.Common.AcadSpline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -23,7 +23,7 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public AcadSpline(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadSpline;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadSpline;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 

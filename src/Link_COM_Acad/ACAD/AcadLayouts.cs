@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadLayouts 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadLayouts _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadLayouts _i;
 		internal AcadLayouts(object AcadLayouts_object) 
 		{
-			this._i = AcadLayouts_object as Autodesk.AutoCAD.Interop.Common.IAcadLayouts;
+			this._i = AcadLayouts_object as Autodesk.AutoCAD.Interop.Common.AcadLayouts;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

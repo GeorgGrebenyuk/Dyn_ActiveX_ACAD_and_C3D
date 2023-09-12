@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadPoint 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadPoint _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadPoint _i;
 		internal AcadPoint(object AcadPoint_object) 
 		{
-			this._i = AcadPoint_object as Autodesk.AutoCAD.Interop.Common.IAcadPoint;
+			this._i = AcadPoint_object as Autodesk.AutoCAD.Interop.Common.AcadPoint;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -21,7 +21,7 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public AcadPoint(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadPoint;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadPoint;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 

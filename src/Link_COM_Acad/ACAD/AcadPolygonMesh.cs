@@ -10,10 +10,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadPolygonMesh 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadPolygonMesh _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadPolygonMesh _i;
 		internal AcadPolygonMesh(object AcadPolygonMesh_object) 
 		{
-			this._i = AcadPolygonMesh_object as Autodesk.AutoCAD.Interop.Common.IAcadPolygonMesh;
+			this._i = AcadPolygonMesh_object as Autodesk.AutoCAD.Interop.Common.AcadPolygonMesh;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -23,7 +23,7 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public AcadPolygonMesh(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadPolygonMesh;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadPolygonMesh;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
         ///<summary>

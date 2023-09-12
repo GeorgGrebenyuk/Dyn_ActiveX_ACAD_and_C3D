@@ -1,4 +1,5 @@
 ﻿using System.CodeDom;
+using System.Collections.Generic;
 using dg = Autodesk.DesignScript.Geometry;
 
 namespace DynAXDBLib 
@@ -9,10 +10,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadBlock 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadBlock _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadBlock _i;
 		internal AcadBlock(object AcadBlock_object) 
 		{
-			this._i = AcadBlock_object as Autodesk.AutoCAD.Interop.Common.IAcadBlock;
+			this._i = AcadBlock_object as Autodesk.AutoCAD.Interop.Common.AcadBlock;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
@@ -23,7 +24,15 @@ namespace DynAXDBLib
 		{
 			return new AcadEntity( this._i.Item(Index));
 		}
-
+		public List<AcadEntity> GetAll()
+		{
+			List<AcadEntity> es = new List<AcadEntity>();
+			foreach (var ent in this._i)
+			{
+				es.Add(new AcadEntity(ent));
+			}
+			return es;
+		}
 		///<summary>
 		///
 		///</summary>
@@ -63,13 +72,6 @@ namespace DynAXDBLib
 			return new AcadEntity(this._i.AddCustomObject(ClassName));
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Add3DPoly(object PointsArray)
-		{
-			return this._i.Add3DPoly(PointsArray);
-		}
 		///<summary>
 		///
 		///</summary>

@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadShape 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadShape _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadShape _i;
 		internal AcadShape(object AcadShape_object) 
 		{
-			this._i = AcadShape_object as Autodesk.AutoCAD.Interop.Common.IAcadShape;
+			this._i = AcadShape_object as Autodesk.AutoCAD.Interop.Common.AcadShape;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
@@ -21,7 +21,7 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public AcadShape(AcadEntity AcadEntity)
         {
-            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcadShape;
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadShape;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadUCS 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadUCS _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadUCS _i;
 		internal AcadUCS(object AcadUCS_object) 
 		{
-			this._i = AcadUCS_object as Autodesk.AutoCAD.Interop.Common.IAcadUCS;
+			this._i = AcadUCS_object as Autodesk.AutoCAD.Interop.Common.AcadUCS;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

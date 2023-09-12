@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class Acad3DFace 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcad3DFace _i;
+		public Autodesk.AutoCAD.Interop.Common.Acad3DFace _i;
 		internal Acad3DFace(object Acad3DFace_object) 
 		{
-			this._i = Acad3DFace_object as Autodesk.AutoCAD.Interop.Common.IAcad3DFace;
+			this._i = Acad3DFace_object as Autodesk.AutoCAD.Interop.Common.Acad3DFace;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>

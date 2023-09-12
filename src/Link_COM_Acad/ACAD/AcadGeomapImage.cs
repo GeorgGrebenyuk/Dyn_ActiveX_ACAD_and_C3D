@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadGeomapImage 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadGeomapImage _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadGeomapImage _i;
 		internal AcadGeomapImage(object AcadGeomapImage_object) 
 		{
-			this._i = AcadGeomapImage_object as Autodesk.AutoCAD.Interop.Common.IAcadGeomapImage;
+			this._i = AcadGeomapImage_object as Autodesk.AutoCAD.Interop.Common.AcadGeomapImage;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

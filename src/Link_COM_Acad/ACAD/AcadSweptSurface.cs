@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadSweptSurface 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadSweptSurface _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadSweptSurface _i;
 		internal AcadSweptSurface(object AcadSweptSurface_object) 
 		{
-			this._i = AcadSweptSurface_object as Autodesk.AutoCAD.Interop.Common.IAcadSweptSurface;
+			this._i = AcadSweptSurface_object as Autodesk.AutoCAD.Interop.Common.AcadSweptSurface;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

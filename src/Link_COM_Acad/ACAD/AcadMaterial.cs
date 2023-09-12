@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadMaterial 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadMaterial _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadMaterial _i;
 		internal AcadMaterial(object AcadMaterial_object) 
 		{
-			this._i = AcadMaterial_object as Autodesk.AutoCAD.Interop.Common.IAcadMaterial;
+			this._i = AcadMaterial_object as Autodesk.AutoCAD.Interop.Common.AcadMaterial;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         ///<summary>

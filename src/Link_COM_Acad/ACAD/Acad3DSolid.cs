@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class Acad3DSolid 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcad3DSolid _i;
+		public Autodesk.AutoCAD.Interop.Common.Acad3DSolid _i;
 		internal Acad3DSolid(object Acad3DSolid_object) 
 		{
-			this._i = Acad3DSolid_object as Autodesk.AutoCAD.Interop.Common.IAcad3DSolid;
+			this._i = Acad3DSolid_object as Autodesk.AutoCAD.Interop.Common.Acad3DSolid;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 		/// <summary>
@@ -21,21 +21,21 @@ namespace DynAXDBLib
 		/// <exception cref="System.Exception"></exception>
 		public Acad3DSolid(AcadEntity AcadEntity)
 		{
-			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.IAcad3DSolid;
+			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.Acad3DSolid;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
         ///<summary>
         /// Create sphere
         ///</summary>
-        public Acad3DSolid CreateSphere (AcadBlock AcadBlock, Point Center, double Radius)
+        public static Acad3DSolid CreateSphere (AcadBlock AcadBlock, Point Center, double Radius)
         {
 			return new Acad3DSolid(AcadBlock._i.AddSphere(Technical.PointByDynPoint(Center), Radius));
         }
         ///<summary>
         ///
         ///</summary>
-        public Acad3DSolid CreateTorus (AcadBlock AcadBlock, Point Center, double TorusRadius, double TubeRadius)
+        public static Acad3DSolid CreateTorus (AcadBlock AcadBlock, Point Center, double TorusRadius, double TubeRadius)
         {
             return new Acad3DSolid(AcadBlock._i.AddTorus(Center, TorusRadius, TubeRadius));
         }
@@ -43,21 +43,21 @@ namespace DynAXDBLib
         ///<summary>
         ///
         ///</summary>
-        public Acad3DSolid CreateWedge (AcadBlock AcadBlock, Point Center, double Length, double Width, double Height)
+        public static Acad3DSolid CreateWedge (AcadBlock AcadBlock, Point Center, double Length, double Width, double Height)
         {
             return new Acad3DSolid(AcadBlock._i.AddWedge(Technical.PointByDynPoint(Center), Length, Width, Height));
         }
         ///<summary>
         ///
         ///</summary>
-        public Acad3DSolid CreateCylinder( AcadBlock AcadBlock, Point Center, double Radius, double Height)
+        public static Acad3DSolid CreateCylinder( AcadBlock AcadBlock, Point Center, double Radius, double Height)
         {
             return new Acad3DSolid(AcadBlock._i.AddCylinder(Technical.PointByDynPoint(Center), Radius, Height));
         }
         ///<summary>
         ///
         ///</summary>
-        public Acad3DSolid CreateCone(AcadBlock AcadBlock, Point Center, double BaseRadius, double Height)
+        public static Acad3DSolid CreateCone(AcadBlock AcadBlock, Point Center, double BaseRadius, double Height)
         {
             return new Acad3DSolid(AcadBlock._i.AddCone(Technical.PointByDynPoint(Center), BaseRadius, Height));
         }
@@ -65,7 +65,7 @@ namespace DynAXDBLib
         ///<summary>
         ///
         ///</summary>
-        public Acad3DSolid CreateBox(AcadBlock AcadBlock, Point Origin, double Length, double Width, double Height)
+        public static Acad3DSolid CreateBox(AcadBlock AcadBlock, Point Origin, double Length, double Width, double Height)
         {
             return new Acad3DSolid(AcadBlock._i.AddBox(Technical.PointByDynPoint(Origin), Length, Width, Height));
         }
@@ -74,7 +74,7 @@ namespace DynAXDBLib
         ///<summary>
         ///
         ///</summary>
-        public object Centroid => this._i.Centroid;
+        public Point Centroid => Technical.PointByDoubleArray(this._i.Centroid);
 
 		///<summary>
 		///
