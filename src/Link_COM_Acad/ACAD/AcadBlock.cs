@@ -71,32 +71,6 @@ namespace DynAXDBLib
 		{
 			return new AcadEntity(this._i.AddCustomObject(ClassName));
 		}
-
-		
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddDimAligned(object ExtLine1Point, object ExtLine2Point, object TextPosition)
-		{
-			return this._i.AddDimAligned(ExtLine1Point, ExtLine2Point, TextPosition);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddDimAngular(object AngleVertex, object FirstEndPoint, object SecondEndPoint, object TextPoint)
-		{
-			return this._i.AddDimAngular(AngleVertex, FirstEndPoint, SecondEndPoint, TextPoint);
-		}
-		//
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddDimDiametric(object ChordPoint, object FarChordPoint, double LeaderLength)
-		{
-			return this._i.AddDimDiametric(ChordPoint, FarChordPoint, LeaderLength);
-		}
-
 		///<summary>
 		///
 		///</summary>
@@ -254,13 +228,6 @@ namespace DynAXDBLib
 			return this._i.AddMLine(VertexList);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddDim3PointAngular(object AngleVertex, object FirstEndPoint, object SecondEndPoint, object TextPoint)
-		{
-			return this._i.AddDim3PointAngular(AngleVertex, FirstEndPoint, SecondEndPoint, TextPoint);
-		}
 
 		///<summary>
 		///
@@ -379,13 +346,7 @@ namespace DynAXDBLib
 		///</summary>
 		public bool IsDynamicBlock => this._i.IsDynamicBlock;
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddDimArc(object ArcCenter, object FirstEndPoint, object SecondEndPoint, object ArcPoint)
-		{
-			return this._i.AddDimArc(ArcCenter, FirstEndPoint, SecondEndPoint, ArcPoint);
-		}
+		
 
 		///<summary>
 		///
