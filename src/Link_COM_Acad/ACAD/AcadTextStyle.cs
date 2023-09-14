@@ -14,11 +14,18 @@ namespace DynAXDBLib
 			this._i = AcadTextStyle_object as Autodesk.AutoCAD.Interop.Common.AcadTextStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadTextStyle (AcadTextStyles AcadTextStyles, string Name)
+        {
+            this._i = AcadTextStyles._i.Add(Name);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public string BigFontFile => this._i.BigFontFile;
+        ///<summary>
+        ///
+        ///</summary>
+        public string BigFontFile => this._i.BigFontFile;
 
 		///<summary>
 		///

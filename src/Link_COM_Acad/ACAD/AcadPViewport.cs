@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadPViewport 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadPViewport _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadPViewport _i;
 		internal AcadPViewport(object AcadPViewport_object) 
 		{
-			this._i = AcadPViewport_object as Autodesk.AutoCAD.Interop.Common.IAcadPViewport;
+			this._i = AcadPViewport_object as Autodesk.AutoCAD.Interop.Common.AcadPViewport;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

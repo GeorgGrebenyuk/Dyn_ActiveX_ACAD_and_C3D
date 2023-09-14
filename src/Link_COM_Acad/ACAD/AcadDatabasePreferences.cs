@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadDatabasePreferences 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDatabasePreferences _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDatabasePreferences _i;
 		internal AcadDatabasePreferences(object AcadDatabasePreferences_object) 
 		{
-			this._i = AcadDatabasePreferences_object as Autodesk.AutoCAD.Interop.Common.IAcadDatabasePreferences;
+			this._i = AcadDatabasePreferences_object as Autodesk.AutoCAD.Interop.Common.AcadDatabasePreferences;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

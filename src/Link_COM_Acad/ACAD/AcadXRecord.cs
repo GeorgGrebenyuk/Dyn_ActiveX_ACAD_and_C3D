@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadXRecord 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadXRecord _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadXRecord _i;
 		internal AcadXRecord(object AcadXRecord_object) 
 		{
-			this._i = AcadXRecord_object as Autodesk.AutoCAD.Interop.Common.IAcadXRecord;
+			this._i = AcadXRecord_object as Autodesk.AutoCAD.Interop.Common.AcadXRecord;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

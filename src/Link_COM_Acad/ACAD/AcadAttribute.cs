@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -6,17 +8,25 @@
 	///</summary>
 	public class AcadAttribute 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadAttribute _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadAttribute _i;
 		internal AcadAttribute(object AcadAttribute_object) 
 		{
-			this._i = AcadAttribute_object as Autodesk.AutoCAD.Interop.Common.IAcadAttribute;
+			this._i = AcadAttribute_object as Autodesk.AutoCAD.Interop.Common.AcadAttribute;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        ///<summary>
+        /// Create new attribute
+        ///</summary>
+        public AcadAttribute (AcadBlock AcadBlock, double Height, 
+			Autodesk.AutoCAD.Interop.Common.AcAttributeMode Mode, string Prompt, Point InsertionPoint, string Tag, string Value)
+        {
+            this._i = AcadBlock._i.AddAttribute(Height, Mode, Prompt, Technical.PointByDynPoint(InsertionPoint), Tag, Value);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public int FieldLength => this._i.FieldLength;
+        ///<summary>
+        ///
+        ///</summary>
+        public int FieldLength => this._i.FieldLength;
 
 		///<summary>
 		///

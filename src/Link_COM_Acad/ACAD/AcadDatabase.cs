@@ -65,7 +65,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Dictionaries => this._i.Dictionaries;
+		public AcadDictionaries Dictionaries => new AcadDictionaries(this._i.Dictionaries);
 
 		///<summary>
 		///
@@ -160,7 +160,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Preferences => this._i.Preferences;
+		public AcadDatabasePreferences Preferences => new AcadDatabasePreferences(this._i.Preferences);
 
 		///<summary>
 		///

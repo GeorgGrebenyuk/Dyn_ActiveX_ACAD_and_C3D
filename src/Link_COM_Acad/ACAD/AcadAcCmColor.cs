@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadAcCmColor 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadAcCmColor _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadAcCmColor _i;
 		internal AcadAcCmColor(object AcadAcCmColor_object) 
 		{
-			this._i = AcadAcCmColor_object as Autodesk.AutoCAD.Interop.Common.IAcadAcCmColor;
+			this._i = AcadAcCmColor_object as Autodesk.AutoCAD.Interop.Common.AcadAcCmColor;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

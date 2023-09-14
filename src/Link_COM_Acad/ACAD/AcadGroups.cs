@@ -15,14 +15,14 @@ namespace DynAXDBLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public AcadGroup Item(object Index) 
+        ///<summary>
+        ///
+        ///</summary>
+        private AcadGroup Item(object Index) 
 		{
 			return new AcadGroup(this._i.Item(Index));
 		}
-		public List<AcadGroup> GetAll()
+		public List<AcadGroup> GetGroups()
 		{
 			List<AcadGroup> gr = new List<AcadGroup>();
 			foreach (var g in this._i)

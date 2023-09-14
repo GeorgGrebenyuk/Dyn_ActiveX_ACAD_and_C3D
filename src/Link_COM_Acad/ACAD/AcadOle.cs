@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadOle 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadOle _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadOle _i;
 		internal AcadOle(object AcadOle_object) 
 		{
-			this._i = AcadOle_object as Autodesk.AutoCAD.Interop.Common.IAcadOle;
+			this._i = AcadOle_object as Autodesk.AutoCAD.Interop.Common.AcadOle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

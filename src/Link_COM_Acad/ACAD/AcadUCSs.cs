@@ -1,4 +1,7 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -16,22 +19,28 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Item(object Index) 
+		private AcadUCS Item(object Index) 
 		{
-			return this._i.Item(Index);
+			return new AcadUCS(this._i.Item(Index));
 		}
-
+		/// <summary>
+		/// Get all ucs
+		/// </summary>
+		/// <returns></returns>
+		public List<AcadUCS> GetAll()
+		{
+			List<AcadUCS> us = new List<AcadUCS>(0);
+			foreach (var u in this._i)
+			{
+				 us.Add(new AcadUCS(u));
+			}
+			return us;
+		}
 		///<summary>
 		///
 		///</summary>
-		public dynamic Count => this._i.Count;
+		public int Count => this._i.Count;
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Add(object Origin,object XAxisPoint,object YAxisPoint,string Name) 
-		{
-			return this._i.Add(Origin,XAxisPoint,YAxisPoint,Name);
-		}
+		
 	}
 }

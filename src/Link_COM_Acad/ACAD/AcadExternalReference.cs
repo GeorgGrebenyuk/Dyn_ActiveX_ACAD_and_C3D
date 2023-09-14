@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadExternalReference 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadExternalReference _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadExternalReference _i;
 		internal AcadExternalReference(object AcadExternalReference_object) 
 		{
-			this._i = AcadExternalReference_object as Autodesk.AutoCAD.Interop.Common.IAcadExternalReference;
+			this._i = AcadExternalReference_object as Autodesk.AutoCAD.Interop.Common.AcadExternalReference;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         ///<summary>

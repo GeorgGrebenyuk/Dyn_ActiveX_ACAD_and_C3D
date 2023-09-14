@@ -24,7 +24,7 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
         ///<summary>
-        ///Create new Ellopse
+        ///Create new Ellipse
         ///</summary>
         public AcadEllipse (AcadBlock AcadBlock, Point Center, object MajorAxis, double RadiusRatio)
         {

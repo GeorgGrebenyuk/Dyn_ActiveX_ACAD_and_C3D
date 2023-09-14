@@ -35,22 +35,22 @@ namespace DynAXDBLib
             this._i = AcadBlock._i.AddLightWeightPolyline(VerticesList.Select(p=>Technical.PointByDynPoint(p).ToArray()));
         }
         ///<summary>
+        /// Get all cordinates in that object as array of Points
+        ///</summary>
+        public List<Point> Coordinates => Technical.PointsByArrayOfDoubleArray(this._i.Coordinates, true);
+
+        ///<summary>
+        /// Set coordinates to that objects from Dynamo's points array
+        ///</summary>
+        public void Set_Coordinates(List<Point> Coordinates)
+        {
+            this._i.Coordinates = Technical.PointsByDynPoints(Coordinates, true);
+        }
+
+        ///<summary>
         ///
         ///</summary>
-        public object Coordinates => this._i.Coordinates;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_Coordinates(object Coordinates) 
-		{
-			this._i.Coordinates = Coordinates;
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public object Normal => this._i.Normal;
+        public object Normal => this._i.Normal;
 
 		///<summary>
 		///
@@ -76,15 +76,15 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public void AddVertex(int Index,object vertex) 
+		public void AddVertex(int Index, Point vertex) 
 		{
-			this._i.AddVertex(Index,vertex);
+			this._i.AddVertex(Index,Technical.PointByDynPoint(vertex));
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object Explode => this._i.Explode();
+        ///<summary>
+        /// Get new AcadEntitis as result of that object exploding
+        ///</summary>
+        public List<AcadEntity> Explode => Technical.GetExploded(this._i.Explode());
 
 		///<summary>
 		///
@@ -161,18 +161,18 @@ namespace DynAXDBLib
 		///</summary>
 		public double Area => this._i.Area;
 
-		///<summary>
-		///
-		///</summary>
-		public object Coordinate(int Index) 
-		{
-			return this._i.Coordinate[Index];
-		}
+        ///<summary>
+        /// Get point by it's index from that object
+        ///</summary>
+        public Point Coordinate(int Index)
+        {
+            return Technical.PointByDynPoint(this._i.Coordinate[Index]);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Coordinate(int Index,object pVal) 
+        ///<summary>
+        ///
+        ///</summary>
+        public void Set_Coordinate(int Index,object pVal) 
 		{
             this._i.Coordinate[Index] = pVal;
 		}

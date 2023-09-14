@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -6,17 +8,26 @@
 	///</summary>
 	public class AcadPointCloud 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadPointCloud _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadPointCloud _i;
 		internal AcadPointCloud(object AcadPointCloud_object) 
 		{
-			this._i = AcadPointCloud_object as Autodesk.AutoCAD.Interop.Common.IAcadPointCloud;
+			this._i = AcadPointCloud_object as Autodesk.AutoCAD.Interop.Common.AcadPointCloud;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic UseEntityColor => this._i.UseEntityColor;
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadPointCloud(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadPointCloud;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public object UseEntityColor => this._i.UseEntityColor;
 
 		///<summary>
 		///
@@ -42,7 +53,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic IntensityColorScheme => this._i.IntensityColorScheme;
+		public object IntensityColorScheme => this._i.IntensityColorScheme;
 
 		///<summary>
 		///
@@ -55,25 +66,25 @@
 		///<summary>
 		///
 		///</summary>
-		public object InsertionPoint => this._i.InsertionPoint;
+		public Point InsertionPoint => Technical.PointByDoubleArray(this._i.InsertionPoint);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_InsertionPoint(object EndPoint) 
+		public void Set_InsertionPoint(Point EndPoint) 
 		{
-			this._i.InsertionPoint = EndPoint;
+			this._i.InsertionPoint = Technical.PointByDynPoint(EndPoint);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Rotation => this._i.Rotation;
+		public double Rotation => this._i.Rotation;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Rotation(dynamic val) 
+		public void Set_Rotation(double val) 
 		{
 			this._i.Rotation = val;
 		}
@@ -81,12 +92,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Width => this._i.Width;
+		public double Width => this._i.Width;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Width(dynamic val) 
+		public void Set_Width(double val) 
 		{
 			this._i.Width = val;
 		}
@@ -94,12 +105,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Length => this._i.Length;
+		public double Length => this._i.Length;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Length(dynamic val) 
+		public void Set_Length(double val) 
 		{
 			this._i.Length = val;
 		}
@@ -107,12 +118,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Height => this._i.Height;
+		public double Height => this._i.Height;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Height(dynamic val) 
+		public void Set_Height(double val) 
 		{
 			this._i.Height = val;
 		}
@@ -120,12 +131,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic scale => this._i.scale;
+		public double scale => this._i.scale;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_scale(dynamic val) 
+		public void Set_scale(double val) 
 		{
 			this._i.scale = val;
 		}
@@ -169,7 +180,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Stylization => this._i.Stylization;
+		public object Stylization => this._i.Stylization;
 
 		///<summary>
 		///
@@ -187,6 +198,6 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic UnitFactor => this._i.UnitFactor;
+		public double UnitFactor => this._i.UnitFactor;
 	}
 }

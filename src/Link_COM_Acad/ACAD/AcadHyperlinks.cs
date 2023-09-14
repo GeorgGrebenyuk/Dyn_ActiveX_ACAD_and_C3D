@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -6,17 +8,17 @@
 	///</summary>
 	public class AcadHyperlinks 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadHyperlinks _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadHyperlinks _i;
 		internal AcadHyperlinks(object AcadHyperlinks_object) 
 		{
-			this._i = AcadHyperlinks_object as Autodesk.AutoCAD.Interop.Common.IAcadHyperlinks;
+			this._i = AcadHyperlinks_object as Autodesk.AutoCAD.Interop.Common.AcadHyperlinks;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Item(dynamic Index) 
+        ///<summary>
+        ///
+        ///</summary>
+        private dynamic Item(dynamic Index) 
 		{
 			return this._i.Item(Index);
 		}
@@ -24,13 +26,18 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Count => this._i.Count;
+		public int Count => this._i.Count;
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Application => this._i.Application;
+        public List<AcadHyperlink> GetHyperlinks()
+        {
+            List<AcadHyperlink> gr = new List<AcadHyperlink>();
+            foreach (var g in this._i)
+            {
+                gr.Add(new AcadHyperlink(g));
+            }
+            return gr;
+        }
 
-		
-	}
+
+    }
 }

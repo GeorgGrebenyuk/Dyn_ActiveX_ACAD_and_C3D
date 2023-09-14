@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadHyperlink 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadHyperlink _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadHyperlink _i;
 		internal AcadHyperlink(object AcadHyperlink_object) 
 		{
-			this._i = AcadHyperlink_object as Autodesk.AutoCAD.Interop.Common.IAcadHyperlink;
+			this._i = AcadHyperlink_object as Autodesk.AutoCAD.Interop.Common.AcadHyperlink;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         ///<summary>

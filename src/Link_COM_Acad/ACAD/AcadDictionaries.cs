@@ -8,17 +8,17 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadDictionaries 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDictionaries _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDictionaries _i;
 		internal AcadDictionaries(object AcadDictionaries_object) 
 		{
-			this._i = AcadDictionaries_object as Autodesk.AutoCAD.Interop.Common.IAcadDictionaries;
+			this._i = AcadDictionaries_object as Autodesk.AutoCAD.Interop.Common.AcadDictionaries;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public AcadDictionary Item(object Index) 
+        ///<summary>
+        ///
+        ///</summary>
+        private AcadDictionary Item(object Index) 
 		{
 			return new AcadDictionary(this._i.Item(Index));
 		}

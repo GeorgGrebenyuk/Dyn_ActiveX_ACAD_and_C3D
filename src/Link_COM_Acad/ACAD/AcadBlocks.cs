@@ -16,7 +16,7 @@
 		///<summary>
 		///
 		///</summary>
-		public AcadBlock Item(object Index) 
+		private AcadBlock Item(object Index) 
 		{
 			return new AcadBlock(this._i.Item(Index));
 		}

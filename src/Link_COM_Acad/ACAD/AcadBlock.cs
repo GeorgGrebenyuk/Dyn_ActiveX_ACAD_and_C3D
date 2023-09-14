@@ -72,14 +72,7 @@ namespace DynAXDBLib
 			return new AcadEntity(this._i.AddCustomObject(ClassName));
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddAttribute(double Height, Autodesk.AutoCAD.Interop.Common.AcAttributeMode Mode, string Prompt, object InsertionPoint, string Tag, string Value)
-		{
-			return this._i.AddAttribute(Height, Mode, Prompt, InsertionPoint, Tag, Value);
-		}
-
+		
 		///<summary>
 		///
 		///</summary>

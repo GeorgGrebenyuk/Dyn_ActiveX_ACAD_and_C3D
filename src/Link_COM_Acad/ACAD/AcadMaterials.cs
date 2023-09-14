@@ -18,7 +18,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public AcadMaterial Item(object Index) 
+		private AcadMaterial Item(object Index) 
 		{
 			return new AcadMaterial(this._i.Item(Index));
 		}
@@ -28,7 +28,7 @@ namespace DynAXDBLib
 		///</summary>
 		public int Count => this._i.Count;
 
-		public List<AcadMaterial> GetAll()
+		public List<AcadMaterial> GetAcadMaterials()
 		{
 			List<AcadMaterial> ms = new List<AcadMaterial>();
 			foreach (var item in this._i)

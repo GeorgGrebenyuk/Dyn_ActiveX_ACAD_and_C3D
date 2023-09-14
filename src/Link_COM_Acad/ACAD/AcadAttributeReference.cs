@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadAttributeReference 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadAttributeReference _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadAttributeReference _i;
 		internal AcadAttributeReference(object AcadAttributeReference_object) 
 		{
-			this._i = AcadAttributeReference_object as Autodesk.AutoCAD.Interop.Common.IAcadAttributeReference;
+			this._i = AcadAttributeReference_object as Autodesk.AutoCAD.Interop.Common.AcadAttributeReference;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

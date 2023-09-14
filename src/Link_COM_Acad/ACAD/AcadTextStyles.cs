@@ -18,7 +18,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public AcadTextStyle Item(int Index) 
+		private AcadTextStyle Item(int Index) 
 		{
 			return new AcadTextStyle(this._i.Item(Index));
 		}
@@ -28,15 +28,9 @@ namespace DynAXDBLib
 		///</summary>
 		public int Count => this._i.Count;
 
-		///<summary>
-		///
-		///</summary>
-		public AcadTextStyle Add(string Name) 
-		{
-			return new AcadTextStyle(this._i.Add(Name));
-		}
+	
 
-		public List<AcadTextStyle> GetAll()
+		public List<AcadTextStyle> GetAcadTextStyles()
 		{
 			List<AcadTextStyle> st = new List<AcadTextStyle>();
 			for (int i = 0; i < this._i.Count; i++)

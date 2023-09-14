@@ -1,4 +1,7 @@
 ﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace DynAXDBLib 
 {
 
@@ -129,25 +132,27 @@ namespace DynAXDBLib
 			this._i.ZScaleFactor = ScaleFactor;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Explode => this._i.Explode();
+        ///<summary>
+        /// Get new AcadEntitis as result of that object exploding
+        ///</summary>
+        public List<AcadEntity> Explode => Technical.GetExploded(this._i.Explode());
+
+        ///<summary>
+        ///
+        ///</summary>
+        public List<AcadAttributeReference> GetAttributes() => ((System.Array)this._i.GetAttributes()).
+			Cast<object>().Select(a=> new AcadAttributeReference(a)).ToList();
 
 		///<summary>
 		///
 		///</summary>
-		public object GetAttributes => this._i.GetAttributes();
+		public List<AcadAttributeReference> GetConstantAttributes() => ((System.Array)this._i.GetConstantAttributes()).
+            Cast<object>().Select(a => new AcadAttributeReference(a)).ToList();
 
-		///<summary>
-		///
-		///</summary>
-		public object GetConstantAttributes => this._i.GetConstantAttributes();
-
-		///<summary>
-		///
-		///</summary>
-		public bool HasAttributes => this._i.HasAttributes;
+        ///<summary>
+        ///
+        ///</summary>
+        public bool HasAttributes => this._i.HasAttributes;
 
 		///<summary>
 		///
@@ -162,7 +167,8 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public object GetDynamicBlockProperties => this._i.GetDynamicBlockProperties();
+		public List<AcadDynamicBlockReferenceProperty> GetDynamicBlockProperties => ((System.Array)this._i.GetDynamicBlockProperties()).
+            Cast<object>().Select(a => new AcadDynamicBlockReferenceProperty(a)).ToList();
 
 		///<summary>
 		///

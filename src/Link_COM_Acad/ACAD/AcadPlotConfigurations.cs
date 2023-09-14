@@ -18,11 +18,11 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public AcadPlotConfigurations Item(object Index) 
+		private AcadPlotConfigurations Item(object Index) 
 		{
 			return new AcadPlotConfigurations(this._i.Item(Index));
 		}
-		public List<AcadPlotConfigurations> GetAll()
+		public List<AcadPlotConfigurations> GetAcadPlotConfigurations()
 		{
 			List<AcadPlotConfigurations> cs = new List<AcadPlotConfigurations>();
 			foreach (var c in this._i)

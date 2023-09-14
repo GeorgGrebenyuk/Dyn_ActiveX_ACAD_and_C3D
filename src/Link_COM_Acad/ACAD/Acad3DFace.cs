@@ -1,4 +1,5 @@
 ﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
 
 namespace DynAXDBLib 
 {
@@ -37,22 +38,22 @@ namespace DynAXDBLib
         }
 
         ///<summary>
+        /// Get all cordinates in that object as array of Points
+        ///</summary>
+        public List<Point> Coordinates => Technical.PointsByArrayOfDoubleArray(this._i.Coordinates, false);
+
+        ///<summary>
+        /// Set coordinates to that objects from Dynamo's points array
+        ///</summary>
+        public void Set_Coordinates(List<Point> Coordinates)
+        {
+            this._i.Coordinates = Technical.PointsByDynPoints(Coordinates, false);
+        }
+
+        ///<summary>
         ///
         ///</summary>
-        public object Coordinates => this._i.Coordinates;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_Coordinates(object corners) 
-		{
-			this._i.Coordinates = corners;
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public bool VisibilityEdge1 => this._i.VisibilityEdge1;
+        public bool VisibilityEdge1 => this._i.VisibilityEdge1;
 
 		///<summary>
 		///
@@ -117,18 +118,18 @@ namespace DynAXDBLib
 			this._i.SetInvisibleEdge(Index,State);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object Coordinate(int Index) 
-		{
-			return this._i.Coordinate[Index];
-		}
+        ///<summary>
+        /// Get point by it's index from that object
+        ///</summary>
+        public Point Coordinate(int Index)
+        {
+            return Technical.PointByDynPoint(this._i.Coordinate[Index]);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Coordinate(int Index,object pVal) 
+        ///<summary>
+        ///
+        ///</summary>
+        public void Set_Coordinate(int Index,object pVal) 
 		{
             this._i.Coordinate[Index] = pVal;
 		}

@@ -12,11 +12,21 @@
 			this._i = AcadGeomapImage_object as Autodesk.AutoCAD.Interop.Common.AcadGeomapImage;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadGeomapImage(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadGeomapImage;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public int GeoImageBrightness => this._i.GeoImageBrightness;
+        ///<summary>
+        ///
+        ///</summary>
+        public int GeoImageBrightness => this._i.GeoImageBrightness;
 
 		///<summary>
 		///

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadDictionary 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDictionary _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDictionary _i;
 		internal AcadDictionary(object AcadDictionary_object) 
 		{
-			this._i = AcadDictionary_object as Autodesk.AutoCAD.Interop.Common.IAcadDictionary;
+			this._i = AcadDictionary_object as Autodesk.AutoCAD.Interop.Common.AcadDictionary;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         ///<summary>

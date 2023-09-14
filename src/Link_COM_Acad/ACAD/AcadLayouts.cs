@@ -18,11 +18,11 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public AcadLayout Item(object Index) 
+		private AcadLayout Item(object Index) 
 		{
 			return new AcadLayout(this._i.Item(Index));
 		}
-		public List<AcadLayout> GetAll()
+		public List<AcadLayout> GetLayouts()
 		{
 			List<AcadLayout> ls = new List<AcadLayout>();
 			foreach (var l in this._i)

@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +14,19 @@
 			this._i = AcadUCS_object as Autodesk.AutoCAD.Interop.Common.AcadUCS;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        ///<summary>
+        ///Create new AcadUCS
+        ///</summary>
+        public AcadUCS(AcadUCSs AcadUCSs, Point Origin, Vector XAxisPoint, Vector YAxisPoint, string Name)
+        {
+            this._i =  AcadUCSs._i.Add(Technical.PointByDynPoint(Origin), 
+				Technical.VectorByDynVector(XAxisPoint), Technical.VectorByDynVector(YAxisPoint), Name);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public string Name => this._i.Name;
+        ///<summary>
+        ///
+        ///</summary>
+        public string Name => this._i.Name;
 
 		///<summary>
 		///
@@ -29,41 +39,41 @@
 		///<summary>
 		///
 		///</summary>
-		public object Origin => this._i.Origin;
+		public Point Origin => Technical.PointByDoubleArray(this._i.Origin);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Origin(object Origin) 
+		public void Set_Origin(Point Origin) 
 		{
-			this._i.Origin = Origin;
+			this._i.Origin = Technical.PointByDynPoint(Origin);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public object XVector => this._i.XVector;
+		public Vector XVector => Technical.VectorByDoubleArray(this._i.XVector);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_XVector(object XVector) 
+		public void Set_XVector(Vector XVector) 
 		{
-			this._i.XVector = XVector;
+			this._i.XVector = Technical.VectorByDynVector(XVector);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public object YVector => this._i.YVector;
+		public Vector YVector => Technical.VectorByDoubleArray(this._i.YVector);
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_YVector(object YVector) 
+        ///<summary>
+        ///
+        ///</summary>
+        public void Set_YVector(Vector YVector) 
 		{
-			this._i.YVector = YVector;
-		}
+			this._i.YVector = Technical.VectorByDynVector(YVector);
+        }
 
 		///<summary>
 		///

@@ -12,11 +12,25 @@
 			this._i = AcadLayer_object as Autodesk.AutoCAD.Interop.Common.AcadLayer;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+		/// <summary>
+		/// Create new layer with unique name
+		/// </summary>
+		/// <param name="AcadLayers"></param>
+		/// <param name="name"></param>
+		public AcadLayer (AcadLayers AcadLayers, string name)
+		{
+			try
+			{
+                this._i = AcadLayers._i.Add(name);
+            }
+			catch (System.Exception ex) { throw ex; };
+
+        }
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic color => this._i.color;
+		public object color => this._i.color;
 
 		///<summary>
 		///
@@ -29,14 +43,14 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic TrueColor => this._i.TrueColor;
+		public AcadAcCmColor TrueColor => new AcadAcCmColor(this._i.TrueColor);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_TrueColor(dynamic pColor) 
+		public void Set_TrueColor(AcadAcCmColor pColor) 
 		{
-			this._i.TrueColor = pColor;
+			this._i.TrueColor = pColor._i;
 		}
 
 		///<summary>

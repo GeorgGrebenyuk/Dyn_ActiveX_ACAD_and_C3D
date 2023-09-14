@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -16,23 +18,29 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Item(object Index) 
+		private dynamic Item(object Index) 
 		{
 			return this._i.Item(Index);
 		}
+		/// <summary>
+		/// Get all layers in document
+		/// </summary>
+		/// <returns></returns>
+        public List<AcadLayer> GetLayers ()
+        {
+            List<AcadLayer> ls = new List<AcadLayer>();
+            foreach (var l in this._i)
+            {
+                ls.Add(new AcadLayer(l));
+            }
+            return ls;
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Count => this._i.Count;
+        ///<summary>
+        ///
+        ///</summary>
+        public int Count => this._i.Count;
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Add(string Name) 
-		{
-			return this._i.Add(Name);
-		}
 
 		///<summary>
 		///
