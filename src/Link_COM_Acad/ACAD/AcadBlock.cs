@@ -274,13 +274,7 @@ namespace DynAXDBLib
 		///</summary>
 		public dynamic XRefDatabase => this._i.XRefDatabase;
 
-		/////<summary>
-		/////
-		/////</summary>
-		//public dynamic AttachExternalReference(string PathName, string Name, object InsertionPoint, double Xscale, double Yscale, double Zscale, double Rotation, bool bOverlay, object Password)
-		//{
-		//	return this._i.AttachExternalReference(PathName, Name, InsertionPoint, Xscale, Yscale, Zscale, Rotation, bOverlay, Password);
-		//}
+		
 
 		///<summary>
 		///
