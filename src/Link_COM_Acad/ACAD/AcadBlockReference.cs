@@ -28,17 +28,15 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadBlockReference;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-		/////<summary>
-		/////
-		/////</summary>
-		//public AcadBlockReference InsertBlock(object InsertionPoint, string Name, double Xscale, double Yscale, double Zscale, double Rotation, object Password)
-		//{
-		//	try
-		//	{
-		//              return new AcadBlockReference(this._i.InsertBlock(InsertionPoint, Name, Xscale, Yscale, Zscale, Rotation, Password));
-		//          }
-		//	catch (System.Exception ex) { throw ex; }
-		//}
+		///<summary>
+		/// Create new block reference
+		///</summary>
+		public AcadBlockReference (dynamic AcadBlock, Point InsertionPoint, string Name,
+			double Xscale, double Yscale, double Zscale, double Rotation)
+		{
+            this._i = AcadBlock._i.InsertBlock(Technical.PointByDynPoint(InsertionPoint),
+                    Name, Xscale, Yscale, Zscale, Rotation);
+        }
 
 		///<summary>
 		///

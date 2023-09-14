@@ -1,4 +1,6 @@
 ﻿
+using Autodesk.AutoCAD.Interop.Common;
+
 namespace DynAXDBLib 
 {
 
@@ -23,18 +25,18 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadHatch;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-        /////<summary>
-        /////
-        /////</summary>
-        //public dynamic AddHatch(int PatternType, string PatternName, bool Associativity, object HatchObjectType)
-        //{
-        //	return this._i.AddHatch(PatternType, PatternName, Associativity, HatchObjectType);
-        //}
+		///<summary>
+		/// Create new hatch object
+		///</summary>
+		public AcadHatch (dynamic AcadBlock, int PatternType, string PatternName, bool Associativity, AcHatchObjectType HatchObjectType)
+		{
+			this._i = AcadBlock._i.AddHatch(PatternType, PatternName, Associativity, HatchObjectType);
+		}
 
-        ///<summary>
-        ///
-        ///</summary>
-        public object Normal => this._i.Normal;
+		///<summary>
+		///
+		///</summary>
+		public object Normal => this._i.Normal;
 
 		///<summary>
 		///
@@ -243,12 +245,12 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic GradientAngle => this._i.GradientAngle;
+		public double GradientAngle => this._i.GradientAngle;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_GradientAngle(dynamic GradientAngle) 
+		public void Set_GradientAngle(double GradientAngle) 
 		{
 			this._i.GradientAngle = GradientAngle;
 		}
@@ -313,7 +315,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic BackgroundColor => this._i.BackgroundColor;
+		public object BackgroundColor => this._i.BackgroundColor;
 
 		///<summary>
 		///
