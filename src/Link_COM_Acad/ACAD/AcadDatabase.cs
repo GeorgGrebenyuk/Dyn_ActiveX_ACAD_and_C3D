@@ -60,7 +60,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Linetypes => this._i.Linetypes;
+		public AcadLineTypes Linetypes => new AcadLineTypes(this._i.Linetypes);
 
 		///<summary>
 		///
@@ -70,7 +70,8 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic RegisteredApplications => this._i.RegisteredApplications;
+		public AcadRegisteredApplications RegisteredApplications => 
+			new AcadRegisteredApplications(this._i.RegisteredApplications);
 
 		///<summary>
 		///
@@ -85,12 +86,12 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Views => this._i.Views;
+		public AcadViews Views => new AcadViews(this._i.Views);
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Viewports => this._i.Viewports;
+		public AcadViewports Viewports => new AcadViewports(this._i.Viewports);
 
 		///<summary>
 		///
@@ -170,7 +171,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic SectionManager => this._i.SectionManager;
+		public AcadSectionManager SectionManager => new AcadSectionManager(this._i.SectionManager);
 
 		///<summary>
 		///

@@ -403,14 +403,6 @@ namespace DynAXDBLib
 			return this._i.AddSection(FromPoint, ToPoint, planeVector);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddMLeader(object PointsArray)
-		{
-			int leaderLineIndex;
-			var data = this._i.AddMLeader(PointsArray, out leaderLineIndex);
-			return data;
-		}
+		
 	}
 }

@@ -22,6 +22,10 @@ namespace DynAXDBLib
 		{
 			return new AcadGroup(this._i.Item(Index));
 		}
+		/// <summary>
+		/// Get all groups
+		/// </summary>
+		/// <returns></returns>
 		public List<AcadGroup> GetGroups()
 		{
 			List<AcadGroup> gr = new List<AcadGroup>();

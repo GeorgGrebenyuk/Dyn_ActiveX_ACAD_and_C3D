@@ -29,12 +29,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic TaperAngle => this._i.TaperAngle;
+		public double TaperAngle => this._i.TaperAngle;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_TaperAngle(dynamic TaperAngle) 
+		public void Set_TaperAngle(double TaperAngle) 
 		{
 			this._i.TaperAngle = TaperAngle;
 		}

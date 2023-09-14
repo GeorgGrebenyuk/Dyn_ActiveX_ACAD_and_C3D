@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,31 +14,40 @@
 			this._i = AcadOle_object as Autodesk.AutoCAD.Interop.Common.AcadOle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadOle(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadOle;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public Point InsertionPoint => Technical.PointByDynPoint(this._i.InsertionPoint);
 
 		///<summary>
 		///
 		///</summary>
-		public object InsertionPoint => this._i.InsertionPoint;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_InsertionPoint(object insPoint) 
+		public void Set_InsertionPoint(Point insPoint) 
 		{
-			this._i.InsertionPoint = insPoint;
+			this._i.InsertionPoint = Technical.PointByDynPoint(insPoint);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Rotation => this._i.Rotation;
+		public double Rotation => this._i.Rotation;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Rotation(dynamic rot) 
+		public void Set_Rotation(double Rotation) 
 		{
-			this._i.Rotation = rot;
+			this._i.Rotation = Rotation;
 		}
 
 		///<summary>
@@ -107,7 +118,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic OleItemType => this._i.OleItemType;
+		public object OleItemType => this._i.OleItemType;
 
 		///<summary>
 		///
@@ -120,7 +131,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic OlePlotQuality => this._i.OlePlotQuality;
+		public object OlePlotQuality => this._i.OlePlotQuality;
 
 		///<summary>
 		///
