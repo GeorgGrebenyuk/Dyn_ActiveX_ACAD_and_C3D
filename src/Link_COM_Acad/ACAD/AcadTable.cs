@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace DynAXDBLib 
@@ -68,7 +69,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic FlowDirection => this._i.FlowDirection;
+		public object FlowDirection => this._i.FlowDirection;
 
 		///<summary>
 		///
@@ -130,23 +131,24 @@ namespace DynAXDBLib
 			this._i.HorzCellMargin = pGap;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object InsertionPoint => this._i.InsertionPoint;
+        ///<summary>
+        ///
+        ///</summary>
+        public Autodesk.DesignScript.Geometry.Point InsertionPoint =>
+            Technical.PointByDoubleArray(this._i.InsertionPoint);
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_InsertionPoint(object insPoint) 
-		{
-			this._i.InsertionPoint = insPoint;
-		}
+        ///<summary>
+        ///
+        ///</summary>
+        public void Set_InsertionPoint(object insPoint)
+        {
+            this._i.InsertionPoint = insPoint;
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public double GetColumnWidth(int col) 
+        ///<summary>
+        ///
+        ///</summary>
+        public double GetColumnWidth(int col) 
 		{
 			return this._i.GetColumnWidth(col);
 		}
@@ -217,23 +219,23 @@ namespace DynAXDBLib
 		///</summary>
 		public double MinimumTableHeight => this._i.MinimumTableHeight;
 
-		///<summary>
-		///
-		///</summary>
-		public object Direction => this._i.Direction;
+        ///<summary>
+        ///
+        ///</summary>
+        public Vector Direction => Technical.VectorByDoubleArray(this._i.Direction);
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Direction(object DirectionVector) 
-		{
-			this._i.Direction = DirectionVector;
-		}
+        ///<summary>
+        ///
+        ///</summary>
+        public void Set_Direction(Vector DirectionVector)
+        {
+            this._i.Direction = Technical.VectorByDynVector(DirectionVector);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public bool TitleSuppressed => this._i.TitleSuppressed;
+        ///<summary>
+        ///
+        ///</summary>
+        public bool TitleSuppressed => this._i.TitleSuppressed;
 
 		///<summary>
 		///

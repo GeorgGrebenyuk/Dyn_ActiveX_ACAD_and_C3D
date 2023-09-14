@@ -95,7 +95,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic TextGenerationFlag => this._i.TextGenerationFlag;
+		public int TextGenerationFlag => this._i.TextGenerationFlag;
 
 		///<summary>
 		///
