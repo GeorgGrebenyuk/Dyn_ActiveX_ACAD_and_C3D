@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadDimDiametric 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDimDiametric _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDimDiametric _i;
 		internal AcadDimDiametric(object AcadDimDiametric_object) 
 		{
-			this._i = AcadDimDiametric_object as Autodesk.AutoCAD.Interop.Common.IAcadDimDiametric;
+			this._i = AcadDimDiametric_object as Autodesk.AutoCAD.Interop.Common.AcadDimDiametric;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>

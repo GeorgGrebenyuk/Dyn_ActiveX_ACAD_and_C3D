@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadMInsertBlock 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadMInsertBlock _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadMInsertBlock _i;
 		internal AcadMInsertBlock(object AcadMInsertBlock_object) 
 		{
-			this._i = AcadMInsertBlock_object as Autodesk.AutoCAD.Interop.Common.IAcadMInsertBlock;
+			this._i = AcadMInsertBlock_object as Autodesk.AutoCAD.Interop.Common.AcadMInsertBlock;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

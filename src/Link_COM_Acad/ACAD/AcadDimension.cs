@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadDimension 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDimension _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDimension _i;
 		internal AcadDimension(object AcadDimension_object) 
 		{
-			this._i = AcadDimension_object as Autodesk.AutoCAD.Interop.Common.IAcadDimension;
+			this._i = AcadDimension_object as Autodesk.AutoCAD.Interop.Common.AcadDimension;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>

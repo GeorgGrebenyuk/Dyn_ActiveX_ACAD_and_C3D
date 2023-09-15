@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadMLine 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadMLine _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadMLine _i;
 		internal AcadMLine(object AcadMLine_object) 
 		{
-			this._i = AcadMLine_object as Autodesk.AutoCAD.Interop.Common.IAcadMLine;
+			this._i = AcadMLine_object as Autodesk.AutoCAD.Interop.Common.AcadMLine;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

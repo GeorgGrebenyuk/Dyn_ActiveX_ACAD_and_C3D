@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadDimAngular 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDimAngular _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDimAngular _i;
 		internal AcadDimAngular(object AcadDimAngular_object) 
 		{
-			this._i = AcadDimAngular_object as Autodesk.AutoCAD.Interop.Common.IAcadDimAngular;
+			this._i = AcadDimAngular_object as Autodesk.AutoCAD.Interop.Common.AcadDimAngular;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>

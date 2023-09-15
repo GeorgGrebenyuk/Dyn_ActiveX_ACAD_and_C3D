@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -36,9 +38,9 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AddObject(string Keyword,string ObjectName) 
+		public AcadObject AddObject(string Keyword,string ObjectName) 
 		{
-			return this._i.AddObject(Keyword,ObjectName);
+			return new AcadObject(this._i.AddObject(Keyword,ObjectName));
 		}
 
 		///<summary>
@@ -52,17 +54,17 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic GetObject(string Name) 
+		public AcadObject GetObject(string Name) 
 		{
-			return this._i.GetObject(Name);
+			return new AcadObject(this._i.GetObject(Name));
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Remove(string Name) 
+		public AcadObject Remove(string Name) 
 		{
-			return this._i.Remove(Name);
+			return new AcadObject(this._i.Remove(Name));
 		}
 
 		///<summary>
@@ -84,22 +86,31 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Item(object Index) 
+		public AcadObject Item(object Index) 
 		{
-			return this._i.Item(Index);
+			return new AcadObject(this._i.Item(Index));
 		}
+        public List<AcadObject> GetAcadObjects()
+        {
+            List<AcadObject> es = new List<AcadObject>();
+            foreach (var ent in this._i)
+            {
+                es.Add(new AcadObject(ent));
+            }
+            return es;
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public int Count => this._i.Count;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Count => this._i.Count;
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddXRecord(string Keyword) 
+		public AcadXRecord AddXRecord(string Keyword) 
 		{
-			return this._i.AddXRecord(Keyword);
+			return new AcadXRecord(this._i.AddXRecord(Keyword));
 		}
 	}
 }

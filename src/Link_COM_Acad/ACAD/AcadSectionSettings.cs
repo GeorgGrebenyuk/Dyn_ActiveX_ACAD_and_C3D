@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadSectionSettings 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadSectionSettings _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadSectionSettings _i;
 		internal AcadSectionSettings(object AcadSectionSettings_object) 
 		{
-			this._i = AcadSectionSettings_object as Autodesk.AutoCAD.Interop.Common.IAcadSectionSettings;
+			this._i = AcadSectionSettings_object as Autodesk.AutoCAD.Interop.Common.AcadSectionSettings;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

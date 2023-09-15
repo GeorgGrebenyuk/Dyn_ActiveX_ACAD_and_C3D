@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadDimRotated 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDimRotated _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDimRotated _i;
 		internal AcadDimRotated(object AcadDimRotated_object) 
 		{
-			this._i = AcadDimRotated_object as Autodesk.AutoCAD.Interop.Common.IAcadDimRotated;
+			this._i = AcadDimRotated_object as Autodesk.AutoCAD.Interop.Common.AcadDimRotated;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>

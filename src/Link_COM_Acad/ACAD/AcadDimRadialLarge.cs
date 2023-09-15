@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadDimRadialLarge 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDimRadialLarge _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDimRadialLarge _i;
 		internal AcadDimRadialLarge(object AcadDimRadialLarge_object) 
 		{
-			this._i = AcadDimRadialLarge_object as Autodesk.AutoCAD.Interop.Common.IAcadDimRadialLarge;
+			this._i = AcadDimRadialLarge_object as Autodesk.AutoCAD.Interop.Common.AcadDimRadialLarge;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>

@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadDimStyle 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDimStyle _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDimStyle _i;
 		internal AcadDimStyle(object AcadDimStyle_object) 
 		{
-			this._i = AcadDimStyle_object as Autodesk.AutoCAD.Interop.Common.IAcadDimStyle;
+			this._i = AcadDimStyle_object as Autodesk.AutoCAD.Interop.Common.AcadDimStyle;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

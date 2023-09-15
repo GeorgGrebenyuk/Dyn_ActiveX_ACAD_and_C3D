@@ -8,10 +8,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadDimOrdinate 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDimOrdinate _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDimOrdinate _i;
 		internal AcadDimOrdinate(object AcadDimOrdinate_object) 
 		{
-			this._i = AcadDimOrdinate_object as Autodesk.AutoCAD.Interop.Common.IAcadDimOrdinate;
+			this._i = AcadDimOrdinate_object as Autodesk.AutoCAD.Interop.Common.AcadDimOrdinate;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

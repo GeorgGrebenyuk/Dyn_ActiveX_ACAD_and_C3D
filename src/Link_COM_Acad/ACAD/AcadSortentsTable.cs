@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadSortentsTable 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadSortentsTable _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadSortentsTable _i;
 		internal AcadSortentsTable(object AcadSortentsTable_object) 
 		{
-			this._i = AcadSortentsTable_object as Autodesk.AutoCAD.Interop.Common.IAcadSortentsTable;
+			this._i = AcadSortentsTable_object as Autodesk.AutoCAD.Interop.Common.AcadSortentsTable;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

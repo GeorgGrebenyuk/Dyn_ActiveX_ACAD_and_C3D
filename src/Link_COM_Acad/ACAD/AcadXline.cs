@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadXline 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadXline _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadXline _i;
 		internal AcadXline(object AcadXline_object) 
 		{
-			this._i = AcadXline_object as Autodesk.AutoCAD.Interop.Common.IAcadXline;
+			this._i = AcadXline_object as Autodesk.AutoCAD.Interop.Common.AcadXline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

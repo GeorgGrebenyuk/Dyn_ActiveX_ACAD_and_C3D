@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadSecurityParams 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadSecurityParams _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadSecurityParams _i;
 		internal AcadSecurityParams(object AcadSecurityParams_object) 
 		{
-			this._i = AcadSecurityParams_object as Autodesk.AutoCAD.Interop.Common.IAcadSecurityParams;
+			this._i = AcadSecurityParams_object as Autodesk.AutoCAD.Interop.Common.AcadSecurityParams;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

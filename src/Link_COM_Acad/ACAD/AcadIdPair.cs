@@ -6,10 +6,10 @@
 	///</summary>
 	public class AcadIdPair 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadIdPair _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadIdPair _i;
 		internal AcadIdPair(object AcadIdPair_object) 
 		{
-			this._i = AcadIdPair_object as Autodesk.AutoCAD.Interop.Common.IAcadIdPair;
+			this._i = AcadIdPair_object as Autodesk.AutoCAD.Interop.Common.AcadIdPair;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 

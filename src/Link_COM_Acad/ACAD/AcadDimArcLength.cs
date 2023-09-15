@@ -9,10 +9,10 @@ namespace DynAXDBLib
 	///</summary>
 	public class AcadDimArcLength 
 	{
-		public Autodesk.AutoCAD.Interop.Common.IAcadDimArcLength _i;
+		public Autodesk.AutoCAD.Interop.Common.AcadDimArcLength _i;
 		internal AcadDimArcLength(object AcadDimArcLength_object) 
 		{
-			this._i = AcadDimArcLength_object as Autodesk.AutoCAD.Interop.Common.IAcadDimArcLength;
+			this._i = AcadDimArcLength_object as Autodesk.AutoCAD.Interop.Common.AcadDimArcLength;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
