@@ -1,4 +1,7 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,21 +15,40 @@
 			this._i = AcadMLine_object as Autodesk.AutoCAD.Interop.Common.AcadMLine;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadMLine(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadMLine;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadMLine(AcadBlock AcadBlock, List<Point> VertexList)
+        {
+            this._i =  AcadBlock._i.AddMLine(Technical.PointsByDynPoints(VertexList, true));
+        }
+        ///<summary>
+        /// Get all cordinates in that object as array of Points
+        ///</summary>
+        public List<Point> Coordinates => Technical.PointsByArrayOfDoubleArray(this._i.Coordinates, true);
 
-		///<summary>
-		///
-		///</summary>
-		public string StyleName => this._i.StyleName;
+        ///<summary>
+        /// Set coordinates to that objects from Dynamo's points array
+        ///</summary>
+        public void Set_Coordinates(List<Point> Coordinates)
+        {
+            this._i.Coordinates = Technical.PointsByDynPoints(Coordinates, true);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object Coordinates => this._i.Coordinates;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_Coordinates(object Vertices) 
+        ///<summary>
+        ///
+        ///</summary>
+        public void Set_Coordinates(object Vertices) 
 		{
 			this._i.Coordinates = Vertices;
 		}

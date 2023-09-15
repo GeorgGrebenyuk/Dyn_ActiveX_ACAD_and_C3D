@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,44 +14,62 @@
 			this._i = AcadXline_object as Autodesk.AutoCAD.Interop.Common.AcadXline;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadXline(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadXline;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+
+        ///<summary>
+        /// Create new XLine
+        ///</summary>
+        public AcadXline(AcadBlock AcadBlock, Point Point1, Point Point2)
+        {
+            this._i =  AcadBlock._i.AddXline(Technical.PointByDynPoint(Point1), Technical.PointByDynPoint(Point2));
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public Point BasePoint => Technical.PointByDynPoint(this._i.BasePoint);
 
 		///<summary>
 		///
 		///</summary>
-		public object BasePoint => this._i.BasePoint;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_BasePoint(object BasePoint) 
+		public void Set_BasePoint(Point BasePoint) 
 		{
-			this._i.BasePoint = BasePoint;
+			this._i.BasePoint = Technical.PointByDynPoint(BasePoint);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public object SecondPoint => this._i.SecondPoint;
+		public Point SecondPoint => Technical.PointByDynPoint(this._i.SecondPoint);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_SecondPoint(object SecondPoint) 
+		public void Set_SecondPoint(Point SecondPoint) 
 		{
-			this._i.SecondPoint = SecondPoint;
+			this._i.SecondPoint = Technical.PointByDynPoint(SecondPoint);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public object DirectionVector => this._i.DirectionVector;
+		public Vector DirectionVector => Technical.VectorByDoubleArray(this._i.DirectionVector);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_DirectionVector(object dirVector) 
+		public void Set_DirectionVector(Vector dirVector) 
 		{
-			this._i.DirectionVector = dirVector;
+			this._i.DirectionVector = Technical.VectorByDynVector(dirVector);
 		}
 
 		///<summary>

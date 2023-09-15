@@ -33,7 +33,7 @@ namespace DynAXDBLib
 			return new Acad3DSolid(AcadBlock._i.AddSphere(Technical.PointByDynPoint(Center), Radius));
         }
         ///<summary>
-        ///
+        ///Create Torus
         ///</summary>
         public static Acad3DSolid CreateTorus (AcadBlock AcadBlock, Point Center, double TorusRadius, double TubeRadius)
         {
@@ -41,14 +41,14 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        ///Create Wedge
         ///</summary>
         public static Acad3DSolid CreateWedge (AcadBlock AcadBlock, Point Center, double Length, double Width, double Height)
         {
             return new Acad3DSolid(AcadBlock._i.AddWedge(Technical.PointByDynPoint(Center), Length, Width, Height));
         }
         ///<summary>
-        ///
+        ///Create Cylinder
         ///</summary>
         public static Acad3DSolid CreateCylinder( AcadBlock AcadBlock, Point Center, double Radius, double Height)
         {
@@ -63,13 +63,60 @@ namespace DynAXDBLib
         }
         //
         ///<summary>
-        ///
+        /// Create Box
         ///</summary>
-        public static Acad3DSolid CreateBox(AcadBlock AcadBlock, Point Origin, double Length, double Width, double Height)
+        public static Acad3DSolid CreateBox(AcadBlock AcadBlock, Point Origin, 
+			double Length, double Width, double Height)
         {
             return new Acad3DSolid(AcadBlock._i.AddBox(Technical.PointByDynPoint(Origin), Length, Width, Height));
         }
+        ///<summary>
+        /// Create Elliptical Cone
+        ///</summary>
+        public static Acad3DSolid AddEllipticalCone(AcadBlock AcadBlock, Point Center,
+			double MajorRadius, double MinorRadius, double Height)
+        {
+            return new Acad3DSolid(AcadBlock._i.AddEllipticalCone(Technical.PointByDynPoint(Center),
+				MajorRadius, MinorRadius, Height));
+        }
 
+        //
+        ///<summary>
+        /// Create Elliptical Cylinder
+        ///</summary>
+        public static Acad3DSolid AddEllipticalCylinder(AcadBlock AcadBlock,
+            Point Center, double MajorRadius, double MinorRadius, double Height)
+        {
+            return new Acad3DSolid(AcadBlock._i.AddEllipticalCylinder(Technical.PointByDynPoint(Center),
+				MajorRadius, MinorRadius, Height));
+        }
+
+        ///<summary>
+        ///Create Extruded Solid
+        ///</summary>
+        public static Acad3DSolid AddExtrudedSolid(AcadBlock AcadBlock, AcadRegion Profile,
+			double Height, double TaperAngle)
+        {
+            return new Acad3DSolid(AcadBlock._i.AddExtrudedSolid(Profile._i, Height, TaperAngle));
+        }
+
+        ///<summary>
+        ///Create Extruded Solid Along Path
+        ///</summary>
+        public static Acad3DSolid AddExtrudedSolidAlongPath(AcadBlock AcadBlock, AcadRegion Profile, dynamic Path)
+        {
+            return new Acad3DSolid(AcadBlock._i.AddExtrudedSolidAlongPath(Profile._i, Path));
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public static Acad3DSolid AddRevolvedSolid(AcadBlock AcadBlock, AcadRegion Profile,
+			Point AxisPoint, object AxisDir, double Angle)
+        {
+            return new Acad3DSolid(AcadBlock._i.AddRevolvedSolid(Profile._i, Technical.PointByDynPoint(AxisPoint),
+				AxisDir, Angle));
+        }
 
         ///<summary>
         ///

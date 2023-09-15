@@ -151,15 +151,6 @@
     <Compile Include="ACAD\AcadSolid.cs" />
     <Compile Include="ACAD\AcadSortentsTable.cs" />
     <Compile Include="ACAD\AcadSpline.cs" />
-    <Compile Include="ACAD\AcadSubDMesh.cs" />
-    <Compile Include="ACAD\AcadSubDMeshEdge.cs" />
-    <Compile Include="ACAD\AcadSubDMeshFace.cs" />
-    <Compile Include="ACAD\AcadSubDMeshVertex.cs" />
-    <Compile Include="ACAD\AcadSubEntity.cs" />
-    <Compile Include="ACAD\AcadSubEntSolidEdge.cs" />
-    <Compile Include="ACAD\AcadSubEntSolidFace.cs" />
-    <Compile Include="ACAD\AcadSubEntSolidNode.cs" />
-    <Compile Include="ACAD\AcadSubEntSolidVertex.cs" />
     <Compile Include="ACAD\AcadSummaryInfo.cs" />
     <Compile Include="ACAD\AcadSurface.cs" />
     <Compile Include="ACAD\AcadSweptSurface.cs" />

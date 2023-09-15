@@ -85,89 +85,7 @@ namespace DynAXDBLib
 		}
 
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddEllipticalCone(object Center, double MajorRadius, double MinorRadius, double Height)
-		{
-			return this._i.AddEllipticalCone(Center, MajorRadius, MinorRadius, Height);
-		}
-
-		//
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddEllipticalCylinder(object Center, double MajorRadius, double MinorRadius, double Height)
-		{
-			return this._i.AddEllipticalCylinder(Center, MajorRadius, MinorRadius, Height);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddExtrudedSolid(dynamic Profile, double Height, double TaperAngle)
-		{
-			return this._i.AddExtrudedSolid(Profile, Height, TaperAngle);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddExtrudedSolidAlongPath(dynamic Profile, dynamic Path)
-		{
-			return this._i.AddExtrudedSolidAlongPath(Profile, Path);
-		}
-
-
-
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddRevolvedSolid(dynamic Profile, object AxisPoint, object AxisDir, double Angle)
-		{
-			return this._i.AddRevolvedSolid(Profile, AxisPoint, AxisDir, Angle);
-		}
-
 		
-
-		
-
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddTolerance(string Text, object InsertionPoint, object Direction)
-		{
-			return this._i.AddTolerance(Text, InsertionPoint, Direction);
-		}
-
-		
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddTrace(object PointsArray)
-		{
-			return this._i.AddTrace(PointsArray);
-		}
-
-		
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddXline(object Point1, object Point2)
-		{
-			return this._i.AddXline(Point1, Point2);
-		}
-
-		
-
-
-
-		
-
 		///<summary>
 		///
 		///</summary>
@@ -193,13 +111,7 @@ namespace DynAXDBLib
 
 		
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddMLine(object VertexList)
-		{
-			return this._i.AddMLine(VertexList);
-		}
+		
 
 
 		///<summary>
@@ -314,15 +226,6 @@ namespace DynAXDBLib
 		public bool IsDynamicBlock => this._i.IsDynamicBlock;
 
 		
-
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddSection(object FromPoint, object ToPoint, object planeVector)
-		{
-			return this._i.AddSection(FromPoint, ToPoint, planeVector);
-		}
 
 		
 	}

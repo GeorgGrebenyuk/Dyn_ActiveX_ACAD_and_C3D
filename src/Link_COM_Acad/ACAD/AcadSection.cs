@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Runtime.InteropServices.WindowsRuntime;
 
@@ -16,11 +17,30 @@ namespace DynAXDBLib
 			this._i = AcadSection_object as Autodesk.AutoCAD.Interop.Common.AcadSection;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadSection(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadSection;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        /// Create new Section
+        ///</summary>
+        public AcadSection(AcadBlock AcadBlock, Point FromPoint, Point ToPoint, Vector planeVector)
+        {
+            this._i =(Autodesk.AutoCAD.Interop.Common.AcadSection)AcadBlock._i.AddSection(
+                Technical.PointByDynPoint(FromPoint), Technical.PointByDynPoint(ToPoint), 
+			Technical.VectorByDynVector(planeVector));
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public string Name => this._i.Name;
+        ///<summary>
+        ///
+        ///</summary>
+        public string Name => this._i.Name;
 
 		///<summary>
 		///
@@ -170,18 +190,18 @@ namespace DynAXDBLib
 			this._i.Vertices = pVal;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object Coordinate(int Index) 
-		{
-			return this._i.Coordinate[Index];
-		}
+        ///<summary>
+        /// Get point by it's index from that object
+        ///</summary>
+        public Point Coordinate(int Index)
+        {
+            return Technical.PointByDynPoint(this._i.Coordinate[Index]);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Coordinate(int Index,object pVal) 
+        ///<summary>
+        ///
+        ///</summary>
+        public void Set_Coordinate(int Index,object pVal) 
 		{
             this._i.Coordinate[Index] = pVal;
 		}

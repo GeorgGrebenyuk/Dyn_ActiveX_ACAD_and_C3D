@@ -15,6 +15,24 @@ namespace DynAXDBLib
 			this._i = AcadTrace_object as Autodesk.AutoCAD.Interop.Common.AcadTrace;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+		/// Try cast from AcadEntity
+		/// </summary>
+		/// <param name="AcadEntity"></param>
+		/// <exception cref="System.Exception"></exception>
+		public AcadTrace(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadTrace;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+
+        ///<summary>
+        /// Create new Trace
+        ///</summary>
+        public AcadTrace(AcadBlock AcadBlock, List<Point> PointsArray)
+        {
+            this._i =  AcadBlock._i.AddTrace(Technical.PointsByDynPoints(PointsArray, true));
+        }
 
         ///<summary>
         /// Get all cordinates in that object as array of Points
@@ -64,11 +82,11 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        /// Set point by it's index to that object
         ///</summary>
-        public void Set_Coordinate(int Index,object pVal) 
-		{
-            this._i.Coordinate[Index] = pVal;
-		}
-	}
+        public void Set_Coordinate(int Index, Point pVal)
+        {
+            this._i.Coordinate[Index] = Technical.PointByDynPoint(pVal);
+        }
+    }
 }

@@ -88,11 +88,11 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        /// Set point by it's index to that object
         ///</summary>
-        public void Set_Coordinate(int Index,object pVal) 
-		{
-            this._i.Coordinate[Index] = pVal;
-		}
-	}
+        public void Set_Coordinate(int Index, Point pVal)
+        {
+            this._i.Coordinate[Index] = Technical.PointByDynPoint(pVal);
+        }
+    }
 }

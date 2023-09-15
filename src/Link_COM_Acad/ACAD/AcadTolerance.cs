@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +14,29 @@
 			this._i = AcadTolerance_object as Autodesk.AutoCAD.Interop.Common.AcadTolerance;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadTolerance(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadTolerance;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        /// Create new Tolerance
+        ///</summary>
+        public AcadTolerance(AcadBlock AcadBlock, string Text, Point InsertionPoint, Vector Direction)
+        {
+            this._i =  AcadBlock._i.AddTolerance(Text, Technical.PointByDynPoint(InsertionPoint),
+				Technical.VectorByDynVector(Direction));
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object DirectionVector => this._i.DirectionVector;
+        ///<summary>
+        ///
+        ///</summary>
+        public object DirectionVector => this._i.DirectionVector;
 
 		///<summary>
 		///
