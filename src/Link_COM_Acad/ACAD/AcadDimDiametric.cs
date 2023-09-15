@@ -71,12 +71,12 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsScale => this._i.AltUnitsScale;
+		public double AltUnitsScale => this._i.AltUnitsScale;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_AltUnitsScale(dynamic scale) 
+		public void Set_AltUnitsScale(double scale) 
 		{
 			this._i.AltUnitsScale = scale;
 		}
@@ -97,7 +97,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltTolerancePrecision => this._i.AltTolerancePrecision;
+		public object AltTolerancePrecision => this._i.AltTolerancePrecision;
 
 		///<summary>
 		///
@@ -110,7 +110,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsFormat => this._i.AltUnitsFormat;
+		public object AltUnitsFormat => this._i.AltUnitsFormat;
 
 		///<summary>
 		///
@@ -149,7 +149,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic DimensionLineColor => this._i.DimensionLineColor;
+		public object DimensionLineColor => this._i.DimensionLineColor;
 
 		///<summary>
 		///
@@ -162,7 +162,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic PrimaryUnitsPrecision => this._i.PrimaryUnitsPrecision;
+		public object PrimaryUnitsPrecision => this._i.PrimaryUnitsPrecision;
 
 		///<summary>
 		///
@@ -175,7 +175,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic FractionFormat => this._i.FractionFormat;
+		public object FractionFormat => this._i.FractionFormat;
 
 		///<summary>
 		///
@@ -188,7 +188,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Fit => this._i.Fit;
+		public object Fit => this._i.Fit;
 
 		///<summary>
 		///
@@ -201,7 +201,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic LinearScaleFactor => this._i.LinearScaleFactor;
+		public double LinearScaleFactor => this._i.LinearScaleFactor;
 
 		///<summary>
 		///
@@ -214,7 +214,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic UnitsFormat => this._i.UnitsFormat;
+		public object UnitsFormat => this._i.UnitsFormat;
 
 		///<summary>
 		///
@@ -500,7 +500,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic DimensionLineWeight => this._i.DimensionLineWeight;
+		public object DimensionLineWeight => this._i.DimensionLineWeight;
 
 		///<summary>
 		///
@@ -526,7 +526,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Arrowhead1Type => this._i.Arrowhead1Type;
+		public object Arrowhead1Type => this._i.Arrowhead1Type;
 
 		///<summary>
 		///
@@ -539,7 +539,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Arrowhead2Type => this._i.Arrowhead2Type;
+		public object Arrowhead2Type => this._i.Arrowhead2Type;
 
 		///<summary>
 		///

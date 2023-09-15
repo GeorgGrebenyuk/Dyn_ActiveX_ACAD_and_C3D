@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +14,30 @@
 			this._i = AcadDimRadial_object as Autodesk.AutoCAD.Interop.Common.IAcadDimRadial;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadDimRadial(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadDimRadial;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_LeaderLength(double rhs) 
+        ///<summary>
+        /// Create new AcadDimRadial
+        ///</summary>
+        public AcadDimRadial(AcadBlock AcadBlock, Point Center, Point ChordPoint, double LeaderLength)
+        {
+            this._i = AcadBlock._i.AddDimRadial(Technical.PointByDynPoint(Center),
+                Technical.PointByDynPoint(ChordPoint), LeaderLength);
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public void Set_LeaderLength(double rhs) 
 		{
 			this._i.LeaderLength = rhs;
 		}
@@ -37,7 +58,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsPrecision => this._i.AltUnitsPrecision;
+		public object AltUnitsPrecision => this._i.AltUnitsPrecision;
 
 		///<summary>
 		///
@@ -50,7 +71,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsScale => this._i.AltUnitsScale;
+		public double AltUnitsScale => this._i.AltUnitsScale;
 
 		///<summary>
 		///
@@ -76,7 +97,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltTolerancePrecision => this._i.AltTolerancePrecision;
+		public object AltTolerancePrecision => this._i.AltTolerancePrecision;
 
 		///<summary>
 		///
@@ -89,7 +110,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsFormat => this._i.AltUnitsFormat;
+		public object AltUnitsFormat => this._i.AltUnitsFormat;
 
 		///<summary>
 		///
@@ -128,7 +149,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic CenterType => this._i.CenterType;
+		public object CenterType => this._i.CenterType;
 
 		///<summary>
 		///
@@ -154,7 +175,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic DimensionLineColor => this._i.DimensionLineColor;
+		public object DimensionLineColor => this._i.DimensionLineColor;
 
 		///<summary>
 		///
@@ -167,7 +188,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic PrimaryUnitsPrecision => this._i.PrimaryUnitsPrecision;
+		public object PrimaryUnitsPrecision => this._i.PrimaryUnitsPrecision;
 
 		///<summary>
 		///
@@ -180,7 +201,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic FractionFormat => this._i.FractionFormat;
+		public object FractionFormat => this._i.FractionFormat;
 
 		///<summary>
 		///
@@ -193,7 +214,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Fit => this._i.Fit;
+		public object Fit => this._i.Fit;
 
 		///<summary>
 		///
@@ -206,7 +227,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic LinearScaleFactor => this._i.LinearScaleFactor;
+		public double LinearScaleFactor => this._i.LinearScaleFactor;
 
 		///<summary>
 		///
@@ -219,7 +240,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic UnitsFormat => this._i.UnitsFormat;
+		public object UnitsFormat => this._i.UnitsFormat;
 
 		///<summary>
 		///
@@ -466,7 +487,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic DimensionLineWeight => this._i.DimensionLineWeight;
+		public object DimensionLineWeight => this._i.DimensionLineWeight;
 
 		///<summary>
 		///
@@ -492,7 +513,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ArrowheadType => this._i.ArrowheadType;
+		public object ArrowheadType => this._i.ArrowheadType;
 
 		///<summary>
 		///

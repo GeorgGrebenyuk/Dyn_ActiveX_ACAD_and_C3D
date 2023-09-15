@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +14,30 @@
 			this._i = AcadDimRadialLarge_object as Autodesk.AutoCAD.Interop.Common.IAcadDimRadialLarge;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadDimRadialLarge(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadDimRadialLarge;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public bool AltUnits => this._i.AltUnits;
+        ///<summary>
+        ///Create DimRadialLarge
+        ///</summary>
+        public AcadDimRadialLarge(AcadBlock AcadBlock, Point Center, Point ChordPoint, Point OverrideCenter, Point JogPoint, double JogAngle)
+        {
+            this._i =  AcadBlock._i.AddDimRadialLarge(Technical.PointByDynPoint(Center),
+                Technical.PointByDynPoint(ChordPoint), Technical.PointByDynPoint(OverrideCenter),
+                Technical.PointByDynPoint(JogPoint), JogAngle);
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public bool AltUnits => this._i.AltUnits;
 
 		///<summary>
 		///
@@ -29,7 +50,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsPrecision => this._i.AltUnitsPrecision;
+		public object AltUnitsPrecision => this._i.AltUnitsPrecision;
 
 		///<summary>
 		///
@@ -42,12 +63,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsScale => this._i.AltUnitsScale;
+		public double AltUnitsScale => this._i.AltUnitsScale;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_AltUnitsScale(dynamic scale) 
+		public void Set_AltUnitsScale(double scale) 
 		{
 			this._i.AltUnitsScale = scale;
 		}
@@ -68,7 +89,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltTolerancePrecision => this._i.AltTolerancePrecision;
+		public object AltTolerancePrecision => this._i.AltTolerancePrecision;
 
 		///<summary>
 		///
@@ -81,7 +102,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsFormat => this._i.AltUnitsFormat;
+		public object AltUnitsFormat => this._i.AltUnitsFormat;
 
 		///<summary>
 		///
@@ -120,7 +141,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic CenterType => this._i.CenterType;
+		public object CenterType => this._i.CenterType;
 
 		///<summary>
 		///
@@ -146,7 +167,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic DimensionLineColor => this._i.DimensionLineColor;
+		public object DimensionLineColor => this._i.DimensionLineColor;
 
 		///<summary>
 		///
@@ -159,7 +180,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic PrimaryUnitsPrecision => this._i.PrimaryUnitsPrecision;
+		public object PrimaryUnitsPrecision => this._i.PrimaryUnitsPrecision;
 
 		///<summary>
 		///
@@ -172,7 +193,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic FractionFormat => this._i.FractionFormat;
+		public object FractionFormat => this._i.FractionFormat;
 
 		///<summary>
 		///
@@ -198,12 +219,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic LinearScaleFactor => this._i.LinearScaleFactor;
+		public double LinearScaleFactor => this._i.LinearScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_LinearScaleFactor(dynamic Type) 
+		public void Set_LinearScaleFactor(double Type) 
 		{
 			this._i.LinearScaleFactor = Type;
 		}

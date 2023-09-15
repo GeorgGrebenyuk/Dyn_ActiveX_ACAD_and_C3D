@@ -1,4 +1,5 @@
-﻿using System.CodeDom;
+﻿using Autodesk.DesignScript.Geometry;
+using System.CodeDom;
 using System.Collections.Generic;
 using dg = Autodesk.DesignScript.Geometry;
 
@@ -17,14 +18,25 @@ namespace DynAXDBLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public AcadEntity Item(object Index) 
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadBlock (AcadBlocks AcadBlocks, Point InsertionPoint, string Name)
+        {
+           this._i = AcadBlocks._i.Add(Technical.PointByDynPoint(InsertionPoint), Name);
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        private AcadEntity Item(object Index) 
 		{
 			return new AcadEntity( this._i.Item(Index));
 		}
-		public List<AcadEntity> GetAll()
+		/// <summary>
+		/// Getting all objects at that block
+		/// </summary>
+		/// <returns></returns>
+		public List<AcadEntity> GetObjects()
 		{
 			List<AcadEntity> es = new List<AcadEntity>();
 			foreach (var ent in this._i)
@@ -65,37 +77,13 @@ namespace DynAXDBLib
 		}
 
 		///<summary>
-		///
+		//
 		///</summary>
 		public AcadEntity AddCustomObject(string ClassName) 
 		{
 			return new AcadEntity(this._i.AddCustomObject(ClassName));
 		}
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddDimRotated(object ExtLine1Point, object ExtLine2Point, object DimLineLocation, double RotationAngle)
-		{
-			return this._i.AddDimRotated(ExtLine1Point, ExtLine2Point, DimLineLocation, RotationAngle);
-		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddDimOrdinate(object DefinitionPoint, object LeaderEndPoint, int UseXAxis)
-		{
-			return this._i.AddDimOrdinate(DefinitionPoint, LeaderEndPoint, UseXAxis);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddDimRadial(object Center, object ChordPoint, double LeaderLength)
-		{
-			return this._i.AddDimRadial(Center, ChordPoint, LeaderLength);
-		}
-
-		
 
 		///<summary>
 		///
@@ -132,21 +120,6 @@ namespace DynAXDBLib
 
 
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddRay(object Point1, object Point2)
-		{
-			return this._i.AddRay(Point1, Point2);
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public object AddRegion(object ObjectList)
-		{
-			return this._i.AddRegion(ObjectList);
-		}
 
 		///<summary>
 		///
@@ -203,7 +176,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Layout => this._i.Layout;
+		public AcadLayout Layout => new AcadLayout(this._i.Layout);
 
 		///<summary>
 		///
@@ -268,13 +241,7 @@ namespace DynAXDBLib
 			this._i.Detach();
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddTable(object InsertionPoint, int NumRows, int NumColumns, double RowHeight, double ColWidth)
-		{
-			return this._i.AddTable(InsertionPoint, NumRows, NumColumns, RowHeight, ColWidth);
-		}
+		
 
 		///<summary>
 		///
@@ -348,13 +315,6 @@ namespace DynAXDBLib
 
 		
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic AddDimRadialLarge(object Center, object ChordPoint, object OverrideCenter, object JogPoint, double JogAngle)
-		{
-			return this._i.AddDimRadialLarge(Center, ChordPoint, OverrideCenter, JogPoint, JogAngle);
-		}
 
 		///<summary>
 		///

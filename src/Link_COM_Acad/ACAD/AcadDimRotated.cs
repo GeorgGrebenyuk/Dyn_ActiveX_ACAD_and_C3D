@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +14,30 @@
 			this._i = AcadDimRotated_object as Autodesk.AutoCAD.Interop.Common.IAcadDimRotated;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadDimRotated(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadDimRotated;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+        ///<summary>
+        /// Create new DimRotated
+        ///</summary>
+        public AcadDimRotated(AcadBlock AcadBlock, Point ExtLine1Point,
+            Point ExtLine2Point, object DimLineLocation, double RotationAngle)
+        {
+            this._i = AcadBlock._i.AddDimRotated(Technical.PointByDynPoint(ExtLine1Point),
+                Technical.PointByDynPoint(ExtLine2Point), DimLineLocation, RotationAngle);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public bool AltUnits => this._i.AltUnits;
+        ///<summary>
+        ///
+        ///</summary>
+        public bool AltUnits => this._i.AltUnits;
 
 		///<summary>
 		///

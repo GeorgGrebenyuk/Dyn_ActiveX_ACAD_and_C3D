@@ -26,6 +26,15 @@ namespace DynAXDBLib
         }
 
         ///<summary>
+        /// Create new Ray
+        ///</summary>
+        public AcadRay (AcadBlock AcadBlock, Point Point1, Point Point2)
+        {
+            this._i = AcadBlock._i.AddRay(Technical.PointByDynPoint(Point1), Technical.PointByDynPoint(Point2));
+        }
+
+
+        ///<summary>
         ///
         ///</summary>
         public Point BasePoint => Technical.PointByDynPoint(this._i.BasePoint);

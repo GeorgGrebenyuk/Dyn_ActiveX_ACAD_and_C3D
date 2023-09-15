@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -13,10 +15,29 @@
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool AltUnits => this._i.AltUnits;
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadDimOrdinate(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadDimOrdinate;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadDimOrdinate (AcadBlock AcadBlock, Point DefinitionPoint, Point LeaderEndPoint, int UseXAxis)
+        {
+            this._i =  AcadBlock._i.AddDimOrdinate(Technical.PointByDynPoint(DefinitionPoint),
+                Technical.PointByDynPoint(LeaderEndPoint), UseXAxis);
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public bool AltUnits => this._i.AltUnits;
 
 		///<summary>
 		///
@@ -29,7 +50,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsPrecision => this._i.AltUnitsPrecision;
+		public object AltUnitsPrecision => this._i.AltUnitsPrecision;
 
 		///<summary>
 		///
@@ -42,12 +63,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsScale => this._i.AltUnitsScale;
+		public double AltUnitsScale => this._i.AltUnitsScale;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_AltUnitsScale(dynamic scale) 
+		public void Set_AltUnitsScale(double scale) 
 		{
 			this._i.AltUnitsScale = scale;
 		}
@@ -68,7 +89,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltTolerancePrecision => this._i.AltTolerancePrecision;
+		public object AltTolerancePrecision => this._i.AltTolerancePrecision;
 
 		///<summary>
 		///
@@ -81,7 +102,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic AltUnitsFormat => this._i.AltUnitsFormat;
+		public object AltUnitsFormat => this._i.AltUnitsFormat;
 
 		///<summary>
 		///
@@ -120,7 +141,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ExtensionLineColor => this._i.ExtensionLineColor;
+		public object ExtensionLineColor => this._i.ExtensionLineColor;
 
 		///<summary>
 		///
@@ -133,7 +154,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic PrimaryUnitsPrecision => this._i.PrimaryUnitsPrecision;
+		public object PrimaryUnitsPrecision => this._i.PrimaryUnitsPrecision;
 
 		///<summary>
 		///
@@ -146,7 +167,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic FractionFormat => this._i.FractionFormat;
+		public object FractionFormat => this._i.FractionFormat;
 
 		///<summary>
 		///
@@ -159,12 +180,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic LinearScaleFactor => this._i.LinearScaleFactor;
+		public double LinearScaleFactor => this._i.LinearScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_LinearScaleFactor(dynamic Type) 
+		public void Set_LinearScaleFactor(double Type) 
 		{
 			this._i.LinearScaleFactor = Type;
 		}
@@ -172,7 +193,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic UnitsFormat => this._i.UnitsFormat;
+		public object UnitsFormat => this._i.UnitsFormat;
 
 		///<summary>
 		///
@@ -185,7 +206,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ExtensionLineWeight => this._i.ExtensionLineWeight;
+		public object ExtensionLineWeight => this._i.ExtensionLineWeight;
 
 		///<summary>
 		///

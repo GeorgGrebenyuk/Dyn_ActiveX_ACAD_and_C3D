@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -20,18 +22,19 @@
 		{
 			return new AcadBlock(this._i.Item(Index));
 		}
+        public List<AcadBlock> GetObjects()
+        {
+            List<AcadBlock> es = new List<AcadBlock>();
+            foreach (var ent in this._i)
+            {
+                es.Add(new AcadBlock(ent));
+            }
+            return es;
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public int Count => this._i.Count;
 
-		///<summary>
-		///
-		///</summary>
-		public int Count => this._i.Count;
-
-		///<summary>
-		///
-		///</summary>
-		public AcadBlock Add(object InsertionPoint,string Name) 
-		{
-			return new AcadBlock(this._i.Add(InsertionPoint,Name));
-		}
 	}
 }

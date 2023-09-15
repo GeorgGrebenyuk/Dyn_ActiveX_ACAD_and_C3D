@@ -1,5 +1,6 @@
 ﻿using Autodesk.DesignScript.Geometry;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DynAXDBLib 
 {
@@ -24,6 +25,16 @@ namespace DynAXDBLib
         {
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadRegion;
             if (this._i == null) throw new System.Exception("Invalid casting");
+        }
+
+        /// <summary>
+        /// Create new Region from moel objects
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="ObjectList">array of Arc, Circle, Ellipse, Line, LWPolyline, Spline objects</param>
+        public AcadRegion(AcadBlock AcadBlock, List<dynamic> ObjectList)
+        {
+            this._i =  AcadBlock._i.AddRegion(ObjectList.Select(a=>a._i).ToArray());
         }
 
         ///<summary>

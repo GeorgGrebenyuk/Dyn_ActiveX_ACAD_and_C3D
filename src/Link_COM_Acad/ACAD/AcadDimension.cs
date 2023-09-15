@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,11 +14,21 @@
 			this._i = AcadDimension_object as Autodesk.AutoCAD.Interop.Common.IAcadDimension;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadDimension(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadDimension;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object Normal => this._i.Normal;
+        ///<summary>
+        ///
+        ///</summary>
+        public object Normal => this._i.Normal;
 
 		///<summary>
 		///
@@ -29,12 +41,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Rotation => this._i.Rotation;
+		public double Rotation => this._i.Rotation;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Rotation(dynamic rotAngle) 
+		public void Set_Rotation(double rotAngle) 
 		{
 			this._i.Rotation = rotAngle;
 		}
@@ -42,25 +54,25 @@
 		///<summary>
 		///
 		///</summary>
-		public object TextPosition => this._i.TextPosition;
+		public Point TextPosition => Technical.PointByDoubleArray(this._i.TextPosition);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_TextPosition(object textPos) 
+		public void Set_TextPosition(Point textPos) 
 		{
-			this._i.TextPosition = textPos;
+			this._i.TextPosition = Technical.PointByDynPoint(textPos);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic TextRotation => this._i.TextRotation;
+		public double TextRotation => this._i.TextRotation;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_TextRotation(dynamic rotAngle) 
+		public void Set_TextRotation(double rotAngle) 
 		{
 			this._i.TextRotation = rotAngle;
 		}
@@ -94,7 +106,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic TextColor => this._i.TextColor;
+		public object TextColor => this._i.TextColor;
 
 		///<summary>
 		///
@@ -172,7 +184,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic VerticalTextPosition => this._i.VerticalTextPosition;
+		public object VerticalTextPosition => this._i.VerticalTextPosition;
 
 		///<summary>
 		///
@@ -185,7 +197,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic TolerancePrecision => this._i.TolerancePrecision;
+		public object TolerancePrecision => this._i.TolerancePrecision;
 
 		///<summary>
 		///
@@ -198,12 +210,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ToleranceHeightScale => this._i.ToleranceHeightScale;
+		public double ToleranceHeightScale => this._i.ToleranceHeightScale;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_ToleranceHeightScale(dynamic scale) 
+		public void Set_ToleranceHeightScale(double scale) 
 		{
 			this._i.ToleranceHeightScale = scale;
 		}
@@ -224,7 +236,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic TextMovement => this._i.TextMovement;
+		public object TextMovement => this._i.TextMovement;
 
 		///<summary>
 		///
@@ -237,7 +249,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ToleranceDisplay => this._i.ToleranceDisplay;
+		public object ToleranceDisplay => this._i.ToleranceDisplay;
 
 		///<summary>
 		///
@@ -250,7 +262,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic ToleranceJustification => this._i.ToleranceJustification;
+		public object ToleranceJustification => this._i.ToleranceJustification;
 
 		///<summary>
 		///
@@ -367,7 +379,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic TextFillColor => this._i.TextFillColor;
+		public object TextFillColor => this._i.TextFillColor;
 
 		///<summary>
 		///

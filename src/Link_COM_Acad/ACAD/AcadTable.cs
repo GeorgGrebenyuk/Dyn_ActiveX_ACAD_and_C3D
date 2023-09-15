@@ -26,7 +26,15 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadTable;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-
+        ///<summary>
+        /// Create new Table
+        ///</summary>
+        public AcadTable(AcadBlock AcadBlock, Point InsertionPoint, int NumRows, int NumColumns, 
+			double RowHeight, double ColWidth)
+        {
+            this._i =  AcadBlock._i.AddTable(Technical.PointByDynPoint(InsertionPoint), NumRows,
+				NumColumns, RowHeight, ColWidth);
+        }
         ///<summary>
         ///
         ///</summary>
