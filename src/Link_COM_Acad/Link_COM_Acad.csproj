@@ -22,6 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\Link_COM_Acad.xml</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -180,4 +181,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)$(ProjectName).dll" "C:\Users\user\AppData\Roaming\Autodesk\C3D 2023\Dynamo\2.13\packages\Link_COM_Acad\bin\$(ProjectName).dll"
+copy "$(TargetDir)$(ProjectName).xml" "C:\Users\user\AppData\Roaming\Autodesk\C3D 2023\Dynamo\2.13\packages\Link_COM_Acad\bin\$(ProjectName).xml"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

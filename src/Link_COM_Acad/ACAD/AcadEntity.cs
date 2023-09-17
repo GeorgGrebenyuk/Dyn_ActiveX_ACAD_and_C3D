@@ -34,10 +34,20 @@ namespace DynAXDBLib
 			catch { }
             throw new Exception("Invalid castings");
         }
-
-		public static AcadEntity SelectSingle(AcadDocument acadDocument)
+		/// <summary>
+		/// Get entities that select in AutoCAD drawing
+		/// </summary>
+		/// <param name="acadDocument"></param>
+		/// <returns></returns>
+		public static List<AcadEntity> SelectEntities (AcadDocument acadDocument)
 		{
-			return new AcadEntity(acadDocument._i.ActiveSelectionSet.Item(0));
+			List<AcadEntity> es = new List<AcadEntity>();
+			foreach (var e in acadDocument._i.ActiveSelectionSet)
+			{
+				es.Add(new AcadEntity(e));
+			}
+
+            return es;
         }
 
         ///<summary>

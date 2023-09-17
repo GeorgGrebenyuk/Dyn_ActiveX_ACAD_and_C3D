@@ -1,0 +1,444 @@
+{
+  "Uuid": "9acafebd-7065-459a-b47a-fb3a5865075a",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "DEBUG_AcadSolids_1",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynAXDBLib.AcadApplication.AcadApplication@string",
+      "Id": "132fe855f499421c9f747a166866ef9c",
+      "Inputs": [
+        {
+          "Id": "95f8f8e8c86540b08a4f8a90decf1303",
+          "Name": "progID",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "97eb9194f38342aab2c7a7a1f40ee583",
+          "Name": "AcadApplication",
+          "Description": "AcadApplication",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Use AcadApplicationVersions to get progID data\n\nAcadApplication.AcadApplication (progID: string): AcadApplication"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynAXDBLib.AcadApplication.AcadApplicationVersions",
+      "Id": "18ca94240c4a4d7d9faabe6d96188ef4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "255f9e7c3980484dbd1e50043e8a06ae",
+          "Name": "AutoCAD 2010",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ece60deb51e94a0ba98b8d010ba0341f",
+          "Name": "AutoCAD 2011",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bdcf09001e00490481f4cf871295e273",
+          "Name": "AutoCAD 2012",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c685ec5d7b5741d09c88602124555e21",
+          "Name": "AutoCAD 2013",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7caaea2cb9e54dcea8c129bca6e16dd0",
+          "Name": "AutoCAD 2014",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a5c7fc361137421a93ba660959430ad1",
+          "Name": "AutoCAD 2015",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "19e3e463e0c04a0d90827cebe1d16347",
+          "Name": "AutoCAD 2016",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8fa14182f2874fdaaeb214ebab289dba",
+          "Name": "AutoCAD 2017",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "47397d92b44941f0b9c64b8d31ec1695",
+          "Name": "AutoCAD 2018",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f96f5be91c3649ba8006390d0fcd6ac3",
+          "Name": "AutoCAD 2019",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9e9fcd64aaa44173b62cb1949b08f6d5",
+          "Name": "AutoCAD 2020",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "491841ff96fd4e29ab8eb1ac13899043",
+          "Name": "AutoCAD 2021",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b640e3639a2842c8baab601b4f57ea37",
+          "Name": "AutoCAD 2022",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ef57b9324b2d47d98420ac52b88dc6ed",
+          "Name": "AutoCAD 2023",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d22cb7bbc0e14831b7be1942ab26f57c",
+          "Name": "AutoCAD 2024",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "AcadApplication.AcadApplicationVersions ( ): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynAXDBLib.AcadApplication.ActiveDocument",
+      "Id": "b35d945378e3487db7ae3941cc5c75ab",
+      "Inputs": [
+        {
+          "Id": "a3ed39cc83b3426a81475fbab94e570e",
+          "Name": "acadApplication",
+          "Description": "DynAXDBLib.AcadApplication",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "12bffddec514430f9b78de165c1aee78",
+          "Name": "AcadDocument",
+          "Description": "AcadDocument",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "AcadApplication.ActiveDocument: AcadDocument"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynAXDBLib.AcadEntity.SelectEntities@DynAXDBLib.AcadDocument",
+      "Id": "f7e0c20d9ab54a8196b764617698f60b",
+      "Inputs": [
+        {
+          "Id": "57710edf86d34d14ad843fc40920fecb",
+          "Name": "acadDocument",
+          "Description": "AcadDocument",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4b285628977f4183b7e358c832e4549b",
+          "Name": "AcadEntity[]",
+          "Description": "AcadEntity[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get entities that select in AutoCAD drawing\n\nAcadEntity.SelectEntities (acadDocument: AcadDocument): AcadEntity[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynAXDBLib.AcadSolid.AcadSolid@DynAXDBLib.AcadEntity",
+      "Id": "4b1030e34d6d4dc29697379e72fea25b",
+      "Inputs": [
+        {
+          "Id": "d7ee790e396e4fcca2891d58adde7394",
+          "Name": "AcadEntity",
+          "Description": "AcadEntity",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a199c6439d6748c98aa5a051823f7ce4",
+          "Name": "AcadSolid",
+          "Description": "AcadSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Try cast from AcadEntity\n\nAcadSolid.AcadSolid (AcadEntity: AcadEntity): AcadSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynAXDBLib.AcadSolid.Coordinates",
+      "Id": "b6c6a6859ab047a5ae5169c9165833a3",
+      "Inputs": [
+        {
+          "Id": "7fd60347910942048b5441d3b96fccc6",
+          "Name": "acadSolid",
+          "Description": "DynAXDBLib.AcadSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3690fc26e2f24fbabcddd40493cf7455",
+          "Name": "Point[]",
+          "Description": "Point[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get all cordinates in that object as array of Points\n\nAcadSolid.Coordinates: Point[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "97eb9194f38342aab2c7a7a1f40ee583",
+      "End": "a3ed39cc83b3426a81475fbab94e570e",
+      "Id": "d9e3cec015e24cf7bc7d8696ba0eba2e"
+    },
+    {
+      "Start": "ef57b9324b2d47d98420ac52b88dc6ed",
+      "End": "95f8f8e8c86540b08a4f8a90decf1303",
+      "Id": "7fd3c07bd3024ccebe7f9533b3bfdcd8"
+    },
+    {
+      "Start": "12bffddec514430f9b78de165c1aee78",
+      "End": "57710edf86d34d14ad843fc40920fecb",
+      "Id": "7fddf681330640fdb1c7b0477cd6b0e1"
+    },
+    {
+      "Start": "4b285628977f4183b7e358c832e4549b",
+      "End": "d7ee790e396e4fcca2891d58adde7394",
+      "Id": "2640124601a64935aff55dd6a2e58fbd"
+    },
+    {
+      "Start": "a199c6439d6748c98aa5a051823f7ce4",
+      "End": "7fd60347910942048b5441d3b96fccc6",
+      "Id": "412dd3ffa50e409187083a3413486dc4"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Нет",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.12.1.8246",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Фоновый просмотр",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "AcadApplication.AcadApplication",
+        "Id": "132fe855f499421c9f747a166866ef9c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 374.0,
+        "Y": 384.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "AcadApplication.AcadApplicationVersions",
+        "Id": "18ca94240c4a4d7d9faabe6d96188ef4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 58.0,
+        "Y": 44.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "AcadApplication.ActiveDocument",
+        "Id": "b35d945378e3487db7ae3941cc5c75ab",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 678.0,
+        "Y": 384.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "AcadEntity.SelectEntities",
+        "Id": "f7e0c20d9ab54a8196b764617698f60b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1070.0,
+        "Y": 385.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "AcadSolid.AcadSolid",
+        "Id": "4b1030e34d6d4dc29697379e72fea25b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1435.0,
+        "Y": 387.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "AcadSolid.Coordinates",
+        "Id": "b6c6a6859ab047a5ae5169c9165833a3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1751.0,
+        "Y": 389.0
+      }
+    ],
+    "Annotations": [],
+    "X": -1276.0,
+    "Y": -88.0,
+    "Zoom": 1.0
+  }
+}
