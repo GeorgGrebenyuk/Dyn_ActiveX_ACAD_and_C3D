@@ -31,16 +31,11 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic key => this._i.key;
+		public long key => this._i.key;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Value => this._i.Value;
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic Application => this._i.Application;
+		public long Value => this._i.Value;
 	}
 }

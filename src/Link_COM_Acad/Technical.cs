@@ -13,9 +13,11 @@ namespace DynAXDBLib
     public static class Technical
     {
         public static string Exc_invalid_casting = "Invalid casting";
-        public static double[] PointByDynPoint(dg.Point p)
+        public static double[] PointByDynPoint(dg.Point p, bool is_planar = false)
         {
-            return new double [] {  p.X, p.Y, p.Z };
+            if (!is_planar) return new double[] { p.X, p.Y, p.Z };
+            else return new double[] { p.X, p.Y };
+
         }
         public static double[] VectorByDynVector(dg.Vector v)
         {
@@ -58,8 +60,10 @@ namespace DynAXDBLib
                 var p = PointByDynPoint(point);
                 ps[counter] = p[0];
                 ps[counter + 1] = p[1];
-                ps[counter + 2] = p[2];
-                counter += 3;
+                if (is_planar) ps[counter + 2] = p[2];
+
+                if (!is_planar) counter += 3;
+                else counter += 2;
             }
             return ps.ToArray();
         }

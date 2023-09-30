@@ -52,14 +52,14 @@ namespace DynAXDBLib
         }
 
         ///<summary>
+        /// Get the Normal vector from that object
+        ///</summary>
+        public Vector Normal => Technical.VectorByDoubleArray(this._i.Normal);
+
+        ///<summary>
         ///
         ///</summary>
-        public object Normal => this._i.Normal;
-
-		///<summary>
-		///
-		///</summary>
-		public string StyleName => this._i.StyleName;
+        public string StyleName => this._i.StyleName;
 
 		///<summary>
 		///

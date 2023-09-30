@@ -15,13 +15,6 @@ namespace DynAXDBLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
-		///<summary>
-		///
-		///</summary>
-		private dynamic Item(object Index) 
-		{
-			return this._i.Item(Index);
-		}
 		/// <summary>
 		/// Get all layers in document
 		/// </summary>

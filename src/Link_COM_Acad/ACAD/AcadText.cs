@@ -177,24 +177,23 @@ namespace DynAXDBLib
 		{
 			this._i.InsertionPoint = insPoint;
 		}
+        ///<summary>
+        /// Get the Normal vector from that object
+        ///</summary>
+        public Vector Normal => Technical.VectorByDoubleArray(this._i.Normal);
 
-		///<summary>
-		///
-		///</summary>
-		public object Normal => this._i.Normal;
+        ///<summary>
+        /// Set Normal to that object by Dynamo vector
+        ///</summary>
+        public void Set_Normal(Vector Normal)
+        {
+            this._i.Normal = Technical.VectorByDynVector(Normal);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Normal(object Normal) 
-		{
-			this._i.Normal = Normal;
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic TextGenerationFlag => this._i.TextGenerationFlag;
+        ///<summary>
+        ///
+        ///</summary>
+        public dynamic TextGenerationFlag => this._i.TextGenerationFlag;
 
 		///<summary>
 		///

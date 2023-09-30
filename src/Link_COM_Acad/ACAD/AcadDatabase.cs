@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using dr = Autodesk.DesignScript.Runtime;
 
 namespace DynAXDBLib 
 {
@@ -14,6 +17,10 @@ namespace DynAXDBLib
 			this._i = AcadDatabase_object as Autodesk.AutoCAD.Interop.Common.AcadDatabase;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+		/// <summary>
+		/// Getting AcadDatabase from Document
+		/// </summary>
+		/// <param name="AcadDocument"></param>
 		public AcadDatabase (AcadDocument AcadDocument)
 		{
 			this._i = AcadDocument._i.Database;
@@ -34,12 +41,21 @@ namespace DynAXDBLib
         ///</summary>
         public AcadBlocks Blocks => new AcadBlocks(this._i.Blocks);
 
-		///<summary>
-		///
-		///</summary>
-		public object CopyObjects(object Objects,object Owner,object IdPairs) 
+        ///<summary>
+        /// Create a copy of each object in objects list and return AcadIdPair objects (old and new ObjectId)
+        ///</summary>
+        [dr.MultiReturn(new[] { "Copied_entities", "Result_AcadIdPairs" })]
+        public Dictionary<string, object> CopyObjects(List<AcadEntity> Objects, AcadBlock Owner) 
 		{
-			return this._i.CopyObjects(Objects,Owner,IdPairs);
+			List<AcadEntity> copied_ents;
+			object IdPairs_raw = new object[Objects.Count];
+            var ents = this._i.CopyObjects(Objects.Select(o=>o._i).ToArray(),Owner._i, ref IdPairs_raw);
+
+			return new Dictionary<string, object>()
+			{
+				{"Copied_entities", ((Array)ents).Cast<object>().Select(e=> new AcadEntity(e)).ToList() },
+                {"Result_AcadIdPairs", ((Array)IdPairs_raw).Cast<object>().Select(e=> new AcadIdPair(e)).ToList() }
+            };
 		}
 
 		///<summary>
@@ -50,7 +66,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic DimStyles => this._i.DimStyles;
+		public AcadDimStyles DimStyles => new AcadDimStyles(this._i.DimStyles);
 
 		///<summary>
 		///
@@ -122,28 +138,28 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public object Limits => this._i.Limits;
+		public double[] Limits => ((Array)this._i.Limits).Cast<double>().ToArray();
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Limits(object Limits) 
+		public void Set_Limits(double[] Limits) 
 		{
 			this._i.Limits = Limits;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public AcadEntity HandleToObject(string Handle) 
+        ///<summary>
+        /// Get an AcadEntity by it's Handle (any DynamoObject.Handle)
+        ///</summary>
+        public AcadEntity HandleToObject(string Handle) 
 		{
 			return new AcadEntity(this._i.HandleToObject(Handle));
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public AcadEntity ObjectIdToObject(dynamic ObjectID) 
+        ///<summary>
+        /// Get an AcadEntity by it's ObjectId (from f.e. Python-script with AutoCAD .NET API)
+        ///</summary>
+        public AcadEntity ObjectIdToObject(dynamic ObjectID) 
 		{
 			return new AcadEntity(this._i.ObjectIdToObject(ObjectID));
 		}

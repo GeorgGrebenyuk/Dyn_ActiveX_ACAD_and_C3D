@@ -14,11 +14,27 @@ namespace DynAXDBLib
 			this._i = AcadViewport_object as Autodesk.AutoCAD.Interop.Common.AcadViewport;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        ///<summary>
+        /// Create new AcadViewport
+        ///</summary>
+        public AcadViewport(AcadViewports AcadViewports, string Name)
+        {
+            this._i = AcadViewports._i.Add(Name);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object Center => this._i.Center;
+        ///<summary>
+        /// Delete this AcadViewport
+        ///</summary>
+        public void DeleteConfiguration(AcadViewports AcadViewports, string Name)
+        {
+            AcadViewports._i.DeleteConfiguration(Name);
+        }
+
+
+        ///<summary>
+        ///
+        ///</summary>
+        public object Center => this._i.Center;
 
 		///<summary>
 		///

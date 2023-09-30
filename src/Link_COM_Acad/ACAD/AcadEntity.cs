@@ -1,4 +1,5 @@
-﻿using Autodesk.DesignScript.Geometry;
+﻿using Autodesk.AutoCAD.Interop.Common;
+using Autodesk.DesignScript.Geometry;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace DynAXDBLib
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadEntity _i;
         
-        internal AcadEntity(object AcadEntity_object, int i = 0) 
+        internal AcadEntity(object AcadEntity_object) 
 		{
 			this._i = AcadEntity_object as Autodesk.AutoCAD.Interop.Common.AcadEntity;
 			if (this._i == null) throw new System.Exception("Invalid casting");
@@ -23,13 +24,13 @@ namespace DynAXDBLib
         /// Cast to AcadEntity from any object
         /// </summary>
         /// <param name="AnyModelObject"></param>
-        public static AcadEntity CastFromAnyObject (dynamic AnyModelObject)
+        public static AcadEntity ByAnyObject (dynamic AnyModelObject)
 		{
 			try
 			{
 				var casted_interface = AnyModelObject._i as Autodesk.AutoCAD.Interop.Common.AcadEntity;
 				if (casted_interface == null) throw new Exception("Invalid castings");
-				return new AcadEntity(casted_interface);
+                return new AcadEntity(casted_interface);
 			}
 			catch { }
             throw new Exception("Invalid castings");
@@ -42,7 +43,7 @@ namespace DynAXDBLib
 		public static List<AcadEntity> SelectEntities (AcadDocument acadDocument)
 		{
 			List<AcadEntity> es = new List<AcadEntity>();
-			foreach (var e in acadDocument._i.ActiveSelectionSet)
+			foreach (AcadEntity e in acadDocument._i.ActiveSelectionSet)
 			{
 				es.Add(new AcadEntity(e));
 			}

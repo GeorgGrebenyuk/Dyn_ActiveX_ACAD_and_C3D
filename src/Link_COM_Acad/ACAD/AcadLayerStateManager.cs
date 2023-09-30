@@ -32,7 +32,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Mask(string bsName) 
+		public object Mask(string bsName) 
 		{
 			return this._i.Mask[bsName];
 		}

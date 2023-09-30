@@ -24,22 +24,8 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Count => this._i.Count;
+		public int Count => this._i.Count;
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Add(string Name) 
-		{
-			return this._i.Add(Name);
-		}
 
-		///<summary>
-		///
-		///</summary>
-		public void DeleteConfiguration(string Name) 
-		{
-			this._i.DeleteConfiguration(Name);
-		}
 	}
 }

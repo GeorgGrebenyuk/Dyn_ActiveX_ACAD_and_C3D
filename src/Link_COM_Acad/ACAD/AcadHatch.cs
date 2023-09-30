@@ -1,5 +1,9 @@
 ﻿
 using Autodesk.AutoCAD.Interop.Common;
+using Autodesk.DesignScript.Geometry;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DynAXDBLib 
 {
@@ -28,28 +32,29 @@ namespace DynAXDBLib
 		///<summary>
 		/// Create new hatch object
 		///</summary>
-		public AcadHatch (dynamic AcadBlock, int PatternType, string PatternName, bool Associativity, AcHatchObjectType HatchObjectType)
+		public AcadHatch (dynamic AcadBlock, int PatternType, string PatternName, 
+			bool Associativity, AcHatchObjectType HatchObjectType)
 		{
 			this._i = AcadBlock._i.AddHatch(PatternType, PatternName, Associativity, HatchObjectType);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object Normal => this._i.Normal;
+        ///<summary>
+        /// Get the Normal vector from that object
+        ///</summary>
+        public Vector Normal => Technical.VectorByDoubleArray(this._i.Normal);
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Normal(object Normal) 
-		{
-			this._i.Normal = Normal;
-		}
+        ///<summary>
+        /// Set Normal to that object by Dynamo vector
+        ///</summary>
+        public void Set_Normal(Vector Normal)
+        {
+            this._i.Normal = Technical.VectorByDynVector(Normal);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public int NumberOfLoops => this._i.NumberOfLoops;
+        ///<summary>
+        ///
+        ///</summary>
+        public int NumberOfLoops => this._i.NumberOfLoops;
 
 		///<summary>
 		///
@@ -176,36 +181,35 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public void AppendOuterLoop(object ObjectArray) 
+		public void AppendOuterLoop(List<AcadEntity> ObjectArray) 
 		{
-			this._i.AppendOuterLoop(ObjectArray);
+			this._i.AppendOuterLoop(ObjectArray.Select(e=>e._i).ToArray());
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void AppendInnerLoop(object ObjectArray) 
+		public void AppendInnerLoop(List<AcadEntity> ObjectArray) 
 		{
-			this._i.AppendInnerLoop(ObjectArray);
+			this._i.AppendInnerLoop(ObjectArray.Select(e => e._i).ToArray());
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void InsertLoopAt(int Index,Autodesk.AutoCAD.Interop.Common.AcLoopType LoopType,object ObjectArray) 
+		public void InsertLoopAt(int Index,Autodesk.AutoCAD.Interop.Common.AcLoopType LoopType, List<AcadEntity> ObjectArray) 
 		{
-			this._i.InsertLoopAt(Index,LoopType,ObjectArray);
+			this._i.InsertLoopAt(Index,LoopType, ObjectArray.Select(e => e._i).ToArray());
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public object GetLoopAt(int Index) 
+		public List<AcadEntity> GetLoopAt(int Index) 
 		{
 			object out_info;
 			this._i.GetLoopAt(Index,out out_info);
-			return out_info;
-
+            return ((Array)out_info).Cast<object>().Select(e=> new AcadEntity(e)).ToList();
         }
 
 		///<summary>
@@ -219,33 +223,33 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public object GradientColor1 => this._i.GradientColor1;
+		public AcadAcCmColor GradientColor1 => new AcadAcCmColor (this._i.GradientColor1);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_GradientColor1(dynamic pColor) 
+		public void Set_GradientColor1(AcadAcCmColor pColor) 
 		{
-			this._i.GradientColor1 = pColor;
+			this._i.GradientColor1 = pColor._i;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object GradientColor2 => this._i.GradientColor2;
+        ///<summary>
+        ///
+        ///</summary>
+        public AcadAcCmColor GradientColor2 => new AcadAcCmColor(this._i.GradientColor2);
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_GradientColor2(dynamic pColor) 
-		{
-			this._i.GradientColor2 = pColor;
-		}
+        ///<summary>
+        ///
+        ///</summary>
+		public void Set_GradientColor2(AcadAcCmColor pColor)
+        {
+            this._i.GradientColor2 = pColor._i;
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public double GradientAngle => this._i.GradientAngle;
+        ///<summary>
+        ///
+        ///</summary>
+        public double GradientAngle => this._i.GradientAngle;
 
 		///<summary>
 		///
@@ -302,27 +306,27 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public object Origin => this._i.Origin;
+		public Point Origin => Technical.PointByDoubleArray(this._i.Origin);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Origin(object Origin) 
+		public void Set_Origin(Point Origin) 
 		{
-			this._i.Origin = Origin;
+			this._i.Origin = Technical.PointByDynPoint(Origin);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public object BackgroundColor => this._i.BackgroundColor;
+		public AcadAcCmColor BackgroundColor => new AcadAcCmColor(this._i.BackgroundColor);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_BackgroundColor(dynamic pColor) 
+		public void Set_BackgroundColor(AcadAcCmColor pColor) 
 		{
-			this._i.BackgroundColor = pColor;
+			this._i.BackgroundColor = pColor._i;
 		}
 	}
 }

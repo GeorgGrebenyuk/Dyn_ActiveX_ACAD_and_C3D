@@ -22,6 +22,10 @@ namespace DynAXDBLib
 		{
 			return new AcadLayout(this._i.Item(Index));
 		}
+		/// <summary>
+		/// Get all layouts in drawing
+		/// </summary>
+		/// <returns></returns>
 		public List<AcadLayout> GetLayouts()
 		{
 			List<AcadLayout> ls = new List<AcadLayout>();

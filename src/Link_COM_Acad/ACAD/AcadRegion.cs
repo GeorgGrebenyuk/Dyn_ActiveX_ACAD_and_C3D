@@ -52,15 +52,15 @@ namespace DynAXDBLib
 		///</summary>
 		public object MomentOfInertia => this._i.MomentOfInertia;
 
-		///<summary>
-		///
-		///</summary>
-		public object Normal => this._i.Normal;
+        ///<summary>
+        /// Get the Normal vector from that object
+        ///</summary>
+        public Vector Normal => Technical.VectorByDoubleArray(this._i.Normal);
 
-		///<summary>
-		///
-		///</summary>
-		public double Perimeter => this._i.Perimeter;
+        ///<summary>
+        ///
+        ///</summary>
+        public double Perimeter => this._i.Perimeter;
 
 		///<summary>
 		///

@@ -48,22 +48,22 @@ namespace DynAXDBLib
         }
 
         ///<summary>
+        /// Get the Normal vector from that object
+        ///</summary>
+        public Vector Normal => Technical.VectorByDoubleArray(this._i.Normal);
+
+        ///<summary>
+        /// Set Normal to that object by Dynamo vector
+        ///</summary>
+        public void Set_Normal(Vector Normal)
+        {
+            this._i.Normal = Technical.VectorByDynVector(Normal);
+        }
+
+        ///<summary>
         ///
         ///</summary>
-        public object Normal => this._i.Normal;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_Normal(object Normal) 
-		{
-			this._i.Normal = Normal;
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public double Thickness => this._i.Thickness;
+        public double Thickness => this._i.Thickness;
 
 		///<summary>
 		///
@@ -78,7 +78,7 @@ namespace DynAXDBLib
 		///</summary>
 		public void AddVertex(int Index, Point vertex) 
 		{
-			this._i.AddVertex(Index,Technical.PointByDynPoint(vertex));
+			this._i.AddVertex(Index,Technical.PointByDynPoint(vertex, true));
 		}
 
         ///<summary>
@@ -174,7 +174,7 @@ namespace DynAXDBLib
         ///</summary>
         public void Set_Coordinate(int Index, Point pVal)
         {
-            this._i.Coordinate[Index] = Technical.PointByDynPoint(pVal);
+            this._i.Coordinate[Index] = Technical.PointByDynPoint(pVal, true);
         }
 
         ///<summary>

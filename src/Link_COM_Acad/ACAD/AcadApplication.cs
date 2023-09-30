@@ -17,6 +17,9 @@ using System.Runtime.Remoting.Activation;
 
 namespace DynAXDBLib
 {
+    /// <summary>
+    /// Root clas for wotk with AutoCAD application's instance
+    /// </summary>
     public class AcadApplication
     {
         public Autodesk.AutoCAD.Interop.IAcadApplication _i;
@@ -38,6 +41,10 @@ namespace DynAXDBLib
             if (check_app != null) this._i = check_app;
         }
 
+        /// <summary>
+        /// Get ProgID identificators for AutoCAD 2010-2024. Old versions may be no supported
+        /// </summary>
+        /// <returns></returns>
         [dr.MultiReturn(new [] { "AutoCAD 2010", "AutoCAD 2011", "AutoCAD 2012", "AutoCAD 2013", "AutoCAD 2014", 
             "AutoCAD 2015", "AutoCAD 2016", "AutoCAD 2017", "AutoCAD 2018", "AutoCAD 2019", 
             "AutoCAD 2020", "AutoCAD 2021", "AutoCAD 2022", "AutoCAD 2023", "AutoCAD 2024" })]
@@ -65,7 +72,10 @@ namespace DynAXDBLib
             this._i.Update();
         }
         public string Caption => this._i.Caption;
-
+        /// <summary>
+        /// Get all opended documents in that app's session
+        /// </summary>
+        /// <returns></returns>
         public List<AcadDocument> Documents()
         {
             var docs_row = this._i.Documents;
@@ -77,6 +87,9 @@ namespace DynAXDBLib
             return docs;
 
         }
+        /// <summary>
+        /// Get active drawing if it exists
+        /// </summary>
         public AcadDocument ActiveDocument => new AcadDocument(this._i.ActiveDocument);
         public void Set_ActiveDocument(AcadDocument AcadDocument) => this._i.ActiveDocument = AcadDocument._i;
         #region getting_processes_ROT

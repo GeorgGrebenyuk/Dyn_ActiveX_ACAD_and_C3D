@@ -163,23 +163,23 @@ namespace DynAXDBLib
 		///</summary>
 		public object MinorAxis => this._i.MinorAxis;
 
-		///<summary>
-		///
-		///</summary>
-		public object Normal => this._i.Normal;
+        ///<summary>
+        /// Get the Normal vector from that object
+        ///</summary>
+        public Vector Normal => Technical.VectorByDoubleArray(this._i.Normal);
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Normal(object Normal) 
-		{
-			this._i.Normal = Normal;
-		}
+        ///<summary>
+        /// Set Normal to that object by Dynamo vector
+        ///</summary>
+        public void Set_Normal(Vector Normal)
+        {
+            this._i.Normal = Technical.VectorByDynVector(Normal);
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public double Area => this._i.Area;
+        ///<summary>
+        ///
+        ///</summary>
+        public double Area => this._i.Area;
 
 		///<summary>
 		///

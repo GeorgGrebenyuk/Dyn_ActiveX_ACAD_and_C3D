@@ -89,15 +89,15 @@ namespace DynAXDBLib
 			this._i.VerticalDirection = pVal;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object Normal => this._i.Normal;
+        ///<summary>
+        /// Get the Normal vector from that object
+        ///</summary>
+        public Vector Normal => Technical.VectorByDoubleArray(this._i.Normal);
 
-		///<summary>
-		///
-		///</summary>
-		public bool LiveSectionEnabled => this._i.LiveSectionEnabled;
+        ///<summary>
+        ///
+        ///</summary>
+        public bool LiveSectionEnabled => this._i.LiveSectionEnabled;
 
 		///<summary>
 		///

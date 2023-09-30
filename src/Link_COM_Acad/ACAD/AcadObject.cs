@@ -10,7 +10,7 @@ namespace DynAXDBLib
 	public class AcadObject 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadObject _i;
-		internal AcadObject(object AcadObject_object, int i = 0) 
+		internal AcadObject(object AcadObject_object) 
 		{
 			this._i = AcadObject_object as Autodesk.AutoCAD.Interop.Common.AcadObject;
 			if (this._i == null) throw new System.Exception("Invalid casting");
@@ -19,14 +19,16 @@ namespace DynAXDBLib
         /// Cast to AcadObject from any object
         /// </summary>
         /// <param name="AnyModelObject"></param>
-        public AcadObject(dynamic AnyModelObject)
+        public static AcadObject ByAnyObject(dynamic AnyModelObject)
         {
             try
             {
-                this._i = AnyModelObject._i as Autodesk.AutoCAD.Interop.Common.AcadObject;
-                if (this._i == null) throw new Exception("Invalid castings");
+                var casted_interface = AnyModelObject._i as Autodesk.AutoCAD.Interop.Common.AcadObject;
+                if (casted_interface == null) throw new Exception("Invalid castings");
+                return new AcadObject(casted_interface);
             }
             catch { }
+            throw new Exception("Invalid castings");
         }
 
         ///<summary>
