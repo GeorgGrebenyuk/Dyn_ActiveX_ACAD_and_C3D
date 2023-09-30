@@ -1,5 +1,6 @@
 ﻿using Autodesk.DesignScript.Geometry;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DynAXDBLib 
 {
@@ -28,9 +29,10 @@ namespace DynAXDBLib
         ///<summary>
         ///
         ///</summary>
-        private AcadPolyfaceMesh (AcadBlock AcadBlock, object VertexList, object FaceList)
+        private AcadPolyfaceMesh (AcadBlock AcadBlock, List<Point> VertexList, List<int[]> FaceList)
         {
-            this._i =  AcadBlock._i.AddPolyfaceMesh(VertexList, FaceList);
+            this._i =  AcadBlock._i.AddPolyfaceMesh(VertexList.Select(p=>Technical.PointByDynPoint(p)), 
+                FaceList.Select(a=>a.ToArray()).ToArray());
         }
 
         ///<summary>
@@ -65,12 +67,12 @@ namespace DynAXDBLib
         ///<summary>
         ///
         ///</summary>
-        public dynamic NumberOfVertices => this._i.NumberOfVertices;
+        public int NumberOfVertices => this._i.NumberOfVertices;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic NumberOfFaces => this._i.NumberOfFaces;
+		public int NumberOfFaces => this._i.NumberOfFaces;
 
 		///<summary>
 		///

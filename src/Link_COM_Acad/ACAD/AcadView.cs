@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,18 +14,27 @@
 			this._i = AcadView_object as Autodesk.AutoCAD.Interop.Common.AcadView;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
-
-		///<summary>
-		///
-		///</summary>
-		public object Center => this._i.Center;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_Center(object Center) 
+		/// <summary>
+		/// Create new AcadView
+		/// </summary>
+		/// <param name="acadViews"></param>
+		/// <param name="Name"></param>
+		public AcadView (AcadViews acadViews, string Name)
 		{
-			this._i.Center = Center;
+			this._i = acadViews._i.Add(Name);
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public Point Center => Technical.PointByDoubleArray(this._i.Center);
+
+		///<summary>
+		///
+		///</summary>
+		public void Set_Center(Point Center) 
+		{
+			this._i.Center = Technical.PointByDynPoint(Center);
 		}
 
 		///<summary>
@@ -68,14 +79,14 @@
 		///<summary>
 		///
 		///</summary>
-		public object Direction => this._i.Direction;
+		public Vector Direction => Technical.VectorByDoubleArray(this._i.Direction);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Direction(object dirVec) 
+		public void Set_Direction(Vector dirVec) 
 		{
-			this._i.Direction = dirVec;
+			this._i.Direction = Technical.VectorByDynVector(dirVec);
 		}
 
 		///<summary>
@@ -104,15 +115,15 @@
 			this._i.CategoryName = category;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic LayoutId => this._i.LayoutId;
+        ///<summary>
+        /// The ObjectID of the layout. 
+        ///</summary>
+        public long LayoutId => this._i.LayoutId;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_LayoutId(dynamic ObjectID) 
+        ///<summary>
+        /// Set the ObjectID of the layout. 
+        ///</summary>
+        public void Set_LayoutId(dynamic ObjectID) 
 		{
 			this._i.LayoutId = ObjectID;
 		}

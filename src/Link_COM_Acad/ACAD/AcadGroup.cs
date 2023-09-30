@@ -25,11 +25,15 @@ namespace DynAXDBLib
         ///<summary>
         ///
         ///</summary>
-        public AcadEntity Item(object Index) 
+        private AcadEntity Item(object Index) 
 		{
 			return new AcadEntity(this._i.Item(Index));
 		}
-		public List<AcadEntity> GetAll()
+		/// <summary>
+		/// Get all entities from that group
+		/// </summary>
+		/// <returns></returns>
+		public List<AcadEntity> GetEntities()
 		{
 			List<AcadEntity> ents = new List<AcadEntity>();
 			foreach (var e in this._i)

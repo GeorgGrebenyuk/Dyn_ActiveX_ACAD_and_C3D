@@ -29,10 +29,10 @@ namespace DynAXDBLib
         ///<summary>
         /// Create new Dim3PointAngular
         ///</summary>
-        public AcadDim3PointAngular (AcadBlock AcadBlock, object AngleVertex,
+        public AcadDim3PointAngular (AcadBlock AcadBlock, Point AngleVertex,
 			Point FirstEndPoint, Point SecondEndPoint, Point TextPoint)
         {
-            this._i =  AcadBlock._i.AddDim3PointAngular(AngleVertex,
+            this._i =  AcadBlock._i.AddDim3PointAngular(Technical.PointByDynPoint(AngleVertex),
                 Technical.PointByDynPoint(FirstEndPoint), Technical.PointByDynPoint(SecondEndPoint),
                 Technical.PointByDynPoint(TextPoint));
         }
@@ -66,14 +66,14 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public object AngleVertex => this._i.AngleVertex;
+		public Point AngleVertex => Technical.PointByDoubleArray(this._i.AngleVertex);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_AngleVertex(object AngleVertex) 
+		public void Set_AngleVertex(Point AngleVertex) 
 		{
-			this._i.AngleVertex = AngleVertex;
+			this._i.AngleVertex = Technical.PointByDynPoint(AngleVertex);
 		}
 
 		///<summary>
@@ -144,7 +144,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Fit => this._i.Fit;
+		public object Fit => this._i.Fit;
 
 		///<summary>
 		///
@@ -313,7 +313,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic DimensionLineWeight => this._i.DimensionLineWeight;
+		public object DimensionLineWeight => this._i.DimensionLineWeight;
 
 		///<summary>
 		///
@@ -339,7 +339,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Arrowhead1Type => this._i.Arrowhead1Type;
+		public object Arrowhead1Type => this._i.Arrowhead1Type;
 
 		///<summary>
 		///
@@ -352,7 +352,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Arrowhead2Type => this._i.Arrowhead2Type;
+		public object Arrowhead2Type => this._i.Arrowhead2Type;
 
 		///<summary>
 		///
@@ -365,7 +365,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic Measurement => this._i.Measurement;
+		public double Measurement => this._i.Measurement;
 
 		///<summary>
 		///

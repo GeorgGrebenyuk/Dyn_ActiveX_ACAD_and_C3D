@@ -76,12 +76,12 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic MDensity => this._i.MDensity;
+		public int MDensity => this._i.MDensity;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_MDensity(dynamic density) 
+		public void Set_MDensity(int density) 
 		{
 			this._i.MDensity = density;
 		}
@@ -89,12 +89,12 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic NDensity => this._i.NDensity;
+		public int NDensity => this._i.NDensity;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_NDensity(dynamic density) 
+		public void Set_NDensity(int density) 
 		{
 			this._i.NDensity = density;
 		}
@@ -102,17 +102,17 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic MVertexCount => this._i.MVertexCount;
+		public int MVertexCount => this._i.MVertexCount;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic NVertexCount => this._i.NVertexCount;
+		public int NVertexCount => this._i.NVertexCount;
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Type => this._i.Type;
+		public object Type => this._i.Type;
 
 		///<summary>
 		///
@@ -125,9 +125,9 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public void AppendVertex(object vertex) 
+		public void AppendVertex(Point vertex) 
 		{
-			this._i.AppendVertex(vertex);
+			this._i.AppendVertex(Technical.PointByDynPoint(vertex));
 		}
 
         ///<summary>

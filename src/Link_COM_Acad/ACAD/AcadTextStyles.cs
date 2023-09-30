@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Reflection;
 
 namespace DynAXDBLib 
 {
@@ -15,13 +16,6 @@ namespace DynAXDBLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
-		///<summary>
-		///
-		///</summary>
-		private AcadTextStyle Item(int Index) 
-		{
-			return new AcadTextStyle(this._i.Item(Index));
-		}
 
 		///<summary>
 		///

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DynAXDBLib 
 {
@@ -15,12 +16,18 @@ namespace DynAXDBLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         ///<summary>
-        ///
+        /// Get existed style or create new style
         ///</summary>
-        public AcadTextStyle (AcadTextStyles AcadTextStyles, string Name)
+        public AcadTextStyle (AcadTextStyles AcadTextStyles, string styleName)
         {
-            this._i = AcadTextStyles._i.Add(Name);
+            for (int i = 0; i < AcadTextStyles._i.Count; i++)
+            {
+                var style = AcadTextStyles._i.Item(i);
+				if (style.Name == styleName) this._i = style;
+            }
+            this._i = AcadTextStyles._i.Add(styleName);
         }
+
 
         ///<summary>
         ///
@@ -82,12 +89,12 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic ObliqueAngle => this._i.ObliqueAngle;
+		public double ObliqueAngle => this._i.ObliqueAngle;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_ObliqueAngle(dynamic obliAngle) 
+		public void Set_ObliqueAngle(double obliAngle) 
 		{
 			this._i.ObliqueAngle = obliAngle;
 		}
@@ -100,7 +107,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public void Set_TextGenerationFlag(dynamic textGenFlag) 
+		public void Set_TextGenerationFlag(int textGenFlag) 
 		{
 			this._i.TextGenerationFlag = textGenFlag;
 		}

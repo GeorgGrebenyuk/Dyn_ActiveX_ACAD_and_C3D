@@ -12,8 +12,12 @@
 			this._i = AcadDatabasePreferences_object as Autodesk.AutoCAD.Interop.Common.AcadDatabasePreferences;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Get preferences from AcadDatabase
+        /// </summary>
+        /// <param name="acadDatabase"></param>
 
-		public AcadDatabasePreferences(AcadDatabase acadDatabase)
+        public AcadDatabasePreferences(AcadDatabase acadDatabase)
 		{
 			this._i = acadDatabase._i.Preferences;
 

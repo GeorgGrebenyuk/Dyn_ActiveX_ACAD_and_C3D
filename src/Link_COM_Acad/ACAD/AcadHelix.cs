@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -12,24 +14,34 @@
 			this._i = AcadHelix_object as Autodesk.AutoCAD.Interop.Common.AcadHelix;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
-
-		///<summary>
-		///
-		///</summary>
-		public object Position => this._i.Position;
-
-		///<summary>
-		///
-		///</summary>
-		public void Set_Position(object StartPoint) 
+		/// <summary>
+		/// Try casting from AcadSpline
+		/// </summary>
+		/// <param name="acadSpline"></param>
+		/// <exception cref="System.Exception"></exception>
+		public AcadHelix (AcadSpline acadSpline)
 		{
-			this._i.Position = StartPoint;
+            this._i = acadSpline._i as Autodesk.AutoCAD.Interop.Common.AcadHelix;
+            if (this._i == null) throw new System.Exception("Invalid casting from AcadSpline");
+
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public Point Position => Technical.PointByDoubleArray(this._i.Position);
+
+		///<summary>
+		///
+		///</summary>
+		public void Set_Position(Point StartPoint) 
+		{
+			this._i.Position = Technical.PointByDynPoint(StartPoint);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Constrain => this._i.Constrain;
+		public object Constrain => this._i.Constrain;
 
 		///<summary>
 		///
@@ -55,12 +67,12 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Turns => this._i.Turns;
+		public double Turns => this._i.Turns;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Turns(dynamic Turns) 
+		public void Set_Turns(double Turns) 
 		{
 			this._i.Turns = Turns;
 		}
@@ -107,7 +119,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Twist => this._i.Twist;
+		public object Twist => this._i.Twist;
 
 		///<summary>
 		///
@@ -120,7 +132,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic TurnSlope => this._i.TurnSlope;
+		public double TurnSlope => this._i.TurnSlope;
 
 		///<summary>
 		///

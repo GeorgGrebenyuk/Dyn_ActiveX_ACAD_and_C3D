@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using System.Collections.Generic;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -16,22 +18,20 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Item(object Index) 
-		{
-			return this._i.Item(Index);
-		}
+		public int Count => this._i.Count;
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Count => this._i.Count;
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic Add(string Name) 
+        /// <summary>
+        /// Get all AcadViews
+        /// </summary>
+        /// <returns></returns>
+        public List<AcadView> GetViews()
 		{
-			return this._i.Add(Name);
-		}
+            List<AcadView> ents = new List<AcadView>();
+            for (int i = 0; i < this._i.Count; i++)
+            {
+                ents.Add(new AcadView(this._i.Item(i)));
+            }
+            return ents;
+        }
 	}
 }

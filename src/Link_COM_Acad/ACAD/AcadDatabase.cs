@@ -159,7 +159,7 @@ namespace DynAXDBLib
         ///<summary>
         /// Get an AcadEntity by it's ObjectId (from f.e. Python-script with AutoCAD .NET API)
         ///</summary>
-        public AcadEntity ObjectIdToObject(dynamic ObjectID) 
+        public AcadEntity ObjectIdToObject(long ObjectID) 
 		{
 			return new AcadEntity(this._i.ObjectIdToObject(ObjectID));
 		}

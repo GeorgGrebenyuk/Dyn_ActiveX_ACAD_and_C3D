@@ -27,7 +27,7 @@ namespace DynAXDBLib
 		/// Get all ucs
 		/// </summary>
 		/// <returns></returns>
-		public List<AcadUCS> GetAll()
+		public List<AcadUCS> GetAcadUCS()
 		{
 			List<AcadUCS> us = new List<AcadUCS>(0);
 			foreach (var u in this._i)
