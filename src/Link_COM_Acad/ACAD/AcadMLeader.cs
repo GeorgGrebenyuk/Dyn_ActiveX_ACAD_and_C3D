@@ -4,10 +4,10 @@ using System.Collections.Generic;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadMLeader 
+    ///<summary>
+    /// An object composed of an arrowhead attached to multiple splines or straight line segments
+    ///</summary>
+    public class AcadMLeader 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadMLeader _i;
 		internal AcadMLeader(object AcadMLeader_object) 
@@ -15,9 +15,13 @@ namespace DynAXDBLib
 			this._i = AcadMLeader_object as Autodesk.AutoCAD.Interop.Common.AcadMLeader;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
-        ///<summary>
-        ///
-        ///</summary>
+
+
+        /// <summary>
+        /// Creates an mleader line, given coordinates
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="PointsArray">The array of 3D WCS coordinates specifying the leader. You must provide at least two point to define the leader. The third point is optional</param>
         public AcadMLeader(AcadBlock AcadBlock, List<Point> PointsArray)
         {
             int leaderLineIndex;

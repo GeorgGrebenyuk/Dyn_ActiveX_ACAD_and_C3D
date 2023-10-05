@@ -6,10 +6,10 @@ using System.Linq;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadLeader 
+    ///<summary>
+    /// An object composed of an arrowhead attached to splines or straight line segments
+    ///</summary>
+    public class AcadLeader 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadLeader _i;
 		internal AcadLeader(object AcadLeader_object) 
@@ -28,7 +28,7 @@ namespace DynAXDBLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
-        /// Create new Leader with Annotation object
+        /// Creates a leader line based on the provided coordinates or adds a new leader cluster to the MLeader object with Annotation object
         /// </summary>
         /// <param name="AcadBlock"></param>
         /// <param name="PointsArray">Three points (gets only x/y coordinates)</param>
@@ -41,7 +41,7 @@ namespace DynAXDBLib
                 Annotation._i, Type);
         }
         /// <summary>
-        /// Create new Leader without Annotation object
+        /// Creates a leader line based on the provided coordinates or adds a new leader cluster to the MLeader object without Annotation object
         /// </summary>
         /// <param name="AcadBlock"></param>
         /// <param name="PointsArray">Three points (gets only x/y coordinates)</param>

@@ -6,10 +6,10 @@ using System.Runtime.InteropServices.WindowsRuntime;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadSection 
+    ///<summary>
+    /// A section plane entity created at the intersection of a plane and a solid
+    ///</summary>
+    public class AcadSection 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadSection _i;
 		internal AcadSection(object AcadSection_object) 
@@ -27,9 +27,15 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadSection;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-        ///<summary>
-        /// Create new Section
-        ///</summary>
+
+
+        /// <summary>
+        /// Creates a section plane
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="FromPoint">The 3D WCS coordinates specifying the finite start point of the section</param>
+        /// <param name="ToPoint">The 3D WCS coordinates specifying a point through which the section will pass. The section extends from FromPoint, through ToPoint to infinity</param>
+        /// <param name="planeVector">A 3D directional vector specifying the direction of the section plane.</param>
         public AcadSection(AcadBlock AcadBlock, Point FromPoint, Point ToPoint, Vector planeVector)
         {
             this._i =(Autodesk.AutoCAD.Interop.Common.AcadSection)AcadBlock._i.AddSection(

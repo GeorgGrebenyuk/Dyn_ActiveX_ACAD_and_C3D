@@ -5,10 +5,10 @@ using System.Linq;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadBlockReference 
+    ///<summary>
+    /// An instance of a block definition inserted into a drawing
+    ///</summary>
+    public class AcadBlockReference 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadBlockReference _i;
 		/// <summary>
@@ -31,10 +31,19 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadBlockReference;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-		///<summary>
-		/// Create new block reference
-		///</summary>
-		public AcadBlockReference (dynamic AcadBlock, Point InsertionPoint, string Name,
+
+
+        /// <summary>
+        /// Inserts a drawing file or a named block that has been defined in the current drawing
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="InsertionPoint">The 3D WCS coordinates specifying the location in the drawing to insert the block</param>
+        /// <param name="Name">The name of the AutoCAD drawing file or the name of the block to insert. If it is a file name, include the .dwg extension and any path information necessary for AutoCAD to find the file</param>
+        /// <param name="Xscale">The default equals 1.0. Must be a positive number</param>
+        /// <param name="Yscale">The default equals 1.0. Must be a positive number</param>
+        /// <param name="Zscale">The default equals 1.0. Must be a positive number</param>
+        /// <param name="Rotation">The default equals 0.0 radians</param>
+        public AcadBlockReference (dynamic AcadBlock, Point InsertionPoint, string Name,
 			double Xscale, double Yscale, double Zscale, double Rotation)
 		{
             this._i = AcadBlock._i.InsertBlock(Technical.PointByDynPoint(InsertionPoint),
@@ -150,46 +159,46 @@ namespace DynAXDBLib
             Cast<object>().Select(a => new AcadAttributeReference(a)).ToList();
 
         ///<summary>
-        ///
+        /// Specifies whether the block has any attributes in it
         ///</summary>
         public bool HasAttributes => this._i.HasAttributes;
 
-		///<summary>
-		///
-		///</summary>
-		public string EffectiveName => this._i.EffectiveName;
+        ///<summary>
+        /// Specifies the original block name
+        ///</summary>
+        public string EffectiveName => this._i.EffectiveName;
 
-		///<summary>
-		///
-		///</summary>
-		public bool IsDynamicBlock => this._i.IsDynamicBlock;
+        ///<summary>
+        /// Specifies whether this is a dynamic block
+        ///</summary>
+        public bool IsDynamicBlock => this._i.IsDynamicBlock;
 
-		///<summary>
-		///
-		///</summary>
-		public List<AcadDynamicBlockReferenceProperty> GetDynamicBlockProperties => ((System.Array)this._i.GetDynamicBlockProperties()).
+        ///<summary>
+        /// Gets the properties of the dynamic block
+        ///</summary>
+        public List<AcadDynamicBlockReferenceProperty> GetDynamicBlockProperties => ((System.Array)this._i.GetDynamicBlockProperties()).
             Cast<object>().Select(a => new AcadDynamicBlockReferenceProperty(a)).ToList();
 
-		///<summary>
-		///
-		///</summary>
-		public void ResetBlock() 
+        ///<summary>
+        /// Resets the dynamic block to the default state
+        ///</summary>
+        public void ResetBlock() 
 		{
 			this._i.ResetBlock();
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public void ConvertToAnonymousBlock() 
+        ///<summary>
+        /// Converts a dynamic block to a regular anonymous block
+        ///</summary>
+        public void ConvertToAnonymousBlock() 
 		{
 			this._i.ConvertToAnonymousBlock();
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public void ConvertToStaticBlock(string newBlockName) 
+        ///<summary>
+        /// Converts a dynamic block to a regular named block
+        ///</summary>
+        public void ConvertToStaticBlock(string newBlockName) 
 		{
 			this._i.ConvertToStaticBlock(newBlockName);
 		}
@@ -233,14 +242,14 @@ namespace DynAXDBLib
 			this._i.ZEffectiveScaleFactor = ScaleFactor;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string InsUnits => this._i.InsUnits;
+        ///<summary>
+        /// Specifies the insert units saved with the block. The InsUnits property specifies the native units for the block reference as defined by the block author. When a block is inserted in a drawing whose units have been defined, the block is automatically scaled proportional to the InsUnitsFactor, the conversion factor between the block units and the current drawing units
+        ///</summary>
+        public string InsUnits => this._i.InsUnits;
 
-		///<summary>
-		///
-		///</summary>
-		public double InsUnitsFactor => this._i.InsUnitsFactor;
+        ///<summary>
+        /// Specifies the conversion factor between block units and drawing units. The conversion factor between block and drawing units
+        ///</summary>
+        public double InsUnitsFactor => this._i.InsUnitsFactor;
 	}
 }

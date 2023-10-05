@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadRegisteredApplications 
+    ///<summary>
+    ///The collection of all registered applications in the drawing
+    ///</summary>
+    public class AcadRegisteredApplications 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadRegisteredApplications _i;
 		internal AcadRegisteredApplications(object AcadRegisteredApplications_object) 

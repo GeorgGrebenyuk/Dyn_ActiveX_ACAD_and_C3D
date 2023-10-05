@@ -92,5 +92,62 @@ namespace DynAXDBLib
             this._i.Erase();
         }
 
+        /// <summary>
+        /// Selects objects and places them into a selection set
+        /// </summary>
+        /// <param name="AcadSelectionSet">AcadSelectionSet instance</param>
+        /// <param name="acSelect">AcSelect enum </param>
+        /// <param name="Point1">The 3D WCS coordinates, or array of coordinates, specifying Point1. See the mode definitions for the proper use of Point1</param>
+        /// <param name="Point2">The 3D WCS coordinates specifying Point2. See the mode definitions for the proper use of Point2</param>
+        /// <param name="FilterType">A DXF group code specifying the type of filter to use</param>
+        /// <param name="FilterData">The value to filter on</param>
+        public static void Select(dynamic AcadSelectionSet, Autodesk.AutoCAD.Interop.Common.AcSelect acSelect, Point Point1, Point Point2, 
+            object FilterType, object FilterData)
+        {
+            AcadSelectionSet._i.Select(acSelect, Technical.PointByDynPoint(Point1), Technical.PointByDynPoint(Point2), FilterType, FilterData);
+        }
+
+        /// <summary>
+        /// Selects all drawings objects and places them into a selection set
+        /// </summary>
+        /// <param name="AcadSelectionSet">AcadSelectionSet instance</param>
+        public static void SelectAll(dynamic AcadSelectionSet)
+        {
+            AcadSelectionSet._i.Select(Autodesk.AutoCAD.Interop.Common.AcSelect.acSelectionSetAll);
+        }
+
+        /// <summary>
+        /// Prompts the user to pick an object from the screen
+        /// </summary>
+        /// <param name="AcadSelectionSet">AcadSelectionSet instance</param>
+        public static void SelectOnScreen(dynamic AcadSelectionSet)
+        {
+            AcadSelectionSet._i.SelectOnScreen();
+        }
+
+        /// <summary>
+        /// Selects an object passing through a given point and places it into a selection set
+        /// </summary>
+        /// <param name="AcadSelectionSet">AcadSelectionSet instance</param>
+        /// <param name="point">The 3D UCS coordinates specifying the point to use for the selection</param>
+        /// <param name="FilterType">A DXF group code specifying the type of filter to use</param>
+        /// <param name="FilterData">The value to filter on</param>
+        public static void SelectAtPoint(dynamic AcadSelectionSet, Point point, object FilterType, object FilterData)
+        {
+            AcadSelectionSet._i.SelectAtPoint(Technical.PointByDynPoint(point), FilterType, FilterData);
+        }
+
+        /// <summary>
+        /// Selects objects within a fence and adds them to the selection set
+        /// </summary>
+        /// <param name="acSelect">AcSelect enum </param>
+        /// <param name="AcadSelectionSet">AcadSelectionSet instance</param>
+        /// <param name="points">An array of 3D WCS coordinates specifying the selection fence</param>
+        /// <param name="FilterType">A DXF group code specifying the type of filter to use</param>
+        /// <param name="FilterData">The value to filter on</param>
+        public static void SelectByPolygon(dynamic AcadSelectionSet, Autodesk.AutoCAD.Interop.Common.AcSelect acSelect, List<Point> points, object FilterType, object FilterData)
+        {
+            AcadSelectionSet._i.SelectAtPoint(Technical.PointsByDynPoints(points, false), FilterType, FilterData);
+        }
     }
 }

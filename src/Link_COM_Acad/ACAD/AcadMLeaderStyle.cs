@@ -1,10 +1,10 @@
 ﻿namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadMLeaderStyle 
+    ///<summary>
+    /// Adds, modifies, and deletes MLeader styles
+    ///</summary>
+    public class AcadMLeaderStyle 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadMLeaderStyle _i;
 		internal AcadMLeaderStyle(object AcadMLeaderStyle_object) 

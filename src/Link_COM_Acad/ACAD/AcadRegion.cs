@@ -5,10 +5,10 @@ using System.Linq;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadRegion 
+    ///<summary>
+    /// A bounded planar face consisting of lines, circles, arcs, elliptical arcs, and spline curves
+    ///</summary>
+    public class AcadRegion 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadRegion _i;
 		internal AcadRegion(object AcadRegion_object) 
@@ -28,10 +28,10 @@ namespace DynAXDBLib
         }
 
         /// <summary>
-        /// Create new Region from moel objects
+        /// Creates a region from a set of entities. The given entities must form a closed coplanar region
         /// </summary>
         /// <param name="AcadBlock"></param>
-        /// <param name="ObjectList">array of Arc, Circle, Ellipse, Line, LWPolyline, Spline objects</param>
+        /// <param name="ObjectList">The array of objects forming the closed coplanar face to be made into a region</param>
         public AcadRegion(AcadBlock AcadBlock, List<dynamic> ObjectList)
         {
             this._i =  AcadBlock._i.AddRegion(ObjectList.Select(a=>a._i).ToArray());

@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDictionary 
+    ///<summary>
+    /// A container object for storing and retrieving objects
+    ///</summary>
+    public class AcadDictionary 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDictionary _i;
 		internal AcadDictionary(object AcadDictionary_object) 
@@ -35,18 +35,23 @@ namespace DynAXDBLib
 			this._i.Name = pVal;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public AcadObject AddObject(string Keyword,string ObjectName) 
+        /// <summary>
+		/// Adds an object to a named dictionary
+		/// </summary>
+		/// <param name="Keyword">The keyword to be listed in the dictionary for this object</param>
+		/// <param name="ObjectName">The rxClassName of the object to be created in the dictionary</param>
+		/// <returns></returns>
+        public AcadObject AddObject(string Keyword,string ObjectName) 
 		{
 			return new AcadObject(this._i.AddObject(Keyword,ObjectName));
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string GetName(dynamic Object) 
+        /// <summary>
+        /// Gets the name (keyword) of an object in a dictionary
+        /// </summary>
+        /// <param name="Object">The object to query</param>
+        /// <returns></returns>
+        public string GetName(dynamic Object) 
 		{
 			return this._i.GetName(Object);
 		}

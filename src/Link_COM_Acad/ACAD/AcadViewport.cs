@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
 
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadViewport 
+    ///<summary>
+    /// A bounded area that displays some portion of a drawing's model space. To make a viewport active, use the ActiveViewport property on the Document object
+    ///</summary>
+    public class AcadViewport 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadViewport _i;
 		internal AcadViewport(object AcadViewport_object) 
@@ -15,10 +16,15 @@ namespace DynAXDBLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         ///<summary>
-        /// Create new AcadViewport
+        /// Create new AcadViewport or return existed
         ///</summary>
         public AcadViewport(AcadViewports AcadViewports, string Name)
         {
+            for (int i = 0; i < AcadViewports._i.Count; i++)
+            {
+                var obj = AcadViewports._i.Item(i);
+                if (obj.Name == Name) this._i = obj;
+            }
             this._i = AcadViewports._i.Add(Name);
         }
 
@@ -34,14 +40,14 @@ namespace DynAXDBLib
         ///<summary>
         ///
         ///</summary>
-        public object Center => this._i.Center;
+        public Point Center => Technical.PointByDoubleArray(this._i.Center);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Center(object Center) 
+		public void Set_Center(Point Center) 
 		{
-			this._i.Center = Center;
+			this._i.Center = Technical.PointByDynPoint(Center);
 		}
 
 		///<summary>

@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadShape 
+    ///<summary>
+    /// An object comprising lines, arcs, and circles defined in an SHX file
+    ///</summary>
+    public class AcadShape 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadShape _i;
 		internal AcadShape(object AcadShape_object) 

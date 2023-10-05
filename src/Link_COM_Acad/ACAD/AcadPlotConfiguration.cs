@@ -4,10 +4,10 @@ using System.Net.Http.Headers;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadPlotConfiguration 
+    ///<summary>
+    /// A named collection of plot settings
+    ///</summary>
+    public class AcadPlotConfiguration 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadPlotConfiguration _i;
 		internal AcadPlotConfiguration(object AcadPlotConfiguration_object) 
@@ -39,166 +39,166 @@ namespace DynAXDBLib
 			this._i.Name = pName;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string ConfigName => this._i.ConfigName;
+        ///<summary>
+        /// Specifies the plotter configuration name
+        ///</summary>
+        public string ConfigName => this._i.ConfigName;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_ConfigName(string pName) 
+        ///<summary>
+        /// Specifies the plotter configuration name
+        ///</summary>
+        public void Set_ConfigName(string pName) 
 		{
 			this._i.ConfigName = pName;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string CanonicalMediaName => this._i.CanonicalMediaName;
+        ///<summary>
+        /// Specifies the paper size by name
+        ///</summary>
+        public string CanonicalMediaName => this._i.CanonicalMediaName;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_CanonicalMediaName(string pName)
+        ///<summary>
+        ///Specifies the paper size by name
+        ///</summary>
+        public void Set_CanonicalMediaName(string pName)
 		{
 			this._i.CanonicalMediaName = pName;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object PaperUnits => this._i.PaperUnits;
+        ///<summary>
+        ///Specifies the units for the display of layout or plot configuration properties
+        ///</summary>
+        public object PaperUnits => this._i.PaperUnits;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_PaperUnits(Autodesk.AutoCAD.Interop.Common.AcPlotPaperUnits pPaperUnits)
+        ///<summary>
+        ///Specifies the units for the display of layout or plot configuration properties
+        ///</summary>
+        public void Set_PaperUnits(Autodesk.AutoCAD.Interop.Common.AcPlotPaperUnits pPaperUnits)
 		{
 			this._i.PaperUnits = pPaperUnits;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool PlotViewportBorders => this._i.PlotViewportBorders;
+        ///<summary>
+        ///Specifies if the viewport borders are to be plotted
+        ///</summary>
+        public bool PlotViewportBorders => this._i.PlotViewportBorders;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_PlotViewportBorders(bool pViewportBorders)
+        ///<summary>
+        ///Specifies if the viewport borders are to be plotted
+        ///</summary>
+        public void Set_PlotViewportBorders(bool pViewportBorders)
 		{
 			this._i.PlotViewportBorders = pViewportBorders;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool ShowPlotStyles => this._i.ShowPlotStyles;
+        ///<summary>
+        ///Specifies whether or not plot styles and plot style names are displayed in the drawing
+        ///</summary>
+        public bool ShowPlotStyles => this._i.ShowPlotStyles;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_ShowPlotStyles(bool pStyles)
+        ///<summary>
+        ///Specifies whether or not plot styles and plot style names are displayed in the drawing
+        ///</summary>
+        public void Set_ShowPlotStyles(bool pStyles)
 		{
 			this._i.ShowPlotStyles = pStyles;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object PlotRotation => this._i.PlotRotation;
+        ///<summary>
+        ///Specifies the rotation angle for the layout or plot configuration
+        ///</summary>
+        public object PlotRotation => this._i.PlotRotation;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_PlotRotation(Autodesk.AutoCAD.Interop.Common.AcPlotRotation pRotation)
+        ///<summary>
+        ///Specifies the rotation angle for the layout or plot configuration
+        ///</summary>
+        public void Set_PlotRotation(Autodesk.AutoCAD.Interop.Common.AcPlotRotation pRotation)
 		{
 			this._i.PlotRotation = pRotation;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool CenterPlot => this._i.CenterPlot;
+        ///<summary>
+        ///Specifies the centering of the plot on the media
+        ///</summary>
+        public bool CenterPlot => this._i.CenterPlot;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_CenterPlot(bool pCentered)
+        ///<summary>
+        ///Specifies the centering of the plot on the media
+        ///</summary>
+        public void Set_CenterPlot(bool pCentered)
 		{
 			this._i.CenterPlot = pCentered;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool PlotHidden => this._i.PlotHidden;
+        ///<summary>
+        ///Specifies if objects are to be hidden during a plot
+        ///</summary>
+        public bool PlotHidden => this._i.PlotHidden;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_PlotHidden(bool pHidden)
+        ///<summary>
+        ///Specifies if objects are to be hidden during a plot
+        ///</summary>
+        public void Set_PlotHidden(bool pHidden)
 		{
 			this._i.PlotHidden = pHidden;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object PlotType => this._i.PlotType;
+        ///<summary>
+        ///Specifies the type of layout or plot configuration. 
+        ///</summary>
+        public object PlotType => this._i.PlotType;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_PlotType(Autodesk.AutoCAD.Interop.Common.AcPlotType pType)
+        ///<summary>
+        ///Specifies the type of layout or plot configuration. 
+        ///</summary>
+        public void Set_PlotType(Autodesk.AutoCAD.Interop.Common.AcPlotType pType)
 		{
 			this._i.PlotType = pType;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string ViewToPlot => this._i.ViewToPlot;
+        ///<summary>
+        ///Specifies the name of the view to plot
+        ///</summary>
+        public string ViewToPlot => this._i.ViewToPlot;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_ViewToPlot(string pName)
+        ///<summary>
+        ///Specifies the name of the view to plot
+        ///</summary>
+        public void Set_ViewToPlot(string pName)
 		{
 			this._i.ViewToPlot = pName;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool UseStandardScale => this._i.UseStandardScale;
+        ///<summary>
+        ///Specifies if the plot is to use a standard or custom scale
+        ///</summary>
+        public bool UseStandardScale => this._i.UseStandardScale;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_UseStandardScale(bool pUseStdScale)
+        ///<summary>
+        ///Specifies if the plot is to use a standard or custom scale
+        ///</summary>
+        public void Set_UseStandardScale(bool pUseStdScale)
 		{
 			this._i.UseStandardScale = pUseStdScale;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object StandardScale => this._i.StandardScale;
+        ///<summary>
+        ///Specifies the standard scale for the layout, viewport, or plot configuration
+        ///</summary>
+        public object StandardScale => this._i.StandardScale;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_StandardScale(Autodesk.AutoCAD.Interop.Common.AcPlotScale pStdScale)
+        ///<summary>
+        ///Specifies the standard scale for the layout, viewport, or plot configuration
+        ///</summary>
+        public void Set_StandardScale(Autodesk.AutoCAD.Interop.Common.AcPlotScale pStdScale)
 		{
 			this._i.StandardScale = pStdScale;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public List<double> GetCustomScale()
+        ///<summary>
+        /// Gets the custom scale for a layout or plot configuration
+        ///</summary>
+        public List<double> GetCustomScale()
 		{
 			double Numerator;
 			double Denominator;
@@ -207,70 +207,72 @@ namespace DynAXDBLib
 			return new List<double> { Numerator, Denominator };
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public void SetCustomScale(double Numerator, double Denominator)
+        /// <summary>
+        /// Sets the custom scale for a layout or plot configuration
+        /// </summary>
+        /// <param name="Numerator">A positive number representing the numerator in the scale ratio. This value represents the number of inches or mm for the scale</param>
+        /// <param name="Denominator">A positive number representing the denominator in the scale ratio. This value represents the number of drawing units for the scale</param>
+        public void SetCustomScale(double Numerator, double Denominator)
 		{
 			this._i.SetCustomScale(Numerator, Denominator);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool ScaleLineweights => this._i.ScaleLineweights;
+        ///<summary>
+        ///Specifies if the lineweight is scaled with the rest of the geometry when a layout is printed
+        ///</summary>
+        public bool ScaleLineweights => this._i.ScaleLineweights;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_ScaleLineweights(bool pScale)
+        ///<summary>
+        ///Specifies if the lineweight is scaled with the rest of the geometry when a layout is printed
+        ///</summary>
+        public void Set_ScaleLineweights(bool pScale)
 		{
 			this._i.ScaleLineweights = pScale;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool PlotWithLineweights => this._i.PlotWithLineweights;
+        ///<summary>
+        ///Specifies whether objects plot with the lineweights they are assigned in the plot file, or with the lineweights in the drawing file
+        ///</summary>
+        public bool PlotWithLineweights => this._i.PlotWithLineweights;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_PlotWithLineweights(bool pPlot)
+        ///<summary>
+        ///Specifies whether objects plot with the lineweights they are assigned in the plot file, or with the lineweights in the drawing file
+        ///</summary>
+        public void Set_PlotWithLineweights(bool pPlot)
 		{
 			this._i.PlotWithLineweights = pPlot;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool PlotViewportsFirst => this._i.PlotViewportsFirst;
+        ///<summary>
+        ///Specifies if all geometry in paper space viewports is plotted first
+        ///</summary>
+        public bool PlotViewportsFirst => this._i.PlotViewportsFirst;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_PlotViewportsFirst(bool pViewportsFirst)
+        ///<summary>
+        ///Specifies if all geometry in paper space viewports is plotted first
+        ///</summary>
+        public void Set_PlotViewportsFirst(bool pViewportsFirst)
 		{
 			this._i.PlotViewportsFirst = pViewportsFirst;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string StyleSheet => this._i.StyleSheet;
+        ///<summary>
+        ///Specifies the style sheet for the layout or plot configuration
+        ///</summary>
+        public string StyleSheet => this._i.StyleSheet;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_StyleSheet(string pName)
+        ///<summary>
+        ///Specifies the style sheet for the layout or plot configuration
+        ///</summary>
+        public void Set_StyleSheet(string pName)
 		{
 			this._i.StyleSheet = pName;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public List<object> GetPaperMargins()
+        ///<summary>
+        ///Gets the margins for the layout or plot configuration
+        ///</summary>
+        public List<object> GetPaperMargins()
 		{
 			object LowerLeft;
 			object UpperRight;
@@ -279,10 +281,10 @@ namespace DynAXDBLib
 			return new List<object> { LowerLeft, UpperRight };
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public List<double> GetPaperSize()
+        ///<summary>
+        ///Gets the width and height of the configured paper
+        ///</summary>
+        public List<double> GetPaperSize()
 		{
 			double Width;
 			double Height;
@@ -291,23 +293,24 @@ namespace DynAXDBLib
 			return new List<double> { Width, Height };
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object PlotOrigin => this._i.PlotOrigin;
+        ///<summary>
+        ///Specifies the origin of the layout or plot configuration in WCS coordinates
+        ///</summary>
+        public double[] PlotOrigin => this._i.PlotOrigin;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_PlotOrigin(object pOrigin)
+        /// <summary>
+        /// Specifies the origin of the layout or plot configuration in WCS coordinates
+        /// </summary>
+        /// <param name="pOrigin">The X and Y values representing the origin relative to the lower-left corner of the media</param>
+        public void Set_PlotOrigin(double[] pOrigin)
 		{
 			this._i.PlotOrigin = pOrigin;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public List<object> GetWindowToPlot()
+        ///<summary>
+        ///Gets the coordinates that define the portion of the layout to plot
+        ///</summary>
+        public List<object> GetWindowToPlot()
 		{
 			object LowerLeft;
 			object UpperRight;
@@ -316,67 +319,68 @@ namespace DynAXDBLib
 			return new List<object> { LowerLeft, UpperRight };
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public void SetWindowToPlot(object LowerLeft, object UpperRight)
+        ///<summary>
+        ///Sets the coordinates that define the portion of the layout to plot
+        ///</summary>
+        public void SetWindowToPlot(object LowerLeft, object UpperRight)
 		{
 			this._i.SetWindowToPlot(LowerLeft, UpperRight);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool PlotWithPlotStyles => this._i.PlotWithPlotStyles;
+        ///<summary>
+        ///Specifies whether or not to plot using the plot styles that are applied to objects and defined in the plot style table
+        ///</summary>
+        public bool PlotWithPlotStyles => this._i.PlotWithPlotStyles;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_PlotWithPlotStyles(bool pStyles)
+        ///<summary>
+        ///Specifies whether or not to plot using the plot styles that are applied to objects and defined in the plot style table
+        ///</summary>
+        public void Set_PlotWithPlotStyles(bool pStyles)
 		{
 			this._i.PlotWithPlotStyles = pStyles;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool ModelType => this._i.ModelType;
+        ///<summary>
+        ///Specifies whether a plot configuration applies to model space or to all layouts
+        ///</summary>
+        public bool ModelType => this._i.ModelType;
 
-		///<summary>
-		///
-		///</summary>
-		public void CopyFrom(dynamic pPlotConfig)
+        /// <summary>
+        /// Copies the settings for a plot configuration
+        /// </summary>
+        /// <param name="pPlotConfig"></param>
+        public void CopyFrom(AcadPlotConfiguration pPlotConfig)
 		{
-			this._i.CopyFrom(pPlotConfig);
+			this._i.CopyFrom(pPlotConfig._i);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object GetCanonicalMediaNames => this._i.GetCanonicalMediaNames();
+        ///<summary>
+        ///Gets all available canonical media names for the specified plot device
+        ///</summary>
+        public object GetCanonicalMediaNames => this._i.GetCanonicalMediaNames();
 
-		///<summary>
-		///
-		///</summary>
-		public object GetPlotDeviceNames => this._i.GetPlotDeviceNames();
+        ///<summary>
+        ///Gets all available plot device names
+        ///</summary>
+        public object GetPlotDeviceNames => this._i.GetPlotDeviceNames();
 
-		///<summary>
-		///
-		///</summary>
-		public object GetPlotStyleTableNames => this._i.GetPlotStyleTableNames();
+        ///<summary>
+        ///Gets all available plot style table names
+        ///</summary>
+        public object GetPlotStyleTableNames => this._i.GetPlotStyleTableNames();
 
-		///<summary>
-		///
-		///</summary>
-		public void RefreshPlotDeviceInfo()
+        ///<summary>
+        /// Updates the plot, canonical media, and plot style table information to reflect the current system state
+        ///</summary>
+        public void RefreshPlotDeviceInfo()
 		{
 			this._i.RefreshPlotDeviceInfo();
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string GetLocaleMediaName(string Name)
+        ///<summary>
+        /// Gets the localized version of the canonical media name
+        ///</summary>
+        public string GetLocaleMediaName(string Name)
 		{
 			return this._i.GetLocaleMediaName(Name);
 		}

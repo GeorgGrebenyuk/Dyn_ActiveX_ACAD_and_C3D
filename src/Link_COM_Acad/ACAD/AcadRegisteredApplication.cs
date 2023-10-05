@@ -1,10 +1,10 @@
 ﻿namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadRegisteredApplication 
+    ///<summary>
+    /// An external application that has been added to the drawing. To be recognized by AutoCAD, an application must register the name or names that it uses. The application name needs to be registered only once per drawing. Application names are saved with the extended data of each entity that uses them. Every instance of extended data referenced in a drawing must have its application registered in the drawing
+    ///</summary>
+    public class AcadRegisteredApplication 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadRegisteredApplication _i;
 		internal AcadRegisteredApplication(object AcadRegisteredApplication_object) 

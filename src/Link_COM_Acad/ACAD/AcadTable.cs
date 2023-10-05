@@ -5,10 +5,10 @@ using System.Runtime.CompilerServices;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadTable 
+    ///<summary>
+    /// AutoCAD table object
+    ///</summary>
+    public class AcadTable 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadTable _i;
 		internal AcadTable(object AcadTable_object) 
@@ -26,9 +26,17 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadTable;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-        ///<summary>
-        /// Create new Table
-        ///</summary>
+
+
+        /// <summary>
+        /// Adds a table to a drawing
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="InsertionPoint">The 3D WCS coordinates in the drawing where the table is inserted</param>
+        /// <param name="NumRows">The number of rows in the table</param>
+        /// <param name="NumColumns">The number of columns in the table</param>
+        /// <param name="RowHeight">The height of the rows in the table</param>
+        /// <param name="ColWidth">The width of the columns in the table</param>
         public AcadTable(AcadBlock AcadBlock, Point InsertionPoint, int NumRows, int NumColumns, 
 			double RowHeight, double ColWidth)
         {

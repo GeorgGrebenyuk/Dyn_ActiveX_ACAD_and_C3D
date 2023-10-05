@@ -5,10 +5,10 @@ using System.Linq;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadSpline 
+    ///<summary>
+    /// A quadratic or cubic NURBS (nonuniform rational B-spline) curve
+    ///</summary>
+    public class AcadSpline 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadSpline _i;
 		internal AcadSpline(object AcadSpline_object) 
@@ -27,13 +27,13 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-		/// <summary>
-		/// Create new spline
-		/// </summary>
-		/// <param name="AcadBlock"></param>
-		/// <param name="PointsArray">Collection of 3D points</param>
-		/// <param name="StartTangent"></param>
-		/// <param name="EndTangent"></param>
+        /// <summary>
+        /// Creates a quadratic or cubic NURBS (nonuniform rational B-spline) curve
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="PointsArray">An array of 3D WCS coordinates defining the spline curve. At least two points (six elements) are required for constructing a Spline object. The array size must be in multiples of three.</param>
+        /// <param name="StartTangent">A 3D vector specifying the tangency of the spline curve at the first point</param>
+        /// <param name="EndTangent">A 3D vector specifying the tangency of the spline curve at the last point</param>
         public AcadSpline (AcadBlock AcadBlock, List<Point> PointsArray, Vector StartTangent, Vector EndTangent)
         {
             this._i = AcadBlock._i.AddSpline(Technical.PointsByDynPoints(PointsArray, false), 

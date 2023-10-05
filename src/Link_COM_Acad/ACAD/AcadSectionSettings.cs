@@ -1,10 +1,10 @@
 ﻿namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadSectionSettings 
+    ///<summary>
+    ///A container for section geometry settings. Settings that control the type and settings used to display a section
+    ///</summary>
+    public class AcadSectionSettings 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadSectionSettings _i;
 		internal AcadSectionSettings(object AcadSectionSettings_object) 
