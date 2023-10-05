@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadGeoPositionMarker 
+    ///<summary>
+    /// A geographical location aware marker object with a label. You cannot create a GeoPositionMarker entity via ActiveX, but can copy existed
+    ///</summary>
+    public class AcadGeoPositionMarker 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadGeoPositionMarker _i;
 		internal AcadGeoPositionMarker(object AcadGeoPositionMarker_object) 
@@ -51,14 +51,14 @@ namespace DynAXDBLib
 		}
 
 		///<summary>
-		///
+		/// Tag string
 		///</summary>
 		public string TextString => this._i.TextString;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_TextString(string bstrText) 
+        ///<summary>
+        ///Tag string
+        ///</summary>
+        public void Set_TextString(string bstrText) 
 		{
 			this._i.TextString = bstrText;
 		}
@@ -76,28 +76,28 @@ namespace DynAXDBLib
 			this._i.TextStyleName = bstrName;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic TextJustify => this._i.TextJustify;
+        ///<summary>
+        ///Specifies the attachment point of the MText
+        ///</summary>
+        public dynamic TextJustify => this._i.TextJustify;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_TextJustify(Autodesk.AutoCAD.Interop.Common.AcAttachmentPoint attPoint) 
+        ///<summary>
+        ///Specifies the attachment point of the MText
+        ///</summary>
+        public void Set_TextJustify(Autodesk.AutoCAD.Interop.Common.AcAttachmentPoint attPoint) 
 		{
 			this._i.TextJustify = attPoint;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object DrawingDirection => this._i.DrawingDirection;
+        ///<summary>
+        ///Specifies the direction in which the mtext paragraph is to be read
+        ///</summary>
+        public object DrawingDirection => this._i.DrawingDirection;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_DrawingDirection(Autodesk.AutoCAD.Interop.Common.AcDrawingDirection drawDir) 
+        ///<summary>
+        ///Specifies the direction in which the mtext paragraph is to be read
+        ///</summary>
+        public void Set_DrawingDirection(Autodesk.AutoCAD.Interop.Common.AcDrawingDirection drawDir) 
 		{
 			this._i.DrawingDirection = drawDir;
 		}
@@ -232,41 +232,41 @@ namespace DynAXDBLib
 			this._i.TextFrameDisplay = pVal;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string Latitude => this._i.Latitude;
+        ///<summary>
+        ///Specifies the latitude of the position marker
+        ///</summary>
+        public string Latitude => this._i.Latitude;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Latitude(string Latitude) 
+        ///<summary>
+        ///Specifies the latitude of the position marker
+        ///</summary>
+        public void Set_Latitude(string Latitude) 
 		{
 			this._i.Latitude = Latitude;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string Longitude => this._i.Longitude;
+        ///<summary>
+        ///Specifies the longitude of the position marker
+        ///</summary>
+        public string Longitude => this._i.Longitude;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Longitude(string Longitude) 
+        ///<summary>
+        ///Specifies the longitude of the position marker
+        ///</summary>
+        public void Set_Longitude(string Longitude) 
 		{
 			this._i.Longitude = Longitude;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double Altitude => this._i.Altitude;
+        ///<summary>
+        ///Specifies the elevation of the position marker
+        ///</summary>
+        public double Altitude => this._i.Altitude;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Altitude(double Altitude) 
+        ///<summary>
+        ///Specifies the elevation of the position marker
+        ///</summary>
+        public void Set_Altitude(double Altitude) 
 		{
 			this._i.Altitude = Altitude;
 		}
