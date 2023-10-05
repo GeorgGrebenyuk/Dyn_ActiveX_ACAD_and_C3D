@@ -27,11 +27,11 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
         ///<summary>
-        ///
+        /// Create new PolygonMesh
         ///</summary>
         public AcadPolygonMesh(AcadBlock AcadBlock, int M, int N, List<Point> PointsMatrix)
         {
-            this._i = AcadBlock._i.Add3DMesh(M, N, PointsMatrix.Select(p=>Technical.PointByDynPoint(p)).ToArray());
+            this._i = AcadBlock._i.Add3DMesh(M, N, Technical.PointsByDynPoints(PointsMatrix, false));
         }
 
         ///<summary>

@@ -25,9 +25,15 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-        ///<summary>
-        ///
-        ///</summary>
+        /// <summary>
+		/// Creates a Shape object based on a template identified by name, at the given insertion point, scale factor, and rotation. 
+        /// Before adding a Shape object, you must load the file containing the desired shape using the LoadShapeFile method. 
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="Name"></param>
+        /// <param name="InsertionPoint"></param>
+        /// <param name="ScaleFactor"></param>
+        /// <param name="RotationAngle"></param>
         public AcadShape(AcadBlock AcadBlock, string Name, Point InsertionPoint, double ScaleFactor, double RotationAngle)
         {
             this._i = AcadBlock._i.AddShape(Name, Technical.PointByDynPoint(InsertionPoint), ScaleFactor, RotationAngle);

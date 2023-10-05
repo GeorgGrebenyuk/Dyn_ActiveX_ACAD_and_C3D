@@ -1,4 +1,5 @@
-﻿using Autodesk.DesignScript.Geometry;
+﻿using Autodesk.AutoCAD.Interop.Common;
+using Autodesk.DesignScript.Geometry;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,17 +27,30 @@ namespace DynAXDBLib
 			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadLeader;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
-		/// <summary>
-		/// Create new Leader
-		/// </summary>
-		/// <param name="AcadBlock"></param>
-		/// <param name="PointsArray"></param>
-		/// <param name="Annotation"></param>
-		/// <param name="Type"></param>
-        public AcadLeader (AcadBlock AcadBlock, List<Point> PointsArray, AcadEntity Annotation, Autodesk.AutoCAD.Interop.Common.AcLeaderType Type)
+        /// <summary>
+        /// Create new Leader with Annotation object
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="PointsArray">Three points (gets only x/y coordinates)</param>
+        /// <param name="Annotation">The ont AcadEntity (casted from AcadBlockReference, AcadMText, AcadTolerance) that should be attached to the leader. The value can also be NULL to not attach an object</param>
+        /// <param name="Type"></param>
+        public AcadLeader (AcadBlock AcadBlock, List<Point> PointsArray, 
+			Autodesk.AutoCAD.Interop.Common.AcLeaderType Type, AcadEntity Annotation)
         {
-            this._i = AcadBlock._i.AddLeader(PointsArray.Select(a => Technical.PointByDynPoint(a)).ToArray(), 
-				(Autodesk.AutoCAD.Interop.Common.AcadEntity)Annotation._i, Type);
+            this._i = AcadBlock._i.AddLeader(Technical.PointsByDynPoints(PointsArray, false),
+                Annotation._i, Type);
+        }
+        /// <summary>
+        /// Create new Leader without Annotation object
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="PointsArray">Three points (gets only x/y coordinates)</param>
+        /// <param name="Type"></param>
+        public AcadLeader(AcadBlock AcadBlock, List<Point> PointsArray,
+            Autodesk.AutoCAD.Interop.Common.AcLeaderType Type)
+        {
+            this._i = AcadBlock._i.AddLeader(Technical.PointsByDynPoints(PointsArray, false),
+                null, Type);
         }
         ///<summary>
         /// Get all cordinates in that object as array of Points

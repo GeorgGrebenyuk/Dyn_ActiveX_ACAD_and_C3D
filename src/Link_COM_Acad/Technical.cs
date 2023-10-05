@@ -60,7 +60,7 @@ namespace DynAXDBLib
                 var p = PointByDynPoint(point);
                 ps[counter] = p[0];
                 ps[counter + 1] = p[1];
-                if (is_planar) ps[counter + 2] = p[2];
+                if (!is_planar) ps[counter + 2] = p[2];
 
                 if (!is_planar) counter += 3;
                 else counter += 2;

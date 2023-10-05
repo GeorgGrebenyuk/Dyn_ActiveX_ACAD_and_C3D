@@ -30,7 +30,7 @@ namespace DynAXDBLib
         ///</summary>
         public static Acad3DSolid CreateSphere (AcadBlock AcadBlock, Point Center, double Radius)
         {
-			return new Acad3DSolid(AcadBlock._i.AddSphere(Technical.PointByDynPoint(Center), Radius));
+            return new Acad3DSolid(AcadBlock._i.AddSphere(Technical.PointByDynPoint(Center), Radius));
         }
         ///<summary>
         ///Create Torus

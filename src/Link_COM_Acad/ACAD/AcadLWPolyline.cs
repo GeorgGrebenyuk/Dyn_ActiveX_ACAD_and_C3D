@@ -28,11 +28,11 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
         ///<summary>
-        ///
+        /// Create new Polyline
         ///</summary>
         public AcadLWPolyline(AcadBlock AcadBlock, List<Point> VerticesList)
         {
-            this._i = AcadBlock._i.AddLightWeightPolyline(VerticesList.Select(p=>Technical.PointByDynPoint(p).ToArray()));
+            this._i = AcadBlock._i.AddLightWeightPolyline(Technical.PointsByDynPoints(VerticesList, true));
         }
         ///<summary>
         /// Get all cordinates in that object as array of Points

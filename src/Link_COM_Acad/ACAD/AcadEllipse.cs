@@ -26,9 +26,10 @@ namespace DynAXDBLib
         ///<summary>
         ///Create new Ellipse
         ///</summary>
-        public AcadEllipse (AcadBlock AcadBlock, Point Center, object MajorAxis, double RadiusRatio)
+        public AcadEllipse (AcadBlock AcadBlock, Point Center, Point MajorAxis, double RadiusRatio)
         {
-            this._i = AcadBlock._i.AddEllipse(Technical.PointByDynPoint(Center), MajorAxis, RadiusRatio);
+            this._i = AcadBlock._i.AddEllipse(Technical.PointByDynPoint(Center, false), 
+				Technical.PointByDynPoint(MajorAxis, false), RadiusRatio);
         }
 
         ///<summary>

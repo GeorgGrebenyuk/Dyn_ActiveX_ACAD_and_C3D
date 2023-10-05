@@ -27,13 +27,16 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-        ///<summary>
-        ///
-        ///</summary>
+		/// <summary>
+		/// Create new spline
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="PointsArray">Collection of 3D points</param>
+		/// <param name="StartTangent"></param>
+		/// <param name="EndTangent"></param>
         public AcadSpline (AcadBlock AcadBlock, List<Point> PointsArray, Vector StartTangent, Vector EndTangent)
         {
-            this._i = AcadBlock._i.AddSpline(
-				PointsArray.Select(p => Technical.PointByDynPoint(p)).ToArray(), 
+            this._i = AcadBlock._i.AddSpline(Technical.PointsByDynPoints(PointsArray, false), 
 				Technical.VectorByDynVector(StartTangent), Technical.VectorByDynVector(EndTangent));
         }
 

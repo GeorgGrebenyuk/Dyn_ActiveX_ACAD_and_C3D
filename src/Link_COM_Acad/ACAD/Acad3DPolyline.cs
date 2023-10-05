@@ -23,11 +23,16 @@ namespace DynAXDBLib
         /// <exception cref="System.Exception"></exception>
         public Acad3DPolyline(AcadEntity AcadEntity)
         {
-			
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.Acad3DPolyline;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-
+        ///<summary>
+        /// Create new 3D Polyline
+        ///</summary>
+        public Acad3DPolyline(AcadBlock AcadBlock, List<Point> VerticesList)
+        {
+            this._i = AcadBlock._i.Add3DPoly(Technical.PointsByDynPoints(VerticesList, true));
+        }
         ///<summary>
         /// Get all cordinates in that object as array of Points
         ///</summary>

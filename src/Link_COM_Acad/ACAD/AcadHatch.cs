@@ -32,8 +32,8 @@ namespace DynAXDBLib
 		///<summary>
 		/// Create new hatch object
 		///</summary>
-		public AcadHatch (dynamic AcadBlock, int PatternType, string PatternName, 
-			bool Associativity, AcHatchObjectType HatchObjectType)
+		public AcadHatch (dynamic AcadBlock, Autodesk.AutoCAD.Interop.Common.AcPatternType PatternType, string PatternName, 
+			bool Associativity, AcHatchObjectType HatchObjectType = AcHatchObjectType.acHatchObject)
 		{
 			this._i = AcadBlock._i.AddHatch(PatternType, PatternName, Associativity, HatchObjectType);
 		}
@@ -59,7 +59,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public object PatternType => this._i.PatternType;
+		public Autodesk.AutoCAD.Interop.Common.AcPatternType PatternType => this._i.PatternType;
 
 		///<summary>
 		///
@@ -160,7 +160,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public object HatchStyle => this._i.HatchStyle;
+		public AcHatchStyle HatchStyle => this._i.HatchStyle;
 
 		///<summary>
 		///
@@ -288,7 +288,7 @@ namespace DynAXDBLib
 		///<summary>
 		///
 		///</summary>
-		public object HatchObjectType => this._i.HatchObjectType;
+		public AcHatchObjectType HatchObjectType => this._i.HatchObjectType;
 
 		///<summary>
 		///
