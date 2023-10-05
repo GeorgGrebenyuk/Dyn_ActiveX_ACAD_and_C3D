@@ -1,4 +1,6 @@
-﻿namespace DynAXDBLib 
+﻿using Autodesk.DesignScript.Geometry;
+
+namespace DynAXDBLib 
 {
 
 	///<summary>
@@ -11,6 +13,13 @@
 		{
 			this._i = AcadMInsertBlock_object as Autodesk.AutoCAD.Interop.Common.AcadMInsertBlock;
 			if (this._i == null) throw new System.Exception("Invalid casting");
+		}
+		///<summary>
+		/// 
+		///</summary>
+		public AcadMInsertBlock (dynamic AcadBlock, Point InsertionPoint, string Name, double Xscale, double Yscale, double Zscale, double Rotation, int NumRows, int NumColumns, int RowSpacing, int ColumnSpacing)
+		{
+			this._i = AcadBlock._i.AddMInsertBlock(Technical.PointByDynPoint(InsertionPoint), Name, Xscale, Yscale, Zscale, Rotation, NumRows, NumColumns, RowSpacing, ColumnSpacing);
 		}
 
 		///<summary>

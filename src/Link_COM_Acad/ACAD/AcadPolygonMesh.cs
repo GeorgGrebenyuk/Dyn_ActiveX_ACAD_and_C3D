@@ -5,10 +5,10 @@ using System.Linq;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadPolygonMesh 
+    ///<summary>
+    /// A free-form 3D mesh. A PolygonMesh object is an M x N mesh where M represents the number of vertices in a row of the mesh and N represents the number of vertices in a column of the mesh. A mesh can be open or closed in either or both the M and N directions. A mesh that is closed in a given direction is considered to be continuous from the last row or column on to the first row or column. 
+    ///</summary>
+    public class AcadPolygonMesh 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadPolygonMesh _i;
 		internal AcadPolygonMesh(object AcadPolygonMesh_object) 
@@ -26,9 +26,14 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadPolygonMesh;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-        ///<summary>
-        /// Create new PolygonMesh
-        ///</summary>
+
+        /// <summary>
+		/// Creates a free-form 3D mesh, given the number of points in the M and N directions and the coordinates of the points in the M and N directions
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="M">Dimensions of the point array. The size of the mesh in both the M and N directions is limited to between 2 and 256</param>
+		/// <param name="N">Dimensions of the point array. The size of the mesh in both the M and N directions is limited to between 2 and 256</param>
+		/// <param name="PointsMatrix">M x N matrix of 3D WCS coordinates. Defining vertices begins with vertex (0,0). Supplying the coordinate locations for each vertex in row M must be done before specifying vertices in row M + 1</param>
         public AcadPolygonMesh(AcadBlock AcadBlock, int M, int N, List<Point> PointsMatrix)
         {
             this._i = AcadBlock._i.Add3DMesh(M, N, Technical.PointsByDynPoints(PointsMatrix, false));
@@ -48,84 +53,84 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        ///Specifies whether the PolygonMesh is closed in the M direction
         ///</summary>
         public bool MClose => this._i.MClose;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_MClose(bool bClose) 
+        ///<summary>
+        ///Specifies whether the PolygonMesh is closed in the M direction
+        ///</summary>
+        public void Set_MClose(bool bClose) 
 		{
 			this._i.MClose = bClose;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool NClose => this._i.NClose;
+        ///<summary>
+        ///Specifies whether the PolygonMesh is closed in the N direction
+        ///</summary>
+        public bool NClose => this._i.NClose;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_NClose(bool bClose) 
+        ///<summary>
+        ///Specifies whether the PolygonMesh is closed in the N direction
+        ///</summary>
+        public void Set_NClose(bool bClose) 
 		{
 			this._i.NClose = bClose;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public int MDensity => this._i.MDensity;
+        ///<summary>
+        ///Specifies the smooth surface density of a PolygonMesh in the M direction
+        ///</summary>
+        public int MDensity => this._i.MDensity;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_MDensity(int density) 
+        ///<summary>
+        ///Specifies the smooth surface density of a PolygonMesh in the M direction
+        ///</summary>
+        public void Set_MDensity(int density) 
 		{
 			this._i.MDensity = density;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public int NDensity => this._i.NDensity;
+        ///<summary>
+        ///Specifies the smooth surface density of a PolygonMesh in the N direction
+        ///</summary>
+        public int NDensity => this._i.NDensity;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_NDensity(int density) 
+        ///<summary>
+        ///Specifies the smooth surface density of a PolygonMesh in the N direction
+        ///</summary>
+        public void Set_NDensity(int density) 
 		{
 			this._i.NDensity = density;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public int MVertexCount => this._i.MVertexCount;
+        ///<summary>
+        ///Gets the vertex count in the M direction for a PolygonMesh
+        ///</summary>
+        public int MVertexCount => this._i.MVertexCount;
 
-		///<summary>
-		///
-		///</summary>
-		public int NVertexCount => this._i.NVertexCount;
+        ///<summary>
+        ///Gets the vertex count in the N direction for a PolygonMesh
+        ///</summary>
+        public int NVertexCount => this._i.NVertexCount;
 
-		///<summary>
-		///
-		///</summary>
-		public object Type => this._i.Type;
+        ///<summary>
+        /// Specifies type of a PolygonMesh object
+        ///</summary>
+        public object Type => this._i.Type;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Type(Autodesk.AutoCAD.Interop.Common.AcPolymeshType Type) 
+        ///<summary>
+        /// Specifies type of a PolygonMesh object
+        ///</summary>
+        public void Set_Type(Autodesk.AutoCAD.Interop.Common.AcPolymeshType Type) 
 		{
 			this._i.Type = Type;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public void AppendVertex(Point vertex) 
+        ///<summary>
+        /// Appends a vertex to the end of a PolygonMesh object
+        ///</summary>
+        public void AppendVertex(Point vertex) 
 		{
 			this._i.AppendVertex(Technical.PointByDynPoint(vertex));
 		}
@@ -133,7 +138,7 @@ namespace DynAXDBLib
         ///<summary>
         /// Get new AcadEntitis as result of that object exploding
         ///</summary>
-        public List<AcadEntity> Explode => Technical.GetExploded(this._i.Explode());
+        public List<AcadEntity> Explode => Technical.GetParts(this._i.Explode());
 
         ///<summary>
         /// Get point by it's index from that object

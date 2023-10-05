@@ -68,7 +68,7 @@ namespace DynAXDBLib
             return ps.ToArray();
         }
         #region non_geometry
-        public static List<AcadEntity> GetExploded (dynamic Explode)
+        public static List<AcadEntity> GetParts (dynamic Explode)
         {
             return ((Array)Explode).Cast<object>().Select(a=> new AcadEntity(a)).ToList();
         }

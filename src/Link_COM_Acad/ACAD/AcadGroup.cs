@@ -20,7 +20,12 @@ namespace DynAXDBLib
         ///</summary>
         public AcadGroup (AcadGroups AcadGroups, string Name)
         {
-            this._i = AcadGroups._i.Add(Name);
+            try
+            {
+                this._i = AcadGroups._i.Add(Name);
+            }
+            catch { }
+           
         }
         ///<summary>
         ///

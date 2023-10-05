@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDimOrdinate 
+    ///<summary>
+    /// A dimension measuring the absolute X or Y position of a point from the origin
+    ///</summary>
+    public class AcadDimOrdinate 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDimOrdinate _i;
 		internal AcadDimOrdinate(object AcadDimOrdinate_object) 
@@ -26,9 +26,13 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-        ///<summary>
-        ///
-        ///</summary>
+        /// <summary>
+		/// Creates an ordinate dimension given the definition point and the leader endpoint
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="DefinitionPoint">The 3D WCS coordinates specifying the point to be dimensioned</param>
+		/// <param name="LeaderEndPoint">The 3D WCS coordinates specifying the endpoint of the leader. This will be the location at which the dimension text is displayed</param>
+		/// <param name="UseXAxis">(0)True: Creates an ordinate dimension displaying the X axis value; (1)False: Creates an ordinate dimension displaying the Y axis value</param>
         public AcadDimOrdinate (AcadBlock AcadBlock, Point DefinitionPoint, Point LeaderEndPoint, int UseXAxis)
         {
             this._i =  AcadBlock._i.AddDimOrdinate(Technical.PointByDynPoint(DefinitionPoint),

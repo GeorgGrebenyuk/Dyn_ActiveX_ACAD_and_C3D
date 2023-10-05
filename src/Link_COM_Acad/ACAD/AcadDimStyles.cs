@@ -1,10 +1,10 @@
 ﻿namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDimStyles 
+    ///<summary>
+    /// The collection of all dimension styles in the drawing. There is no limit to the number of dimension styles that you can create in your drawing. However, there can be only one instance of the DimStyles collection. The DimStyles collection is predefined for each drawing. You can make multiple references to it by using the DimStyles property. Once done with an object, the reference is automatically released
+    ///</summary>
+    public class AcadDimStyles 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDimStyles _i;
 		internal AcadDimStyles(object AcadDimStyles_object) 
@@ -16,22 +16,7 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic Item(object Index) 
-		{
-			return this._i.Item(Index);
-		}
+		public int Count => this._i.Count;
 
-		///<summary>
-		///
-		///</summary>
-		public dynamic Count => this._i.Count;
-
-		///<summary>
-		///
-		///</summary>
-		public dynamic Add(string Name) 
-		{
-			return this._i.Add(Name);
-		}
 	}
 }

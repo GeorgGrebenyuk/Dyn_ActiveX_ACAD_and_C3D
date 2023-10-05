@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDimDiametric 
+    ///<summary>
+    ///A dimension measuring the diameter of a circle or arc
+    ///</summary>
+    public class AcadDimDiametric 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDimDiametric _i;
 		internal AcadDimDiametric(object AcadDimDiametric_object) 
@@ -25,9 +25,13 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-        ///<summary>
-        /// Create new DimDiametric
-        ///</summary>
+        /// <summary>
+		/// Creates a diametric dimension for a circle or arc given the two points on the diameter and the length of the leader line
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="ChordPoint">The 3D WCS coordinates specifying the first diameter point on the circle or arc</param>
+		/// <param name="FarChordPoint">The 3D WCS coordinates specifying the second diameter point on the circle or arc</param>
+		/// <param name="LeaderLength">The positive value representing the length from the ChordPoint to the annotation text or dogleg</param>
         public AcadDimDiametric(AcadBlock AcadBlock, Point ChordPoint, Point FarChordPoint, double LeaderLength)
         {
             this._i =  AcadBlock._i.AddDimDiametric(Technical.PointByDynPoint(ChordPoint),

@@ -5,10 +5,10 @@ using System.Linq;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadPolyfaceMesh 
+    ///<summary>
+    /// A three-dimensional polyface mesh
+    ///</summary>
+    public class AcadPolyfaceMesh 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadPolyfaceMesh _i;
 		internal AcadPolyfaceMesh(object AcadPolyfaceMesh_object) 
@@ -26,9 +26,13 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadPolyfaceMesh;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-        ///<summary>
-        ///
-        ///</summary>
+
+        /// <summary>
+        /// Creates a polyface mesh from a list of vertices
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="VertexList">An array of 3D WCS coordinates used to create the polyface mesh vertices. At least four points (twelve elements) are required for constructing a polyface mesh object. The array size must be a multiple of three</param>
+        /// <param name="FaceList">An array of integers representing the vertex numbers for each face. Faces are defined in groups of four vertex index values, so the size of this array must be a multiple of four</param>
         private AcadPolyfaceMesh (AcadBlock AcadBlock, List<Point> VertexList, List<int[]> FaceList)
         {
             this._i =  AcadBlock._i.AddPolyfaceMesh(VertexList.Select(p=>Technical.PointByDynPoint(p)), 
@@ -65,19 +69,19 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        ///Gets the number of vertices for the PolyfaceMesh
         ///</summary>
         public int NumberOfVertices => this._i.NumberOfVertices;
 
-		///<summary>
-		///
-		///</summary>
-		public int NumberOfFaces => this._i.NumberOfFaces;
+        ///<summary>
+        ///Gets the number of faces for the PolyfaceMesh
+        ///</summary>
+        public int NumberOfFaces => this._i.NumberOfFaces;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Faces(object rhs) 
+		private void Set_Faces(object rhs) 
 		{
 			this._i.Faces = rhs;
 		}

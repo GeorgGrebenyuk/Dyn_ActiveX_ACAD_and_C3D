@@ -203,23 +203,22 @@ namespace DynAXDBLib
 			this._i.TextGenerationFlag = textGenFlag;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double Thickness => this._i.Thickness;
+        ///<summary>
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
+        ///</summary>
+        public double Thickness => this._i.Thickness;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Thickness(double Thickness) 
-		{
-			this._i.Thickness = Thickness;
-		}
-
-		///<summary>
-		///
-		///</summary>
-		public bool UpsideDown => this._i.UpsideDown;
+        ///<summary>
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
+        ///</summary>
+        public void Set_Thickness(double Thickness)
+        {
+            this._i.Thickness = Thickness;
+        }
+        ///<summary>
+        ///
+        ///</summary>
+        public bool UpsideDown => this._i.UpsideDown;
 
 		///<summary>
 		///

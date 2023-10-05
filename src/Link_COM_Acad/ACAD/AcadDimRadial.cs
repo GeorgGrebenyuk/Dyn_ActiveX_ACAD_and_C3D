@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDimRadial 
+    ///<summary>
+    /// A dimension measuring the radius of a circle or arc
+    ///</summary>
+    public class AcadDimRadial 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDimRadial _i;
 		internal AcadDimRadial(object AcadDimRadial_object) 
@@ -25,9 +25,13 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-        ///<summary>
-        /// Create new AcadDimRadial
-        ///</summary>
+        /// <summary>
+		/// Creates a radial dimension for the selected object at the given location
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="Center">The 3D WCS coordinates specifying the center point on the circle or arc</param>
+		/// <param name="ChordPoint">The 3D WCS coordinates specifying the point on the circle or arc to attach the leader line</param>
+		/// <param name="LeaderLength">The positive value representing the length from the ChordPoint to the annotation text or dogleg</param>
         public AcadDimRadial(AcadBlock AcadBlock, Point Center, Point ChordPoint, double LeaderLength)
         {
             this._i = AcadBlock._i.AddDimRadial(Technical.PointByDynPoint(Center),

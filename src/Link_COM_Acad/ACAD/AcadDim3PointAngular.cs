@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDim3PointAngular 
+    ///<summary>
+    ///A dimension measuring the angular distance between three points. AutoCAD uses the location of the dimension line arc to choose between the minor and major angles specified by the angle vertex and extension lines
+    ///</summary>
+    public class AcadDim3PointAngular 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDim3PointAngular _i;
 		internal AcadDim3PointAngular(object AcadDim3PointAngular_object) 
@@ -26,9 +26,14 @@ namespace DynAXDBLib
         }
 
 
-        ///<summary>
-        /// Create new Dim3PointAngular
-        ///</summary>
+        /// <summary>
+		/// Creates an angular dimension using 3 points
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="AngleVertex">The 3D WCS coordinates specifying the vertex of the angle to be measured</param>
+		/// <param name="FirstEndPoint">The 3D WCS coordinates specifying the point through which the first extension line passes</param>
+		/// <param name="SecondEndPoint">The 3D WCS coordinates specifying the point through which the second extension line passes</param>
+		/// <param name="TextPoint">The 3D WCS coordinates specifying the point at which the dimension text is to be displayed.</param>
         public AcadDim3PointAngular (AcadBlock AcadBlock, Point AngleVertex,
 			Point FirstEndPoint, Point SecondEndPoint, Point TextPoint)
         {
@@ -38,27 +43,27 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        ///Specifies the endpoint of the first extension line
         ///</summary>
         public Point ExtLine1EndPoint => Technical.PointByDynPoint(this._i.ExtLine1EndPoint);
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_ExtLine1EndPoint(Point xLine1Point) 
+        ///<summary>
+        ///Specifies the endpoint of the first extension line
+        ///</summary>
+        public void Set_ExtLine1EndPoint(Point xLine1Point) 
 		{
 			this._i.ExtLine1EndPoint = Technical.PointByDoubleArray(xLine1Point);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public Point ExtLine2EndPoint => Technical.PointByDynPoint(this._i.ExtLine2EndPoint);
+        ///<summary>
+        ///Specifies the endpoint of the second extension line
+        ///</summary>
+        public Point ExtLine2EndPoint => Technical.PointByDynPoint(this._i.ExtLine2EndPoint);
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_ExtLine2EndPoint(Point xLine2Point) 
+        ///<summary>
+        ///Specifies the endpoint of the second extension line
+        ///</summary>
+        public void Set_ExtLine2EndPoint(Point xLine2Point) 
 		{
 			this._i.ExtLine2EndPoint = Technical.PointByDoubleArray(xLine2Point);
 		}

@@ -4,10 +4,10 @@ using System;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDimArcLength 
+    ///<summary>
+    /// A dimension measuring the length of an arc
+    ///</summary>
+    public class AcadDimArcLength 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDimArcLength _i;
 		internal AcadDimArcLength(object AcadDimArcLength_object) 
@@ -26,9 +26,14 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-        ///<summary>
-        /// Create new DimArcLength
-        ///</summary>
+        /// <summary>
+		/// Creates an arc length dimension for an arc
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="ArcCenter">The 3D WCS coordinates specifying the center of the arc</param>
+		/// <param name="FirstEndPoint">The 3D WCS coordinates specifying the point through which the first extension line passes</param>
+		/// <param name="SecondEndPoint">The 3D WCS coordinates specifying the point through which the second extension line passes</param>
+		/// <param name="ArcPoint">The 3D WCS coordinates specifying a point on the arc</param>
         public AcadDimArcLength(AcadBlock AcadBlock, Point ArcCenter,
             Point FirstEndPoint, Point SecondEndPoint, Point ArcPoint)
         {

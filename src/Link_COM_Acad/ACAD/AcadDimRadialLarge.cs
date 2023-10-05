@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDimRadialLarge 
+    ///<summary>
+    /// A dimension measuring a large radius, also known as a jogged radius dimension
+    ///</summary>
+    public class AcadDimRadialLarge 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDimRadialLarge _i;
 		internal AcadDimRadialLarge(object AcadDimRadialLarge_object) 
@@ -25,9 +25,15 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-        ///<summary>
-        ///Create DimRadialLarge
-        ///</summary>
+        /// <summary>
+		/// Creates a jogged radial dimension for an arc, circle, or polyline arc segment
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="Center">The 3D WCS coordinates specifying the center of the arc, circle, or polyline arc segment</param>
+		/// <param name="ChordPoint">The 3D WCS coordinates specifying the chord point for the arc</param>
+		/// <param name="OverrideCenter">The 3D WCS coordinates specifying the override center location or pick point</param>
+		/// <param name="JogPoint">The 3D WCS coordinates specifying the jog location or pick point</param>
+		/// <param name="JogAngle">The value for the jog angle</param>
         public AcadDimRadialLarge(AcadBlock AcadBlock, Point Center, Point ChordPoint, Point OverrideCenter, Point JogPoint, double JogAngle)
         {
             this._i =  AcadBlock._i.AddDimRadialLarge(Technical.PointByDynPoint(Center),

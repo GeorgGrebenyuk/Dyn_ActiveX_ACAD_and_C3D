@@ -18,7 +18,7 @@ using System.Runtime.Remoting.Activation;
 namespace DynAXDBLib
 {
     /// <summary>
-    /// Root clas for wotk with AutoCAD application's instance
+    /// Root clas for wotk with AutoCAD application's instance. An instance of the AutoCAD application
     /// </summary>
     public class AcadApplication
     {
@@ -67,13 +67,21 @@ namespace DynAXDBLib
             {"AutoCAD 2024","AutoCAD.Application.24.3"  }
         };
 
+        /// <summary>
+        /// Updates the object to the drawing screen
+        /// </summary>
         public void Update()
         {
             this._i.Update();
         }
-        public string Caption => this._i.Caption;
+
         /// <summary>
-        /// Get all opended documents in that app's session
+        /// Gets the text that the user sees displayed for the application or a menu item
+        /// </summary>
+        public string Caption => this._i.Caption;
+
+        /// <summary>
+        /// The Documents collection for the current AutoCAD session
         /// </summary>
         /// <returns></returns>
         public List<AcadDocument> Documents()

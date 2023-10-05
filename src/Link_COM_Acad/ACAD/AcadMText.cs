@@ -3,10 +3,12 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadMText 
+    ///<summary>
+    /// A paragraph of alphanumeric characters that fits within a nonprinting text boundary. MText objects use word wrap to break long lines into paragraphs. AutoCAD automatically breaks lines at the edge of the text boundary, as specified by the Width property. 
+
+
+    ///</summary>
+    public class AcadMText 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadMText _i;
 		internal AcadMText(object AcadMText_object) 
@@ -24,9 +26,14 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadMText;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-        ///<summary>
-        ///Create new MText
-        ///</summary>
+
+        /// <summary>
+        /// Creates an MText entity in a rectangle defined by the insertion point and width of the bounding box
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="InsertionPoint">The insertion point of the MText bounding box</param>
+        /// <param name="Width">The width of the MText bounding box</param>
+        /// <param name="Text">The actual text string for the MText object</param>
         public AcadMText(AcadBlock AcadBlock, Point InsertionPoint, double Width, string Text)
         {
             this._i = AcadBlock._i.AddMText(Technical.PointByDynPoint(InsertionPoint), Width, Text);
@@ -34,27 +41,27 @@ namespace DynAXDBLib
 
 
         ///<summary>
-        ///
+        /// Specifies the text string for the entity
         ///</summary>
         public string TextString => this._i.TextString;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_TextString(string bstrText) 
+        ///<summary>
+        /// Specifies the text string for the entity
+        ///</summary>
+        public void Set_TextString(string bstrText) 
 		{
 			this._i.TextString = bstrText;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public string StyleName => this._i.StyleName;
+        ///<summary>
+        /// Specifies the name of the style used with the object
+        ///</summary>
+        public string StyleName => this._i.StyleName;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_StyleName(string bstrName) 
+        ///<summary>
+        /// Specifies the name of the style used with the object
+        ///</summary>
+        public void Set_StyleName(string bstrName) 
 		{
 			this._i.StyleName = bstrName;
 		}

@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDimAligned 
+    ///<summary>
+    /// A linear dimension, measuring the distance between two points, that is displayed parallel to the points being measured
+    ///</summary>
+    public class AcadDimAligned 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDimAligned _i;
 		internal AcadDimAligned(object AcadDimAligned_object) 
@@ -25,9 +25,13 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-        ///<summary>
-        /// Create new DimAligned
-        ///</summary>
+        /// <summary>
+		/// Creates an aligned dimension object
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="ExtLine1Point">The 3D WCS coordinates specifying the first endpoint of the extension line</param>
+		/// <param name="ExtLine2Point">The 3D WCS coordinates specifying the second endpoint of the extension line. </param>
+		/// <param name="TextPosition">The 3D WCS coordinates specifying the text position.</param>
         public AcadDimAligned(AcadBlock AcadBlock, Point ExtLine1Point, Point ExtLine2Point, Point TextPosition)
         {
 			this._i = AcadBlock._i.AddDimAligned(Technical.PointByDynPoint(ExtLine1Point),

@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDimAngular 
+    ///<summary>
+    /// A dimension measuring the angular distance between two lines or between the angle of a circular arc
+    ///</summary>
+    public class AcadDimAngular 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDimAngular _i;
 		internal AcadDimAngular(object AcadDimAngular_object) 
@@ -25,9 +25,14 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-        ///<summary>
-        /// Create new DimAngular
-        ///</summary>
+        /// <summary>
+		/// Creates an angular dimension for an arc, two lines, or a circle
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="AngleVertex">The 3D WCS coordinates specifying the center of the circle or arc, or the common vertex between the two dimensioned lines</param>
+		/// <param name="FirstEndPoint">The 3D WCS coordinates specifying the point through which the first extension line passes</param>
+		/// <param name="SecondEndPoint">The 3D WCS coordinates specifying the point through which the second extension line passes</param>
+		/// <param name="TextPoint">The 3D WCS coordinates specifying the point at which the dimension text is to be displayed</param>
         public AcadDimAngular(AcadBlock AcadBlock, object AngleVertex,
 			Point FirstEndPoint, Point SecondEndPoint, Point TextPoint)
         {

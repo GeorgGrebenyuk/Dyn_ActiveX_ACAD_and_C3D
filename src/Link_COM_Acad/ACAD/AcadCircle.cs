@@ -1,11 +1,13 @@
 ﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
+
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadCircle 
+    ///<summary>
+    ///A full circle
+    ///</summary>
+    public class AcadCircle 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadCircle _i;
 		internal AcadCircle(object AcadCircle_object) 
@@ -23,23 +25,27 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadCircle;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-        ///<summary>
-        ///Create new Circle
-        ///</summary>
+
+        /// <summary>
+        /// Creates a circle given a center point and radius
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="Center">The 3D WCS coordinates specifying the circle's center</param>
+        /// <param name="Radius">The radius of the circle. Must be a positive number</param>
         public AcadCircle (AcadBlock AcadBlock, Point Center, double Radius)
         {
             this._i = AcadBlock._i.AddCircle(Technical.PointByDynPoint(Center), Radius);
         }
 
         ///<summary>
-        ///
+        ///Specifies the center of circle
         ///</summary>
         public Point Center => Technical.PointByDoubleArray(this._i.Center);
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Center(Point CenterPoint) 
+        ///<summary>
+        ///Specifies the center of circle
+        ///</summary>
+        public void Set_Center(Point CenterPoint) 
 		{
 			this._i.Center = Technical.PointByDynPoint(CenterPoint);
 		}
@@ -70,28 +76,28 @@ namespace DynAXDBLib
 			this._i.Diameter = Diameter;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double Circumference => this._i.Circumference;
+        ///<summary>
+        ///Specifies the circumference of a circle
+        ///</summary>
+        public double Circumference => this._i.Circumference;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Circumference(double Circumference) 
+        ///<summary>
+        ///Specifies the circumference of a circle
+        ///</summary>
+        public void Set_Circumference(double Circumference) 
 		{
 			this._i.Circumference = Circumference;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double Area => this._i.Area;
+        ///<summary>
+        ///Specifies the enclosed area of circle
+        ///</summary>
+        public double Area => this._i.Area;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Area(double Area) 
+        ///<summary>
+        ///Specifies the enclosed area of an circle
+        ///</summary>
+        public void Set_Area(double Area) 
 		{
 			this._i.Area = Area;
 		}
@@ -110,24 +116,26 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
         ///</summary>
         public double Thickness => this._i.Thickness;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Thickness(double Thickness) 
+        ///<summary>
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
+        ///</summary>
+        public void Set_Thickness(double Thickness) 
 		{
 			this._i.Thickness = Thickness;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object Offset(double Distance) 
-		{
-			return this._i.Offset(Distance);
-		}
-	}
+        /// <summary>
+        /// Creates a new object at a specified offset distance from an existing object
+        /// </summary>
+        /// <param name="Distance">The distance to offset the object. The offset can be a positive or negative number, but it cannot equal zero. If the offset is negative, this is interpreted as being an offset to make a "smaller" curve (that is, for an arc it would offset to a radius that is "Distance less" than the starting curve's radius). If "smaller" has no meaning, then it would offset in the direction of smaller X, Y, and Z WCS coordinates</param>
+        /// <returns></returns>
+        public List<AcadEntity> Offset(double Distance)
+        {
+            return Technical.GetParts(this._i.Offset(Distance));
+        }
+    }
 }

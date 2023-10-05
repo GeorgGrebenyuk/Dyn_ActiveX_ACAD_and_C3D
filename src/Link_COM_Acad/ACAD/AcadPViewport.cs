@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using Autodesk.AutoCAD.Interop.Common;
+using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
 
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadPViewport 
+    ///<summary>
+    /// Rectangular objects created in paper space that display views
+    ///</summary>
+    public class AcadPViewport 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadPViewport _i;
 		internal AcadPViewport(object AcadPViewport_object) 
@@ -15,17 +17,43 @@ namespace DynAXDBLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object Center => this._i.Center;
+        /// <summary>
+        /// Adds an active paper space viewport, given the center, height, and width
+        /// </summary>
+        /// <param name="acabBlock"></param>
+        /// <param name="center">The center coordinates of the viewport.</param>
+        /// <param name="width">The width of the viewport. Must be a positive number</param>
+        /// <param name="height">The height of the viewport. Must be a positive number.</param>
+        public AcadPViewport(AcadDatabase acabBlock, Point center, double width, double height)
+		{
+            this._i = acabBlock._i.PaperSpace.AddPViewport(Technical.PointByDynPoint(center), width, height);
+
+        }
+        /// <summary>
+        /// Adds a paper space viewport to specific Layout, given the center, height, and width
+        /// </summary>
+        /// <param name="acadLayout">Layout</param>
+        /// <param name="center">The center coordinates of the viewport.</param>
+        /// <param name="width">The width of the viewport. Must be a positive number</param>
+        /// <param name="height">The height of the viewport. Must be a positive number.</param>
+        public AcadPViewport(AcadLayout acadLayout, Point center, double width, double height)
+        {
+			((Autodesk.AutoCAD.Interop.AcadDocument)acadLayout._i.Document).ActiveLayout = acadLayout._i;
+
+            this._i = acadLayout._i.Database.PaperSpace.AddPViewport(Technical.PointByDynPoint(center), width, height);
+        }
+
+        ///<summary>
+        ///
+        ///</summary>
+        public Point Center => Technical.PointByDoubleArray(this._i.Center);
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_Center(object CenterPoint) 
+		public void Set_Center(Point CenterPoint) 
 		{
-			this._i.Center = CenterPoint;
+			this._i.Center = Technical.PointByDynPoint(CenterPoint);
 		}
 
 		///<summary>

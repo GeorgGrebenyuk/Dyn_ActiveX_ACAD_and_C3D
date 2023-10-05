@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadLayers 
+    ///<summary>
+    ///The collection of all layers in the drawing. There is no limit to the number of layers that you can create in your drawing. However, there can be only one instance of the Layers collection. The Layers collection is predefined for each drawing. You can make multiple references to it by using the Layers property. Once done with an object, the reference is automatically released
+    ///</summary>
+    public class AcadLayers 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadLayers _i;
 		internal AcadLayers(object AcadLayers_object) 
@@ -35,10 +35,10 @@ namespace DynAXDBLib
         public int Count => this._i.Count;
 
 
-		///<summary>
-		///
-		///</summary>
-		public void GenerateUsageData() 
+        ///<summary>
+        ///Generates data specifying whether a layer is in use
+        ///</summary>
+        public void GenerateUsageData() 
 		{
 			this._i.GenerateUsageData();
 		}

@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadBlocks 
+    ///<summary>
+    /// The collection of all blocks in the drawing
+    ///</summary>
+    public class AcadBlocks 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadBlocks _i;
 		internal AcadBlocks(object AcadBlocks_object) 
@@ -22,6 +22,10 @@ namespace DynAXDBLib
 		{
 			return new AcadBlock(this._i.Item(Index));
 		}
+        /// <summary>
+        /// Get all blocks in drawing
+        /// </summary>
+        /// <returns></returns>
         public List<AcadBlock> GetObjects()
         {
             List<AcadBlock> es = new List<AcadBlock>();

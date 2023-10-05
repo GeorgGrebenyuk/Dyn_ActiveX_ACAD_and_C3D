@@ -148,6 +148,8 @@
     <Compile Include="ACAD\AcadSectionSettings.cs" />
     <Compile Include="ACAD\AcadSectionTypeSettings.cs" />
     <Compile Include="ACAD\AcadSecurityParams.cs" />
+    <Compile Include="ACAD\AcadSelectionSet.cs" />
+    <Compile Include="ACAD\AcadSelectionSets.cs" />
     <Compile Include="ACAD\AcadShape.cs" />
     <Compile Include="ACAD\AcadSolid.cs" />
     <Compile Include="ACAD\AcadSortentsTable.cs" />

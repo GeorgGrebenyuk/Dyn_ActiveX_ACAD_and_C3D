@@ -1,12 +1,13 @@
 ﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
 
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadArc 
+    ///<summary>
+    ///A circular arc. An arc is always drawn counterclockwise from the start point to the endpoint. The StartPoint and EndPoint properties of an arc are calculated through the StartAngle, EndAngle, and Radius properties
+    ///</summary>
+    public class AcadArc 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadArc _i;
 		internal AcadArc(object AcadArc_object) 
@@ -24,111 +25,119 @@ namespace DynAXDBLib
 			this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadArc;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
-        ///<summary>
-        ///Create new Arc
-        ///</summary>
+
+        /// <summary>
+        /// Creates an arc given the center, radius, start angle, and end angle of the arc. A start angle greater than an end angle defines a counterclockwise arc
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="Center">The 3D WCS coordinates specifying the center point of the arc</param>
+        /// <param name="Radius">The radius of the arc</param>
+        /// <param name="StartAngle">The start, in radians, defining the arc</param>
+        /// <param name="EndAngle">The send angles, in radians, defining the arc. </param>
         public AcadArc(AcadBlock AcadBlock, Point Center, double Radius, double StartAngle, double EndAngle)
         {
             this._i = AcadBlock._i.AddArc(Technical.PointByDynPoint(Center), Radius, StartAngle, EndAngle);
         }
 
         ///<summary>
-        ///
+        ///Specifies the start point
         ///</summary>
         public Point StartPoint => Technical.PointByDoubleArray(this._i.StartPoint);
 
-		///<summary>
-		///
-		///</summary>
-		public Point Center => Technical.PointByDoubleArray(this._i.Center);
+        ///<summary>
+        ///Specifies the center of an arc
+        ///</summary>
+        public Point Center => Technical.PointByDoubleArray(this._i.Center);
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Center(object CenterPoint) 
+        ///<summary>
+        ///Specifies the center of an arc
+        ///</summary>
+        public void Set_Center(object CenterPoint) 
 		{
 			this._i.Center = CenterPoint;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public Point EndPoint => Technical.PointByDoubleArray(this._i.EndPoint);
+        ///<summary>
+        ///Specifies the end point
+        ///</summary>
+        public Point EndPoint => Technical.PointByDoubleArray(this._i.EndPoint);
 
-		///<summary>
-		///
-		///</summary>
-		public double Radius => this._i.Radius;
+        ///<summary>
+        ///Specifies the radius of an arc
+        ///</summary>
+        public double Radius => this._i.Radius;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Radius(double Radius) 
+        ///<summary>
+        ///Specifies the radius of an arc
+        ///</summary>
+        public void Set_Radius(double Radius) 
 		{
 			this._i.Radius = Radius;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double StartAngle => this._i.StartAngle;
+        ///<summary>
+        ///Specifies the start angle of an arc 
+        ///</summary>
+        public double StartAngle => this._i.StartAngle;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_StartAngle(dynamic Angle) 
+        ///<summary>
+        ///Specifies the start angle of an arc 
+        ///</summary>
+        public void Set_StartAngle(double Angle) 
 		{
 			this._i.StartAngle = Angle;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double EndAngle => this._i.EndAngle;
+        ///<summary>
+        ///Specifies the end angle of an arc 
+        ///</summary>
+        public double EndAngle => this._i.EndAngle;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_EndAngle(double Angle) 
+        ///<summary>
+        ///Specifies the end angle of an arc 
+        ///</summary>
+        public void Set_EndAngle(double Angle) 
 		{
 			this._i.EndAngle = Angle;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double TotalAngle => this._i.TotalAngle;
+        ///<summary>
+        ///Gets the total angle for the arc
+        ///</summary>
+        public double TotalAngle => this._i.TotalAngle;
 
-		///<summary>
-		///
-		///</summary>
-		public double ArcLength => this._i.ArcLength;
+        ///<summary>
+        ///Gets the length of the arc
+        ///</summary>
+        public double ArcLength => this._i.ArcLength;
 
-		///<summary>
-		///
-		///</summary>
-		public double Thickness => this._i.Thickness;
+        ///<summary>
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
+        ///</summary>
+        public double Thickness => this._i.Thickness;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Thickness(double Thickness) 
+        ///<summary>
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
+        ///</summary>
+        public void Set_Thickness(double Thickness) 
 		{
 			this._i.Thickness = Thickness;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object Offset(double Distance) 
+        /// <summary>
+        /// Creates a new object at a specified offset distance from an existing object
+        /// </summary>
+        /// <param name="Distance">The distance to offset the object. The offset can be a positive or negative number, but it cannot equal zero. If the offset is negative, this is interpreted as being an offset to make a "smaller" curve (that is, for an arc it would offset to a radius that is "Distance less" than the starting curve's radius). If "smaller" has no meaning, then it would offset in the direction of smaller X, Y, and Z WCS coordinates</param>
+        /// <returns></returns>
+        public List<AcadEntity> Offset(double Distance) 
 		{
-			return this._i.Offset(Distance);
+            return Technical.GetParts(this._i.Offset(Distance));
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double Area => this._i.Area;
+        ///<summary>
+        ///Specifies the enclosed area of an arc
+        ///</summary>
+        public double Area => this._i.Area;
 
         ///<summary>
         /// Get the Normal vector from that object

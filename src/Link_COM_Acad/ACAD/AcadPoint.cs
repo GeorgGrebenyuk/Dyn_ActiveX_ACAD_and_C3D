@@ -4,10 +4,10 @@ using System.Collections.Generic;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadPoint 
+    ///<summary>
+    /// A point marker appearing as a dot, square, circle, X, tick, or plus sign (+); or as a combination of these
+    ///</summary>
+    public class AcadPoint 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadPoint _i;
 		internal AcadPoint(object AcadPoint_object) 
@@ -27,9 +27,11 @@ namespace DynAXDBLib
         }
 
 
-        ///<summary>
-        ///
-        ///</summary>
+        /// <summary>
+        /// Creates a Point object at a given location
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="Point">The coordinates of the point to be created</param>
         public AcadPoint(AcadBlock AcadBlock, Point Point)
         {
             this._i = AcadBlock._i.AddPoint(Technical.PointByDynPoint(Point));
@@ -39,14 +41,14 @@ namespace DynAXDBLib
         ///<summary>
         /// Get all cordinates in that object as array of Points
         ///</summary>
-        public List<Point> Coordinates => Technical.PointsByArrayOfDoubleArray(this._i.Coordinates, false);
+        public Point Coordinates => Technical.PointByDynPoint(this._i.Coordinates);
 
         ///<summary>
         /// Set coordinates to that objects from Dynamo's points array
         ///</summary>
-        public void Set_Coordinates(List<Point> Coordinates)
+        public void Set_Coordinates(Point Coordinates)
         {
-            this._i.Coordinates = Technical.PointsByDynPoints(Coordinates, false);
+            this._i.Coordinates = Technical.PointByDynPoint(Coordinates);
         }
 
         ///<summary>
@@ -63,16 +65,16 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
         ///</summary>
         public double Thickness => this._i.Thickness;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Thickness(double Thickness) 
-		{
-			this._i.Thickness = Thickness;
-		}
-	}
+        ///<summary>
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
+        ///</summary>
+        public void Set_Thickness(double Thickness)
+        {
+            this._i.Thickness = Thickness;
+        }
+    }
 }

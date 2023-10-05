@@ -5,10 +5,10 @@ using System.Linq;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class Acad3DPolyline 
+    ///<summary>
+    /// A 3D polyline of straight line segments
+    ///</summary>
+    public class Acad3DPolyline 
 	{
 		public Autodesk.AutoCAD.Interop.Common.Acad3DPolyline _i;
 		internal Acad3DPolyline(object Acad3DPolyline_object) 
@@ -27,7 +27,7 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
         ///<summary>
-        /// Create new 3D Polyline
+        /// Creates a 3D polyline from the given array of coordinates
         ///</summary>
         public Acad3DPolyline(AcadBlock AcadBlock, List<Point> VerticesList)
         {
@@ -46,10 +46,10 @@ namespace DynAXDBLib
             this._i.Coordinates = Technical.PointsByDynPoints(Coordinates, false);
         }
 
-		///<summary>
-		///
-		///</summary>
-		public void AppendVertex(Point vertex) 
+        ///<summary>
+        /// Appends a vertex to the end of a 3DPolyline
+        ///</summary>
+        public void AppendVertex(Point vertex) 
 		{
 			this._i.AppendVertex(Technical.PointByDynPoint(vertex));
 		}
@@ -57,7 +57,7 @@ namespace DynAXDBLib
         ///<summary>
         /// Get new AcadEntitis as result of that object exploding
         ///</summary>
-        public List<AcadEntity> Explode => Technical.GetExploded(this._i.Explode());
+        public List<AcadEntity> Explode => Technical.GetParts(this._i.Explode());
 
         ///<summary>
         /// Get point by it's index from that object
@@ -75,35 +75,35 @@ namespace DynAXDBLib
             this._i.Coordinate[Index] = Technical.PointByDynPoint(pVal);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public object Type => this._i.Type;
+        ///<summary>
+        /// Specifies type of a Polyline object
+        ///</summary>
+        public object Type => this._i.Type;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Type(Autodesk.AutoCAD.Interop.Common.Ac3DPolylineType Type) 
+        ///<summary>
+        /// Specifies type of a Polyline object
+        ///</summary>
+        public void Set_Type(Autodesk.AutoCAD.Interop.Common.Ac3DPolylineType Type) 
 		{
 			this._i.Type = Type;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool Closed => this._i.Closed;
+        ///<summary>
+        /// Specifies whether the 3D polyline is open or closed
+        ///</summary>
+        public bool Closed => this._i.Closed;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Closed(bool fClose) 
+        ///<summary>
+        /// Specifies whether the 3D polyline is open or closed
+        ///</summary>
+        public void Set_Closed(bool fClose) 
 		{
 			this._i.Closed = fClose;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double Length => this._i.Length;
+        ///<summary>
+        /// Gets the length of an object
+        ///</summary>
+        public double Length => this._i.Length;
 	}
 }

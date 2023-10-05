@@ -33,7 +33,7 @@ namespace DynAXDBLib
 		/// Create new hatch object
 		///</summary>
 		public AcadHatch (dynamic AcadBlock, Autodesk.AutoCAD.Interop.Common.AcPatternType PatternType, string PatternName, 
-			bool Associativity, AcHatchObjectType HatchObjectType = AcHatchObjectType.acHatchObject)
+			bool Associativity, AcHatchObjectType HatchObjectType)
 		{
 			this._i = AcadBlock._i.AddHatch(PatternType, PatternName, Associativity, HatchObjectType);
 		}

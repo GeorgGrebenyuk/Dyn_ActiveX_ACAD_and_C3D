@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadLayouts 
+    ///<summary>
+    /// The collection of all layouts in the drawing
+    ///</summary>
+    public class AcadLayouts 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadLayouts _i;
 		internal AcadLayouts(object AcadLayouts_object) 

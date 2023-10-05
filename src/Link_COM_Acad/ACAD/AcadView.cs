@@ -1,4 +1,5 @@
 ﻿using Autodesk.DesignScript.Geometry;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DynAXDBLib 
 {
@@ -15,13 +16,18 @@ namespace DynAXDBLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 		/// <summary>
-		/// Create new AcadView
+		/// Create new AcadView or return existes
 		/// </summary>
 		/// <param name="acadViews"></param>
 		/// <param name="Name"></param>
 		public AcadView (AcadViews acadViews, string Name)
 		{
-			this._i = acadViews._i.Add(Name);
+            for (int i = 0; i < acadViews._i.Count; i++)
+            {
+                var style = acadViews._i.Item(i);
+                if (style.Name == Name) this._i = style;
+            }
+            this._i = acadViews._i.Add(Name);
         }
 
         ///<summary>

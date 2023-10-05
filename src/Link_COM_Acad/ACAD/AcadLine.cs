@@ -1,12 +1,13 @@
 ﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
 
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadLine 
+    ///<summary>
+    /// A single line segment
+    ///</summary>
+    public class AcadLine 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadLine _i;
 		internal AcadLine(object AcadLine_object) 
@@ -24,9 +25,13 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadLine;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-        ///<summary>
-        ///
-        ///</summary>
+
+        /// <summary>
+        /// Creates a line passing through two points
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="StartPoint">The 3D WCS coordinates specifying the line start point</param>
+        /// <param name="EndPoint">The 3D WCS coordinates specifying the line endpoint</param>
         public AcadLine(AcadBlock AcadBlock, Point StartPoint, Point EndPoint)
         {
             this._i =  AcadBlock._i.AddLine(Technical.PointByDynPoint(StartPoint), Technical.PointByDynPoint(EndPoint));
@@ -72,30 +77,32 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
         ///</summary>
         public double Thickness => this._i.Thickness;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Thickness(double Thickness) 
-		{
-			this._i.Thickness = Thickness;
-		}
+        ///<summary>
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
+        ///</summary>
+        public void Set_Thickness(double Thickness)
+        {
+            this._i.Thickness = Thickness;
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object Offset(double Distance) 
-		{
-			return this._i.Offset(Distance);
-		}
+        /// <summary>
+        /// Creates a new object at a specified offset distance from an existing object
+        /// </summary>
+        /// <param name="Distance">The distance to offset the object. The offset can be a positive or negative number, but it cannot equal zero. If the offset is negative, this is interpreted as being an offset to make a "smaller" curve (that is, for an arc it would offset to a radius that is "Distance less" than the starting curve's radius). If "smaller" has no meaning, then it would offset in the direction of smaller X, Y, and Z WCS coordinates</param>
+        /// <returns></returns>
+        public List<AcadEntity> Offset(double Distance)
+        {
+            return Technical.GetParts(this._i.Offset(Distance));
+        }
 
-		///<summary>
-		///
-		///</summary>
-		public object Delta => this._i.Delta;
+        ///<summary>
+        ///
+        ///</summary>
+        public object Delta => this._i.Delta;
 
 		///<summary>
 		///

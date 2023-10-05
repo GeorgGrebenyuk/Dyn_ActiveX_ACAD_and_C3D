@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadMaterials 
+    ///<summary>
+    /// The collection of all materials in the drawing
+    ///</summary>
+    public class AcadMaterials 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadMaterials _i;
 		internal AcadMaterials(object AcadMaterials_object) 

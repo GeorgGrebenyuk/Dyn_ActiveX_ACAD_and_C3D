@@ -6,10 +6,10 @@ using dr = Autodesk.DesignScript.Runtime;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDatabase 
+    ///<summary>
+    /// The contents of an XRef block
+    ///</summary>
+    public class AcadDatabase 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDatabase _i;
 		internal AcadDatabase(object AcadDatabase_object) 
@@ -27,17 +27,17 @@ namespace DynAXDBLib
 
         }
         ///<summary>
-        ///
+        ///Gets the ModelSpace collection for the document
         ///</summary>
         public AcadBlock ModelSpace => new AcadBlock( this._i.ModelSpace);
 
-		///<summary>
-		///
-		///</summary>
+        ///<summary>
+        ///Gets the PaperSpace collection for the document
+        ///</summary>
         public AcadBlock PaperSpace => new AcadBlock(this._i.PaperSpace);
 
         ///<summary>
-        ///
+        ///Gets the Blocks collection for the drawing
         ///</summary>
         public AcadBlocks Blocks => new AcadBlocks(this._i.Blocks);
 
@@ -58,92 +58,92 @@ namespace DynAXDBLib
             };
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public AcadGroups Groups => new AcadGroups(this._i.Groups);
+        ///<summary>
+        ///Gets the Groups collection for the document
+        ///</summary>
+        public AcadGroups Groups => new AcadGroups(this._i.Groups);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadDimStyles DimStyles => new AcadDimStyles(this._i.DimStyles);
+        ///<summary>
+        ///Gets the DimStyles collection for the document
+        ///</summary>
+        public AcadDimStyles DimStyles => new AcadDimStyles(this._i.DimStyles);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadLayers Layers => new AcadLayers(this._i.Layers);
+        ///<summary>
+        ///Gets the Layers collection for the document.
+        ///</summary>
+        public AcadLayers Layers => new AcadLayers(this._i.Layers);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadLineTypes Linetypes => new AcadLineTypes(this._i.Linetypes);
+        ///<summary>
+        ///Gets the Linetypes collection for the document
+        ///</summary>
+        public AcadLineTypes Linetypes => new AcadLineTypes(this._i.Linetypes);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadDictionaries Dictionaries => new AcadDictionaries(this._i.Dictionaries);
+        ///<summary>
+        ///Gets the Dictionaries collection for the document
+        ///</summary>
+        public AcadDictionaries Dictionaries => new AcadDictionaries(this._i.Dictionaries);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadRegisteredApplications RegisteredApplications => 
+        ///<summary>
+        ///Gets the RegisteredApplications collection for the document
+        ///</summary>
+        public AcadRegisteredApplications RegisteredApplications => 
 			new AcadRegisteredApplications(this._i.RegisteredApplications);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadTextStyles TextStyles => new AcadTextStyles(this._i.TextStyles);
+        ///<summary>
+        ///Gets the TextStyles collection for the document
+        ///</summary>
+        public AcadTextStyles TextStyles => new AcadTextStyles(this._i.TextStyles);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadUCSs UserCoordinateSystems => new AcadUCSs(this._i.UserCoordinateSystems);
+        ///<summary>
+        ///Gets the UCSs collection for the document
+        ///</summary>
+        public AcadUCSs UserCoordinateSystems => new AcadUCSs(this._i.UserCoordinateSystems);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadViews Views => new AcadViews(this._i.Views);
+        ///<summary>
+        ///Gets the Views collection for the document
+        ///</summary>
+        public AcadViews Views => new AcadViews(this._i.Views);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadViewports Viewports => new AcadViewports(this._i.Viewports);
+        ///<summary>
+        ///Gets the Viewports collection for the document. 
+        ///</summary>
+        public AcadViewports Viewports => new AcadViewports(this._i.Viewports);
 
-		///<summary>
-		///
-		///</summary>
-		public double ElevationModelSpace => this._i.ElevationModelSpace;
+        ///<summary>
+        ///Specifies the elevation setting in model space. The current elevation is the Z value that is used whenever a 3D point is expected but only the X and Y values are supplied. The current elevation is maintained separately in model space and paper space
+        ///</summary>
+        public double ElevationModelSpace => this._i.ElevationModelSpace;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_ElevationModelSpace(double Elevation) 
+        ///<summary>
+        ///Specifies the elevation setting in model space. The current elevation is the Z value that is used whenever a 3D point is expected but only the X and Y values are supplied. The current elevation is maintained separately in model space and paper space
+        ///</summary>
+        public void Set_ElevationModelSpace(double Elevation) 
 		{
 			this._i.ElevationModelSpace = Elevation;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double ElevationPaperSpace => this._i.ElevationPaperSpace;
+        ///<summary>
+        ///Specifies the elevation setting in paper space. The current elevation is the Z value that is used whenever a 3D point is expected but only the X and Y values are supplied. The current elevation is maintained separately in model space and paper space
+        ///</summary>
+        public double ElevationPaperSpace => this._i.ElevationPaperSpace;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_ElevationPaperSpace(double Elevation) 
+        ///<summary>
+        ///Specifies the elevation setting in paper space. The current elevation is the Z value that is used whenever a 3D point is expected but only the X and Y values are supplied. The current elevation is maintained separately in model space and paper space
+        ///</summary>
+        public void Set_ElevationPaperSpace(double Elevation) 
 		{
 			this._i.ElevationPaperSpace = Elevation;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public double[] Limits => ((Array)this._i.Limits).Cast<double>().ToArray();
+        ///<summary>
+        ///Specifies the drawing limits
+        ///</summary>
+        public double[] Limits => ((Array)this._i.Limits).Cast<double>().ToArray();
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Limits(double[] Limits) 
+        ///<summary>
+        ///Specifies the drawing limits
+        ///</summary>
+        public void Set_Limits(double[] Limits) 
 		{
 			this._i.Limits = Limits;
 		}
@@ -164,34 +164,34 @@ namespace DynAXDBLib
 			return new AcadEntity(this._i.ObjectIdToObject(ObjectID));
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public AcadLayouts Layouts => new AcadLayouts(this._i.Layouts);
+        ///<summary>
+        ///Gets the Layouts collection for the document
+        ///</summary>
+        public AcadLayouts Layouts => new AcadLayouts(this._i.Layouts);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadPlotConfigurations PlotConfigurations => new AcadPlotConfigurations(this._i.PlotConfigurations);
+        ///<summary>
+        ///Gets the PlotConfigurations collection for the document.
+        ///</summary>
+        public AcadPlotConfigurations PlotConfigurations => new AcadPlotConfigurations(this._i.PlotConfigurations);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadDatabasePreferences Preferences => new AcadDatabasePreferences(this._i.Preferences);
+        ///<summary>
+        ///Gets the Preferences object
+        ///</summary>
+        public AcadDatabasePreferences Preferences => new AcadDatabasePreferences(this._i.Preferences);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadSummaryInfo SummaryInfo => new AcadSummaryInfo(this._i.SummaryInfo);
+        ///<summary>
+        ///Specifies the properties of a drawing
+        ///</summary>
+        public AcadSummaryInfo SummaryInfo => new AcadSummaryInfo(this._i.SummaryInfo);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadSectionManager SectionManager => new AcadSectionManager(this._i.SectionManager);
+        ///<summary>
+        ///Returns the section manager object
+        ///</summary>
+        public AcadSectionManager SectionManager => new AcadSectionManager(this._i.SectionManager);
 
-		///<summary>
-		///
-		///</summary>
-		public AcadMaterials Materials => new AcadMaterials(this._i.Materials);
+        ///<summary>
+        ///Specifies the Materials of a drawing
+        ///</summary>
+        public AcadMaterials Materials => new AcadMaterials(this._i.Materials);
 	}
 }

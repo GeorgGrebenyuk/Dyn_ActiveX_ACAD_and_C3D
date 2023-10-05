@@ -1,10 +1,10 @@
 ﻿namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadLineType 
+    ///<summary>
+    /// The line characteristics consisting of combinations of dashes, dots, and spaces/ It is not possible to create a linetype programmatically
+    ///</summary>
+    public class AcadLineType 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadLineType _i;
 		internal AcadLineType(object AcadLineType_object) 
@@ -13,13 +13,18 @@
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
         /// <summary>
-        /// Create new AcadLineType by name
+        /// You can only create default linetypes programmatically.
         /// </summary>
         /// <param name="AcadLineTypes"></param>
         /// <param name="Name"></param>
         public AcadLineType(AcadLineTypes AcadLineTypes, string Name)
 		{
-			this._i = AcadLineTypes._i.Add(Name);
+            for (int i = 0; i < AcadLineTypes._i.Count; i++)
+            {
+                var obj = AcadLineTypes._i.Item(i);
+                if (obj.Name == Name) this._i = obj;
+            }
+            this._i = AcadLineTypes._i.Add(Name);
         }
 
 		///<summary>

@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadLineTypes 
+    ///<summary>
+    /// The collection of all linetypes in the drawing
+    ///</summary>
+    public class AcadLineTypes 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadLineTypes _i;
 		internal AcadLineTypes(object AcadLineTypes_object) 
@@ -31,12 +31,14 @@ namespace DynAXDBLib
             }
             return objects;
         }
-        
 
-		///<summary>
-		/// Load Linetype definition from file
-		///</summary>
-		public void Load(string Name,string FileName) 
+
+        /// <summary>
+        /// Loads a menu group from a customization (CUIx) file or the definition of a linetype from a library (LIN) file
+        /// </summary>
+        /// <param name="Name">The name of the linetype to load</param>
+        /// <param name="FileName">The name of the file the linetype is in</param>
+        public void Load(string Name,string FileName) 
 		{
 			this._i.Load(Name,FileName);
 		}

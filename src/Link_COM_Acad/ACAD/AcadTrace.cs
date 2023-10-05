@@ -61,17 +61,17 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
         ///</summary>
         public double Thickness => this._i.Thickness;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_Thickness(double Thickness) 
-		{
-			this._i.Thickness = Thickness;
-		}
+        ///<summary>
+        ///Specifies the distance a 2D AutoCAD object is extruded above or below its elevation
+        ///</summary>
+        public void Set_Thickness(double Thickness)
+        {
+            this._i.Thickness = Thickness;
+        }
 
         ///<summary>
         /// Get point by it's index from that object

@@ -135,7 +135,7 @@ namespace DynAXDBLib
         ///<summary>
         /// Get new AcadEntitis as result of that object exploding
         ///</summary>
-        public List<AcadEntity> Explode => Technical.GetExploded(this._i.Explode());
+        public List<AcadEntity> Explode => Technical.GetParts(this._i.Explode());
 
         ///<summary>
         ///

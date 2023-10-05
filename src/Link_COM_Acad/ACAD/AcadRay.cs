@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadRay 
+    ///<summary>
+    /// A semi-infinite line
+    ///</summary>
+    public class AcadRay 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadRay _i;
 		internal AcadRay(object AcadRay_object) 
@@ -25,9 +25,12 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
 
-        ///<summary>
-        /// Create new Ray
-        ///</summary>
+        /// <summary>
+		/// Creates a ray passing through two unique points
+		/// </summary>
+		/// <param name="AcadBlock"></param>
+		/// <param name="Point1">The 3D WCS coordinates specifying the finite start point of the ray</param>
+		/// <param name="Point2"> The 3D WCS coordinates specifying a point through which the ray will pass. The ray extends from Point1, through Point2 to infinity</param>
         public AcadRay (AcadBlock AcadBlock, Point Point1, Point Point2)
         {
             this._i = AcadBlock._i.AddRay(Technical.PointByDynPoint(Point1), Technical.PointByDynPoint(Point2));

@@ -3,10 +3,10 @@
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class AcadDimRotated 
+    ///<summary>
+    /// A dimension that measures the distance between two points and is displayed at a given rotation
+    ///</summary>
+    public class AcadDimRotated 
 	{
 		public Autodesk.AutoCAD.Interop.Common.AcadDimRotated _i;
 		internal AcadDimRotated(object AcadDimRotated_object) 
@@ -24,14 +24,20 @@ namespace DynAXDBLib
             this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadDimRotated;
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
-        ///<summary>
-        /// Create new DimRotated
-        ///</summary>
+
+        /// <summary>
+        /// Creates a rotated linear dimension
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="ExtLine1Point">The 3D WCS coordinates specifying the first end of the linear dimension to be measured. This is where the first extension line will be attached</param>
+        /// <param name="ExtLine2Point">The 3D WCS coordinates specifying the second end of the linear dimension to be measured. This is where the second extension line will be attached</param>
+        /// <param name="DimLineLocation">The 3D WCS coordinates specifying a point on the dimension line. This will define the placement of the dimension line and the dimension text</param>
+        /// <param name="RotationAngle">The angle, in radians, of rotation displaying the linear dimension</param>
         public AcadDimRotated(AcadBlock AcadBlock, Point ExtLine1Point,
-            Point ExtLine2Point, object DimLineLocation, double RotationAngle)
+            Point ExtLine2Point, Point DimLineLocation, double RotationAngle)
         {
             this._i = AcadBlock._i.AddDimRotated(Technical.PointByDynPoint(ExtLine1Point),
-                Technical.PointByDynPoint(ExtLine2Point), DimLineLocation, RotationAngle);
+                Technical.PointByDynPoint(ExtLine2Point), Technical.PointByDynPoint(DimLineLocation), RotationAngle);
         }
 
         ///<summary>

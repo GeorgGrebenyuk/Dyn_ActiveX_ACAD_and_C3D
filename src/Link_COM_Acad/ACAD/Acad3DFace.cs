@@ -4,10 +4,10 @@ using System.Collections.Generic;
 namespace DynAXDBLib 
 {
 
-	///<summary>
-	///
-	///</summary>
-	public class Acad3DFace 
+    ///<summary>
+    /// A 3D triangle or quadrilateral plane section
+    ///</summary>
+    public class Acad3DFace 
 	{
 		public Autodesk.AutoCAD.Interop.Common.Acad3DFace _i;
 		internal Acad3DFace(object Acad3DFace_object) 
@@ -26,7 +26,7 @@ namespace DynAXDBLib
             if (this._i == null) throw new System.Exception("Invalid casting");
         }
         ///<summary>
-        ///Create new 3D face
+        ///Creates a 3DFace object given four vertices
         ///</summary>
         public Acad3DFace(AcadBlock AcadBlock, Point Point1, Point Point2, Point Point3, Point Point4)
         {
@@ -51,69 +51,69 @@ namespace DynAXDBLib
         }
 
         ///<summary>
-        ///
+        /// Specifies the visibility of a 3DFace edge 1
         ///</summary>
         public bool VisibilityEdge1 => this._i.VisibilityEdge1;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_VisibilityEdge1(bool visibility) 
+        ///<summary>
+        /// Specifies the visibility of a 3DFace edge 1
+        ///</summary>
+        public void Set_VisibilityEdge1(bool visibility) 
 		{
 			this._i.VisibilityEdge1 = visibility;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool VisibilityEdge2 => this._i.VisibilityEdge2;
+        ///<summary>
+        /// Specifies the visibility of a 3DFace edge 2
+        ///</summary>
+        public bool VisibilityEdge2 => this._i.VisibilityEdge2;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_VisibilityEdge2(bool visibility) 
+        ///<summary>
+        /// Specifies the visibility of a 3DFace edge 2
+        ///</summary>
+        public void Set_VisibilityEdge2(bool visibility) 
 		{
 			this._i.VisibilityEdge2 = visibility;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool VisibilityEdge3 => this._i.VisibilityEdge3;
+        ///<summary>
+        /// Specifies the visibility of a 3DFace edge 3
+        ///</summary>
+        public bool VisibilityEdge3 => this._i.VisibilityEdge3;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_VisibilityEdge3(bool visibility) 
+        ///<summary>
+        /// Specifies the visibility of a 3DFace edge 3
+        ///</summary>
+        public void Set_VisibilityEdge3(bool visibility) 
 		{
 			this._i.VisibilityEdge3 = visibility;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool VisibilityEdge4 => this._i.VisibilityEdge4;
+        ///<summary>
+        /// Specifies the visibility of a 3DFace edge 4
+        ///</summary>
+        public bool VisibilityEdge4 => this._i.VisibilityEdge4;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_VisibilityEdge4(bool visibility) 
+        ///<summary>
+        /// Specifies the visibility of a 3DFace edge 4
+        ///</summary>
+        public void Set_VisibilityEdge4(bool visibility) 
 		{
 			this._i.VisibilityEdge4 = visibility;
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public bool GetInvisibleEdge(int Index) 
+        ///<summary>
+        /// Gets the visibility setting for an edge of a 3DFace object at a given index
+        ///</summary>
+        public bool GetInvisibleEdge(int Index) 
 		{
 			return this._i.GetInvisibleEdge(Index);
 		}
 
-		///<summary>
-		///
-		///</summary>
-		public void SetInvisibleEdge(int Index,bool State) 
+        ///<summary>
+        /// Sets the visibility setting for an edge of a 3DFace object at a given index
+        ///</summary>
+        public void SetInvisibleEdge(int Index,bool State) 
 		{
 			this._i.SetInvisibleEdge(Index,State);
 		}

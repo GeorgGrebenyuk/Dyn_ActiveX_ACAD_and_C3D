@@ -1,4 +1,6 @@
 ﻿using Autodesk.DesignScript.Geometry;
+using System.Collections.Generic;
+
 namespace DynAXDBLib 
 {
 
@@ -182,12 +184,14 @@ namespace DynAXDBLib
         ///</summary>
         public double Area => this._i.Area;
 
-		///<summary>
-		///
-		///</summary>
-		public object Offset(double Distance) 
-		{
-			return this._i.Offset(Distance);
-		}
-	}
+        /// <summary>
+        /// Creates a new object at a specified offset distance from an existing object
+        /// </summary>
+        /// <param name="Distance">The distance to offset the object. The offset can be a positive or negative number, but it cannot equal zero. If the offset is negative, this is interpreted as being an offset to make a "smaller" curve (that is, for an arc it would offset to a radius that is "Distance less" than the starting curve's radius). If "smaller" has no meaning, then it would offset in the direction of smaller X, Y, and Z WCS coordinates</param>
+        /// <returns></returns>
+        public List<AcadEntity> Offset(double Distance)
+        {
+            return Technical.GetParts(this._i.Offset(Distance));
+        }
+    }
 }
