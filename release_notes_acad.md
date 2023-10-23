@@ -1,5 +1,16 @@
 # Release notes of Link_COM_Acad
 
+## Version 0.1.8 (23.10.2023, 20:30 UTC)
+
+### Updates:
+
+* Repairing methods `Coordinate` and `Coordinates` for linear objects are not working correctly (Coordinates don't returns last coordinate; Coordinate don't return any coordinate);
+
+### Adding:
+
+* New CustomNode ConnectToAcadDoc.dyf for getting AcadDocument from node `Document.Current` from Civil 3D Dynamo (there using small Python-node with that method https://help.autodesk.com/view/OARX/2024/ENU/?guid=OARX-ManagedRefGuide-Autodesk_AutoCAD_ApplicationServices_DocumentExtension_GetAcadDocument_this_Document);
+
+
 ## Version 0.1.7 (05.10.2023, 18:30 UTC)
 
 ### Updates:

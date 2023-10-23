@@ -39,7 +39,7 @@ namespace DynAXDBLib
 
             int coord_limit = 2;
             if (!is_planar) coord_limit = 3;
-            for (int i = 0; i < coordinates_raw.Length - coord_limit; i+= coord_limit)
+            for (int i = 0; i <= (coordinates_raw.Length - coord_limit); i+= coord_limit)
             {
                 double x = coordinates_raw[i];
                 double y = coordinates_raw[i + 1];

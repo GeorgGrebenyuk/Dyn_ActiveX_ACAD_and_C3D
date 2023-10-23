@@ -145,7 +145,7 @@ namespace DynAXDBLib
         ///</summary>
         public Point Coordinate(int Index)
         {
-            return Technical.PointByDynPoint(this._i.Coordinate[Index]);
+            return Technical.PointByDoubleArray(this._i.Coordinate[Index]);
         }
 
         ///<summary>

@@ -41,7 +41,7 @@ namespace DynAXDBLib
         ///<summary>
         /// Get all cordinates in that object as array of Points
         ///</summary>
-        public Point Coordinates => Technical.PointByDynPoint(this._i.Coordinates);
+        public Point Coordinates => Technical.PointByDoubleArray(this._i.Coordinates);
 
         ///<summary>
         /// Set coordinates to that objects from Dynamo's points array
