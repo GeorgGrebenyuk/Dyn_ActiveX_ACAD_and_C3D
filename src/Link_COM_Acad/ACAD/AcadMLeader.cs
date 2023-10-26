@@ -15,6 +15,16 @@ namespace DynAXDBLib
 			this._i = AcadMLeader_object as Autodesk.AutoCAD.Interop.Common.AcadMLeader;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
+        /// <summary>
+        /// Try cast from AcadEntity
+        /// </summary>
+        /// <param name="AcadEntity"></param>
+        /// <exception cref="System.Exception"></exception>
+        public AcadMLeader(AcadEntity AcadEntity)
+        {
+            this._i = AcadEntity._i as Autodesk.AutoCAD.Interop.Common.AcadMLeader;
+            if (this._i == null) throw new System.Exception("Invalid casting");
+        }
 
 
         /// <summary>
