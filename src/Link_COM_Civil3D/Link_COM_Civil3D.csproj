@@ -1108,5 +1108,11 @@
     <Compile Include="AeccXLandLib\AeccWatershedRegions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Link_COM_Acad\Link_COM_Acad.csproj">
+      <Project>{88664255-EBF2-410C-95CF-0A95BAF87790}</Project>
+      <Name>Link_COM_Acad</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

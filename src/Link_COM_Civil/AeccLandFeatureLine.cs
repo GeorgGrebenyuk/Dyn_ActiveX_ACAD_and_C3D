@@ -1,7 +1,6 @@
-﻿using DynAXDBLib;
-
-namespace DynAeccXLandLib 
+﻿namespace DynAeccXLandLib 
 {
+
 	///<summary>
 	///
 	///</summary>
@@ -14,31 +13,20 @@ namespace DynAeccXLandLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
-        /// <summary>
-        /// Try cast from AcadEntity
-        /// </summary>
-        /// <param name="AcadEntity"></param>
-        /// <exception cref="System.Exception"></exception>
-        public AeccLandFeatureLine(AcadEntity AcadEntity)
-        {
-            this._i = AcadEntity._i as Autodesk.AECC.Interop.Land.IAeccLandFeatureLine;
-            if (this._i == null) throw new System.Exception("Invalid casting");
-        }
-
-        ///<summary>
-        ///
-        ///</summary>
-        public int PointsCount => this._i.PointsCount;
+		///<summary>
+		///
+		///</summary>
+		public dynamic PointsCount => this._i.PointsCount;
 
 		///<summary>
 		///
 		///</summary>
-		public int PIPointsCount => this._i.PIPointsCount;
+		public dynamic PIPointsCount => this._i.PIPointsCount;
 
 		///<summary>
 		///
 		///</summary>
-		public int ElevationPointsCount => this._i.ElevationPointsCount;
+		public dynamic ElevationPointsCount => this._i.ElevationPointsCount;
 
 		///<summary>
 		///

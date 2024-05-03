@@ -16,7 +16,8 @@
 		///<summary>
 		///
 		///</summary>
-		public dynamic SurfaceStyles => this._i.SurfaceStyles;
+		pub
+			lic dynamic SurfaceStyles => this._i.SurfaceStyles;
 
 		///<summary>
 		///
