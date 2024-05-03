@@ -1,5 +1,17 @@
 # Release notes of Link_COM_Acad
 
+## Version 0.1.10
+
+### Updates:
+
+* AcadDocument: one of constructor is hide (that using in Python-node);
+
+## Version 0.1.9 (26.10.2023, 08:40 UTC)
+
+### Updates:
+
+* AcadMLeader: adding constructor as casting from AcadEntity;
+
 ## Version 0.1.8 (23.10.2023, 20:30 UTC)
 
 ### Updates:

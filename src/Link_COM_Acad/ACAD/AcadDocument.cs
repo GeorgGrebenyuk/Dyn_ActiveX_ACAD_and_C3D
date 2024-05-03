@@ -24,6 +24,7 @@ namespace DynAXDBLib
         /// Cast interfce Autodesk.AutoCAD.Interop.AcadDocument to that class. Use only with Custom Node ConnectToAcadDoc!!!
         /// </summary>
         /// <param name="AcadDocument_object"></param>
+        [Autodesk.DesignScript.Runtime.IsVisibleInDynamoLibrary(false)]
         public AcadDocument(object AcadDocument_object)
         {
             this._i = AcadDocument_object as Autodesk.AutoCAD.Interop.AcadDocument;

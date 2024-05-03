@@ -1,0 +1,197 @@
+{
+  "Uuid": "cf128193-def7-4dbd-ba51-402ba3c5a2a0",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Link_COM_Acad_SAMPLE_FromCivilDoc_to_AcadDocument",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.AutoCAD.DynamoNodes.Document.Current",
+      "Id": "44daffb8e60b46f59356879325726b29",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d2143980c92a4779b662140f2edaf485",
+          "Name": "Document",
+          "Description": "Document",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the current AutoCAD document.\n\nDocument.Current: Document"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Load the Python Standard and DesignScript Libraries\r\nimport sys\r\nimport clr\r\n\r\n# Add Assemblies for AutoCAD\r\nclr.AddReference('AcMgd')\r\nclr.AddReference('AcDbMgd')\r\n\r\n# Import references from AutoCAD\r\nfrom Autodesk.AutoCAD.Runtime import *\r\nfrom Autodesk.AutoCAD.ApplicationServices import *\r\nfrom Autodesk.AutoCAD.DatabaseServices import *\r\n\r\n# The inputs to this node will be stored as a list in the IN variables.\r\ndataEnteringNode = IN\r\n\r\nadoc = Application.DocumentManager.MdiActiveDocument\r\nacad_doc = DocumentExtension.GetAcadDocument(adoc)\r\n\r\nOUT = acad_doc\r\n",
+      "Engine": "IronPython2",
+      "VariableInputPorts": true,
+      "Id": "bbc90333c11e46b78c38453c68314128",
+      "Inputs": [
+        {
+          "Id": "fabc67c46f814e3d9c2f103aac5ff689",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bb2d5c8f74614d04968996d285fa44d0",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynAXDBLib.AcadDocument.AcadDocument@var",
+      "Id": "a9394eea712d4a018385fd10905ffc7a",
+      "Inputs": [
+        {
+          "Id": "e7ba2115db9548c4802b959a9c01b942",
+          "Name": "AcadDocument_object",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5d3c78aa7e874a01a90c419deeceeaf3",
+          "Name": "AcadDocument",
+          "Description": "AcadDocument",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Cast intrafce Autodesk.AutoCAD.Interop.AcadDocument to that class. Use only with Python-node ByCurrentDocument!\n\nAcadDocument.AcadDocument (AcadDocument_object: var): AcadDocument"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "d2143980c92a4779b662140f2edaf485",
+      "End": "fabc67c46f814e3d9c2f103aac5ff689",
+      "Id": "08a7d655ca6245fbb2e86744066e645c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "bb2d5c8f74614d04968996d285fa44d0",
+      "End": "e7ba2115db9548c4802b959a9c01b942",
+      "Id": "77238fc2506946e592f97f513c410aa5",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Link_COM_Acad",
+      "Version": "0.1.7",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "a9394eea712d4a018385fd10905ffc7a"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.13",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.13.1.3887",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Document.Current",
+        "ShowGeometry": true,
+        "Id": "44daffb8e60b46f59356879325726b29",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -52.669052872617613,
+        "Y": 230.19292883463629
+      },
+      {
+        "Name": "DocumentExtension.GetAcadDocument()",
+        "ShowGeometry": true,
+        "Id": "bbc90333c11e46b78c38453c68314128",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 233.72101883183166,
+        "Y": 232.69104926311974
+      },
+      {
+        "Name": "AcadDocument.AcadDocument",
+        "ShowGeometry": true,
+        "Id": "a9394eea712d4a018385fd10905ffc7a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 684.57056401141244,
+        "Y": 233.86436832865479
+      }
+    ],
+    "Annotations": [],
+    "X": 269.21711144076266,
+    "Y": 165.37342336249174,
+    "Zoom": 0.58301301620920054
+  }
+}
