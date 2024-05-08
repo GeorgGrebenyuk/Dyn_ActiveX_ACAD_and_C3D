@@ -3,24 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Link_COM_Acad", "Link_COM_Acad\Link_COM_Acad.csproj", "{88664255-EBF2-410C-95CF-0A95BAF87790}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Link_COM_Civil3D", "Link_COM_Civil3D\Link_COM_Civil3D.csproj", "{9A8AB0C6-D4B0-4A28-9195-8DF4BFEE9148}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Link_COM_Acad", "Link_COM_Acad\Link_COM_Acad.csproj", "{C4FB0FED-3ECE-4BCA-A03F-82CD7945A966}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug_NET8|Any CPU = Debug_NET8|Any CPU
+		Debug_NET8|x64 = Debug_NET8|x64
+		Release_NET8|Any CPU = Release_NET8|Any CPU
+		Release_NET8|x64 = Release_NET8|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{88664255-EBF2-410C-95CF-0A95BAF87790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88664255-EBF2-410C-95CF-0A95BAF87790}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88664255-EBF2-410C-95CF-0A95BAF87790}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88664255-EBF2-410C-95CF-0A95BAF87790}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A8AB0C6-D4B0-4A28-9195-8DF4BFEE9148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A8AB0C6-D4B0-4A28-9195-8DF4BFEE9148}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A8AB0C6-D4B0-4A28-9195-8DF4BFEE9148}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A8AB0C6-D4B0-4A28-9195-8DF4BFEE9148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4FB0FED-3ECE-4BCA-A03F-82CD7945A966}.Debug_NET8|Any CPU.ActiveCfg = Debug_NET8|Any CPU
+		{C4FB0FED-3ECE-4BCA-A03F-82CD7945A966}.Debug_NET8|Any CPU.Build.0 = Debug_NET8|Any CPU
+		{C4FB0FED-3ECE-4BCA-A03F-82CD7945A966}.Debug_NET8|x64.ActiveCfg = Debug_NET8|x64
+		{C4FB0FED-3ECE-4BCA-A03F-82CD7945A966}.Debug_NET8|x64.Build.0 = Debug_NET8|x64
+		{C4FB0FED-3ECE-4BCA-A03F-82CD7945A966}.Release_NET8|Any CPU.ActiveCfg = Release_NET8|Any CPU
+		{C4FB0FED-3ECE-4BCA-A03F-82CD7945A966}.Release_NET8|Any CPU.Build.0 = Release_NET8|Any CPU
+		{C4FB0FED-3ECE-4BCA-A03F-82CD7945A966}.Release_NET8|x64.ActiveCfg = Release_NET8|x64
+		{C4FB0FED-3ECE-4BCA-A03F-82CD7945A966}.Release_NET8|x64.Build.0 = Release_NET8|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

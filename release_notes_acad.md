@@ -5,6 +5,8 @@
 ### Updates:
 
 * AcadDocument: one of constructor is hide (that using in Python-node);
+* AcadApplication: new node for Connect to Acad 2025;
+* Migrate to Dynamo 3.0 (.NET8);
 
 ## Version 0.1.9 (26.10.2023, 08:40 UTC)
 
